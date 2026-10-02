@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore the characters and locations of NPC Beta.">
+    <title>NPC Beta — Character & Location Archive</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="NPC Beta home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>NPC <strong>Beta</strong></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#characters">Characters</a>
+        <a href="#locations">Locations</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">An evolving world archive</p>
+        <h1 id="hero-title">Every story starts with <em>someone, somewhere.</em></h1>
+        <p class="intro">Meet the people, discover the places, and follow the threads that connect the world of NPC Beta.</p>
+        <a class="button" href="#catalog">Explore the archive <span aria-hidden="true">→</span></a>
+      </section>
+
+      <section class="catalog" id="catalog" aria-labelledby="catalog-title">
+        <div>
+          <p class="eyebrow">The archive</p>
+          <h2 id="catalog-title">Discover the world</h2>
+        </div>
+        <p id="catalog-status" class="status" role="status">Loading the archive…</p>
+        <div class="collections">
+          <article class="collection" id="characters">
+            <span class="collection-number">01</span>
+            <h3>Characters</h3>
+            <p>Allies, rivals, merchants, wanderers, and the people still waiting to be understood.</p>
+            <span class="count" id="character-count">— entries</span>
+          </article>
+          <article class="collection" id="locations">
+            <span class="collection-number">02</span>
+            <h3>Locations</h3>
+            <p>Settlements, wild places, hidden landmarks, and every road between them.</p>
+            <span class="count" id="location-count">— entries</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>NPC Beta <span aria-hidden="true">/</span> A world in progress</p>
+    </footer>
+  </body>
+</html>
