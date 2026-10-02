@@ -3,56 +3,77 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Explore the characters and locations of NPC Beta.">
-    <title>NPC Beta — Character & Location Archive</title>
+    <meta name="description" content="Find memorable, ready-to-play fantasy characters for your next session.">
+    <meta name="theme-color" content="#f4eee5">
+    <title>NPC Beta — Find your next character</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/portraits.js" defer></script>
     <script src="js/app.js" defer></script>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="./" aria-label="NPC Beta home">
-        <span class="brand-mark" aria-hidden="true">N</span>
-        <span>NPC <strong>Beta</strong></span>
-      </a>
-      <nav aria-label="Primary navigation">
-        <a href="#characters">Characters</a>
-        <a href="#locations">Locations</a>
-      </nav>
+      <a class="brand" href="./" aria-label="NPC Beta home">NPC Beta</a>
+      <button class="icon-button saved-shortcut" type="button" aria-label="Show saved characters" aria-pressed="false">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.5 4.5h11v16l-5.5-3.4-5.5 3.4z"/></svg>
+      </button>
     </header>
 
     <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <p class="eyebrow">An evolving world archive</p>
-        <h1 id="hero-title">Every story starts with <em>someone, somewhere.</em></h1>
-        <p class="intro">Meet the people, discover the places, and follow the threads that connect the world of NPC Beta.</p>
-        <a class="button" href="#catalog">Explore the archive <span aria-hidden="true">→</span></a>
+      <section class="library" aria-labelledby="library-title">
+        <div class="intro-copy">
+          <p class="eyebrow">The character library</p>
+          <h1 id="library-title">Find your next character</h1>
+          <p>Memorable NPCs. Ready to play.</p>
+        </div>
+        <div class="search-row">
+          <label class="search-field" for="character-search">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+            <span class="visually-hidden">Search characters</span>
+            <input id="character-search" type="search" placeholder="Search characters..." autocomplete="off">
+          </label>
+          <button class="icon-button filter-button" type="button" aria-label="Show all characters">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M14 4v6M6 14v6"/></svg>
+          </button>
+        </div>
+        <div class="filters" aria-label="Filter characters">
+          <button class="filter active" data-group="all" type="button">All</button>
+          <button class="filter" data-group="adventurers" type="button">Adventurers</button>
+          <button class="filter" data-group="townsfolk" type="button">Townsfolk</button>
+        </div>
+        <p class="results-note" id="results-note" role="status">Loading characters…</p>
+        <div class="character-grid" id="character-grid"></div>
       </section>
 
-      <section class="catalog" id="catalog" aria-labelledby="catalog-title">
-        <div>
-          <p class="eyebrow">The archive</p>
-          <h2 id="catalog-title">Discover the world</h2>
+      <aside class="detail-panel" id="detail-panel" aria-label="Character details" aria-hidden="true">
+        <div class="detail-header">
+          <button class="back-button" type="button"><span aria-hidden="true">←</span> Back</button>
+          <span>Character</span>
+          <button class="icon-button detail-save" type="button" aria-label="Save character">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.5 4.5h11v16l-5.5-3.4-5.5 3.4z"/></svg>
+          </button>
         </div>
-        <p id="catalog-status" class="status" role="status">Loading the archive…</p>
-        <div class="collections">
-          <article class="collection" id="characters">
-            <span class="collection-number">01</span>
-            <h3>Characters</h3>
-            <p>Allies, rivals, merchants, wanderers, and the people still waiting to be understood.</p>
-            <span class="count" id="character-count">— entries</span>
-          </article>
-          <article class="collection" id="locations">
-            <span class="collection-number">02</span>
-            <h3>Locations</h3>
-            <p>Settlements, wild places, hidden landmarks, and every road between them.</p>
-            <span class="count" id="location-count">— entries</span>
-          </article>
+        <div class="detail-scroll">
+          <img class="detail-portrait" src="" alt="">
+          <div class="detail-content">
+            <h2></h2>
+            <p class="detail-meta"></p>
+            <div class="tag-list"></div>
+            <p class="detail-summary"></p>
+            <dl class="detail-facts">
+              <div><dt><span aria-hidden="true">◯</span> At the table</dt><dd class="table-note"></dd></div>
+              <div><dt><span aria-hidden="true">◇</span> Adventure hook</dt><dd class="adventure-hook"></dd></div>
+            </dl>
+          </div>
         </div>
-      </section>
+        <button class="session-button" type="button"><span aria-hidden="true">＋</span> Add to session</button>
+      </aside>
+      <button class="panel-scrim" type="button" aria-label="Close character details" tabindex="-1"></button>
     </main>
 
-    <footer>
-      <p>NPC Beta <span aria-hidden="true">/</span> A world in progress</p>
-    </footer>
+    <nav class="bottom-nav" aria-label="Application">
+      <a class="active" href="./"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5.5c3.1-.8 5.8-.2 8 1.7v12c-2.2-1.9-4.9-2.5-8-1.7zM20 5.5c-3.1-.8-5.8-.2-8 1.7v12c2.2-1.9 4.9-2.5 8-1.7z"/></svg><span>Library</span></a>
+      <button class="nav-saved" type="button"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.5 4.5h11v16l-5.5-3.4-5.5 3.4z"/></svg><span>Saved</span><span class="saved-count" aria-label="0 saved"></span></button>
+      <button type="button"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/><circle cx="8" cy="8" r=".8"/><circle cx="16" cy="8" r=".8"/><circle cx="16" cy="15" r=".8"/></svg><span>Session</span></button>
+    </nav>
   </body>
 </html>
