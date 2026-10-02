@@ -1,1 +1,70 @@
-[]
+[
+  {
+    "id": "cassian-holt",
+    "name": "Cassian Holt",
+    "role": "Adventurer",
+    "group": "adventurers",
+    "subtitle": "Fallen nobility",
+    "summary": "Seeking adventure and riches to restore his fallen house.",
+    "tableNote": "Courteous, but sensitive about his family name.",
+    "adventureHook": "He needs companions to recover a lost family heirloom.",
+    "locationIds": [],
+    "tags": [
+      "fortune seeker",
+      "family duty"
+    ],
+    "imageAlt": "Cassian Holt in a red cloak and dark armor in a sunlit city",
+    "portraitKey": "cassian-holt"
+  },
+  {
+    "id": "mira-fen",
+    "name": "Mira Fen",
+    "role": "Apothecary",
+    "group": "townsfolk",
+    "subtitle": "Herbalist and healer",
+    "summary": "A precise apothecary whose remedies carry a hint of old magic.",
+    "tableNote": "Warm and observant; she remembers every favor.",
+    "adventureHook": "A rare moonflower she needs grows beyond the old city walls.",
+    "locationIds": [],
+    "tags": [
+      "healer",
+      "keen observer"
+    ],
+    "imageAlt": "Mira Fen surrounded by bottles and herbs in her apothecary",
+    "portraitKey": "mira-fen"
+  },
+  {
+    "id": "brother-alden",
+    "name": "Brother Alden",
+    "role": "Priest",
+    "group": "townsfolk",
+    "subtitle": "Keeper of the dawn chapel",
+    "summary": "A steadfast priest protecting a secret beneath his quiet chapel.",
+    "tableNote": "Speaks gently and pauses before answering direct questions.",
+    "adventureHook": "The chapel bells ring each midnight, though no one pulls the ropes.",
+    "locationIds": [],
+    "tags": [
+      "counsel",
+      "hidden burden"
+    ],
+    "imageAlt": "Brother Alden in pale ceremonial robes before a tall chapel window",
+    "portraitKey": "brother-alden"
+  },
+  {
+    "id": "nessa-vale",
+    "name": "Nessa Vale",
+    "role": "Smuggler",
+    "group": "adventurers",
+    "subtitle": "Harbor runner",
+    "summary": "A daring smuggler who knows every hidden route through the harbor.",
+    "tableNote": "Quick to laugh, quicker to notice an unguarded purse.",
+    "adventureHook": "One of her trusted routes has begun delivering ships to the wrong coast.",
+    "locationIds": [],
+    "tags": [
+      "risk taker",
+      "harbor ties"
+    ],
+    "imageAlt": "Nessa Vale in a dark leather coat overlooking a busy harbor",
+    "portraitKey": "nessa-vale"
+  }
+]
