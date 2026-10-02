@@ -14,7 +14,11 @@
       "family duty"
     ],
     "imageAlt": "Cassian Holt in a red cloak and dark armor in a sunlit city",
-    "portraitKey": "cassian-holt"
+    "portraitKey": "cassian-holt",
+    "locationFit": [
+      "Town",
+      "Ruins"
+    ]
   },
   {
     "id": "mira-fen",
@@ -31,7 +35,11 @@
       "keen observer"
     ],
     "imageAlt": "Mira Fen surrounded by bottles and herbs in her apothecary",
-    "portraitKey": "mira-fen"
+    "portraitKey": "mira-fen",
+    "locationFit": [
+      "Town",
+      "Wilderness"
+    ]
   },
   {
     "id": "brother-alden",
@@ -48,7 +56,11 @@
       "hidden burden"
     ],
     "imageAlt": "Brother Alden in pale ceremonial robes before a tall chapel window",
-    "portraitKey": "brother-alden"
+    "portraitKey": "brother-alden",
+    "locationFit": [
+      "Town",
+      "Ruins"
+    ]
   },
   {
     "id": "nessa-vale",
@@ -65,6 +77,10 @@
       "harbor ties"
     ],
     "imageAlt": "Nessa Vale in a dark leather coat overlooking a busy harbor",
-    "portraitKey": "nessa-vale"
+    "portraitKey": "nessa-vale",
+    "locationFit": [
+      "Town",
+      "Wilderness"
+    ]
   }
 ]
