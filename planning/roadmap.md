@@ -27,3 +27,6 @@
 - Versioned lore and revision history.
 - Downloadable data exports.
 - Optional map and relationship visualizations.
+
+The three dashboard concepts—session planner, live session, and encounter builder:
+- The earlier NPC library and Cassian Holt profile:****
