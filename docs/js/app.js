@@ -2,8 +2,8 @@ const STORAGE_KEYS = { saved: "npc-beta-saved", session: "npc-beta-session" };
 const state = {
   characters: [], portraits: window.NPC_PORTRAITS || {}, query: "", sort: "name", view: "library",
   roles: new Set(), locations: new Set(), activeCharacter: null,
-  saved: new Set(JSON.parse(localStorage.getItem(STORAGE_KEYS.saved) || "[]")),
-  session: new Set(JSON.parse(localStorage.getItem(STORAGE_KEYS.session) || "[]")),
+  saved: new Set(readStorage(STORAGE_KEYS.saved, [], validIds)),
+  session: new Set(readStorage(STORAGE_KEYS.session, [], validIds)),
 };
 const elements = {
   grid: document.querySelector("#character-grid"), results: document.querySelector("#results-note"),
@@ -17,8 +17,8 @@ const elements = {
 };
 
 function saveState() {
-  localStorage.setItem(STORAGE_KEYS.saved, JSON.stringify([...state.saved]));
-  localStorage.setItem(STORAGE_KEYS.session, JSON.stringify([...state.session]));
+  writeStorage(STORAGE_KEYS.saved, [...state.saved]);
+  writeStorage(STORAGE_KEYS.session, [...state.session]);
 }
 function bookmarkIcon() { return '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.5 4.5h11v16l-5.5-3.4-5.5 3.4z"/></svg>'; }
 function roleIcon(role) {
@@ -45,13 +45,24 @@ function visibleCharacters() {
   }).sort((a, b) => a[state.sort].localeCompare(b[state.sort]));
 }
 function render() {
+  renderCompanion();
+  document.querySelector(".library").hidden = state.view === "generator";
+  document.querySelector("#generator-view").hidden = state.view !== "generator";
+  if (state.view === "generator") ensureGenerator();
   const characters = visibleCharacters();
-  const labels = { library: "NPC Library", saved: "Saved NPCs", session: "Session" };
+  const labels = { library: "NPC Library", saved: "Saved NPCs", session: "Session", generator: "Quick Name Generator" };
   elements.title.textContent = labels[state.view];
   elements.results.textContent = `${characters.length} ${characters.length === 1 ? "character" : "characters"}${state.view === "session" ? " selected" : ""}`;
   document.querySelectorAll("[data-view]").forEach((button) => button.classList.toggle("active", button.dataset.view === state.view));
   elements.savedCounts.forEach((count) => { count.textContent = state.saved.size || ""; count.setAttribute("aria-label", `${state.saved.size} saved`); });
-  elements.sessionCounts.forEach((count) => { count.textContent = state.session.size || ""; count.setAttribute("aria-label", `${state.session.size} selected`); });
+  elements.sessionCounts.forEach((count) => { count.textContent = sessionEntries().length || ""; count.setAttribute("aria-label", `${sessionEntries().length} selected`); });
+  if (state.view === "session") {
+    elements.grid.innerHTML = "";
+    const selected = visibleSessionEntries();
+    elements.results.textContent = `${selected.length} of ${sessionEntries().length} characters selected`;
+    renderCast(elements.grid, selected);
+    return;
+  }
   if (!characters.length) {
     const message = state.view === "session" ? "Your session is empty. Add characters from their profiles." : state.view === "saved" ? "You have not saved any matching characters yet." : "No characters match those filters.";
     elements.grid.innerHTML = `<p class="empty-state">${message}</p>`; return;
