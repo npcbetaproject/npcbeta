@@ -8,6 +8,7 @@
     <title>NPC Beta — Character library</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/portraits.js" defer></script>
+    <script src="js/generator.js" defer></script>
     <script src="js/app.js" defer></script>
   </head>
   <body>
@@ -17,6 +18,7 @@
         <button class="nav-link active" type="button" data-view="library">Library</button>
         <button class="nav-link" type="button" data-view="saved">Saved</button>
         <button class="nav-link" type="button" data-view="session">Session</button>
+      <button class="nav-link" type="button" data-view="generator">Name Generator</button>
       </nav>
     </header>
 
@@ -49,6 +51,24 @@
         </div>
       </section>
 
+      <section id="generator-view" class="generator-layout" aria-labelledby="generator-title" hidden>
+        <div class="generator-card">
+          <h1 id="generator-title">Quick Name Generator</h1>
+          <p class="generator-intro">A new face for your next encounter.</p>
+          <p id="generator-error" role="alert" hidden></p>
+          <div id="generator-controls" hidden>
+            <div class="name-result"><h2 id="generated-name"></h2><button type="button" data-roll="name" aria-label="Reroll name">↻</button><button type="button" id="copy-name">Copy</button></div>
+            <div class="generator-field"><label for="generator-location">Location</label><div><select id="generator-location" aria-describedby="location-helper"></select><button type="button" data-roll="location" aria-label="Reroll location">↻</button></div></div>
+            <p id="location-helper" class="field-helper">Changing location also rolls a profession.</p>
+            <div class="generator-field"><label for="generator-profession">Profession</label><div><select id="generator-profession"></select><button type="button" data-roll="profession" aria-label="Reroll profession">↻</button></div></div>
+            <div class="generator-actions"><button type="button" data-roll="all" class="primary-action">Roll All</button><button type="button" id="add-generated">Add to Session</button><button type="button" id="undo-generator" disabled>Undo last roll</button></div>
+          </div>
+        </div>
+        <aside class="tonight-cast" aria-labelledby="cast-title"><div class="cast-heading"><h2 id="cast-title">Tonight’s cast</h2><span id="cast-count"></span></div><div id="cast-list"></div></aside>
+      </section>
+      <p id="action-feedback" class="action-feedback" role="status" aria-live="polite"></p>
+      <p id="storage-warning" class="storage-warning" role="status" hidden></p>
+
       <aside class="detail-panel" id="detail-panel" aria-label="Character details" aria-hidden="true">
         <div class="detail-header">
           <button class="back-button" type="button"><span aria-hidden="true">←</span> Back</button><span>Character</span>
@@ -64,6 +84,7 @@
       <button class="active" type="button" data-view="library"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5.5c3.1-.8 5.8-.2 8 1.7v12c-2.2-1.9-4.9-2.5-8-1.7zM20 5.5c-3.1-.8-5.8-.2-8 1.7v12c2.2-1.9 4.9-2.5 8-1.7z"/></svg><span>Library</span></button>
       <button type="button" data-view="saved"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.5 4.5h11v16l-5.5-3.4-5.5 3.4z"/></svg><span>Saved</span><span class="saved-count" aria-label="0 saved"></span></button>
       <button type="button" data-view="session"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/></svg><span>Session</span><span class="session-count" aria-label="0 selected"></span></button>
+      <button type="button" data-view="generator"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16M4 12h10M4 19h7M18 15v6M15 18h6"/></svg><span>Name Generator</span></button>
     </nav>
   </body>
 </html>

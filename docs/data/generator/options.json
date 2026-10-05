@@ -1,0 +1,688 @@
+{
+  "locations": [
+    {
+      "id": "village",
+      "label": "Village",
+      "professionIds": [
+        "farmer",
+        "shepherd",
+        "blacksmith",
+        "innkeeper",
+        "herbalist",
+        "priest",
+        "merchant"
+      ]
+    },
+    {
+      "id": "city-street",
+      "label": "City street",
+      "professionIds": [
+        "guard",
+        "courier",
+        "merchant",
+        "laborer",
+        "street-performer",
+        "beggar",
+        "thief"
+      ]
+    },
+    {
+      "id": "tavern-inn",
+      "label": "Tavern / inn",
+      "professionIds": [
+        "innkeeper",
+        "cook",
+        "server",
+        "brewer",
+        "musician",
+        "mercenary",
+        "adventurer"
+      ]
+    },
+    {
+      "id": "marketplace",
+      "label": "Marketplace",
+      "professionIds": [
+        "merchant",
+        "peddler",
+        "artisan",
+        "fortune-teller",
+        "porter",
+        "guard",
+        "pickpocket"
+      ]
+    },
+    {
+      "id": "harbor-docks",
+      "label": "Harbor / docks",
+      "professionIds": [
+        "sailor",
+        "dockworker",
+        "shipwright",
+        "fisher",
+        "customs-officer",
+        "merchant",
+        "smuggler"
+      ]
+    },
+    {
+      "id": "ship",
+      "label": "Ship",
+      "professionIds": [
+        "captain",
+        "sailor",
+        "navigator",
+        "cook",
+        "surgeon",
+        "merchant",
+        "pirate"
+      ]
+    },
+    {
+      "id": "church-shrine",
+      "label": "Church / shrine",
+      "professionIds": [
+        "priest",
+        "acolyte",
+        "healer",
+        "caretaker",
+        "scholar",
+        "pilgrim"
+      ]
+    },
+    {
+      "id": "monastery",
+      "label": "Monastery",
+      "professionIds": [
+        "monk",
+        "scribe",
+        "librarian",
+        "gardener",
+        "cook",
+        "healer"
+      ]
+    },
+    {
+      "id": "noble-estate",
+      "label": "Noble estate",
+      "professionIds": [
+        "steward",
+        "servant",
+        "cook",
+        "gardener",
+        "tutor",
+        "bodyguard",
+        "stable-keeper"
+      ]
+    },
+    {
+      "id": "castle-keep",
+      "label": "Castle / keep",
+      "professionIds": [
+        "soldier",
+        "guard",
+        "commander",
+        "steward",
+        "messenger",
+        "blacksmith",
+        "cook"
+      ]
+    },
+    {
+      "id": "watchhouse-prison",
+      "label": "Watchhouse / prison",
+      "professionIds": [
+        "guard",
+        "watch-captain",
+        "jailer",
+        "investigator",
+        "clerk",
+        "bounty-hunter"
+      ]
+    },
+    {
+      "id": "farm-ranch",
+      "label": "Farm / ranch",
+      "professionIds": [
+        "farmer",
+        "shepherd",
+        "rancher",
+        "beekeeper",
+        "stable-keeper",
+        "laborer"
+      ]
+    },
+    {
+      "id": "forest",
+      "label": "Forest",
+      "professionIds": [
+        "hunter",
+        "trapper",
+        "forester",
+        "herbalist",
+        "ranger",
+        "guide",
+        "hermit"
+      ]
+    },
+    {
+      "id": "road-caravan",
+      "label": "Road / caravan",
+      "professionIds": [
+        "merchant",
+        "caravan-driver",
+        "guard",
+        "courier",
+        "guide",
+        "peddler",
+        "bandit"
+      ]
+    },
+    {
+      "id": "mine-quarry",
+      "label": "Mine / quarry",
+      "professionIds": [
+        "miner",
+        "prospector",
+        "foreman",
+        "engineer",
+        "mason",
+        "laborer",
+        "guard"
+      ]
+    },
+    {
+      "id": "workshop-forge",
+      "label": "Workshop / forge",
+      "professionIds": [
+        "blacksmith",
+        "carpenter",
+        "jeweler",
+        "leatherworker",
+        "potter",
+        "tinker",
+        "apprentice"
+      ]
+    },
+    {
+      "id": "academy-library",
+      "label": "Academy / library",
+      "professionIds": [
+        "scholar",
+        "librarian",
+        "scribe",
+        "tutor",
+        "researcher",
+        "student",
+        "mage"
+      ]
+    },
+    {
+      "id": "wizards-tower",
+      "label": "Wizard\u2019s tower",
+      "professionIds": [
+        "mage",
+        "alchemist",
+        "enchanter",
+        "diviner",
+        "scholar",
+        "apprentice",
+        "servant"
+      ]
+    },
+    {
+      "id": "graveyard-crypt",
+      "label": "Graveyard / crypt",
+      "professionIds": [
+        "gravedigger",
+        "undertaker",
+        "caretaker",
+        "priest",
+        "historian",
+        "grave-robber"
+      ]
+    },
+    {
+      "id": "ruins",
+      "label": "Ruins",
+      "professionIds": [
+        "explorer",
+        "archaeologist",
+        "treasure-hunter",
+        "scavenger",
+        "adventurer",
+        "bandit",
+        "cultist"
+      ]
+    },
+    {
+      "id": "cave-dungeon",
+      "label": "Cave / dungeon",
+      "professionIds": [
+        "explorer",
+        "guide",
+        "miner",
+        "treasure-hunter",
+        "adventurer",
+        "smuggler",
+        "cultist"
+      ]
+    },
+    {
+      "id": "military-camp",
+      "label": "Military camp",
+      "professionIds": [
+        "soldier",
+        "scout",
+        "mercenary",
+        "healer",
+        "cook",
+        "quartermaster",
+        "blacksmith"
+      ]
+    },
+    {
+      "id": "traveling-carnival",
+      "label": "Traveling carnival",
+      "professionIds": [
+        "acrobat",
+        "musician",
+        "actor",
+        "fortune-teller",
+        "animal-handler",
+        "merchant",
+        "pickpocket"
+      ]
+    }
+  ],
+  "professions": [
+    {
+      "id": "farmer",
+      "label": "Farmer"
+    },
+    {
+      "id": "shepherd",
+      "label": "Shepherd"
+    },
+    {
+      "id": "blacksmith",
+      "label": "Blacksmith"
+    },
+    {
+      "id": "innkeeper",
+      "label": "Innkeeper"
+    },
+    {
+      "id": "herbalist",
+      "label": "Herbalist"
+    },
+    {
+      "id": "priest",
+      "label": "Priest"
+    },
+    {
+      "id": "merchant",
+      "label": "Merchant"
+    },
+    {
+      "id": "guard",
+      "label": "Guard"
+    },
+    {
+      "id": "courier",
+      "label": "Courier"
+    },
+    {
+      "id": "laborer",
+      "label": "Laborer"
+    },
+    {
+      "id": "street-performer",
+      "label": "Street performer"
+    },
+    {
+      "id": "beggar",
+      "label": "Beggar"
+    },
+    {
+      "id": "thief",
+      "label": "Thief"
+    },
+    {
+      "id": "cook",
+      "label": "Cook"
+    },
+    {
+      "id": "server",
+      "label": "Server"
+    },
+    {
+      "id": "brewer",
+      "label": "Brewer"
+    },
+    {
+      "id": "musician",
+      "label": "Musician"
+    },
+    {
+      "id": "mercenary",
+      "label": "Mercenary"
+    },
+    {
+      "id": "adventurer",
+      "label": "Adventurer"
+    },
+    {
+      "id": "peddler",
+      "label": "Peddler"
+    },
+    {
+      "id": "artisan",
+      "label": "Artisan"
+    },
+    {
+      "id": "fortune-teller",
+      "label": "Fortune teller"
+    },
+    {
+      "id": "porter",
+      "label": "Porter"
+    },
+    {
+      "id": "pickpocket",
+      "label": "Pickpocket"
+    },
+    {
+      "id": "sailor",
+      "label": "Sailor"
+    },
+    {
+      "id": "dockworker",
+      "label": "Dockworker"
+    },
+    {
+      "id": "shipwright",
+      "label": "Shipwright"
+    },
+    {
+      "id": "fisher",
+      "label": "Fisher"
+    },
+    {
+      "id": "customs-officer",
+      "label": "Customs officer"
+    },
+    {
+      "id": "smuggler",
+      "label": "Smuggler"
+    },
+    {
+      "id": "captain",
+      "label": "Captain"
+    },
+    {
+      "id": "navigator",
+      "label": "Navigator"
+    },
+    {
+      "id": "surgeon",
+      "label": "Surgeon"
+    },
+    {
+      "id": "pirate",
+      "label": "Pirate"
+    },
+    {
+      "id": "acolyte",
+      "label": "Acolyte"
+    },
+    {
+      "id": "healer",
+      "label": "Healer"
+    },
+    {
+      "id": "caretaker",
+      "label": "Caretaker"
+    },
+    {
+      "id": "scholar",
+      "label": "Scholar"
+    },
+    {
+      "id": "pilgrim",
+      "label": "Pilgrim"
+    },
+    {
+      "id": "monk",
+      "label": "Monk"
+    },
+    {
+      "id": "scribe",
+      "label": "Scribe"
+    },
+    {
+      "id": "librarian",
+      "label": "Librarian"
+    },
+    {
+      "id": "gardener",
+      "label": "Gardener"
+    },
+    {
+      "id": "steward",
+      "label": "Steward"
+    },
+    {
+      "id": "servant",
+      "label": "Servant"
+    },
+    {
+      "id": "tutor",
+      "label": "Tutor"
+    },
+    {
+      "id": "bodyguard",
+      "label": "Bodyguard"
+    },
+    {
+      "id": "stable-keeper",
+      "label": "Stable keeper"
+    },
+    {
+      "id": "soldier",
+      "label": "Soldier"
+    },
+    {
+      "id": "commander",
+      "label": "Commander"
+    },
+    {
+      "id": "messenger",
+      "label": "Messenger"
+    },
+    {
+      "id": "watch-captain",
+      "label": "Watch captain"
+    },
+    {
+      "id": "jailer",
+      "label": "Jailer"
+    },
+    {
+      "id": "investigator",
+      "label": "Investigator"
+    },
+    {
+      "id": "clerk",
+      "label": "Clerk"
+    },
+    {
+      "id": "bounty-hunter",
+      "label": "Bounty hunter"
+    },
+    {
+      "id": "rancher",
+      "label": "Rancher"
+    },
+    {
+      "id": "beekeeper",
+      "label": "Beekeeper"
+    },
+    {
+      "id": "hunter",
+      "label": "Hunter"
+    },
+    {
+      "id": "trapper",
+      "label": "Trapper"
+    },
+    {
+      "id": "forester",
+      "label": "Forester"
+    },
+    {
+      "id": "ranger",
+      "label": "Ranger"
+    },
+    {
+      "id": "guide",
+      "label": "Guide"
+    },
+    {
+      "id": "hermit",
+      "label": "Hermit"
+    },
+    {
+      "id": "caravan-driver",
+      "label": "Caravan driver"
+    },
+    {
+      "id": "bandit",
+      "label": "Bandit"
+    },
+    {
+      "id": "miner",
+      "label": "Miner"
+    },
+    {
+      "id": "prospector",
+      "label": "Prospector"
+    },
+    {
+      "id": "foreman",
+      "label": "Foreman"
+    },
+    {
+      "id": "engineer",
+      "label": "Engineer"
+    },
+    {
+      "id": "mason",
+      "label": "Mason"
+    },
+    {
+      "id": "carpenter",
+      "label": "Carpenter"
+    },
+    {
+      "id": "jeweler",
+      "label": "Jeweler"
+    },
+    {
+      "id": "leatherworker",
+      "label": "Leatherworker"
+    },
+    {
+      "id": "potter",
+      "label": "Potter"
+    },
+    {
+      "id": "tinker",
+      "label": "Tinker"
+    },
+    {
+      "id": "apprentice",
+      "label": "Apprentice"
+    },
+    {
+      "id": "researcher",
+      "label": "Researcher"
+    },
+    {
+      "id": "student",
+      "label": "Student"
+    },
+    {
+      "id": "mage",
+      "label": "Mage"
+    },
+    {
+      "id": "alchemist",
+      "label": "Alchemist"
+    },
+    {
+      "id": "enchanter",
+      "label": "Enchanter"
+    },
+    {
+      "id": "diviner",
+      "label": "Diviner"
+    },
+    {
+      "id": "gravedigger",
+      "label": "Gravedigger"
+    },
+    {
+      "id": "undertaker",
+      "label": "Undertaker"
+    },
+    {
+      "id": "historian",
+      "label": "Historian"
+    },
+    {
+      "id": "grave-robber",
+      "label": "Grave robber"
+    },
+    {
+      "id": "explorer",
+      "label": "Explorer"
+    },
+    {
+      "id": "archaeologist",
+      "label": "Archaeologist"
+    },
+    {
+      "id": "treasure-hunter",
+      "label": "Treasure hunter"
+    },
+    {
+      "id": "scavenger",
+      "label": "Scavenger"
+    },
+    {
+      "id": "cultist",
+      "label": "Cultist"
+    },
+    {
+      "id": "scout",
+      "label": "Scout"
+    },
+    {
+      "id": "quartermaster",
+      "label": "Quartermaster"
+    },
+    {
+      "id": "acrobat",
+      "label": "Acrobat"
+    },
+    {
+      "id": "actor",
+      "label": "Actor"
+    },
+    {
+      "id": "animal-handler",
+      "label": "Animal handler"
+    }
+  ]
+}
