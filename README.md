@@ -99,3 +99,19 @@ images fall back automatically. Image bytes are never stored in localStorage.
 
 Run `node tests/locations.dom.test.cjs` for location integration checks and
 `node tests/locations.test.cjs` for browser checks with the preview server running.
+
+## NPC Beta Pro
+
+Open **Pro** in the existing navigation. The page presents planned features only;
+there is no checkout, authentication or premium access enforcement.
+
+Configure `supportUrl` in `docs/js/pro.js` with the real HTTPS patron support URL.
+Both support states then become **Become a Patron** links using that one value.
+An empty or non-HTTPS value keeps **Patron support coming soon**, with no link.
+
+The hero reuses the embedded Cassian Holt portrait. For a higher-resolution hero,
+add an image such as `docs/images/characters/pro-hero.webp` and set `heroImage` in
+`docs/js/pro.js` to `images/characters/pro-hero.webp` (relative to `docs/index.html`).
+Update the image alt text in `docs/index.html` if the artwork changes. A failed or
+unavailable image displays the ivory/burgundy decorative fallback; page text and
+the illustrative dialogue caption remain real HTML.
