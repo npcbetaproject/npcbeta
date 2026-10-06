@@ -22,8 +22,8 @@
       "city"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": ""
+    "image": "images/locations/tavern.webp",
+    "imageAlt": "Timber tavern with glowing windows, outdoor tables and barrels beside a cobbled road at sunset."
   },
   {
     "id": "general-store",
@@ -35,8 +35,8 @@
       "city"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": ""
+    "image": "images/locations/general-store.webp",
+    "imageAlt": "Village general store with an open doorway and baskets, sacks and supplies displayed outside."
   },
   {
     "id": "blacksmiths-forge",
@@ -48,8 +48,8 @@
       "city"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": ""
+    "image": "images/locations/blacksmiths-forge.webp",
+    "imageAlt": "Open blacksmith workshop with a glowing forge, anvil, hammers and horseshoes."
   },
   {
     "id": "apothecary",
@@ -61,8 +61,8 @@
       "city"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": ""
+    "image": "images/locations/apothecary.webp",
+    "imageAlt": "Warm apothecary interior with shelves of bottles, hanging herbs and a worktable covered in plants and remedies."
   },
   {
     "id": "market-square",
@@ -74,8 +74,8 @@
       "city"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": ""
+    "image": "images/locations/market-square.webp",
+    "imageAlt": "Cobbled town market square with canvas stalls, produce and timber buildings in the evening light."
   },
   {
     "id": "chapel",
@@ -87,8 +87,8 @@
       "city"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": ""
+    "image": "images/locations/chapel.webp",
+    "imageAlt": "Small stone chapel with a bell tower, an arched doorway and flowers along a cobbled path."
   },
   {
     "id": "watchhouse",
@@ -99,8 +99,8 @@
       "city"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": ""
+    "image": "images/locations/watchhouse.webp",
+    "imageAlt": "Stone and timber watchhouse with blue banners, a tower and a fortified arched entrance."
   },
   {
     "id": "private-residence",
@@ -112,8 +112,8 @@
       "city"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": ""
+    "image": "images/locations/private-residence.webp",
+    "imageAlt": "Timber and stone cottage with glowing windows, a fenced garden and flowers beside the front door."
   },
   {
     "id": "stables",
@@ -125,8 +125,8 @@
       "city"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": ""
+    "image": "images/locations/stables.webp",
+    "imageAlt": "Timber stable with horses in open stalls, hay, saddles and a stone water trough."
   },
   {
     "id": "docks-ferry-landing",
@@ -139,8 +139,8 @@
       "wilderness"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": ""
+    "image": "images/locations/docks-ferry-landing.webp",
+    "imageAlt": "Wooden riverside landing with mooring posts and a covered ferry beneath a sunset sky."
   },
   {
     "id": "roadside-campsite",
