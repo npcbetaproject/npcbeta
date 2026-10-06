@@ -29,6 +29,7 @@ async function ensureLocations() {
       validateLocationData(templates, labels);
       locationLibrary.templates = templates; locationLibrary.labels = labels;
       renderLocationFilters(); renderLocations();
+      if (state.view === "session") renderSessionLocations();
     } catch { locationLibrary.error = true; renderLocations(); }
     finally { locationLibrary.loading = null; }
   })();
@@ -98,6 +99,8 @@ function renderSessionLocations() {
   }
   for (const instance of locationLibrary.instances) {
     const card = locationNode('article', 'session-location-card'); card.dataset.instanceId = instance.id;
+    const template = locationLibrary.templates?.find(item => item.id === instance.templateId);
+    if (template) card.append(locationThumbnail(template));
     const title = locationNode('h3', '', instance.displayName || 'Unnamed location'); card.append(title);
     const controls = [['displayName', 'Location name', 'input'], ['notes', 'Personal notes', 'textarea'], ['condition', 'Condition', 'select']];
     for (const [field, label, tag] of controls) {

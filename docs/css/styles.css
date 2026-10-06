@@ -33,3 +33,8 @@
 .support-features-intro{text-align:center;color:#514b46;line-height:1.6;margin:-10px 0 24px}.support-status{text-align:center;line-height:1.6;margin-top:24px}.pro-feature>div{min-width:0}.pro-actions .pro-explore{max-width:100%;line-height:1.5}.pro-explore span{flex-shrink:0}
 @media(min-width:761px) and (max-width:1000px){.desktop-nav{gap:0;min-width:0}.nav-link{padding-inline:5px;font-size:.85rem}.site-header .brand{gap:5px}.site-header .brand strong{font-size:1.6rem}.site-header .brand span:last-child{font-size:1.05rem}}
 @media(max-width:760px){.bottom-nav button[data-view="support"] span{max-width:54px;line-height:1.15;text-align:center}.pro-explore{font-size:.9rem}.pro-eyebrow{line-height:1.6;letter-spacing:.16em}.pro-intro h1{overflow-wrap:break-word}}
+
+/* Reuse full-colour source files; only Session artwork is muted. */
+#character-grid .session-portrait{display:block;width:100%;aspect-ratio:1.16;object-fit:cover;border-radius:6px;margin-bottom:16px;filter:grayscale(100%) contrast(85%)}
+.session-location-card .location-thumbnail{border-radius:6px;margin-bottom:18px;filter:grayscale(100%) contrast(85%)}
+@media(max-width:760px){#character-grid .session-portrait{aspect-ratio:.92}}
