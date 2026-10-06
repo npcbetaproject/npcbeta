@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/portraits.js" defer></script>
     <script src="js/generator.js" defer></script>
+    <script src="js/locations.js" defer></script>
     <script src="js/app.js" defer></script>
   </head>
   <body>
@@ -16,6 +17,7 @@
       <a class="brand" href="#library" data-view="library" aria-label="NPC Beta library"><span class="brand-mark" aria-hidden="true">✧</span><strong>NPC</strong> <span>Beta</span></a>
       <nav class="desktop-nav" aria-label="Primary">
         <button class="nav-link active" type="button" data-view="library">Library</button>
+        <button class="nav-link" type="button" data-view="locations">Locations</button>
         <button class="nav-link" type="button" data-view="saved">Saved</button>
         <button class="nav-link" type="button" data-view="session">Session</button>
       <button class="nav-link" type="button" data-view="generator">Name Generator</button>
@@ -46,8 +48,22 @@
           </aside>
           <div class="library-results">
             <p class="results-note" id="results-note" role="status">Loading characters…</p>
+            <h2 id="session-npcs-title" class="session-section-title" hidden>NPCs</h2>
             <div class="character-grid" id="character-grid"></div>
+            <section id="session-locations" aria-labelledby="session-locations-title" hidden><div class="session-section-heading"><h2 id="session-locations-title">Locations</h2><span id="session-location-count"></span></div><div id="session-location-list" class="session-location-grid"></div></section>
           </div>
+        </div>
+      </section>
+
+      <section id="locations-view" aria-labelledby="locations-title" hidden>
+        <div class="locations-toolbar">
+          <h1 id="locations-title">Locations</h1>
+          <label class="search-field" for="location-search"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg><span class="visually-hidden">Search locations</span><input id="location-search" type="search" placeholder="Search locations…" autocomplete="off"></label>
+          <button id="location-filter-toggle" class="location-filter-toggle" type="button" aria-expanded="false" aria-controls="location-filter-panel">Filters</button>
+        </div>
+        <div class="locations-layout">
+          <aside id="location-filter-panel" class="filter-panel location-filter-panel" aria-label="Filter locations"><div class="filter-heading"><h2>Filters</h2><span aria-hidden="true">✧</span></div><fieldset><legend>Setting</legend><div id="setting-options"></div></fieldset><fieldset><legend>Condition</legend><div id="condition-options"></div></fieldset><button type="button" class="clear-filters" id="clear-location-filters">Clear filters</button></aside>
+          <div class="locations-results"><p id="location-results-note" class="results-note" role="status">Loading locations…</p><div id="location-grid" class="location-grid"></div></div>
         </div>
       </section>
 
@@ -82,6 +98,7 @@
 
     <nav class="bottom-nav" aria-label="Application">
       <button class="active" type="button" data-view="library"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5.5c3.1-.8 5.8-.2 8 1.7v12c-2.2-1.9-4.9-2.5-8-1.7zM20 5.5c-3.1-.8-5.8-.2-8 1.7v12c2.2-1.9 4.9-2.5 8-1.7z"/></svg><span>Library</span></button>
+      <button type="button" data-view="locations"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3 11 9-7 9 7M5 10v10h14V10M10 20v-6h4v6"/></svg><span>Locations</span></button>
       <button type="button" data-view="saved"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.5 4.5h11v16l-5.5-3.4-5.5 3.4z"/></svg><span>Saved</span><span class="saved-count" aria-label="0 saved"></span></button>
       <button type="button" data-view="session"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/></svg><span>Session</span><span class="session-count" aria-label="0 selected"></span></button>
       <button type="button" data-view="generator"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5h16M4 12h10M4 19h7M18 15v6M15 18h6"/></svg><span>Name Generator</span></button>
