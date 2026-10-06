@@ -74,6 +74,7 @@ function render() {
     elements.results.textContent = `${selected.length} of ${sessionEntries().length} characters selected`;
     renderCast(elements.grid, selected);
     renderSessionLocations();
+    if (!locationLibrary.templates && !locationLibrary.error) ensureLocations();
     return;
   }
   if (!characters.length) {

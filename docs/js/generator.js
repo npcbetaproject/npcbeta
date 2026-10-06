@@ -139,6 +139,17 @@ function renderCast(container, entries = sessionEntries()) {
   if (!entries.length) { const empty = document.createElement('p'); empty.className = 'empty-state'; empty.textContent = sessionEntries().length ? 'No session NPCs match those filters.' : 'Add an NPC to build tonight’s cast.'; container.append(empty); return; }
   entries.forEach(entry => {
     const card = document.createElement('article'); card.className = 'cast-entry';
+    if (container.id === 'character-grid' && entry.library) {
+      const character = state.characters.find(item => item.id === entry.id);
+      const source = character && state.portraits[character.portraitKey];
+      if (source) {
+        const portrait = document.createElement('img');
+        portrait.className = 'session-portrait'; portrait.src = source;
+        portrait.alt = character.imageAlt; portrait.loading = 'lazy';
+        portrait.addEventListener('error', () => portrait.remove(), { once: true });
+        card.append(portrait);
+      }
+    }
     const heading = document.createElement('h3');
     if (entry.library) { const open = document.createElement('button'); open.type = 'button'; open.className = 'cast-profile'; open.textContent = entry.name; open.onclick = () => openDetail(state.characters.find(character => character.id === entry.id)); heading.append(open); }
     else heading.textContent = entry.name;
