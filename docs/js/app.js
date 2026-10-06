@@ -46,19 +46,25 @@ function visibleCharacters() {
 }
 function render() {
   renderCompanion();
-  document.querySelector(".library").hidden = state.view === "generator" || state.view === "locations";
+  document.querySelector(".library").hidden = ["generator", "locations", "pro"].includes(state.view);
   document.querySelector("#locations-view").hidden = state.view !== "locations";
   document.querySelector("#session-locations").hidden = state.view !== "session";
   document.querySelector("#session-npcs-title").hidden = state.view !== "session";
   document.querySelector("#generator-view").hidden = state.view !== "generator";
+  document.querySelector("#pro-view").hidden = state.view !== "pro";
   if (state.view === "generator") ensureGenerator();
   const characters = visibleCharacters();
-  const labels = { library: "NPC Library", saved: "Saved NPCs", session: "Session", generator: "Quick Name Generator", locations: "Locations" };
+  const labels = { library: "NPC Library", saved: "Saved NPCs", session: "Session", generator: "Quick Name Generator", locations: "Locations", pro: "NPC Beta Pro" };
   elements.title.textContent = labels[state.view];
   elements.results.textContent = `${characters.length} ${characters.length === 1 ? "character" : "characters"}${state.view === "session" ? " selected" : ""}`;
   document.querySelectorAll("[data-view]").forEach((button) => button.classList.toggle("active", button.dataset.view === state.view));
+  document.querySelectorAll("nav [data-view]").forEach((button) => {
+    if (button.dataset.view === state.view) button.setAttribute("aria-current", "page");
+    else button.removeAttribute("aria-current");
+  });
   elements.savedCounts.forEach((count) => { count.textContent = state.saved.size || ""; count.setAttribute("aria-label", `${state.saved.size} saved`); });
   elements.sessionCounts.forEach((count) => { count.textContent = sessionEntries().length || ""; count.setAttribute("aria-label", `${sessionEntries().length} selected`); });
+  if (state.view === "pro") return;
   if (state.view === "locations") { ensureLocations(); return; }
   if (state.view === "session") {
     elements.grid.innerHTML = "";
