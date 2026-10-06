@@ -125,3 +125,14 @@ Browser storage keys and saved/session data formats remain unchanged.
 Run `node tests/pro.dom.test.cjs` for support integration checks and
 `node tests/pro.test.cjs` with the local server on port 8000 for browser layout,
 keyboard, scroll, storage and overflow checks at five viewport widths.
+
+## High-resolution NPC portraits
+
+Eight additional NPCs use 960 × 960 WebP files under `docs/images/characters/`.
+`docs/js/character-portraits.js` extends the existing portrait map, loaded after
+`portraits.js`; cards, detailed profiles and Session reuse the same source.
+Their `portraitFit: "contain"` keeps the complete image within existing frames
+on desktop/mobile, with ivory space where aspect ratios differ. The zoom-on-hover
+is disabled for these images. Original NPC portraits and IDs are retained.
+Each new record includes ancestry, profession (`role`), summary, portrayal note,
+adventure hook, descriptive alt text, tags and location-fit filters.

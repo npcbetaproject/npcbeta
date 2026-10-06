@@ -144,7 +144,8 @@ function renderCast(container, entries = sessionEntries()) {
       const source = character && state.portraits[character.portraitKey];
       if (source) {
         const portrait = document.createElement('img');
-        portrait.className = 'session-portrait'; portrait.src = source;
+        portrait.className = 'session-portrait';
+        portrait.classList.toggle('portrait-contain', character.portraitFit === 'contain'); portrait.src = source;
         portrait.alt = character.imageAlt; portrait.loading = 'lazy';
         portrait.addEventListener('error', () => portrait.remove(), { once: true });
         card.append(portrait);
