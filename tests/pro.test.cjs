@@ -6,19 +6,21 @@ const assert = require('node:assert/strict');
  await page.addInitScript(()=>{localStorage.setItem('npc-beta-saved','["mira-fen"]');localStorage.setItem('npc-beta-session','["cassian-holt"]');});
  await page.goto('http://localhost:8000/docs/');await page.waitForSelector('.character-card');
  const stored=await page.evaluate(()=>({...localStorage}));
- await page.locator('.desktop-nav [data-view="pro"]').click();
+ await page.locator('.desktop-nav [data-view="support"]').click();
+ assert.equal(await page.title(),'Support NPC Beta — NPC Beta');
+ for(const menu of ['.desktop-nav','.bottom-nav']) assert.deepEqual(await page.locator(menu+' button').evaluateAll(buttons=>buttons.map(b=>b.querySelector('span')?.textContent||b.textContent)),['Library','Locations','Name Generator','Saved','Session','Support Us']);
  assert(await page.locator('#pro-view').isVisible());assert(await page.locator('.library').isHidden());
  assert.equal(await page.locator('.pro-badge').count(),6);assert.equal(await page.locator('[data-support]').count(),2);
- assert.equal(await page.locator('.desktop-nav [data-view="pro"]').getAttribute('aria-current'),'page');
+ assert.equal(await page.locator('.desktop-nav [data-view="support"]').getAttribute('aria-current'),'page');
  assert(await page.locator('#pro-portrait').evaluate(el=>el.complete&&el.naturalWidth>0));
  for(const width of [320,375,760,900,1440]) {
   await page.setViewportSize({width,height:900});
-  for(const view of ['pro','library','locations','saved','session','generator']) {
+  for(const view of ['support','library','locations','saved','session','generator']) {
    await page.evaluate(view=>setView(view),view);
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${view} overflow at ${width}`);
   }
  }
- await page.setViewportSize({width:375,height:900});await page.locator('.bottom-nav [data-view="pro"]').click();
+ await page.setViewportSize({width:375,height:900});await page.locator('.bottom-nav [data-view="support"]').click();
  const intro=await page.locator('.pro-intro').boundingBox(),art=await page.locator('.pro-art').boundingBox();assert(intro.y<art.y);
  await page.locator('.pro-explore').focus();await page.keyboard.press('Enter');
  assert.equal(await page.evaluate(()=>document.activeElement.id),'pro-features');
@@ -32,5 +34,5 @@ const assert = require('node:assert/strict');
  assert.equal(await configured.locator('a.pro-support').count(),2);
  for(const link of await configured.locator('a.pro-support').all()) assert.equal(await link.getAttribute('href'),'https://example.com/support');
  await configured.waitForFunction(()=>document.querySelector('#pro-portrait').hidden);assert(await configured.locator('.pro-art-fallback').isVisible());
- assert.deepEqual(errors,[]);await browser.close();console.log('PASS: Pro navigation, mobile priority, six planned cards, support configuration, fallback, keyboard scrolling, storage preservation, all-view overflow at five widths');
+ assert.deepEqual(errors,[]);await browser.close();console.log('PASS: Support Us navigation, mobile priority, six planned cards, support configuration, fallback, keyboard scrolling, storage preservation, all-view overflow at five widths');
 })().catch(e=>{console.error(e);process.exit(1);});
