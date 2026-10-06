@@ -37,7 +37,7 @@ function roleIcon(role) {
 function visibleCharacters() {
   const query = state.query.toLowerCase();
   return state.characters.filter((character) => {
-    const searchable = [character.name, character.role, character.subtitle, ...character.tags].join(" ").toLowerCase();
+    const searchable = [character.name, character.ancestry || "", character.role, character.subtitle, ...character.tags].join(" ").toLowerCase();
     const roleMatch = !state.roles.size || state.roles.has(character.role);
     const locationMatch = !state.locations.size || (character.locationFit || []).some((location) => state.locations.has(location));
     const viewMatch = state.view === "library" || (state.view === "saved" ? state.saved.has(character.id) : state.session.has(character.id));
@@ -83,7 +83,7 @@ function render() {
   }
   elements.grid.innerHTML = characters.map((character) => `<article class="character-card">
     <button class="card-open" type="button" data-character="${character.id}" aria-label="View ${character.name}">
-      <div class="portrait-wrap"><img src="${state.portraits[character.portraitKey]}" alt="${character.imageAlt}"></div>
+      <div class="portrait-wrap"><img class="${character.portraitFit === "contain" ? "portrait-contain" : ""}" src="${state.portraits[character.portraitKey]}" alt="${character.imageAlt}"></div>
       <div class="card-copy"><h3>${character.name}</h3><p class="role-line">${roleIcon(character.role)}<span>${character.role}</span></p><p class="card-subtitle">${character.subtitle}</p></div>
     </button>
     ${state.view === "session" ? `<button class="session-remove" type="button" data-remove-session="${character.id}" aria-label="Remove ${character.name} from session">Remove</button>` : `<button class="card-save ${state.saved.has(character.id) ? "is-saved" : ""}" type="button" data-save="${character.id}" aria-label="${state.saved.has(character.id) ? "Remove" : "Save"} ${character.name}">${bookmarkIcon()}</button>`}
@@ -102,8 +102,8 @@ function updateDetailActions() {
   elements.sessionButton.classList.toggle("added", isAdded); elements.sessionButton.innerHTML = isAdded ? '<span aria-hidden="true">✓</span> Remove from session' : '<span aria-hidden="true">＋</span> Add to session';
 }
 function openDetail(character) {
-  state.activeCharacter = character; const portrait = elements.detail.querySelector(".detail-portrait"); portrait.src = state.portraits[character.portraitKey]; portrait.alt = character.imageAlt;
-  elements.detail.querySelector("h2").textContent = character.name; elements.detail.querySelector(".detail-meta").textContent = `${character.role} · ${character.subtitle}`;
+  state.activeCharacter = character; const portrait = elements.detail.querySelector(".detail-portrait"); portrait.src = state.portraits[character.portraitKey]; portrait.alt = character.imageAlt; portrait.classList.toggle("portrait-contain", character.portraitFit === "contain");
+  elements.detail.querySelector("h2").textContent = character.name; elements.detail.querySelector(".detail-meta").textContent = `${character.ancestry ? character.ancestry + " · " : ""}${character.role} · ${character.subtitle}`;
   elements.detail.querySelector(".tag-list").innerHTML = character.tags.map((tag) => `<span>${tag}</span>`).join(""); elements.detail.querySelector(".detail-summary").textContent = character.summary;
   elements.detail.querySelector(".table-note").textContent = character.tableNote; elements.detail.querySelector(".adventure-hook").textContent = character.adventureHook;
   updateDetailActions(); elements.detail.classList.add("open"); elements.detail.setAttribute("aria-hidden", "false"); document.body.classList.add("panel-open"); elements.detail.querySelector(".back-button").focus();

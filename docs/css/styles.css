@@ -38,3 +38,7 @@
 #character-grid .session-portrait{display:block;width:100%;aspect-ratio:1.16;object-fit:cover;border-radius:6px;margin-bottom:16px;filter:grayscale(100%) contrast(85%)}
 .session-location-card .location-thumbnail{border-radius:6px;margin-bottom:18px;filter:grayscale(100%) contrast(85%)}
 @media(max-width:760px){#character-grid .session-portrait{aspect-ratio:.92}}
+
+/* Preserve full square portraits inside the existing card/profile frames. */
+.portrait-wrap img.portrait-contain,.detail-portrait.portrait-contain,#character-grid .session-portrait.portrait-contain{object-fit:contain;object-position:center;background:var(--paper)}
+.character-card:hover img.portrait-contain{transform:none}

@@ -82,5 +82,193 @@
       "Town",
       "Wilderness"
     ]
+  },
+  {
+    "id": "wenrin-duskshield",
+    "name": "Wenrin Duskshield",
+    "ancestry": "Human",
+    "role": "Guard captain",
+    "group": "townsfolk",
+    "subtitle": "Weary keeper of the gate",
+    "summary": "Dutiful, watchful and weary, Wenrin keeps the town guard disciplined while quietly shouldering every missed patrol and sleepless night. Practical armor and a burgundy cloak mark a captain who values service above ceremony.",
+    "tableNote": "Scan the room before speaking. Keep instructions short, rub a tired brow, and show relief when someone follows through.",
+    "adventureHook": "A patrol has failed to return from an abandoned watchtower. Wenrin needs discreet help before panic spreads.",
+    "locationIds": [],
+    "tags": [
+      "dutiful",
+      "watchful",
+      "town guard"
+    ],
+    "imageAlt": "Human guard captain with graying hair, practical armor and a burgundy cloak before a fortified gate.",
+    "portraitKey": "wenrin-duskshield",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town",
+      "Ruins"
+    ]
+  },
+  {
+    "id": "harira-ashhaven",
+    "name": "Harira Ashhaven",
+    "ancestry": "Halfling",
+    "role": "Innkeeper",
+    "group": "townsfolk",
+    "subtitle": "A welcome and a watchful eye",
+    "summary": "Warm and observant, Harira runs a comfortable inn where travelers find good food and a listener who remembers their names. Curly chestnut hair, a waistcoat and an apron give her an approachable air; little escapes her attention.",
+    "tableNote": "Offer food before questions. Notice small changes in a guest’s mood, and share useful information without embarrassing anyone.",
+    "adventureHook": "A guest vanished overnight, leaving a paid room, untouched breakfast and a coded note tucked beneath a plate.",
+    "locationIds": [],
+    "tags": [
+      "welcoming",
+      "observant",
+      "hospitality"
+    ],
+    "imageAlt": "Curly-haired innkeeper in a waistcoat and apron standing inside a warmly lit timber inn.",
+    "portraitKey": "harira-ashhaven",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town"
+    ]
+  },
+  {
+    "id": "norzor-stormfield",
+    "name": "Norzor Stormfield",
+    "ancestry": "Dwarf",
+    "role": "Blacksmith",
+    "group": "townsfolk",
+    "subtitle": "Pride in every rivet",
+    "summary": "Proud and dependable, Norzor judges work by how well it survives hard use. A braided auburn beard and a scarred leather apron frame a craftsperson whose promises are as solid as the tools leaving the forge.",
+    "tableNote": "Test the weight of anything handed over. Praise good workmanship plainly; grumble at shortcuts, then explain how to fix them.",
+    "adventureHook": "A shipment of ore contains a metal that will not cool. Norzor wants its source investigated before anyone uses it.",
+    "locationIds": [],
+    "tags": [
+      "dependable",
+      "craftsmanship",
+      "proud"
+    ],
+    "imageAlt": "Auburn-bearded blacksmith in a leather work apron beside an anvil and glowing forge.",
+    "portraitKey": "norzor-stormfield",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town"
+    ]
+  },
+  {
+    "id": "aretha-frostcrest",
+    "name": "Aretha Frostcrest",
+    "ancestry": "Elf",
+    "role": "Scholar",
+    "group": "townsfolk",
+    "subtitle": "One more unanswered question",
+    "summary": "Curious and easily distracted, Aretha follows intriguing details even when a conversation has moved on. Blue-gray robes, ink-stained fingers and a worn book reveal a scholar more interested in discoveries than appearances.",
+    "tableNote": "Interrupt yourself with a new connection, mark a page with whatever is nearby, and become sharply focused when evidence appears.",
+    "adventureHook": "A marginal note in an old book describes a room missing from every surviving map of a ruined observatory.",
+    "locationIds": [],
+    "tags": [
+      "curious",
+      "research",
+      "distractible"
+    ],
+    "imageAlt": "Dark-haired elven scholar in blue-gray robes holding a worn book in a sunlit library.",
+    "portraitKey": "aretha-frostcrest",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town",
+      "Ruins"
+    ]
+  },
+  {
+    "id": "sergorn-wolffall",
+    "name": "Sergorn Wolffall",
+    "ancestry": "Human",
+    "role": "Wilderness guide",
+    "group": "adventurers",
+    "subtitle": "The steady pathfinder",
+    "summary": "Quiet and reliable, Sergorn knows when to keep moving and when the woods are asking travelers to stop. An olive cloak, worn leather gear and an attentive expression suit a guide who earns trust through careful preparation.",
+    "tableNote": "Listen before answering. Point out tracks and weather changes with few words; check everyone’s gear without making a fuss.",
+    "adventureHook": "Fresh tracks circle a remote camp but never approach or leave it. Sergorn needs companions to find out what is watching.",
+    "locationIds": [],
+    "tags": [
+      "reliable",
+      "tracking",
+      "quiet"
+    ],
+    "imageAlt": "Wilderness guide in an olive cloak and worn leather gear with a walking staff against forested mountains.",
+    "portraitKey": "sergorn-wolffall",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Wilderness"
+    ]
+  },
+  {
+    "id": "elmir-valebrook",
+    "name": "Elmir Valebrook",
+    "ancestry": "Gnome",
+    "role": "Merchant",
+    "group": "townsfolk",
+    "subtitle": "A fair measure and a better story",
+    "summary": "Cheerful and persuasive, Elmir can make a humble purchase feel like a lucky discovery. Copper curls, a plum coat and a small brass balance scale accompany a merchant who takes pride in finding the right goods for the right buyer.",
+    "tableNote": "Ask what the customer needs before naming a price. Tell a short story about each item, and weigh goods with deliberate care.",
+    "adventureHook": "A consignment arrived with one sealed parcel that appears on no invoice. Someone is offering far too much for it.",
+    "locationIds": [],
+    "tags": [
+      "persuasive",
+      "trade",
+      "cheerful"
+    ],
+    "imageAlt": "Copper-curled merchant in a plum coat holding a small brass balance scale at an outdoor market.",
+    "portraitKey": "elmir-valebrook",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town"
+    ]
+  },
+  {
+    "id": "harthos-ravenmoor",
+    "name": "Harthos Ravenmoor",
+    "ancestry": "Orc",
+    "role": "Ferryman",
+    "group": "townsfolk",
+    "subtitle": "Patient keeper of the crossing",
+    "summary": "Patient and practical, Harthos carries people across the river with steady hands and little ceremony. Weathered clothing and a wooden ferry pole reflect years spent reading currents and making room for one more traveler.",
+    "tableNote": "Allow comfortable silences. Check the river while talking, explain hazards matter-of-factly, and never rush a frightened passenger.",
+    "adventureHook": "The ferry keeps drifting toward a submerged stone arch against the current. Harthos wants someone to learn what lies below.",
+    "locationIds": [],
+    "tags": [
+      "patient",
+      "river crossing",
+      "practical"
+    ],
+    "imageAlt": "Orc ferryman in weathered clothing holding a wooden ferry pole beside a calm river.",
+    "portraitKey": "harthos-ravenmoor",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town",
+      "Wilderness"
+    ]
+  },
+  {
+    "id": "valaris-blackwhisper",
+    "name": "Valaris Blackwhisper",
+    "ancestry": "Human",
+    "role": "Gravedigger",
+    "group": "townsfolk",
+    "subtitle": "Discretion among the headstones",
+    "summary": "Respectful and discreet, Valaris tends graves with the same care given to the living who visit them. A simple hood, work gloves and a shovel identify someone trusted with difficult tasks and stories best left unspoken.",
+    "tableNote": "Lower your voice near mourners. Ask permission before touching keepsakes, and answer questions carefully without turning grief into gossip.",
+    "adventureHook": "A newly filled grave is neatly reopened each dawn, yet no tracks disturb the surrounding earth. Valaris asks for a quiet investigation.",
+    "locationIds": [],
+    "tags": [
+      "respectful",
+      "discreet",
+      "cemetery"
+    ],
+    "imageAlt": "Hooded gravedigger in work gloves holding a shovel among headstones and trees.",
+    "portraitKey": "valaris-blackwhisper",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town",
+      "Ruins"
+    ]
   }
 ]
