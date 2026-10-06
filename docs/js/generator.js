@@ -110,6 +110,7 @@ function resultSignature(value) { return JSON.stringify([value.name, value.locat
 function renderGenerator() {
   if (!generator.data || !generator.current) return;
   const current = generator.current;
+  document.querySelector('#generator-visual-preview').replaceChildren(generatedNpcVisual(current));
   document.querySelector('#generator-controls').hidden = false;
   document.querySelector('#generated-name').textContent = current.name;
   const fill = (selector, entries, value) => {
@@ -139,18 +140,19 @@ function renderCast(container, entries = sessionEntries()) {
   if (!entries.length) { const empty = document.createElement('p'); empty.className = 'empty-state'; empty.textContent = sessionEntries().length ? 'No session NPCs match those filters.' : 'Add an NPC to build tonight’s cast.'; container.append(empty); return; }
   entries.forEach(entry => {
     const card = document.createElement('article'); card.className = 'cast-entry';
-    if (container.id === 'character-grid' && entry.library) {
+    if (entry.library) {
       const character = state.characters.find(item => item.id === entry.id);
       const source = character && state.portraits[character.portraitKey];
       if (source) {
         const portrait = document.createElement('img');
-        portrait.className = 'session-portrait';
+        portrait.className = container.id === 'character-grid' ? 'session-portrait' : 'cast-portrait';
         portrait.classList.toggle('portrait-contain', character.portraitFit === 'contain'); portrait.src = source;
         portrait.alt = character.imageAlt; portrait.loading = 'lazy';
         portrait.addEventListener('error', () => portrait.remove(), { once: true });
         card.append(portrait);
       }
     }
+    if (!entry.library) card.append(generatedNpcVisual(entry));
     const heading = document.createElement('h3');
     if (entry.library) { const open = document.createElement('button'); open.type = 'button'; open.className = 'cast-profile'; open.textContent = entry.name; open.onclick = () => openDetail(state.characters.find(character => character.id === entry.id)); heading.append(open); }
     else heading.textContent = entry.name;

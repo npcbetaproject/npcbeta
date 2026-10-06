@@ -10,7 +10,7 @@ async function setup(storage=seed,failure){
  for(const[k,v]of Object.entries(storage))w.localStorage.setItem(k,v);
  if(failure==='storage'){w.Storage.prototype.setItem=()=>{throw Error('quota')};}
  if(failure==='unavailable'){w.Storage.prototype.getItem=()=>{throw Error('blocked')};w.Storage.prototype.setItem=()=>{throw Error('blocked')};}
- w.eval(['generator','locations','app'].map(file=>fs.readFileSync('docs/js/'+file+'.js','utf8')).join('\n')+'\nwindow.test={locationLibrary,validateLocationData,visibleLocations,clearLocationFilters,addSessionLocation,renderSessionLocations,safeLocationImage,setView,ensureLocations,ensureGenerator,generator,state,sessionEntries};');
+ w.eval(['generator','locations','generated-visuals','app'].map(file=>fs.readFileSync('docs/js/'+file+'.js','utf8')).join('\n')+'\nwindow.test={locationLibrary,validateLocationData,visibleLocations,clearLocationFilters,addSessionLocation,renderSessionLocations,safeLocationImage,setView,ensureLocations,ensureGenerator,generator,state,sessionEntries};');
  await new Promise(r=>setTimeout(r,10));w.test.setView('locations');await w.test.ensureLocations();return dom;
 }
 (async()=>{

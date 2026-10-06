@@ -30,6 +30,7 @@ async function ensureLocations() {
       locationLibrary.templates = templates; locationLibrary.labels = labels;
       renderLocationFilters(); renderLocations();
       if (state.view === "session") renderSessionLocations();
+      refreshNpcVisuals();
     } catch { locationLibrary.error = true; renderLocations(); }
     finally { locationLibrary.loading = null; }
   })();
