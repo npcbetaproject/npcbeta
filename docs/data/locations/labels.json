@@ -1,0 +1,14 @@
+{
+  "settings": {
+    "village": "Village",
+    "town": "Town",
+    "city": "City",
+    "wilderness": "Wilderness",
+    "underground": "Underground"
+  },
+  "conditions": {
+    "maintained": "Maintained",
+    "abandoned": "Abandoned",
+    "ruined": "Ruined"
+  }
+}

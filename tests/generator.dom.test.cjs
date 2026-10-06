@@ -10,7 +10,7 @@ async function setup(storage=initialStorage, failure){
  w.scrollTo=()=>{};w.fetch=async url=>({ok: !(failure==='data'&&url.includes('generator')),json:async()=>JSON.parse(fs.readFileSync('docs/'+url,'utf8'))});
  for(const [key,value]of Object.entries(storage))w.localStorage.setItem(key,value);
  if(failure==='storage'){w.Storage.prototype.getItem=()=>{throw Error('blocked')};w.Storage.prototype.setItem=()=>{throw Error('quota')};}
- w.eval(fs.readFileSync('docs/js/generator.js','utf8')+'\n'+fs.readFileSync('docs/js/app.js','utf8')+'\nwindow.test={generator,state,chooseDifferent,rollGenerator,supportedResult,validateGeneratorData,setView,ensureGenerator,sessionEntries,visibleSessionEntries,copyName,writeStorage};');
+ w.eval(fs.readFileSync('docs/js/generator.js','utf8')+'\n'+fs.readFileSync('docs/js/locations.js','utf8')+'\n'+fs.readFileSync('docs/js/app.js','utf8')+'\nwindow.test={generator,state,chooseDifferent,rollGenerator,supportedResult,validateGeneratorData,setView,ensureGenerator,sessionEntries,visibleSessionEntries,copyName,writeStorage};');
  await new Promise(r=>setTimeout(r,10)); w.test.setView('generator');await w.test.ensureGenerator();return dom;
 }
 (async()=>{

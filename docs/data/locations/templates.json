@@ -1,0 +1,452 @@
+[
+  {
+    "id": "inn",
+    "name": "Inn",
+    "description": "A business offering rooms for travelers, usually with meals and a common room.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "tavern",
+    "name": "Tavern",
+    "description": "A place serving drinks and often food, primarily for socializing. It does not necessarily offer lodging.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "general-store",
+    "name": "General Store",
+    "description": "A shop selling everyday supplies such as rope, lanterns, soap, sacks and travel provisions.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "blacksmiths-forge",
+    "name": "Blacksmith’s Forge",
+    "description": "A workshop where metal is heated and shaped into tools, nails, horseshoes and other goods. Weapons and armor may require a specialist.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "apothecary",
+    "name": "Apothecary",
+    "description": "A shop preparing and selling medicinal herbs, remedies and ointments. Magical potions may be available in some settings.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "market-square",
+    "name": "Market Square",
+    "description": "An open public area where vendors sell goods from stalls or carts, also used for announcements and gatherings.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "chapel",
+    "name": "Chapel",
+    "description": "A small place of worship serving a local community, with an altar and space for ceremonies.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "watchhouse",
+    "name": "Watchhouse",
+    "description": "A base for local guards where residents report crimes. It may include offices, equipment storage and holding cells.",
+    "settings": [
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "private-residence",
+    "name": "Private Residence",
+    "description": "Someone’s home, ranging from a modest cottage to a wealthy townhouse, with rooms reflecting the occupants’ daily lives.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "stables",
+    "name": "Stables",
+    "description": "A building housing riding and pack animals. Staff may provide feed, boarding, grooming and mounts for hire.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "docks-ferry-landing",
+    "name": "Docks / Ferry Landing",
+    "description": "A waterside place where boats load passengers and goods. Docks hold moored vessels; ferry landings serve crossings.",
+    "settings": [
+      "village",
+      "town",
+      "city",
+      "wilderness"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "roadside-campsite",
+    "name": "Roadside Campsite",
+    "description": "A stopping place beside a travel route where people pitch tents, rest and cook.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": null,
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "river-ford",
+    "name": "River Ford",
+    "description": "A shallow stretch of river where people and animals cross without a bridge. Rain can make it dangerous.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": null,
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "forest-clearing",
+    "name": "Forest Clearing",
+    "description": "An open area surrounded by trees, suitable for resting, camping or meeting.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": null,
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "hunters-cabin",
+    "name": "Hunter’s Cabin",
+    "description": "A small dwelling used by a hunter or trapper, usually containing a bed, fireplace, tools and supplies.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "rock-shelter",
+    "name": "Rock Shelter",
+    "description": "A space beneath an overhanging rock or cliff that offers partial protection from weather.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": null,
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "marsh-boardwalk",
+    "name": "Marsh Boardwalk",
+    "description": "A raised wooden walkway across wet ground, allowing travelers to pass without sinking into the marsh.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "mountain-trail",
+    "name": "Mountain Trail",
+    "description": "A walking route through steep terrain, often narrow and uneven, where travelers may move single file.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": null,
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "lakeshore",
+    "name": "Lakeshore",
+    "description": "The edge of a lake, with possible beaches, reeds, fishing spots and boat landings.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": null,
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "waterfall-pool",
+    "name": "Waterfall Pool",
+    "description": "A pool beneath falling water, surrounded by slippery rocks and loud rushing water.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": null,
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "animal-den",
+    "name": "Animal Den",
+    "description": "A sheltered place where an animal sleeps or raises its young, such as a burrow, cave or hollow beneath roots.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": null,
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "abandoned-logging-camp",
+    "name": "Abandoned Logging Camp",
+    "description": "A former base for timber workers, with empty huts, tool sheds, stacked logs and hauling tracks.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": "abandoned",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "ravine-crossing",
+    "name": "Ravine Crossing",
+    "description": "A place to cross a deep, narrow gap using a bridge, fallen tree or narrow ledge.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": null,
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "overgrown-homestead",
+    "name": "Overgrown Homestead",
+    "description": "A deserted rural home with a cottage, well, garden or barn overtaken by vegetation and partly collapsed.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": "ruined",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "gatehouse",
+    "name": "Gatehouse",
+    "description": "A fortified entrance where guards control access through gates, sometimes with a heavy sliding grille called a portcullis.",
+    "settings": [
+      "town",
+      "city",
+      "wilderness"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "courtyard",
+    "name": "Courtyard",
+    "description": "An outdoor space enclosed by walls or buildings, used for deliveries, daily work and access to nearby rooms.",
+    "settings": [
+      "town",
+      "city",
+      "wilderness"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "great-hall",
+    "name": "Great Hall",
+    "description": "A large room for meals, gatherings and receiving visitors, where a lord or commander may conduct business.",
+    "settings": [
+      "town",
+      "city",
+      "wilderness"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "kitchen-and-pantry",
+    "name": "Kitchen and Pantry",
+    "description": "Rooms for preparing meals and storing food, utensils and ingredients.",
+    "settings": [
+      "village",
+      "town",
+      "city",
+      "wilderness",
+      "underground"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "barracks",
+    "name": "Barracks",
+    "description": "Shared accommodation for soldiers or guards, with beds, personal storage and equipment.",
+    "settings": [
+      "town",
+      "city",
+      "wilderness",
+      "underground"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "armory",
+    "name": "Armory",
+    "description": "A secure room storing weapons, armor and military supplies, with controlled access.",
+    "settings": [
+      "town",
+      "city",
+      "wilderness",
+      "underground"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "storeroom",
+    "name": "Storeroom",
+    "description": "A room holding supplies such as oil, rope, tools and provisions, often packed with shelves, crates and barrels.",
+    "settings": [
+      "village",
+      "town",
+      "city",
+      "wilderness",
+      "underground"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "guardroom",
+    "name": "Guardroom",
+    "description": "A duty station where guards wait and monitor a nearby entrance or passage.",
+    "settings": [
+      "town",
+      "city",
+      "wilderness",
+      "underground"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "prison-cells",
+    "name": "Prison Cells",
+    "description": "Small locked rooms for captives, usually reached through a guarded corridor, with basic furnishings.",
+    "settings": [
+      "town",
+      "city",
+      "wilderness",
+      "underground"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "servants-passage",
+    "name": "Servants’ Passage",
+    "description": "A secondary corridor or stairway allowing household staff to move between working rooms and living quarters.",
+    "settings": [
+      "town",
+      "city",
+      "wilderness",
+      "underground"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "cistern-chamber",
+    "name": "Cistern Chamber",
+    "description": "A chamber containing a tank or reservoir of stored water to supply the building.",
+    "settings": [
+      "town",
+      "city",
+      "wilderness",
+      "underground"
+    ],
+    "condition": "maintained",
+    "image": null,
+    "imageAlt": ""
+  },
+  {
+    "id": "burial-vault",
+    "name": "Burial Vault",
+    "description": "An enclosed room, usually underground, containing coffins or tombs belonging to a family or former occupants.",
+    "settings": [
+      "underground"
+    ],
+    "condition": null,
+    "image": null,
+    "imageAlt": ""
+  }
+]
