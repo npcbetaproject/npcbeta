@@ -136,3 +136,23 @@ on desktop/mobile, with ivory space where aspect ratios differ. The zoom-on-hove
 is disabled for these images. Original NPC portraits and IDs are retained.
 Each new record includes ancestry, profession (`role`), summary, portrayal note,
 adventure hook, descriptive alt text, tags and location-fit filters.
+
+## Generated NPC visuals
+
+`docs/js/generated-visuals.js` supplies one renderer for the generator preview,
+Tonight’s cast and Session. `GENERATED_LOCATION_TEMPLATES` explicitly maps stable
+generator setting IDs to location-template IDs; `null` means no equivalent.
+Village/city street use Market Square as representative settlement artwork;
+monastery uses Chapel. Art paths come from template `image` metadata and retain
+safe relative-path validation. Missing/broken art uses a parchment/location symbol.
+
+`PROFESSION_ICON_ROLES` shares existing library role SVGs across stable profession
+IDs; `EXTRA_PROFESSION_ICONS` adds trade, nautical and music symbols. Unmapped IDs
+use a generic person. The badge stays crisp while only the background is muted.
+Images/icons are decorative because adjacent text states both fields. Existing
+stored records keep their IDs/labels and need no migration; no image data is saved.
+Library NPCs retain portraits in both cast views. Rerolls update the current preview;
+saved cast entries keep the location/profession they had when added to Session.
+
+Run `node tests/generated-visuals.dom.test.cjs` for mapping, reroll, saved-record,
+shared-visual and fallback checks.
