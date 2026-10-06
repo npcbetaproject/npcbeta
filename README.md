@@ -100,18 +100,28 @@ images fall back automatically. Image bytes are never stored in localStorage.
 Run `node tests/locations.dom.test.cjs` for location integration checks and
 `node tests/locations.test.cjs` for browser checks with the preview server running.
 
-## NPC Beta Pro
+## Support Us
 
-Open **Pro** in the existing navigation. The page presents planned features only;
-there is no checkout, authentication or premium access enforcement.
+Open **Support Us** in the shared desktop/mobile navigation. Support helps fund
+NPCs, locations and tools that remain free for every Game Master. All six
+additions are labeled Planned and are not yet available.
 
-Configure `supportUrl` in `docs/js/pro.js` with the real HTTPS patron support URL.
-Both support states then become **Become a Patron** links using that one value.
-An empty or non-HTTPS value keeps **Patron support coming soon**, with no link.
+Configure the single `supportUrl` in `docs/js/pro.js` with your real HTTPS Patreon
+URL. Both actions become **Become a Patron** links to that URL. Empty or
+non-HTTPS values display **Patreon support coming soon**, without a placeholder
+link. No account or URL is supplied by default.
 
-The hero reuses the embedded Cassian Holt portrait. For a higher-resolution hero,
-add an image such as `docs/images/characters/pro-hero.webp` and set `heroImage` in
-`docs/js/pro.js` to `images/characters/pro-hero.webp` (relative to `docs/index.html`).
-Update the image alt text in `docs/index.html` if the artwork changes. A failed or
-unavailable image displays the ivory/burgundy decorative fallback; page text and
-the illustrative dialogue caption remain real HTML.
+The hero reuses the embedded Cassian Holt portrait. Set `heroImage` in
+`docs/js/pro.js` to a site-relative image such as
+`images/characters/pro-hero.webp` to replace it, and update the alt text in
+`docs/index.html`. Failed images show the decorative fallback.
+
+`#support` opens Support Us directly; the legacy `#pro` route and `setView("pro")`
+remain compatible. Internal pro-prefixed CSS/DOM names are retained for style
+compatibility, with no Pro messaging displayed to visitors. Navigation order is
+Library, Locations, Name Generator, Saved, Session, Support Us in both menus.
+Browser storage keys and saved/session data formats remain unchanged.
+
+Run `node tests/pro.dom.test.cjs` for support integration checks and
+`node tests/pro.test.cjs` with the local server on port 8000 for browser layout,
+keyboard, scroll, storage and overflow checks at five viewport widths.

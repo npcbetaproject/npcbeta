@@ -46,15 +46,17 @@ function visibleCharacters() {
 }
 function render() {
   renderCompanion();
-  document.querySelector(".library").hidden = ["generator", "locations", "pro"].includes(state.view);
+  document.title = state.view === "support" ? "Support NPC Beta — NPC Beta" : "NPC Beta — " + ({library:"Character library", locations:"Locations", generator:"Name Generator", saved:"Saved", session:"Session"}[state.view] || "Character library");
+  document.querySelector('meta[name="description"]').content = state.view === "support" ? "Patreon support helps keep NPC Beta’s NPCs, locations and tools free for every Game Master." : "Find memorable, ready-to-play fantasy characters for your next session.";
+  document.querySelector(".library").hidden = ["generator", "locations", "support"].includes(state.view);
   document.querySelector("#locations-view").hidden = state.view !== "locations";
   document.querySelector("#session-locations").hidden = state.view !== "session";
   document.querySelector("#session-npcs-title").hidden = state.view !== "session";
   document.querySelector("#generator-view").hidden = state.view !== "generator";
-  document.querySelector("#pro-view").hidden = state.view !== "pro";
+  document.querySelector("#pro-view").hidden = state.view !== "support";
   if (state.view === "generator") ensureGenerator();
   const characters = visibleCharacters();
-  const labels = { library: "NPC Library", saved: "Saved NPCs", session: "Session", generator: "Quick Name Generator", locations: "Locations", pro: "NPC Beta Pro" };
+  const labels = { library: "NPC Library", saved: "Saved NPCs", session: "Session", generator: "Quick Name Generator", locations: "Locations", support: "Support NPC Beta" };
   elements.title.textContent = labels[state.view];
   elements.results.textContent = `${characters.length} ${characters.length === 1 ? "character" : "characters"}${state.view === "session" ? " selected" : ""}`;
   document.querySelectorAll("[data-view]").forEach((button) => button.classList.toggle("active", button.dataset.view === state.view));
@@ -64,7 +66,7 @@ function render() {
   });
   elements.savedCounts.forEach((count) => { count.textContent = state.saved.size || ""; count.setAttribute("aria-label", `${state.saved.size} saved`); });
   elements.sessionCounts.forEach((count) => { count.textContent = sessionEntries().length || ""; count.setAttribute("aria-label", `${sessionEntries().length} selected`); });
-  if (state.view === "pro") return;
+  if (state.view === "support") return;
   if (state.view === "locations") { ensureLocations(); return; }
   if (state.view === "session") {
     elements.grid.innerHTML = "";
@@ -106,7 +108,9 @@ function openDetail(character) {
   updateDetailActions(); elements.detail.classList.add("open"); elements.detail.setAttribute("aria-hidden", "false"); document.body.classList.add("panel-open"); elements.detail.querySelector(".back-button").focus();
 }
 function closeDetail() { elements.detail.classList.remove("open"); elements.detail.setAttribute("aria-hidden", "true"); document.body.classList.remove("panel-open"); }
-function setView(view) { state.view = view; closeDetail(); render(); window.scrollTo({ top: 0, behavior: "smooth" }); }
+const APP_VIEWS = ["library", "locations", "generator", "saved", "session", "support"];
+function routeView(value) { return value === "pro" ? "support" : APP_VIEWS.includes(value) ? value : null; }
+function setView(view) { view = routeView(view); if (!view) return; state.view = view; history.replaceState(null, "", "#" + view); closeDetail(); render(); window.scrollTo({ top: 0, behavior: "smooth" }); }
 
 elements.search.addEventListener("input", ({ target }) => { state.query = target.value.trim(); render(); });
 elements.sort.addEventListener("change", ({ target }) => { state.sort = target.value; render(); });
@@ -123,3 +127,7 @@ elements.detailSave.addEventListener("click", () => toggleSaved(state.activeChar
 elements.sessionButton.addEventListener("click", () => { const id = state.activeCharacter.id; state.session.has(id) ? state.session.delete(id) : state.session.add(id); saveState(); updateDetailActions(); render(); });
 document.addEventListener("keydown", ({ key }) => { if (key === "Escape") closeDetail(); });
 fetch("data/characters/index.json").then((response) => { if (!response.ok) throw new Error("Could not load characters"); return response.json(); }).then((characters) => { state.characters = characters; renderFilters(); render(); }).catch((error) => { elements.results.textContent = "The character library could not be loaded."; console.error(error); });
+
+// Keep legacy #pro links compatible while new navigation uses #support.
+state.view = routeView(location.hash.slice(1)) || "library";
+window.addEventListener("hashchange", () => { const view = routeView(location.hash.slice(1)); if (view) setView(view); });
