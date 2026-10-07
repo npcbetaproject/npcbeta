@@ -34,7 +34,7 @@ all.click();select('merchants-crafters');select('faith-healing');assert.equal(id
 select('merchants-crafters',false);select('faith-healing',false);assert(all.checked);assert.equal(t.visibleCharacters().length,characters.length);assert.equal(t.visibleCharacters()[0].id,first);
 select('merchants-crafters');const search=d.querySelector('#character-search');search.value='blacksmith';search.dispatchEvent(new w.Event('input'));assert.deepEqual(ids(),['norzor-stormfield']);assert.match(d.querySelector('#results-note').textContent,/1 character/);assert.equal(d.querySelector('.role-line span').textContent,'Blacksmith');
 t.openDetail(t.state.characters.find(x=>x.id==='norzor-stormfield'));assert.match(d.querySelector('.detail-meta').textContent,/Blacksmith/);
-const loc=d.querySelector('#location-filters input[value="Wilderness"]');loc.checked=true;loc.dispatchEvent(new w.Event('change',{bubbles:true}));assert.equal(t.visibleCharacters().length,0);loc.checked=false;loc.dispatchEvent(new w.Event('change',{bubbles:true}));
+const loc=d.querySelector('#location-filters input[value="wilderness"]');loc.checked=true;loc.dispatchEvent(new w.Event('change',{bubbles:true}));assert.equal(t.visibleCharacters().length,0);loc.checked=false;loc.dispatchEvent(new w.Event('change',{bubbles:true}));
 search.value='';search.dispatchEvent(new w.Event('input'));select('merchants-crafters',false);select('scholars-magic');t.setView('saved');assert.deepEqual(ids(),['seren-dawnsong']);
 t.setView('session');assert.deepEqual(Array.from(t.visibleSessionEntries(),x=>x.id),['seren-dawnsong']);
 all.click();select('merchants-crafters');assert.deepEqual(Array.from(t.visibleSessionEntries(),x=>x.id).sort(),['generated-blacksmith','mira-fen']);

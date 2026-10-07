@@ -52,3 +52,18 @@ Use the eight category IDs and labels in `docs/data/characters/role-categories.j
 For example, an Apothecary may use `["merchants-crafters", "faith-healing"]`, while a knight who adventures may use `["adventurers", "military-authority"]`. Every future NPC pack must include at least one valid category per NPC. Validate uniqueness and membership before publication. Keep exact professions in `role` so they remain searchable.
 
 The same file contains `generatorProfessionCategoryIds` solely to classify generated Session entries at display time. This does not change generator options or stored records; when adding a new generator profession later, provide its category mapping too.
+
+## NPC location fit categories
+
+Every future NPC pack must include a nonempty array of unique `locationFitCategoryIds` from `docs/data/characters/location-fit-categories.json`. Its ordered `categories` list owns the IDs and labels. All Locations means no restriction and must not be stored as an ID. These describe plausible encounters, not permanent residence; assign multiple categories only when supported by profession, description or adventure hook.
+
+- `settlements`: townsfolk, merchants, innkeepers and officials.
+- `roads-travel`: couriers, caravan guards, pilgrims and travelling adventurers.
+- `wilderness`: hunters, guides, hermits and wilderness explorers.
+- `dungeons-ruins`: treasure hunters, dungeon explorers, cultists and captives.
+- `castles-estates`: nobles, household servants, court advisors and knights.
+- `waterfront`: sailors, ferrymen, dockworkers and maritime smugglers.
+
+Cassian Holt uses `["settlements", "roads-travel", "dungeons-ruins"]`. Preserve `locationIds` for specific published location references and `locationFit` for existing descriptive Session labels. Keep all NPC IDs and `roleCategoryIds` unchanged. Validate category membership and uniqueness before publication. Avoid assigning every category based on theoretical possibilities.
+
+`generatorLocationCategoryIds` maps existing Name Generator location IDs solely for filtering generated Session entries at display time. It does not alter generator options or browser records. Add a mapping if future work introduces a generator location.

@@ -179,3 +179,11 @@ Generated Session NPCs are classified by the same configuration’s profession-I
 Run `node tests/role-categories.dom.test.cjs` for category validation, overlap, All Roles, combined search/location filters, Saved/Session compatibility, generated Session professions and sort preservation.
 
 With the preview server running on port 8000, `node tests/role-categories.test.cjs` checks category controls and overflow at desktop and mobile widths.
+
+## NPC location fit categories
+
+Library, Saved and Session share the six ordered categories in `docs/data/characters/location-fit-categories.json`, initially selecting All Locations. Library NPCs use `locationFitCategoryIds`; multiple selections use OR, combined with Role and search using AND. All Locations removes only the location restriction, while Clear filters resets both groups. Existing descriptive `locationFit`, specific `locationIds`, IDs, storage and default Most recent sorting are preserved. The Locations page filters and Name Generator options are unchanged.
+
+Generated Session records use the configuration’s location-ID mapping without a migration; unknown legacy IDs remain visible under All Locations. Future NPC packs must include valid `locationFitCategoryIds`; see `planning/content-guidelines.md`.
+
+Run `node tests/location-fit-categories.dom.test.cjs` for assignment validation, overlap, combined filters, Saved/Session, reset and storage checks. With Chromium installed and the repository served at localhost:8000, run `node tests/location-fit-categories.test.cjs` for rendered checks at five desktop/mobile widths.
