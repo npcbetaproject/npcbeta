@@ -20,7 +20,10 @@
       "Ruins"
     ],
     "portraitFit": "contain",
-    "publishedAt": "2026-10-02T18:37:09-04:00"
+    "publishedAt": "2026-10-02T18:37:09-04:00",
+    "roleCategoryIds": [
+      "adventurers"
+    ]
   },
   {
     "id": "mira-fen",
@@ -43,7 +46,11 @@
       "Wilderness"
     ],
     "portraitFit": "contain",
-    "publishedAt": "2026-10-02T18:37:09-04:00"
+    "publishedAt": "2026-10-02T18:37:09-04:00",
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "faith-healing"
+    ]
   },
   {
     "id": "brother-alden",
@@ -66,7 +73,10 @@
       "Ruins"
     ],
     "portraitFit": "contain",
-    "publishedAt": "2026-10-02T18:37:09-04:00"
+    "publishedAt": "2026-10-02T18:37:09-04:00",
+    "roleCategoryIds": [
+      "faith-healing"
+    ]
   },
   {
     "id": "nessa-vale",
@@ -89,7 +99,10 @@
       "Wilderness"
     ],
     "portraitFit": "contain",
-    "publishedAt": "2026-10-02T18:37:09-04:00"
+    "publishedAt": "2026-10-02T18:37:09-04:00",
+    "roleCategoryIds": [
+      "underworld"
+    ]
   },
   {
     "id": "wenrin-duskshield",
@@ -114,7 +127,10 @@
       "Town",
       "Ruins"
     ],
-    "publishedAt": "2026-10-06T15:46:02-07:00"
+    "publishedAt": "2026-10-06T15:46:02-07:00",
+    "roleCategoryIds": [
+      "military-authority"
+    ]
   },
   {
     "id": "harira-ashhaven",
@@ -138,7 +154,10 @@
     "locationFit": [
       "Town"
     ],
-    "publishedAt": "2026-10-06T15:46:02-07:00"
+    "publishedAt": "2026-10-06T15:46:02-07:00",
+    "roleCategoryIds": [
+      "hospitality-entertainment"
+    ]
   },
   {
     "id": "norzor-stormfield",
@@ -162,7 +181,10 @@
     "locationFit": [
       "Town"
     ],
-    "publishedAt": "2026-10-06T15:46:02-07:00"
+    "publishedAt": "2026-10-06T15:46:02-07:00",
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ]
   },
   {
     "id": "aretha-frostcrest",
@@ -187,7 +209,10 @@
       "Town",
       "Ruins"
     ],
-    "publishedAt": "2026-10-06T15:46:02-07:00"
+    "publishedAt": "2026-10-06T15:46:02-07:00",
+    "roleCategoryIds": [
+      "scholars-magic"
+    ]
   },
   {
     "id": "sergorn-wolffall",
@@ -211,7 +236,11 @@
     "locationFit": [
       "Wilderness"
     ],
-    "publishedAt": "2026-10-06T15:46:02-07:00"
+    "publishedAt": "2026-10-06T15:46:02-07:00",
+    "roleCategoryIds": [
+      "adventurers",
+      "workers-services"
+    ]
   },
   {
     "id": "elmir-valebrook",
@@ -235,7 +264,10 @@
     "locationFit": [
       "Town"
     ],
-    "publishedAt": "2026-10-06T15:46:02-07:00"
+    "publishedAt": "2026-10-06T15:46:02-07:00",
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ]
   },
   {
     "id": "harthos-ravenmoor",
@@ -260,7 +292,10 @@
       "Town",
       "Wilderness"
     ],
-    "publishedAt": "2026-10-06T15:46:02-07:00"
+    "publishedAt": "2026-10-06T15:46:02-07:00",
+    "roleCategoryIds": [
+      "workers-services"
+    ]
   },
   {
     "id": "valaris-blackwhisper",
@@ -285,7 +320,10 @@
       "Town",
       "Ruins"
     ],
-    "publishedAt": "2026-10-06T15:46:02-07:00"
+    "publishedAt": "2026-10-06T15:46:02-07:00",
+    "roleCategoryIds": [
+      "workers-services"
+    ]
   },
   {
     "id": "kaelen-ashford",
@@ -310,7 +348,11 @@
       "Town",
       "Ruins"
     ],
-    "publishedAt": "2026-10-06T17:37:06-07:00"
+    "publishedAt": "2026-10-06T17:37:06-07:00",
+    "roleCategoryIds": [
+      "adventurers",
+      "military-authority"
+    ]
   },
   {
     "id": "seren-dawnsong",
@@ -335,7 +377,11 @@
       "Town",
       "Ruins"
     ],
-    "publishedAt": "2026-10-06T17:37:06-07:00"
+    "publishedAt": "2026-10-06T17:37:06-07:00",
+    "roleCategoryIds": [
+      "adventurers",
+      "scholars-magic"
+    ]
   },
   {
     "id": "rurik-stoneward",
@@ -360,7 +406,10 @@
       "Wilderness",
       "Ruins"
     ],
-    "publishedAt": "2026-10-06T17:37:06-07:00"
+    "publishedAt": "2026-10-06T17:37:06-07:00",
+    "roleCategoryIds": [
+      "adventurers"
+    ]
   },
   {
     "id": "nyra-valecrest",
@@ -385,6 +434,9 @@
       "Wilderness",
       "Town"
     ],
-    "publishedAt": "2026-10-06T17:37:06-07:00"
+    "publishedAt": "2026-10-06T17:37:06-07:00",
+    "roleCategoryIds": [
+      "adventurers"
+    ]
   }
 ]

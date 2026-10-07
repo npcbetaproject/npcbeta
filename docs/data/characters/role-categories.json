@@ -1,0 +1,338 @@
+{
+  "categories": [
+    {
+      "id": "adventurers",
+      "label": "Adventurers"
+    },
+    {
+      "id": "merchants-crafters",
+      "label": "Merchants & Crafters"
+    },
+    {
+      "id": "hospitality-entertainment",
+      "label": "Hospitality & Entertainment"
+    },
+    {
+      "id": "scholars-magic",
+      "label": "Scholars & Magic"
+    },
+    {
+      "id": "faith-healing",
+      "label": "Faith & Healing"
+    },
+    {
+      "id": "military-authority",
+      "label": "Military & Authority"
+    },
+    {
+      "id": "workers-services",
+      "label": "Workers & Services"
+    },
+    {
+      "id": "underworld",
+      "label": "Underworld"
+    }
+  ],
+  "generatorProfessionCategoryIds": {
+    "adventurer": [
+      "adventurers"
+    ],
+    "explorer": [
+      "adventurers"
+    ],
+    "treasure-hunter": [
+      "adventurers"
+    ],
+    "ranger": [
+      "adventurers",
+      "workers-services"
+    ],
+    "bounty-hunter": [
+      "adventurers"
+    ],
+    "scout": [
+      "adventurers",
+      "military-authority"
+    ],
+    "blacksmith": [
+      "merchants-crafters"
+    ],
+    "merchant": [
+      "merchants-crafters"
+    ],
+    "peddler": [
+      "merchants-crafters"
+    ],
+    "artisan": [
+      "merchants-crafters"
+    ],
+    "shipwright": [
+      "merchants-crafters"
+    ],
+    "carpenter": [
+      "merchants-crafters"
+    ],
+    "jeweler": [
+      "merchants-crafters"
+    ],
+    "leatherworker": [
+      "merchants-crafters"
+    ],
+    "potter": [
+      "merchants-crafters"
+    ],
+    "tinker": [
+      "merchants-crafters"
+    ],
+    "innkeeper": [
+      "hospitality-entertainment"
+    ],
+    "cook": [
+      "hospitality-entertainment"
+    ],
+    "server": [
+      "hospitality-entertainment"
+    ],
+    "brewer": [
+      "hospitality-entertainment"
+    ],
+    "musician": [
+      "hospitality-entertainment"
+    ],
+    "street-performer": [
+      "hospitality-entertainment"
+    ],
+    "acrobat": [
+      "hospitality-entertainment"
+    ],
+    "actor": [
+      "hospitality-entertainment"
+    ],
+    "scholar": [
+      "scholars-magic"
+    ],
+    "scribe": [
+      "scholars-magic"
+    ],
+    "librarian": [
+      "scholars-magic"
+    ],
+    "tutor": [
+      "scholars-magic"
+    ],
+    "researcher": [
+      "scholars-magic"
+    ],
+    "student": [
+      "scholars-magic"
+    ],
+    "mage": [
+      "scholars-magic"
+    ],
+    "alchemist": [
+      "merchants-crafters",
+      "scholars-magic"
+    ],
+    "enchanter": [
+      "scholars-magic"
+    ],
+    "diviner": [
+      "scholars-magic"
+    ],
+    "historian": [
+      "scholars-magic"
+    ],
+    "archaeologist": [
+      "adventurers",
+      "scholars-magic"
+    ],
+    "fortune-teller": [
+      "hospitality-entertainment",
+      "scholars-magic"
+    ],
+    "priest": [
+      "faith-healing"
+    ],
+    "acolyte": [
+      "faith-healing"
+    ],
+    "healer": [
+      "faith-healing"
+    ],
+    "pilgrim": [
+      "faith-healing"
+    ],
+    "monk": [
+      "faith-healing"
+    ],
+    "cultist": [
+      "faith-healing"
+    ],
+    "surgeon": [
+      "faith-healing"
+    ],
+    "guard": [
+      "military-authority"
+    ],
+    "soldier": [
+      "military-authority"
+    ],
+    "commander": [
+      "military-authority"
+    ],
+    "watch-captain": [
+      "military-authority"
+    ],
+    "jailer": [
+      "military-authority"
+    ],
+    "customs-officer": [
+      "military-authority"
+    ],
+    "quartermaster": [
+      "military-authority"
+    ],
+    "farmer": [
+      "workers-services"
+    ],
+    "shepherd": [
+      "workers-services"
+    ],
+    "courier": [
+      "workers-services"
+    ],
+    "laborer": [
+      "workers-services"
+    ],
+    "beggar": [
+      "workers-services"
+    ],
+    "porter": [
+      "workers-services"
+    ],
+    "sailor": [
+      "workers-services"
+    ],
+    "dockworker": [
+      "workers-services"
+    ],
+    "fisher": [
+      "workers-services"
+    ],
+    "captain": [
+      "workers-services"
+    ],
+    "navigator": [
+      "workers-services"
+    ],
+    "caretaker": [
+      "workers-services"
+    ],
+    "gardener": [
+      "workers-services"
+    ],
+    "steward": [
+      "workers-services"
+    ],
+    "servant": [
+      "workers-services"
+    ],
+    "bodyguard": [
+      "military-authority",
+      "workers-services"
+    ],
+    "stable-keeper": [
+      "workers-services"
+    ],
+    "messenger": [
+      "workers-services"
+    ],
+    "investigator": [
+      "workers-services"
+    ],
+    "clerk": [
+      "workers-services"
+    ],
+    "rancher": [
+      "workers-services"
+    ],
+    "beekeeper": [
+      "workers-services"
+    ],
+    "hunter": [
+      "workers-services"
+    ],
+    "trapper": [
+      "workers-services"
+    ],
+    "forester": [
+      "workers-services"
+    ],
+    "guide": [
+      "adventurers",
+      "workers-services"
+    ],
+    "hermit": [
+      "workers-services"
+    ],
+    "caravan-driver": [
+      "workers-services"
+    ],
+    "miner": [
+      "workers-services"
+    ],
+    "prospector": [
+      "workers-services"
+    ],
+    "foreman": [
+      "workers-services"
+    ],
+    "engineer": [
+      "workers-services"
+    ],
+    "mason": [
+      "workers-services"
+    ],
+    "apprentice": [
+      "workers-services"
+    ],
+    "gravedigger": [
+      "workers-services"
+    ],
+    "undertaker": [
+      "workers-services"
+    ],
+    "scavenger": [
+      "workers-services"
+    ],
+    "animal-handler": [
+      "workers-services"
+    ],
+    "thief": [
+      "underworld"
+    ],
+    "pickpocket": [
+      "underworld"
+    ],
+    "smuggler": [
+      "underworld"
+    ],
+    "pirate": [
+      "underworld"
+    ],
+    "bandit": [
+      "underworld"
+    ],
+    "grave-robber": [
+      "underworld"
+    ],
+    "mercenary": [
+      "adventurers",
+      "military-authority"
+    ],
+    "herbalist": [
+      "merchants-crafters",
+      "faith-healing"
+    ]
+  }
+}
