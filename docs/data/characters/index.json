@@ -18,7 +18,8 @@
     "locationFit": [
       "Town",
       "Ruins"
-    ]
+    ],
+    "portraitFit": "contain"
   },
   {
     "id": "mira-fen",
@@ -39,7 +40,8 @@
     "locationFit": [
       "Town",
       "Wilderness"
-    ]
+    ],
+    "portraitFit": "contain"
   },
   {
     "id": "brother-alden",
@@ -60,7 +62,8 @@
     "locationFit": [
       "Town",
       "Ruins"
-    ]
+    ],
+    "portraitFit": "contain"
   },
   {
     "id": "nessa-vale",
@@ -81,7 +84,8 @@
     "locationFit": [
       "Town",
       "Wilderness"
-    ]
+    ],
+    "portraitFit": "contain"
   },
   {
     "id": "wenrin-duskshield",

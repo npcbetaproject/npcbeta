@@ -156,3 +156,6 @@ saved cast entries keep the location/profession they had when added to Session.
 
 Run `node tests/generated-visuals.dom.test.cjs` for mapping, reroll, saved-record,
 shared-visual and fallback checks.
+
+The original four NPCs also use 960 × 960 external WebP portraits. All library
+portraits follow `project/npc-portrait-standard.md`, referenced by `AGENTS.md`.
