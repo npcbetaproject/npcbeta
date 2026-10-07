@@ -45,7 +45,9 @@ function generatedNpcVisual(entry) {
     image.addEventListener('error', () => image.remove(), { once: true }); background.append(image);
   }
   const badge = document.createElement('span'); badge.className = 'generated-profession-badge'; badge.innerHTML = professionBadgeIcon(entry.professionId);
-  visual.append(background, badge); return visual;
+  const silhouette = document.createElement('img');
+  silhouette.className = 'generated-npc-silhouette'; silhouette.src = 'images/generated-npc-silhouette.svg'; silhouette.alt = '';
+  visual.append(background, silhouette, badge); return visual;
 }
 function refreshNpcVisuals() {
   renderCast(document.querySelector('#cast-list'));
