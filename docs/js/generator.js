@@ -173,11 +173,19 @@ document.querySelector('#generator-location').addEventListener('change', event =
 document.querySelector('#generator-profession').addEventListener('change', event => rollGenerator('profession', event.target.value));
 document.querySelector('#copy-name').addEventListener('click', () => copyName(generator.current.name));
 document.querySelector('#undo-generator').addEventListener('click', () => { if (!generator.previous) return; generator.current = generator.previous; generator.previous = null; saveGenerator(); renderGenerator(); announce('Last change undone.'); });
-document.querySelector('#add-generated').addEventListener('click', () => {
+function addGeneratedToSession() {
   const current = generator.current;
   if (!current || generator.records.some(record => resultSignature(record) === resultSignature(current))) return;
   const location = generator.data.locations.find(item => item.id === current.locationId);
   const profession = generator.data.professions.find(item => item.id === current.professionId);
   generator.records.push({ ...current, id: `generated-${crypto.randomUUID()}`, locationLabel: location.label, professionLabel: profession.label, createdAt: new Date().toISOString() });
   writeStorage(GENERATOR_KEYS.records, generator.records); render(); announce('Added to session');
+}
+document.querySelector('#add-generated').addEventListener('click', addGeneratedToSession);
+document.querySelector('#add-roll-next').addEventListener('click', () => {
+  if (!generator.data || !generator.current) return;
+  const name = generator.current.name;
+  addGeneratedToSession();
+  rollGenerator('all');
+  announce(`${name} is in Session. Next NPC generated.`);
 });
