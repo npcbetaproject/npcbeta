@@ -74,15 +74,16 @@
       <section id="generator-view" class="generator-layout" aria-labelledby="generator-title" hidden>
         <div class="generator-card">
           <h1 id="generator-title">Quick Name Generator</h1>
-          <p class="generator-intro">A new face for your next encounter.</p>
           <p id="generator-error" role="alert" hidden></p>
           <div id="generator-controls" hidden>
-            <div id="generator-visual-preview"></div>
-            <div class="name-result"><h2 id="generated-name"></h2><button type="button" data-roll="name" aria-label="Reroll name">↻</button><button type="button" id="copy-name">Copy</button></div>
-            <div class="generator-field"><label for="generator-location">Location</label><div><select id="generator-location" aria-describedby="location-helper"></select><button type="button" data-roll="location" aria-label="Reroll location">↻</button></div></div>
-            <p id="location-helper" class="field-helper">Changing location also rolls a profession.</p>
+            <div class="generator-result-row"><div id="generator-visual-preview"></div>
+            <div class="name-result"><h2 id="generated-name"></h2><button type="button" data-roll="name" aria-label="Reroll name">↻</button><button type="button" id="copy-name">Copy</button></div></div>
+            <div class="generator-fields">
+            <div class="generator-field"><label for="generator-location">Location <span class="location-help" tabindex="0" aria-label="Changing location also rolls a profession." title="Changing location also rolls a profession.">ⓘ<span role="tooltip">Changing location also rolls a profession.</span></span></label><div><select id="generator-location" aria-describedby="location-helper"></select><button type="button" data-roll="location" aria-label="Reroll location">↻</button></div></div>
+            <p id="location-helper" class="visually-hidden">Changing location also rolls a profession.</p>
             <div class="generator-field"><label for="generator-profession">Profession</label><div><select id="generator-profession"></select><button type="button" data-roll="profession" aria-label="Reroll profession">↻</button></div></div>
-            <div class="generator-actions"><button type="button" data-roll="all" class="primary-action">Roll All</button><button type="button" id="add-generated">Add to Session</button><button type="button" id="undo-generator" disabled>Undo last roll</button></div>
+            </div>
+            <div class="generator-actions"><button type="button" data-roll="all">Roll All</button><button type="button" id="add-generated">Add to Session</button><button type="button" id="add-roll-next" class="primary-action">Add &amp; Roll Next</button><button type="button" id="undo-generator" aria-label="Undo last roll" disabled>Undo</button></div>
           </div>
         </div>
         <aside class="tonight-cast" aria-labelledby="cast-title"><div class="cast-heading"><h2 id="cast-title">Tonight’s cast</h2><span id="cast-count"></span></div><div id="cast-list"></div></aside>
