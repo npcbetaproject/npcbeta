@@ -187,3 +187,9 @@ Library, Saved and Session share the six ordered categories in `docs/data/charac
 Generated Session records use the configuration’s location-ID mapping without a migration; unknown legacy IDs remain visible under All Locations. Future NPC packs must include valid `locationFitCategoryIds`; see `planning/content-guidelines.md`.
 
 Run `node tests/location-fit-categories.dom.test.cjs` for assignment validation, overlap, combined filters, Saved/Session, reset and storage checks. With Chromium installed and the repository served at localhost:8000, run `node tests/location-fit-categories.test.cjs` for rendered checks at five desktop/mobile widths.
+
+## Complete Name Generator location imagery
+
+Wizard’s Tower, Ship, Mine / Quarry, Academy / Library and Traveling Carnival now have illustrated location templates, completing background coverage for all 23 existing Name Generator locations. The Locations library contains 44 illustrated templates. Generator previews and generated Cast/Session cards reuse the same location files beneath the silhouette. Existing generator choices, profession mappings, location filters and stored records are unchanged.
+
+Descriptions, setting assignments and final image prompts are documented in `project/location-packs/missing-generator-locations.md`. Validate the five new templates and legacy generated records with `node tests/missing-generator-locations.dom.test.cjs`. Run `node tests/missing-generator-locations.test.cjs` with Chromium and localhost:8000, or use the supported `NPC_TEST_CHROME` and `NPC_TEST_LOCAL_FILES=1` overrides for an alternate executable and local-file routing.

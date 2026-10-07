@@ -1,13 +1,13 @@
-// Generator settings differ from location-template IDs. Null means no equivalent.
+// Generator settings differ from location-template IDs; each has a reusable location image.
 const GENERATED_LOCATION_TEMPLATES = Object.freeze({
   village: 'market-square', 'city-street': 'market-square', 'tavern-inn': 'tavern',
-  marketplace: 'market-square', 'harbor-docks': 'docks-ferry-landing', ship: null,
+  marketplace: 'market-square', 'harbor-docks': 'docks-ferry-landing', ship: 'ship',
   'church-shrine': 'chapel', monastery: 'chapel', 'noble-estate': 'private-residence',
   'castle-keep': 'gatehouse', 'watchhouse-prison': 'watchhouse', 'farm-ranch': 'stables',
-  forest: 'forest-clearing', 'road-caravan': 'roadside-campsite', 'mine-quarry': null,
-  'workshop-forge': 'blacksmiths-forge', 'academy-library': null, 'wizards-tower': null,
+  forest: 'forest-clearing', 'road-caravan': 'roadside-campsite', 'mine-quarry': 'mine-quarry',
+  'workshop-forge': 'blacksmiths-forge', 'academy-library': 'academy-library', 'wizards-tower': 'wizards-tower',
   'graveyard-crypt': 'burial-vault', ruins: 'overgrown-homestead', 'cave-dungeon': 'rock-shelter',
-  'military-camp': 'barracks', 'traveling-carnival': null,
+  'military-camp': 'barracks', 'traveling-carnival': 'traveling-carnival',
 });
 // Stable profession IDs share the existing library role icons where appropriate.
 const PROFESSION_ICON_ROLES = Object.freeze(Object.fromEntries([

@@ -8,7 +8,7 @@ await new Promise(r=>setTimeout(r,20));const t=w.test,d=w.document;
 assert.equal(t.state.sort,'recent');assert.equal(t.visibleCharacters()[0].id,'kaelen-ashford');
 assert.equal(t.comparePublished({}, {publishedAt:'2026-10-07T00:00:00Z'})>0,true);assert.equal(t.comparePublished({publishedAt:'invalid'},{}),0);
 d.querySelector('#character-sort').value='name';d.querySelector('#character-sort').dispatchEvent(new w.Event('change'));assert.equal(t.visibleCharacters()[0].name,'Aretha Frostcrest');
-t.setView('locations');await t.ensureLocations();assert.deepEqual(Array.from(t.visibleLocations().slice(0,3),x=>x.id),['ritual-chamber','forgotten-storeroom','dungeon-prison-cells']);
+t.setView('locations');await t.ensureLocations();assert.deepEqual(Array.from(t.visibleLocations().slice(0,5),x=>x.id),['wizards-tower','ship','mine-quarry','academy-library','traveling-carnival']);
 const select=d.querySelector('#location-sort');select.value='name';select.dispatchEvent(new w.Event('change'));assert.equal(t.visibleLocations()[0].id,'abandoned-logging-camp');
 select.value='recent';select.dispatchEvent(new w.Event('change'));d.querySelector('[data-template-id="ritual-chamber"] button').click();t.setView('session');assert.equal(d.querySelector('input[data-location-field="displayName"]').value,'Ritual Chamber');
 assert.equal(w.localStorage.getItem('npc-beta-saved'),'["mira-fen"]');assert.equal(w.localStorage.getItem('npc-beta-session'),'["cassian-holt"]');w.close();console.log('PASS: recent defaults, pack order, date fallback, name sorting, dungeon Session and existing storage');
