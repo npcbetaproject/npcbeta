@@ -523,5 +523,74 @@
     "imageAlt": "Rusted iron prison cells along a damp stone corridor with shackles and an abandoned guard desk",
     "publishedAt": "2026-10-07T03:18:40Z",
     "pack": "dungeon-chambers"
+  },
+  {
+    "id": "wizards-tower",
+    "name": "Wizard’s Tower",
+    "description": "A secluded tower used for magical study, with a workroom, shelves of spellbooks and an upper chamber for observing the sky. Visitors may seek advice, rare knowledge or help with an unusual enchantment.",
+    "settings": [
+      "wilderness",
+      "town",
+      "city"
+    ],
+    "imageAlt": "Round stone wizard’s tower with a slate roof, glowing windows and a study doorway amid forested hills.",
+    "condition": "maintained",
+    "image": "images/locations/wizards-tower-location.webp",
+    "publishedAt": "2026-10-07T04:25:50Z"
+  },
+  {
+    "id": "ship",
+    "name": "Ship",
+    "description": "A wooden sailing vessel carrying passengers or cargo, with an open deck, rigging, a captain’s cabin and storage below. It can serve as a harbor meeting place or a base for a voyage.",
+    "settings": [
+      "town",
+      "city",
+      "wilderness"
+    ],
+    "imageAlt": "Wooden sailing ship deck with furled canvas sails, rigging, cargo barrels and a calm harbor beyond the rails.",
+    "condition": "maintained",
+    "image": "images/locations/ship-location.webp",
+    "publishedAt": "2026-10-07T04:25:50Z"
+  },
+  {
+    "id": "mine-quarry",
+    "name": "Mine / Quarry",
+    "description": "A working site where miners extract ore underground and quarry workers cut stone from exposed rock. Timber supports, hauling tracks and lifting gear surround the entrances and work areas.",
+    "settings": [
+      "wilderness",
+      "underground"
+    ],
+    "imageAlt": "Rocky quarry with a timber-supported mine entrance, ore cart tracks, stacked stone and a wooden lifting frame.",
+    "condition": "maintained",
+    "image": "images/locations/mine-quarry-location.webp",
+    "publishedAt": "2026-10-07T04:25:50Z"
+  },
+  {
+    "id": "academy-library",
+    "name": "Academy / Library",
+    "description": "A place of learning with bookshelves, reading tables and rooms for lessons or research. Scholars, scribes and students gather here to consult records, copy texts and investigate unfamiliar subjects.",
+    "settings": [
+      "town",
+      "city"
+    ],
+    "imageAlt": "Medieval library with tall oak bookshelves, stone arches, reading tables and a brass armillary sphere in soft daylight.",
+    "condition": "maintained",
+    "image": "images/locations/academy-library-location.webp",
+    "publishedAt": "2026-10-07T04:25:50Z"
+  },
+  {
+    "id": "traveling-carnival",
+    "name": "Traveling Carnival",
+    "description": "A temporary gathering of entertainers and vendors who travel with tents and wagons. A performance tent, small stage and lantern-lit paths offer places to meet performers, trade rumors or discover a hidden trouble.",
+    "settings": [
+      "village",
+      "town",
+      "city",
+      "wilderness"
+    ],
+    "imageAlt": "Medieval traveling carnival with burgundy and ivory tents, timber wagons, lanterns and a small stage beside a country road.",
+    "condition": "maintained",
+    "image": "images/locations/traveling-carnival-location.webp",
+    "publishedAt": "2026-10-07T04:25:50Z"
   }
 ]
