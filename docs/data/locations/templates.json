@@ -9,8 +9,8 @@
       "city"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/inn-location.webp",
+    "imageAlt": "Fantasy illustration of inn: A business offering rooms for travelers, usually with meals and a common room.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -161,8 +161,8 @@
       "wilderness"
     ],
     "condition": null,
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/roadside-campsite-location.webp",
+    "imageAlt": "Fantasy illustration of roadside campsite: A stopping place beside a travel route where people pitch tents, rest and cook.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -173,8 +173,8 @@
       "wilderness"
     ],
     "condition": null,
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/river-ford-location.webp",
+    "imageAlt": "Fantasy illustration of river ford: A shallow stretch of river where people and animals cross without a bridge. Rain can make it dangerous.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -185,8 +185,8 @@
       "wilderness"
     ],
     "condition": null,
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/forest-clearing-location.webp",
+    "imageAlt": "Fantasy illustration of forest clearing: An open area surrounded by trees, suitable for resting, camping or meeting.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -197,8 +197,8 @@
       "wilderness"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/hunters-cabin-location.webp",
+    "imageAlt": "Fantasy illustration of hunter’s cabin: A small dwelling used by a hunter or trapper, usually containing a bed, fireplace, tools and supplies.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -209,8 +209,8 @@
       "wilderness"
     ],
     "condition": null,
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/rock-shelter-location.webp",
+    "imageAlt": "Fantasy illustration of rock shelter: A space beneath an overhanging rock or cliff that offers partial protection from weather.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -221,8 +221,8 @@
       "wilderness"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/marsh-boardwalk-location.webp",
+    "imageAlt": "Fantasy illustration of marsh boardwalk: A raised wooden walkway across wet ground, allowing travelers to pass without sinking into the marsh.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -233,8 +233,8 @@
       "wilderness"
     ],
     "condition": null,
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/mountain-trail-location.webp",
+    "imageAlt": "Fantasy illustration of mountain trail: A walking route through steep terrain, often narrow and uneven, where travelers may move single file.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -245,8 +245,8 @@
       "wilderness"
     ],
     "condition": null,
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/lakeshore-location.webp",
+    "imageAlt": "Fantasy illustration of lakeshore: The edge of a lake, with possible beaches, reeds, fishing spots and boat landings.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -257,8 +257,8 @@
       "wilderness"
     ],
     "condition": null,
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/waterfall-pool-location.webp",
+    "imageAlt": "Fantasy illustration of waterfall pool: A pool beneath falling water, surrounded by slippery rocks and loud rushing water.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -269,8 +269,8 @@
       "wilderness"
     ],
     "condition": null,
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/animal-den-location.webp",
+    "imageAlt": "Fantasy illustration of animal den: A sheltered place where an animal sleeps or raises its young, such as a burrow, cave or hollow beneath roots.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -281,8 +281,8 @@
       "wilderness"
     ],
     "condition": "abandoned",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/abandoned-logging-camp-location.webp",
+    "imageAlt": "Fantasy illustration of abandoned logging camp: A former base for timber workers, with empty huts, tool sheds, stacked logs and hauling tracks.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -293,8 +293,8 @@
       "wilderness"
     ],
     "condition": null,
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/ravine-crossing-location.webp",
+    "imageAlt": "Fantasy illustration of ravine crossing: A place to cross a deep, narrow gap using a bridge, fallen tree or narrow ledge.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -305,8 +305,8 @@
       "wilderness"
     ],
     "condition": "ruined",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/overgrown-homestead-location.webp",
+    "imageAlt": "Fantasy illustration of overgrown homestead: A deserted rural home with a cottage, well, garden or barn overtaken by vegetation and partly collapsed.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -319,8 +319,8 @@
       "wilderness"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/gatehouse-location.webp",
+    "imageAlt": "Fantasy illustration of gatehouse: A fortified entrance where guards control access through gates, sometimes with a heavy sliding grille called a portcullis.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -333,8 +333,8 @@
       "wilderness"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/courtyard-location.webp",
+    "imageAlt": "Fantasy illustration of courtyard: An outdoor space enclosed by walls or buildings, used for deliveries, daily work and access to nearby rooms.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -347,8 +347,8 @@
       "wilderness"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/great-hall-location.webp",
+    "imageAlt": "Fantasy illustration of great hall: A large room for meals, gatherings and receiving visitors, where a lord or commander may conduct business.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -363,8 +363,8 @@
       "underground"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/kitchen-and-pantry-location.webp",
+    "imageAlt": "Fantasy illustration of kitchen and pantry: Rooms for preparing meals and storing food, utensils and ingredients.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -378,8 +378,8 @@
       "underground"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/barracks-location.webp",
+    "imageAlt": "Fantasy illustration of barracks: Shared accommodation for soldiers or guards, with beds, personal storage and equipment.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -393,8 +393,8 @@
       "underground"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/armory-location.webp",
+    "imageAlt": "Fantasy illustration of armory: A secure room storing weapons, armor and military supplies, with controlled access.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -409,8 +409,8 @@
       "underground"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/storeroom-location.webp",
+    "imageAlt": "Fantasy illustration of storeroom: A room holding supplies such as oil, rope, tools and provisions, often packed with shelves, crates and barrels.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -424,8 +424,8 @@
       "underground"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/guardroom-location.webp",
+    "imageAlt": "Fantasy illustration of guardroom: A duty station where guards wait and monitor a nearby entrance or passage.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -439,8 +439,8 @@
       "underground"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/prison-cells-location.webp",
+    "imageAlt": "Fantasy illustration of prison cells: Small locked rooms for captives, usually reached through a guarded corridor, with basic furnishings.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -454,8 +454,8 @@
       "underground"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/servants-passage-location.webp",
+    "imageAlt": "Fantasy illustration of servants’ passage: A secondary corridor or stairway allowing household staff to move between working rooms and living quarters.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -469,8 +469,8 @@
       "underground"
     ],
     "condition": "maintained",
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/cistern-chamber-location.webp",
+    "imageAlt": "Fantasy illustration of cistern chamber: A chamber containing a tank or reservoir of stored water to supply the building.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
@@ -481,8 +481,8 @@
       "underground"
     ],
     "condition": null,
-    "image": null,
-    "imageAlt": "",
+    "image": "images/locations/burial-vault-location.webp",
+    "imageAlt": "Fantasy illustration of burial vault: An enclosed room, usually underground, containing coffins or tombs belonging to a family or former occupants.",
     "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
