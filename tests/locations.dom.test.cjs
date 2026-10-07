@@ -5,7 +5,7 @@ const templates=JSON.parse(fs.readFileSync('docs/data/locations/templates.json')
 const labels=JSON.parse(fs.readFileSync('docs/data/locations/labels.json'));
 const seed={'npc-beta-saved':'["mira-fen"]','npc-beta-session':'["cassian-holt"]'};
 async function setup(storage=seed,failure){
- const dom=new JSDOM(fs.readFileSync('docs/index.html','utf8'),{url:'http://localhost/npcbeta/',runScripts:'outside-only'});const w=dom.window;w.scrollTo=()=>{};
+ const dom=new JSDOM(fs.readFileSync('docs/index.html','utf8'),{url:'http://localhost/npcbeta/',runScripts:'outside-only'});const w=dom.window;w.scrollTo=()=>{};w.matchMedia=()=>({matches:true});
  w.fetch=async url=>({ok:!(failure==='data'&&url.includes('locations/')),json:async()=>JSON.parse(fs.readFileSync('docs/'+url,'utf8'))});
  for(const[k,v]of Object.entries(storage))w.localStorage.setItem(k,v);
  if(failure==='storage'){w.Storage.prototype.setItem=()=>{throw Error('quota')};}

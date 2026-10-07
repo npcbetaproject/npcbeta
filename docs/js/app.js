@@ -1,7 +1,7 @@
 const STORAGE_KEYS = { saved: "npc-beta-saved", session: "npc-beta-session" };
 const state = {
   characters: [], portraits: window.NPC_PORTRAITS || {}, query: "", sort: "name", view: "library",
-  roles: new Set(), locations: new Set(), activeCharacter: null,
+  roles: new Set(), locations: new Set(), activeCharacter: null, characterLoadError: false,
   saved: new Set(readStorage(STORAGE_KEYS.saved, [], validIds)),
   session: new Set(readStorage(STORAGE_KEYS.session, [], validIds)),
 };
@@ -78,6 +78,11 @@ function render() {
     if (!locationLibrary.templates && !locationLibrary.error) ensureLocations();
     return;
   }
+  if (state.characterLoadError) {
+    elements.results.textContent = "The character library could not be loaded.";
+    elements.grid.innerHTML = '<p class="empty-state">The character library could not be loaded. Please reload to try again.</p>';
+    return;
+  }
   if (!characters.length) {
     const message = state.view === "session" ? "Your session is empty. Add characters from their profiles." : state.view === "saved" ? "You have not saved any matching characters yet." : "No characters match those filters.";
     elements.grid.innerHTML = `<p class="empty-state">${message}</p>`; return;
@@ -112,7 +117,21 @@ function openDetail(character) {
 function closeDetail() { elements.detail.classList.remove("open"); elements.detail.setAttribute("aria-hidden", "true"); document.body.classList.remove("panel-open"); }
 const APP_VIEWS = ["library", "locations", "generator", "saved", "session", "support"];
 function routeView(value) { return value === "pro" ? "support" : APP_VIEWS.includes(value) ? value : null; }
-function setView(view) { view = routeView(view); if (!view) return; state.view = view; history.replaceState(null, "", "#" + view); closeDetail(); render(); window.scrollTo({ top: 0, behavior: "smooth" }); }
+function setView(view, { updateHistory = true } = {}) {
+  view = routeView(view);
+  if (!view) return;
+  if (updateHistory && routeView(location.hash.slice(1)) !== view) {
+    history.pushState(null, "", "#" + view);
+  }
+  state.view = view;
+  closeDetail();
+  render();
+  window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+}
+function restoreRoute() {
+  const view = routeView(location.hash.slice(1)) || "library";
+  if (view !== state.view) setView(view, { updateHistory: false });
+}
 
 elements.search.addEventListener("input", ({ target }) => { state.query = target.value.trim(); render(); });
 elements.sort.addEventListener("change", ({ target }) => { state.sort = target.value; render(); });
@@ -128,8 +147,10 @@ elements.detail.querySelector(".back-button").addEventListener("click", closeDet
 elements.detailSave.addEventListener("click", () => toggleSaved(state.activeCharacter.id));
 elements.sessionButton.addEventListener("click", () => { const id = state.activeCharacter.id; state.session.has(id) ? state.session.delete(id) : state.session.add(id); saveState(); updateDetailActions(); render(); });
 document.addEventListener("keydown", ({ key }) => { if (key === "Escape") closeDetail(); });
-fetch("data/characters/index.json").then((response) => { if (!response.ok) throw new Error("Could not load characters"); return response.json(); }).then((characters) => { state.characters = characters; renderFilters(); render(); }).catch((error) => { elements.results.textContent = "The character library could not be loaded."; console.error(error); });
+fetch("data/characters/index.json").then((response) => { if (!response.ok) throw new Error("Could not load characters"); return response.json(); }).then((characters) => { state.characters = characters; renderFilters(); render(); }).catch((error) => { state.characterLoadError = true; render(); console.error(error); });
 
 // Keep legacy #pro links compatible while new navigation uses #support.
 state.view = routeView(location.hash.slice(1)) || "library";
-window.addEventListener("hashchange", () => { const view = routeView(location.hash.slice(1)); if (view) setView(view); });
+window.addEventListener("popstate", restoreRoute);
+window.addEventListener("hashchange", restoreRoute);
+render();
