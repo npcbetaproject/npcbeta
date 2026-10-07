@@ -1,6 +1,6 @@
 const STORAGE_KEYS = { saved: "npc-beta-saved", session: "npc-beta-session" };
 const state = {
-  characters: [], roleConfig: null, portraits: window.NPC_PORTRAITS || {}, query: "", sort: "recent", view: "library",
+  characters: [], roleConfig: null, locationFitConfig: null, portraits: window.NPC_PORTRAITS || {}, query: "", sort: "recent", view: "library",
   roles: new Set(), locations: new Set(), activeCharacter: null,
   saved: new Set(readStorage(STORAGE_KEYS.saved, [], validIds)),
   session: new Set(readStorage(STORAGE_KEYS.session, [], validIds)),
@@ -48,6 +48,21 @@ function validateRoleCategories(config, characters) {
   if (!Array.isArray(characters) || characters.some(character => !valid(character.roleCategoryIds))) throw new Error("Invalid NPC role category IDs");
   if (!config.generatorProfessionCategoryIds || Object.values(config.generatorProfessionCategoryIds).some(values => !valid(values))) throw new Error("Invalid session profession categories");
 }
+function validateLocationFitCategories(config, characters) {
+  const stableId = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+  if (!Array.isArray(config?.categories) || !config.categories.length || config.categories.some(item => !stableId.test(item.id) || typeof item.label !== "string" || !item.label.trim())) throw new Error("Invalid location fit categories");
+  const ids = new Set(config.categories.map(item => item.id));
+  if (ids.size !== config.categories.length) throw new Error("Duplicate location fit category IDs");
+  const valid = values => Array.isArray(values) && values.length > 0 && new Set(values).size === values.length && values.every(id => ids.has(id));
+  if (!Array.isArray(characters) || characters.some(character => !valid(character.locationFitCategoryIds))) throw new Error("Invalid NPC location fit category IDs");
+  if (!config.generatorLocationCategoryIds || Object.values(config.generatorLocationCategoryIds).some(values => !valid(values))) throw new Error("Invalid session location categories");
+}
+function matchesLocationFitCategories(ids = []) { return !state.locations.size || ids.some(id => state.locations.has(id)); }
+function syncLocationFitFilters() {
+  elements.locationFilters.querySelectorAll("[data-filter='location']").forEach(input => { input.checked = state.locations.has(input.value); });
+  const all = elements.locationFilters.querySelector("[data-all-locations]");
+  if (all) all.checked = !state.locations.size;
+}
 function matchesRoleCategories(ids = []) { return !state.roles.size || ids.some(id => state.roles.has(id)); }
 function syncRoleFilters() {
   elements.roleFilters.querySelectorAll("[data-filter='role']").forEach(input => { input.checked = state.roles.has(input.value); });
@@ -59,13 +74,13 @@ function visibleCharacters() {
   return state.characters.filter((character) => {
     const searchable = [character.name, character.ancestry || "", character.role, character.subtitle, ...character.tags].join(" ").toLowerCase();
     const roleMatch = matchesRoleCategories(character.roleCategoryIds);
-    const locationMatch = !state.locations.size || (character.locationFit || []).some((location) => state.locations.has(location));
+    const locationMatch = matchesLocationFitCategories(character.locationFitCategoryIds);
     const viewMatch = state.view === "library" || (state.view === "saved" ? state.saved.has(character.id) : state.session.has(character.id));
     return searchable.includes(query) && roleMatch && locationMatch && viewMatch;
   }).sort((a, b) => state.sort === "recent" ? comparePublished(a, b) : a[state.sort].localeCompare(b[state.sort]));
 }
 function render() {
-  syncRoleFilters();
+  syncRoleFilters(); syncLocationFitFilters();
   renderCompanion();
   if ((state.view === "generator" || state.view === "session") && !locationLibrary.templates && !locationLibrary.error) ensureLocations();
   document.title = state.view === "support" ? "Support NPC Beta — NPC Beta" : "NPC Beta — " + ({library:"Character library", locations:"Locations", generator:"Name Generator", saved:"Saved", session:"Session"}[state.view] || "Character library");
@@ -112,18 +127,20 @@ function render() {
   </article>`).join("");
 }
 function renderFilters() {
-  const roles = state.roleConfig.categories;
-  const locations = [...new Set(state.characters.flatMap(({ locationFit = [] }) => locationFit))].sort();
-  const options = (items, type) => items.map((item) => `<label class="filter-option"><input type="checkbox" data-filter="${type}" value="${item}"><span>${item}</span></label>`).join("");
-  elements.roleFilters.replaceChildren();
-  for (const item of [{ id: "all", label: "All Roles" }, ...roles]) {
-    const label = document.createElement("label"); label.className = "filter-option";
-    const input = document.createElement("input"); input.type = "checkbox"; input.value = item.id;
-    if (item.id === "all") input.dataset.allRoles = ""; else input.dataset.filter = "role";
-    const text = document.createElement("span"); text.textContent = item.label;
-    label.append(input, text); elements.roleFilters.append(label);
+  for (const [container, categories, type, allLabel, allDataset] of [
+    [elements.roleFilters, state.roleConfig.categories, "role", "All Roles", "allRoles"],
+    [elements.locationFilters, state.locationFitConfig.categories, "location", "All Locations", "allLocations"],
+  ]) {
+    container.replaceChildren();
+    for (const item of [{ id: "all", label: allLabel }, ...categories]) {
+      const label = document.createElement("label"); label.className = "filter-option";
+      const input = document.createElement("input"); input.type = "checkbox"; input.value = item.id;
+      if (item.id === "all") input.dataset[allDataset] = ""; else input.dataset.filter = type;
+      const text = document.createElement("span"); text.textContent = item.label;
+      label.append(input, text); container.append(label);
+    }
   }
-  syncRoleFilters(); elements.locationFilters.innerHTML = options(locations, "location");
+  syncRoleFilters(); syncLocationFitFilters();
 }
 function toggleSaved(id) { state.saved.has(id) ? state.saved.delete(id) : state.saved.add(id); saveState(); render(); if (state.activeCharacter?.id === id) updateDetailActions(); }
 function updateDetailActions() {
@@ -147,7 +164,7 @@ elements.search.addEventListener("input", ({ target }) => { state.query = target
 elements.sort.addEventListener("change", ({ target }) => { state.sort = target.value; render(); });
 document.querySelectorAll("[data-view]").forEach((button) => button.addEventListener("click", (event) => { event.preventDefault(); setView(button.dataset.view); }));
 elements.filterToggle.addEventListener("click", () => { const open = elements.filterPanel.classList.toggle("open"); elements.filterToggle.setAttribute("aria-expanded", String(open)); });
-elements.filterPanel.addEventListener("change", ({ target }) => { if (target.matches("[data-all-roles]")) { state.roles.clear(); render(); return; } if (!target.matches("[data-filter]")) return; const set = target.dataset.filter === "role" ? state.roles : state.locations; target.checked ? set.add(target.value) : set.delete(target.value); render(); });
+elements.filterPanel.addEventListener("change", ({ target }) => { if (target.matches("[data-all-roles]")) { state.roles.clear(); render(); return; } if (target.matches("[data-all-locations]")) { state.locations.clear(); render(); return; } if (!target.matches("[data-filter]")) return; const set = target.dataset.filter === "role" ? state.roles : state.locations; target.checked ? set.add(target.value) : set.delete(target.value); render(); });
 document.querySelector(".clear-filters").addEventListener("click", () => { state.roles.clear(); state.locations.clear(); elements.filterPanel.querySelectorAll("input").forEach((input) => { input.checked = false; }); render(); });
 elements.grid.addEventListener("click", (event) => {
   const save = event.target.closest("[data-save]"); const remove = event.target.closest("[data-remove-session]"); const open = event.target.closest("[data-character]");
@@ -157,7 +174,7 @@ elements.detail.querySelector(".back-button").addEventListener("click", closeDet
 elements.detailSave.addEventListener("click", () => toggleSaved(state.activeCharacter.id));
 elements.sessionButton.addEventListener("click", () => { const id = state.activeCharacter.id; state.session.has(id) ? state.session.delete(id) : state.session.add(id); saveState(); updateDetailActions(); render(); });
 document.addEventListener("keydown", ({ key }) => { if (key === "Escape") closeDetail(); });
-Promise.all(["index", "role-categories"].map(file => fetch(`data/characters/${file}.json`).then(response => { if (!response.ok) throw new Error("Could not load character data"); return response.json(); }))).then(([characters, config]) => { validateRoleCategories(config, characters); state.characters = characters; state.roleConfig = config; renderFilters(); render(); }).catch((error) => { elements.results.textContent = "The character library could not be loaded."; console.error(error); });
+Promise.all(["index", "role-categories", "location-fit-categories"].map(file => fetch(`data/characters/${file}.json`).then(response => { if (!response.ok) throw new Error("Could not load character data"); return response.json(); }))).then(([characters, config, locationConfig]) => { validateRoleCategories(config, characters); validateLocationFitCategories(locationConfig, characters); state.locationFitConfig = locationConfig; state.characters = characters; state.roleConfig = config; renderFilters(); render(); }).catch((error) => { elements.results.textContent = "The character library could not be loaded."; console.error(error); });
 
 // Keep legacy #pro links compatible while new navigation uses #support.
 state.view = routeView(location.hash.slice(1)) || "library";

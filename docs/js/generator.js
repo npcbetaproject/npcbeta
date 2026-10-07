@@ -131,8 +131,8 @@ function visibleSessionEntries() {
   return sessionEntries().filter(entry => {
     const character = state.characters.find(item => item.id === entry.id);
     const searchable = character ? [character.name, character.role, character.subtitle, ...character.tags].join(' ') : [entry.name, entry.professionLabel, entry.locationLabel].join(' ');
-    const locations = character?.locationFit || [entry.locationLabel];
-    return searchable.toLowerCase().includes(state.query.toLowerCase()) && matchesRoleCategories(character?.roleCategoryIds || state.roleConfig?.generatorProfessionCategoryIds[entry.professionId] || []) && (!state.locations.size || locations.some(location => state.locations.has(location)));
+    const locations = character?.locationFitCategoryIds || state.locationFitConfig?.generatorLocationCategoryIds[entry.locationId] || [];
+    return searchable.toLowerCase().includes(state.query.toLowerCase()) && matchesRoleCategories(character?.roleCategoryIds || state.roleConfig?.generatorProfessionCategoryIds[entry.professionId] || []) && matchesLocationFitCategories(locations);
   }).sort((a, b) => (state.sort === 'recent' ? comparePublished({publishedAt: state.characters.find(item => item.id === a.id)?.publishedAt || a.createdAt}, {publishedAt: state.characters.find(item => item.id === b.id)?.publishedAt || b.createdAt}) : state.sort === 'role' ? a.professionLabel.localeCompare(b.professionLabel) : a.name.localeCompare(b.name)));
 }
 function renderCast(container, entries = sessionEntries()) {

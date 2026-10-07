@@ -1,0 +1,99 @@
+{
+  "categories": [
+    {
+      "id": "settlements",
+      "label": "Settlements"
+    },
+    {
+      "id": "roads-travel",
+      "label": "Roads & Travel"
+    },
+    {
+      "id": "wilderness",
+      "label": "Wilderness"
+    },
+    {
+      "id": "dungeons-ruins",
+      "label": "Dungeons & Ruins"
+    },
+    {
+      "id": "castles-estates",
+      "label": "Castles & Estates"
+    },
+    {
+      "id": "waterfront",
+      "label": "Waterfront"
+    }
+  ],
+  "generatorLocationCategoryIds": {
+    "village": [
+      "settlements"
+    ],
+    "city-street": [
+      "settlements"
+    ],
+    "tavern-inn": [
+      "settlements"
+    ],
+    "marketplace": [
+      "settlements"
+    ],
+    "church-shrine": [
+      "settlements"
+    ],
+    "monastery": [
+      "settlements"
+    ],
+    "watchhouse-prison": [
+      "settlements"
+    ],
+    "farm-ranch": [
+      "settlements"
+    ],
+    "workshop-forge": [
+      "settlements"
+    ],
+    "academy-library": [
+      "settlements"
+    ],
+    "road-caravan": [
+      "roads-travel"
+    ],
+    "traveling-carnival": [
+      "roads-travel"
+    ],
+    "forest": [
+      "wilderness"
+    ],
+    "military-camp": [
+      "wilderness"
+    ],
+    "mine-quarry": [
+      "dungeons-ruins"
+    ],
+    "graveyard-crypt": [
+      "dungeons-ruins"
+    ],
+    "ruins": [
+      "dungeons-ruins"
+    ],
+    "cave-dungeon": [
+      "dungeons-ruins"
+    ],
+    "noble-estate": [
+      "castles-estates"
+    ],
+    "castle-keep": [
+      "castles-estates"
+    ],
+    "wizards-tower": [
+      "castles-estates"
+    ],
+    "harbor-docks": [
+      "waterfront"
+    ],
+    "ship": [
+      "waterfront"
+    ]
+  }
+}

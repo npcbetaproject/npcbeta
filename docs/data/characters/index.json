@@ -23,6 +23,11 @@
     "publishedAt": "2026-10-02T18:37:09-04:00",
     "roleCategoryIds": [
       "adventurers"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel",
+      "dungeons-ruins"
     ]
   },
   {
@@ -50,6 +55,10 @@
     "roleCategoryIds": [
       "merchants-crafters",
       "faith-healing"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "wilderness"
     ]
   },
   {
@@ -76,6 +85,10 @@
     "publishedAt": "2026-10-02T18:37:09-04:00",
     "roleCategoryIds": [
       "faith-healing"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "dungeons-ruins"
     ]
   },
   {
@@ -102,6 +115,10 @@
     "publishedAt": "2026-10-02T18:37:09-04:00",
     "roleCategoryIds": [
       "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "waterfront"
     ]
   },
   {
@@ -130,6 +147,11 @@
     "publishedAt": "2026-10-06T15:46:02-07:00",
     "roleCategoryIds": [
       "military-authority"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "dungeons-ruins",
+      "castles-estates"
     ]
   },
   {
@@ -157,6 +179,9 @@
     "publishedAt": "2026-10-06T15:46:02-07:00",
     "roleCategoryIds": [
       "hospitality-entertainment"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
     ]
   },
   {
@@ -184,6 +209,9 @@
     "publishedAt": "2026-10-06T15:46:02-07:00",
     "roleCategoryIds": [
       "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
     ]
   },
   {
@@ -212,6 +240,10 @@
     "publishedAt": "2026-10-06T15:46:02-07:00",
     "roleCategoryIds": [
       "scholars-magic"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "dungeons-ruins"
     ]
   },
   {
@@ -240,6 +272,10 @@
     "roleCategoryIds": [
       "adventurers",
       "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "roads-travel",
+      "wilderness"
     ]
   },
   {
@@ -267,6 +303,9 @@
     "publishedAt": "2026-10-06T15:46:02-07:00",
     "roleCategoryIds": [
       "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
     ]
   },
   {
@@ -295,6 +334,10 @@
     "publishedAt": "2026-10-06T15:46:02-07:00",
     "roleCategoryIds": [
       "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "roads-travel",
+      "waterfront"
     ]
   },
   {
@@ -323,6 +366,10 @@
     "publishedAt": "2026-10-06T15:46:02-07:00",
     "roleCategoryIds": [
       "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "dungeons-ruins"
     ]
   },
   {
@@ -352,6 +399,11 @@
     "roleCategoryIds": [
       "adventurers",
       "military-authority"
+    ],
+    "locationFitCategoryIds": [
+      "roads-travel",
+      "dungeons-ruins",
+      "castles-estates"
     ]
   },
   {
@@ -381,6 +433,10 @@
     "roleCategoryIds": [
       "adventurers",
       "scholars-magic"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel"
     ]
   },
   {
@@ -409,6 +465,11 @@
     "publishedAt": "2026-10-06T17:37:06-07:00",
     "roleCategoryIds": [
       "adventurers"
+    ],
+    "locationFitCategoryIds": [
+      "roads-travel",
+      "wilderness",
+      "dungeons-ruins"
     ]
   },
   {
@@ -437,6 +498,11 @@
     "publishedAt": "2026-10-06T17:37:06-07:00",
     "roleCategoryIds": [
       "adventurers"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel",
+      "wilderness"
     ]
   }
 ]
