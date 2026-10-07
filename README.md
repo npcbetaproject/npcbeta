@@ -169,3 +169,13 @@ Dungeon Chambers contains Ritual Chamber, Forgotten Storeroom and Prison Cells, 
 ## Complete location artwork
 
 All 39 location templates have dedicated WebP artwork. The 26 previously unillustrated templates use `docs/images/locations/<template-id>-location.webp`, at 1920 × 1080. Each illustration has descriptive alt text. Existing artwork, template IDs, publication dates and session storage formats are preserved. The original Prison Cells template has its own `prison-cells-location.webp`, separate from the Dungeon Chambers illustration. Generated NPC visuals automatically reuse the new artwork through existing setting mappings; missing-image fallbacks remain available.
+
+## Broad NPC role filters
+
+Library, Saved and Session use the eight categories in `docs/data/characters/role-categories.json`, with All Roles selected initially. Each library NPC has a nonempty `roleCategoryIds` array while retaining its specific `role` profession. Multiple categories use OR; categories, search and location fit use AND. Exact professions remain searchable. All Roles or Clear filters removes category restrictions; sorting and saved/session keys are unchanged.
+
+Generated Session NPCs are classified by the same configuration’s profession-ID mapping at display time, without rewriting personal data or changing Name Generator options. Future NPC packs must include valid category IDs; see `planning/content-guidelines.md`.
+
+Run `node tests/role-categories.dom.test.cjs` for category validation, overlap, All Roles, combined search/location filters, Saved/Session compatibility, generated Session professions and sort preservation.
+
+With the preview server running on port 8000, `node tests/role-categories.test.cjs` checks category controls and overflow at desktop and mobile widths.

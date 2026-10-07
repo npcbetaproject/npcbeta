@@ -16,7 +16,8 @@ Each published character should include:
 - `id`: unique lowercase kebab-case identifier.
 - `name`: display name.
 - `summary`: one or two sentences in present tense.
-- `role`: the character's primary narrative function.
+- `role`: the character’s specific profession, displayed on cards and profiles.
+- `roleCategoryIds`: a nonempty array of unique IDs from `docs/data/characters/role-categories.json`; assign based on profession and description. Multiple categories are supported. Preserve the specific `role` and stable NPC ID.
 - `locationIds`: an array of related published location IDs.
 - `tags`: an array using values from `tag-definitions.md`.
 - `image`: a path relative to `docs/`, with meaningful alternative text stored in
@@ -43,3 +44,11 @@ Each published location should include:
 4. Describe images for their relevant content rather than beginning with “image of.”
 5. Flag spoilers or sensitive material clearly in the draft.
 6. Have another contributor review an entry before adding it to a JSON index.
+
+## NPC role categories
+
+Use the eight category IDs and labels in `docs/data/characters/role-categories.json`, in its configured order. All Roles is an interface option meaning no category restriction; do not store `all` in an NPC’s array. Categories describe occupations and activities, not alignment or Story Role. Assign Underworld for activities such as smuggling, theft or organized crime, never simply because an NPC is a villain or rebel.
+
+For example, an Apothecary may use `["merchants-crafters", "faith-healing"]`, while a knight who adventures may use `["adventurers", "military-authority"]`. Every future NPC pack must include at least one valid category per NPC. Validate uniqueness and membership before publication. Keep exact professions in `role` so they remain searchable.
+
+The same file contains `generatorProfessionCategoryIds` solely to classify generated Session entries at display time. This does not change generator options or stored records; when adding a new generator profession later, provide its category mapping too.
