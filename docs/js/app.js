@@ -107,7 +107,7 @@ function openDetail(character) {
   elements.detail.querySelector("h2").textContent = character.name; elements.detail.querySelector(".detail-meta").textContent = `${character.ancestry ? character.ancestry + " · " : ""}${character.role} · ${character.subtitle}`;
   elements.detail.querySelector(".tag-list").innerHTML = character.tags.map((tag) => `<span>${tag}</span>`).join(""); elements.detail.querySelector(".detail-summary").textContent = character.summary;
   elements.detail.querySelector(".table-note").textContent = character.tableNote; elements.detail.querySelector(".adventure-hook").textContent = character.adventureHook;
-  updateDetailActions(); elements.detail.classList.add("open"); elements.detail.setAttribute("aria-hidden", "false"); document.body.classList.add("panel-open"); elements.detail.querySelector(".back-button").focus();
+  updateDetailActions(); elements.detail.classList.add("open"); elements.detail.setAttribute("aria-hidden", "false"); document.body.classList.add("panel-open"); elements.detail.querySelector(".detail-scroll").scrollTop = 0; elements.detail.querySelector(".back-button").focus({ preventScroll: true });
 }
 function closeDetail() { elements.detail.classList.remove("open"); elements.detail.setAttribute("aria-hidden", "true"); document.body.classList.remove("panel-open"); }
 const APP_VIEWS = ["library", "locations", "generator", "saved", "session", "support"];
