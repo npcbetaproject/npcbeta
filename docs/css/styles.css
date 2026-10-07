@@ -75,3 +75,8 @@
 .brand:focus-visible{outline:2px solid var(--wine);outline-offset:4px;border-radius:4px}
 @media(max-width:1000px) and (min-width:761px){.brand-logo{width:155px}.site-header{padding-inline:18px}.desktop-nav{gap:4px}.desktop-nav .nav-link{padding-inline:8px}}
 @media(max-width:760px){.brand-logo{width:150px}}
+
+/* Make publication sorting available on desktop and mobile. */
+.locations-toolbar{grid-template-columns:auto minmax(0,1fr) 210px}
+.library-toolbar{grid-template-columns:auto minmax(0,1fr) 210px}
+@media(max-width:760px){.library-toolbar{grid-template-columns:minmax(0,1fr) auto}.library-toolbar .sort-field{display:flex;grid-column:1;grid-row:3;height:44px}.locations-toolbar{grid-template-columns:minmax(0,1fr) auto}.locations-toolbar h1{grid-column:1/-1}.locations-toolbar .location-sort{display:flex;grid-column:1;grid-row:3;height:44px}.locations-toolbar .location-filter-toggle{grid-column:2;grid-row:2}}
