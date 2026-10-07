@@ -1,6 +1,6 @@
 const {JSDOM}=require('jsdom'),fs=require('node:fs'),assert=require('node:assert/strict');
 (async()=>{
- const dom=new JSDOM(fs.readFileSync('docs/index.html','utf8'),{url:'https://example.com/npcbeta/',runScripts:'outside-only'}),w=dom.window;w.scrollTo=()=>{};
+ const dom=new JSDOM(fs.readFileSync('docs/index.html','utf8'),{url:'https://example.com/npcbeta/',runScripts:'outside-only'}),w=dom.window;w.scrollTo=()=>{};w.matchMedia=()=>({matches:true});
  const legacy={id:'generated-legacy',name:'Old Friend',locationId:'tavern-inn',professionId:'innkeeper',locationLabel:'Legacy label',professionLabel:'Legacy role',createdAt:'2026-01-01'};
  w.localStorage.setItem('npc-beta:generator:v1:session',JSON.stringify([legacy]));w.localStorage.setItem('npc-beta-saved','["mira-fen"]');w.localStorage.setItem('npc-beta-session','["cassian-holt"]');
  w.fetch=async path=>({ok:true,json:async()=>JSON.parse(fs.readFileSync('docs/'+path))});
