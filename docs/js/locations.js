@@ -7,7 +7,7 @@ const validCondition = value => value === null || CONDITION_IDS.includes(value);
 const validLocationInstance = value => value && typeof value.id === 'string' && value.id.startsWith('location-') && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value.templateId) && typeof value.displayName === 'string' && typeof value.notes === 'string' && validSettings(value.settings) && validCondition(value.condition) && typeof value.createdAt === 'string';
 const locationLibrary = {
   templates: null, labels: null, loading: null, error: false,
-  query: '', settings: new Set(), conditions: new Set(),
+  query: '', sort: 'recent', settings: new Set(), conditions: new Set(),
   instances: readStorage(SESSION_LOCATIONS_KEY, [], value => Array.isArray(value) && value.every(validLocationInstance) && new Set(value.map(item => item.id)).size === value.length),
 };
 function validateLocationData(templates, labels) {
@@ -38,7 +38,7 @@ async function ensureLocations() {
 }
 function visibleLocations() {
   const query = locationLibrary.query.toLowerCase();
-  return (locationLibrary.templates || []).filter(item => `${item.name} ${item.description}`.toLowerCase().includes(query) && (!locationLibrary.settings.size || item.settings.some(id => locationLibrary.settings.has(id))) && (!locationLibrary.conditions.size || locationLibrary.conditions.has(item.condition)));
+  return (locationLibrary.templates || []).filter(item => `${item.name} ${item.description}`.toLowerCase().includes(query) && (!locationLibrary.settings.size || item.settings.some(id => locationLibrary.settings.has(id))) && (!locationLibrary.conditions.size || locationLibrary.conditions.has(item.condition))).sort((a, b) => locationLibrary.sort === 'recent' ? comparePublished(a, b) : a.name.localeCompare(b.name));
 }
 function locationNode(tag, className, text) {
   const node = document.createElement(tag); if (className) node.className = className; if (text !== undefined) node.textContent = text; return node;
@@ -133,3 +133,5 @@ document.querySelector('#clear-location-filters').addEventListener('click', clea
 document.querySelector('#location-filter-toggle').addEventListener('click', event => {
   const open = document.querySelector('#location-filter-panel').classList.toggle('open'); event.currentTarget.setAttribute('aria-expanded', String(open));
 });
+
+document.querySelector('#location-sort').addEventListener('change', event => { locationLibrary.sort = event.target.value; renderLocations(); });

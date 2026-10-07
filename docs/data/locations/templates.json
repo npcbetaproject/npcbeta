@@ -10,7 +10,8 @@
     ],
     "condition": "maintained",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "tavern",
@@ -23,7 +24,8 @@
     ],
     "condition": "maintained",
     "image": "images/locations/tavern.webp",
-    "imageAlt": "Timber tavern with glowing windows, outdoor tables and barrels beside a cobbled road at sunset."
+    "imageAlt": "Timber tavern with glowing windows, outdoor tables and barrels beside a cobbled road at sunset.",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "general-store",
@@ -36,7 +38,8 @@
     ],
     "condition": "maintained",
     "image": "images/locations/general-store.webp",
-    "imageAlt": "Village general store with an open doorway and baskets, sacks and supplies displayed outside."
+    "imageAlt": "Village general store with an open doorway and baskets, sacks and supplies displayed outside.",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "blacksmiths-forge",
@@ -49,7 +52,8 @@
     ],
     "condition": "maintained",
     "image": "images/locations/blacksmiths-forge.webp",
-    "imageAlt": "Open blacksmith workshop with a glowing forge, anvil, hammers and horseshoes."
+    "imageAlt": "Open blacksmith workshop with a glowing forge, anvil, hammers and horseshoes.",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "apothecary",
@@ -62,7 +66,8 @@
     ],
     "condition": "maintained",
     "image": "images/locations/apothecary.webp",
-    "imageAlt": "Warm apothecary interior with shelves of bottles, hanging herbs and a worktable covered in plants and remedies."
+    "imageAlt": "Warm apothecary interior with shelves of bottles, hanging herbs and a worktable covered in plants and remedies.",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "market-square",
@@ -75,7 +80,8 @@
     ],
     "condition": "maintained",
     "image": "images/locations/market-square.webp",
-    "imageAlt": "Cobbled town market square with canvas stalls, produce and timber buildings in the evening light."
+    "imageAlt": "Cobbled town market square with canvas stalls, produce and timber buildings in the evening light.",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "chapel",
@@ -88,7 +94,8 @@
     ],
     "condition": "maintained",
     "image": "images/locations/chapel.webp",
-    "imageAlt": "Small stone chapel with a bell tower, an arched doorway and flowers along a cobbled path."
+    "imageAlt": "Small stone chapel with a bell tower, an arched doorway and flowers along a cobbled path.",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "watchhouse",
@@ -100,7 +107,8 @@
     ],
     "condition": "maintained",
     "image": "images/locations/watchhouse.webp",
-    "imageAlt": "Stone and timber watchhouse with blue banners, a tower and a fortified arched entrance."
+    "imageAlt": "Stone and timber watchhouse with blue banners, a tower and a fortified arched entrance.",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "private-residence",
@@ -113,7 +121,8 @@
     ],
     "condition": "maintained",
     "image": "images/locations/private-residence.webp",
-    "imageAlt": "Timber and stone cottage with glowing windows, a fenced garden and flowers beside the front door."
+    "imageAlt": "Timber and stone cottage with glowing windows, a fenced garden and flowers beside the front door.",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "stables",
@@ -126,7 +135,8 @@
     ],
     "condition": "maintained",
     "image": "images/locations/stables.webp",
-    "imageAlt": "Timber stable with horses in open stalls, hay, saddles and a stone water trough."
+    "imageAlt": "Timber stable with horses in open stalls, hay, saddles and a stone water trough.",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "docks-ferry-landing",
@@ -140,7 +150,8 @@
     ],
     "condition": "maintained",
     "image": "images/locations/docks-ferry-landing.webp",
-    "imageAlt": "Wooden riverside landing with mooring posts and a covered ferry beneath a sunset sky."
+    "imageAlt": "Wooden riverside landing with mooring posts and a covered ferry beneath a sunset sky.",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "roadside-campsite",
@@ -151,7 +162,8 @@
     ],
     "condition": null,
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "river-ford",
@@ -162,7 +174,8 @@
     ],
     "condition": null,
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "forest-clearing",
@@ -173,7 +186,8 @@
     ],
     "condition": null,
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "hunters-cabin",
@@ -184,7 +198,8 @@
     ],
     "condition": "maintained",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "rock-shelter",
@@ -195,7 +210,8 @@
     ],
     "condition": null,
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "marsh-boardwalk",
@@ -206,7 +222,8 @@
     ],
     "condition": "maintained",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "mountain-trail",
@@ -217,7 +234,8 @@
     ],
     "condition": null,
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "lakeshore",
@@ -228,7 +246,8 @@
     ],
     "condition": null,
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "waterfall-pool",
@@ -239,7 +258,8 @@
     ],
     "condition": null,
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "animal-den",
@@ -250,7 +270,8 @@
     ],
     "condition": null,
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "abandoned-logging-camp",
@@ -261,7 +282,8 @@
     ],
     "condition": "abandoned",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "ravine-crossing",
@@ -272,7 +294,8 @@
     ],
     "condition": null,
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "overgrown-homestead",
@@ -283,7 +306,8 @@
     ],
     "condition": "ruined",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "gatehouse",
@@ -296,7 +320,8 @@
     ],
     "condition": "maintained",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "courtyard",
@@ -309,7 +334,8 @@
     ],
     "condition": "maintained",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "great-hall",
@@ -322,7 +348,8 @@
     ],
     "condition": "maintained",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "kitchen-and-pantry",
@@ -337,7 +364,8 @@
     ],
     "condition": "maintained",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "barracks",
@@ -351,7 +379,8 @@
     ],
     "condition": "maintained",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "armory",
@@ -365,7 +394,8 @@
     ],
     "condition": "maintained",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "storeroom",
@@ -380,7 +410,8 @@
     ],
     "condition": "maintained",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "guardroom",
@@ -394,7 +425,8 @@
     ],
     "condition": "maintained",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "prison-cells",
@@ -408,7 +440,8 @@
     ],
     "condition": "maintained",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "servants-passage",
@@ -422,7 +455,8 @@
     ],
     "condition": "maintained",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "cistern-chamber",
@@ -436,7 +470,8 @@
     ],
     "condition": "maintained",
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
   },
   {
     "id": "burial-vault",
@@ -447,6 +482,46 @@
     ],
     "condition": null,
     "image": null,
-    "imageAlt": ""
+    "imageAlt": "",
+    "publishedAt": "2026-10-05T20:03:20-04:00"
+  },
+  {
+    "id": "ritual-chamber",
+    "name": "Ritual Chamber",
+    "description": "A circular stone chamber surrounds an altar, with carved floor sigils and clusters of candles. A faint violet glow lingers over the prepared ritual; one place remains conspicuously empty.",
+    "settings": [
+      "underground"
+    ],
+    "condition": "abandoned",
+    "image": "images/locations/ritual-chamber.webp",
+    "imageAlt": "A candlelit stone ritual chamber with carved floor sigils and a violet-lit central altar",
+    "publishedAt": "2026-10-07T03:18:40Z",
+    "pack": "dungeon-chambers"
+  },
+  {
+    "id": "forgotten-storeroom",
+    "name": "Forgotten Storeroom",
+    "description": "Dusty crates, cracked barrels and crowded shelves fill a cramped underground storeroom. Fresh footprints cut through the dust toward a crate that shifts from within.",
+    "settings": [
+      "underground"
+    ],
+    "condition": "abandoned",
+    "image": "images/locations/forgotten-storeroom.webp",
+    "imageAlt": "An underground storeroom of dusty wooden crates, barrels and shelves lit by a warm lantern",
+    "publishedAt": "2026-10-07T03:18:40Z",
+    "pack": "dungeon-chambers"
+  },
+  {
+    "id": "dungeon-prison-cells",
+    "name": "Prison Cells",
+    "description": "Rusted iron bars divide a damp stone corridor into narrow cells, beside an abandoned guard’s desk. One locked cell is spotless, with a warm meal waiting inside.",
+    "settings": [
+      "underground"
+    ],
+    "condition": "abandoned",
+    "image": "images/locations/prison-cells.webp",
+    "imageAlt": "Rusted iron prison cells along a damp stone corridor with shackles and an abandoned guard desk",
+    "publishedAt": "2026-10-07T03:18:40Z",
+    "pack": "dungeon-chambers"
   }
 ]

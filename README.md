@@ -159,3 +159,9 @@ shared-visual and fallback checks.
 
 The original four NPCs also use 960 × 960 external WebP portraits. All library
 portraits follow `project/npc-portrait-standard.md`, referenced by `AGENTS.md`.
+
+## Publication sorting and dungeon pack
+
+Library and Locations default to **Most recent**, ordered by `publishedAt` (ISO 8601), newest first. Existing publication dates come from the first Git commit containing each record. Equal dates retain JSON order; missing or invalid dates sort last. Set publication dates when adding future packs. Name sorting remains available, plus Role for NPCs. Sorting controls are available on mobile too.
+
+Dungeon Chambers contains Ritual Chamber, Forgotten Storeroom and Prison Cells, with 1920 × 1080 WebP illustrations under `docs/images/locations/`. These are Underground / Abandoned templates and create independent editable Session instances using the existing storage format.

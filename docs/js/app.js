@@ -1,6 +1,6 @@
 const STORAGE_KEYS = { saved: "npc-beta-saved", session: "npc-beta-session" };
 const state = {
-  characters: [], portraits: window.NPC_PORTRAITS || {}, query: "", sort: "name", view: "library",
+  characters: [], portraits: window.NPC_PORTRAITS || {}, query: "", sort: "recent", view: "library",
   roles: new Set(), locations: new Set(), activeCharacter: null,
   saved: new Set(readStorage(STORAGE_KEYS.saved, [], validIds)),
   session: new Set(readStorage(STORAGE_KEYS.session, [], validIds)),
@@ -34,6 +34,11 @@ function roleIcon(role) {
   };
   return `<svg class="role-icon ${role === "Smuggler" ? "mask" : ""}" aria-hidden="true" viewBox="0 0 24 24">${icons[role] || icons.Scholar}</svg>`;
 }
+// Stable sort preserves editorial order within a pack and for undated entries.
+function comparePublished(a, b) {
+  const date = value => Number.isFinite(Date.parse(value)) ? Date.parse(value) : 0;
+  return date(b.publishedAt) - date(a.publishedAt);
+}
 function visibleCharacters() {
   const query = state.query.toLowerCase();
   return state.characters.filter((character) => {
@@ -42,7 +47,7 @@ function visibleCharacters() {
     const locationMatch = !state.locations.size || (character.locationFit || []).some((location) => state.locations.has(location));
     const viewMatch = state.view === "library" || (state.view === "saved" ? state.saved.has(character.id) : state.session.has(character.id));
     return searchable.includes(query) && roleMatch && locationMatch && viewMatch;
-  }).sort((a, b) => a[state.sort].localeCompare(b[state.sort]));
+  }).sort((a, b) => state.sort === "recent" ? comparePublished(a, b) : a[state.sort].localeCompare(b[state.sort]));
 }
 function render() {
   renderCompanion();

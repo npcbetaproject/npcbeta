@@ -133,7 +133,7 @@ function visibleSessionEntries() {
     const searchable = character ? [character.name, character.role, character.subtitle, ...character.tags].join(' ') : [entry.name, entry.professionLabel, entry.locationLabel].join(' ');
     const locations = character?.locationFit || [entry.locationLabel];
     return searchable.toLowerCase().includes(state.query.toLowerCase()) && (!state.roles.size || state.roles.has(entry.professionLabel)) && (!state.locations.size || locations.some(location => state.locations.has(location)));
-  }).sort((a, b) => (state.sort === 'role' ? a.professionLabel.localeCompare(b.professionLabel) : a.name.localeCompare(b.name)));
+  }).sort((a, b) => (state.sort === 'recent' ? comparePublished({publishedAt: state.characters.find(item => item.id === a.id)?.publishedAt || a.createdAt}, {publishedAt: state.characters.find(item => item.id === b.id)?.publishedAt || b.createdAt}) : state.sort === 'role' ? a.professionLabel.localeCompare(b.professionLabel) : a.name.localeCompare(b.name)));
 }
 function renderCast(container, entries = sessionEntries()) {
   container.replaceChildren();
