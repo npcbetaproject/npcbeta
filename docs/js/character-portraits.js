@@ -9,4 +9,8 @@ window.NPC_PORTRAITS = Object.freeze({
   "elmir-valebrook": "images/characters/elmir-valebrook.webp",
   "harthos-ravenmoor": "images/characters/harthos-ravenmoor.webp",
   "valaris-blackwhisper": "images/characters/valaris-blackwhisper.webp",
+  "kaelen-ashford": "images/characters/kaelen-ashford.webp",
+  "seren-dawnsong": "images/characters/seren-dawnsong.webp",
+  "rurik-stoneward": "images/characters/rurik-stoneward.webp",
+  "nyra-valecrest": "images/characters/nyra-valecrest.webp",
 });

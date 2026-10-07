@@ -274,5 +274,101 @@
       "Town",
       "Ruins"
     ]
+  },
+  {
+    "id": "kaelen-ashford",
+    "name": "Kaelen Ashford",
+    "ancestry": "Human",
+    "role": "Knight",
+    "group": "adventurers",
+    "subtitle": "Honour beyond the crown",
+    "summary": "Resolute and protective, Kaelen wants to redeem himself without serving another corrupt lord. Battered plate armour, a burgundy cloak and a broken heraldic badge mark a knight who has lost his station but refuses to abandon his principles.",
+    "tableNote": "Stand between others and danger. Speak plainly, avoid claiming authority, and hesitate when asked whom you once served.",
+    "adventureHook": "He must rescue the heir whose disappearance he was blamed for—and needs allies willing to defy the crown.",
+    "locationIds": [],
+    "tags": [
+      "redemption",
+      "protective",
+      "disgraced knight"
+    ],
+    "imageAlt": "Human knight with short dark hair, battered plate armour, a burgundy cloak and a broken heraldic badge in a ruined castle courtyard.",
+    "portraitKey": "kaelen-ashford",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town",
+      "Ruins"
+    ]
+  },
+  {
+    "id": "seren-dawnsong",
+    "name": "Seren Dawnsong",
+    "ancestry": "Elf",
+    "role": "Rebel mage",
+    "group": "adventurers",
+    "subtitle": "Freedom at a dangerous price",
+    "summary": "Charismatic and reckless, Seren fights to free her city from an order she once belonged to. Ivory travelling robes, dark leather bracers and singed silver hair reveal a mage whose convictions have already cost her dearly.",
+    "tableNote": "Speak with infectious confidence. Treat cautious plans as challenges, but become quiet when civilians might bear the cost.",
+    "adventureHook": "She has stolen the key to the city’s magical defences, but using it could endanger the people she hopes to save.",
+    "locationIds": [],
+    "tags": [
+      "rebellion",
+      "charismatic",
+      "reckless"
+    ],
+    "imageAlt": "Silver-haired elven rebel mage in ivory travelling robes and leather bracers in a medieval city alley.",
+    "portraitKey": "seren-dawnsong",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town",
+      "Ruins"
+    ]
+  },
+  {
+    "id": "rurik-stoneward",
+    "name": "Rurik Stoneward",
+    "ancestry": "Dwarf",
+    "role": "Expedition leader",
+    "group": "adventurers",
+    "subtitle": "The road back to the mountain",
+    "summary": "Steadfast and stubborn, Rurik is determined to reclaim his clan’s lost home. Weathered mail, a braided black beard and an ancestral axe accompany a leader who carries both the expedition’s hopes and the weight of its losses.",
+    "tableNote": "Check supplies before making promises. Remember each companion’s strengths, and resist suggestions that the lost hold should stay buried.",
+    "adventureHook": "Something inside the mountain is answering his signal fires. He believes survivors remain; his companions fear a trap.",
+    "locationIds": [],
+    "tags": [
+      "clan duty",
+      "steadfast",
+      "reclamation"
+    ],
+    "imageAlt": "Black-bearded dwarf expedition leader in weathered mail holding an ancestral axe before an ancient mountain gate.",
+    "portraitKey": "rurik-stoneward",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Wilderness",
+      "Ruins"
+    ]
+  },
+  {
+    "id": "nyra-valecrest",
+    "name": "Nyra Valecrest",
+    "ancestry": "Tiefling",
+    "role": "Monster hunter",
+    "group": "adventurers",
+    "subtitle": "The truth behind the quarry",
+    "summary": "Resourceful and guarded, Nyra hunts creatures others dismiss as folklore. Charcoal leather armour, swept-back horns and a scar across one eyebrow frame a hunter willing to question whether the supposed monster is the real threat.",
+    "tableNote": "Study tracks and exits while talking. Ask for evidence before accepting a story, and show unexpected patience toward frightened strangers.",
+    "adventureHook": "She discovers that her latest quarry protects a village—and that her employer wants the village destroyed.",
+    "locationIds": [],
+    "tags": [
+      "resourceful",
+      "guarded",
+      "monster hunter"
+    ],
+    "imageAlt": "Tiefling monster hunter with swept-back horns, a scar across one eyebrow and charcoal leather armour on a woodland trail.",
+    "portraitKey": "nyra-valecrest",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Wilderness",
+      "Town"
+    ]
   }
 ]
