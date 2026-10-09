@@ -13,6 +13,7 @@
     <script src="js/locations.js" defer></script>
     <script src="js/pro.js" defer></script>
     <script src="js/generated-visuals.js" defer></script>
+    <script src="js/session-board.js" defer></script>
     <script src="js/app.js" defer></script>
   </head>
   <body>
@@ -52,10 +53,21 @@
           </aside>
           <div class="library-results">
             <p class="results-note" id="results-note" role="status">Loading characters…</p>
-            <h2 id="session-npcs-title" class="session-section-title" hidden>NPCs</h2>
             <div class="character-grid" id="character-grid"></div>
-            <section id="session-locations" aria-labelledby="session-locations-title" hidden><div class="session-section-heading"><h2 id="session-locations-title">Locations</h2><span id="session-location-count"></span></div><div id="session-location-list" class="session-location-grid"></div></section>
           </div>
+        </div>
+      </section>
+
+      <section id="session-board" aria-labelledby="session-board-title" hidden>
+        <div class="session-board-toolbar">
+          <div class="session-board-heading"><h1 id="session-board-title">Session</h1><span>Live reference</span></div>
+          <div class="session-board-search"><label class="search-field" for="session-search"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg><span class="visually-hidden">Search session NPCs and locations</span><input id="session-search" type="search" placeholder="Search names, professions, places…" autocomplete="off"></label><button id="session-clear-search" type="button" aria-label="Clear session search" disabled>Clear</button></div>
+          <div class="session-tabs" role="tablist" aria-label="Session references"><button id="session-tab-npcs" type="button" role="tab" aria-controls="session-npc-column" aria-selected="true" tabindex="0" data-session-tab="npcs">NPCs <span id="session-tab-npc-count">0</span></button><button id="session-tab-locations" type="button" role="tab" aria-controls="session-locations" aria-selected="false" tabindex="-1" data-session-tab="locations">Locations <span id="session-tab-location-count">0</span></button></div>
+          <p id="session-search-status" class="visually-hidden" role="status"></p>
+        </div>
+        <div class="session-board-columns">
+          <section id="session-locations" class="session-column" aria-labelledby="session-locations-title"><div class="session-column-heading"><h2 id="session-locations-title">Locations</h2><span id="session-location-count"></span></div><div id="session-location-list"></div></section>
+          <section id="session-npc-column" class="session-column" aria-labelledby="session-npcs-title"><div class="session-column-heading"><h2 id="session-npcs-title">NPCs</h2><span id="session-npc-count"></span></div></section>
         </div>
       </section>
 
@@ -101,12 +113,12 @@
       <p id="action-feedback" class="action-feedback" role="status" aria-live="polite"></p>
       <p id="storage-warning" class="storage-warning" role="status" hidden></p>
 
-      <aside class="detail-panel" id="detail-panel" aria-label="Character details" aria-hidden="true">
+      <aside class="detail-panel" id="detail-panel" role="dialog" aria-modal="true" aria-labelledby="detail-title" aria-label="Character details" aria-hidden="true" inert>
         <div class="detail-header">
-          <button class="back-button" type="button"><span aria-hidden="true">←</span> Back</button><span>Character</span>
+          <button class="back-button" type="button"><span aria-hidden="true">←</span> Back</button><span class="detail-kind">Character</span>
           <button class="icon-button detail-save" type="button" aria-label="Save character"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.5 4.5h11v16l-5.5-3.4-5.5 3.4z"/></svg></button>
         </div>
-        <div class="detail-scroll"><img class="detail-portrait" src="" alt=""><div class="detail-content"><h2></h2><p class="detail-meta"></p><div class="tag-list"></div><p class="detail-summary"></p><dl class="detail-facts"><div><dt><span aria-hidden="true">◯</span> At the table</dt><dd class="table-note"></dd></div><div><dt><span aria-hidden="true">◇</span> Adventure hook</dt><dd class="adventure-hook"></dd></div></dl></div></div>
+        <div class="detail-scroll"><img class="detail-portrait" src="" alt=""><div class="detail-extra-visual" hidden></div><div class="detail-content"><h2 id="detail-title"></h2><p class="detail-meta"></p><div class="tag-list"></div><p class="detail-summary"></p><dl class="detail-facts"><div><dt><span aria-hidden="true">◯</span> At the table</dt><dd class="table-note"></dd></div><div><dt><span aria-hidden="true">◇</span> Adventure hook</dt><dd class="adventure-hook"></dd></div></dl><div class="detail-location-fields" hidden></div></div></div>
         <button class="session-button" type="button"><span aria-hidden="true">＋</span> Add to session</button>
       </aside>
       <button class="panel-scrim" type="button" aria-label="Close character details" tabindex="-1"></button>

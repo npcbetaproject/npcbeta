@@ -10,7 +10,7 @@ async function setup(storage=initialStorage, failure){
  w.scrollTo=()=>{};w.fetch=async url=>({ok: !(failure==='data'&&url.includes('generator')),json:async()=>JSON.parse(fs.readFileSync('docs/'+url,'utf8'))});
  for(const [key,value]of Object.entries(storage))w.localStorage.setItem(key,value);
  if(failure==='storage'){w.Storage.prototype.getItem=()=>{throw Error('blocked')};w.Storage.prototype.setItem=()=>{throw Error('quota')};}
- w.eval(fs.readFileSync('docs/js/generator.js','utf8')+'\n'+fs.readFileSync('docs/js/locations.js','utf8')+'\n'+fs.readFileSync('docs/js/generated-visuals.js','utf8')+'\n'+fs.readFileSync('docs/js/app.js','utf8')+'\nwindow.test={generator,state,chooseDifferent,rollGenerator,supportedResult,validateGeneratorData,setView,ensureGenerator,sessionEntries,visibleSessionEntries,copyName,writeStorage};');
+ w.eval(fs.readFileSync('docs/js/generator.js','utf8')+'\n'+fs.readFileSync('docs/js/locations.js','utf8')+'\n'+fs.readFileSync('docs/js/generated-visuals.js','utf8')+'\n'+fs.readFileSync('docs/js/session-board.js','utf8')+'\n'+fs.readFileSync('docs/js/app.js','utf8')+'\nwindow.test={generator,state,chooseDifferent,rollGenerator,supportedResult,validateGeneratorData,setView,ensureGenerator,sessionEntries,visibleSessionEntries,copyName,writeStorage};');
  await new Promise(r=>setTimeout(r,10)); w.test.setView('generator');await w.test.ensureGenerator();return dom;
 }
 (async()=>{
@@ -30,10 +30,10 @@ async function setup(storage=initialStorage, failure){
  t.setView('session');assert.equal(w.document.querySelectorAll('#character-grid .cast-entry').length,2);
  const generated=()=>[...w.document.querySelectorAll('#character-grid .cast-entry')].find(el=>el.querySelector('h3').textContent===stored.name);
  generated().querySelector('button').click();await Promise.resolve();assert.equal(w.copied,stored.name);
- w.document.querySelector('#character-grid .cast-profile').click();assert(w.document.querySelector('#detail-panel').classList.contains('open'));click('.back-button');
+ w.document.querySelector('#character-grid .session-row-open').click();assert(w.document.querySelector('#detail-panel').classList.contains('open'));click('.back-button');
  const persisted={};for(let i=0;i<w.localStorage.length;i++){const k=w.localStorage.key(i);persisted[k]=w.localStorage.getItem(k)};
  const refresh=await setup(persisted);assert.deepEqual(JSON.parse(JSON.stringify(refresh.window.test.generator.current)),stored);assert.equal(refresh.window.test.sessionEntries().length,2);refresh.window.close();
- generated().querySelectorAll('button')[1].click();assert.equal(t.generator.records.length,0);assert.deepEqual(snapshot(),stored);assert.equal(w.document.querySelectorAll('#cast-list .cast-entry').length,1);
+ generated().querySelector('[data-session-action=remove]').click();assert.equal(t.generator.records.length,0);assert.deepEqual(snapshot(),stored);assert.equal(w.document.querySelectorAll('#cast-list .cast-entry').length,1);
  t.setView('generator');click('#add-generated');w.document.querySelectorAll('#cast-list .cast-entry')[1].querySelectorAll('button')[1].click();assert.equal(t.generator.records.length,0);
  assert.equal(w.localStorage.getItem('npc-beta-saved'),initialStorage['npc-beta-saved']);assert.equal(w.localStorage.getItem('npc-beta-session'),initialStorage['npc-beta-session']);
  t.state.query='Cassian';assert.equal(t.visibleSessionEntries().length,1);t.state.query='no match';assert.equal(t.visibleSessionEntries().length,0);t.state.query='';

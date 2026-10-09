@@ -31,7 +31,7 @@ async function ensureLocations() {
       renderLocationFilters(); renderLocations();
       if (state.view === "session") renderSessionLocations();
       refreshNpcVisuals();
-    } catch { locationLibrary.error = true; renderLocations(); }
+    } catch { locationLibrary.error = true; renderLocations(); if (state.view === "session") renderSessionBoard(); }
     finally { locationLibrary.loading = null; }
   })();
   return locationLibrary.loading;
@@ -92,18 +92,10 @@ function addSessionLocation(template) {
   locationLibrary.instances.push({ id: `location-${crypto.randomUUID()}`, templateId: template.id, displayName: template.name, notes: '', settings: [...template.settings], condition: template.condition, createdAt: new Date().toISOString() });
   saveSessionLocations(); renderSessionLocations(); announce(`${template.name} added to session.`);
 }
-function renderSessionLocations() {
-  document.querySelector('#session-location-count').textContent = `${locationLibrary.instances.length} ${locationLibrary.instances.length === 1 ? 'location' : 'locations'}`;
-  const container = document.querySelector('#session-location-list'); container.replaceChildren();
-  if (!locationLibrary.instances.length) {
-    const empty = locationNode('div', 'empty-state', 'Add a location from Locations to plan your session.'); empty.append(locationButton('Browse Locations', () => setView('locations'))); container.append(empty); return;
-  }
-  for (const instance of locationLibrary.instances) {
-    const card = locationNode('article', 'session-location-card'); card.dataset.instanceId = instance.id;
-    const template = locationLibrary.templates?.find(item => item.id === instance.templateId);
-    if (template) card.append(locationThumbnail(template));
-    const title = locationNode('h3', '', instance.displayName || 'Unnamed location'); card.append(title);
-    const controls = [['displayName', 'Location name', 'input'], ['notes', 'Personal notes', 'textarea'], ['condition', 'Condition', 'select']];
+function renderSessionLocations() { if (state.view === "session") renderSessionBoard(); }
+function sessionLocationFields(instance, onChange) {
+  const fields = [];
+  const controls = [['displayName', 'Location name', 'input'], ['notes', 'Personal notes', 'textarea'], ['condition', 'Condition', 'select']];
     for (const [field, label, tag] of controls) {
       const wrapper = locationNode('div', 'session-location-field'); const control = document.createElement(tag); control.id = `${instance.id}-${field}`; control.dataset.locationField = field;
       const labelNode = locationNode('label', '', label); labelNode.htmlFor = control.id;
@@ -111,18 +103,12 @@ function renderSessionLocations() {
       else { if (tag === 'input') control.type = 'text'; else control.rows = 3; control.value = instance[field]; }
       control.addEventListener('input', () => {
         instance[field] = field === 'condition' ? control.value || null : control.value;
-        if (field === 'displayName') title.textContent = instance.displayName || 'Unnamed location';
-        saveSessionLocations();
+        saveSessionLocations(); onChange();
       });
       control.addEventListener('change', () => announce('Session location updated.'));
-      wrapper.append(labelNode, control); card.append(wrapper);
+      wrapper.append(labelNode, control); fields.push(wrapper);
     }
-    card.append(locationButton('Remove', () => {
-      locationLibrary.instances = locationLibrary.instances.filter(item => item.id !== instance.id); saveSessionLocations(); renderSessionLocations(); announce('Location removed from session.');
-      const next = container.querySelector('input, button'); if (next) next.focus();
-    }, `Remove ${instance.displayName || 'unnamed location'} from session`));
-    container.append(card);
-  }
+  return fields;
 }
 document.querySelector('#location-search').addEventListener('input', event => { locationLibrary.query = event.target.value.trim(); renderLocations(); });
 document.querySelector('#location-filter-panel').addEventListener('change', event => {

@@ -86,3 +86,64 @@
 /* Broad role labels retain readable checkboxes on narrow filter panels. */
 .filter-option input{flex:0 0 20px}.filter-option span{min-width:0;overflow-wrap:anywhere}
 @media(max-width:760px){#role-filters,#location-filters{grid-template-columns:minmax(0,1fr)}}
+
+/* Session reference board: scroll lists, keep reference controls in reach. */
+#session-board { max-width: 1440px; margin: 0 auto; padding: 24px 32px; }
+.session-board-toolbar { position: sticky; top: 0; z-index: 3; background: var(--paper, #f5f1e9); padding: 12px 0; }
+.session-board-heading { display:flex; align-items:baseline; gap:16px; }
+.session-board-heading h1 { font-size:28px; margin:0 0 12px; }
+.session-board-heading > span { font-size:13px; color:#65615a; }
+.session-board-search { display:flex; gap:8px; max-width:650px; }
+.session-board-search .search-field { flex:1; min-width:0; }
+.session-board-search input { width:100%; min-width:0; }
+.session-board-search button, .session-row-actions button, .session-tabs button { min-height:44px; min-width:44px; border:1px solid #c9c2b6; border-radius:5px; background:#faf8f3; color:#38352f; padding:8px 12px; cursor:pointer; }
+.session-board-search button:disabled { opacity:.45; cursor:default; }
+.session-board-columns { display:grid; grid-template-columns:minmax(0, 2fr) minmax(0, 3fr); gap:24px; }
+.session-column { min-width:0; }
+.session-column-heading { display:flex; justify-content:space-between; align-items:center; padding:14px 0 10px; }
+.session-column-heading h2 { margin:0; font-size:20px; }
+.session-column-heading > span { font-size:13px; color:#65615a; }
+#session-board #character-grid, #session-location-list { display:flex; flex-direction:column; gap:6px; overflow-y:auto; max-height:calc(100dvh - 230px); scrollbar-gutter:stable; padding:2px 3px 12px; }
+#session-board .session-row { display:flex; align-items:center; gap:6px; padding:4px; margin:0; min-height:72px; border:1px solid #d7d0c4; border-radius:6px; background:#faf8f3; box-shadow:none; }
+#session-board .session-row.is-pinned { border-left:3px solid #837047; }
+.session-row-open { display:flex; align-items:center; text-align:left; flex:1; min-width:0; gap:10px; border:0; border-radius:3px; background:none; padding:3px; color:inherit; cursor:pointer; }
+.session-row-copy { min-width:0; flex:1; }
+#session-board .session-row h3 { font-size:16px; line-height:1.3; margin:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+#session-board .session-row-description { font-size:13px; line-height:1.5; margin:3px 0 0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:#605b52; }
+.session-pin-indicator { font-size:10px; color:#77623f; }
+.session-row-actions { display:flex; gap:3px; flex-shrink:0; }
+.session-row-actions button { font-size:12px; padding:6px; }
+.session-pin-button svg { width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:1.6; vertical-align:middle; }
+.session-pin-button[aria-pressed=true] { background:#ebe2cf; color:#65502c; }
+#session-board .session-npc-thumbnail, #session-board .generated-npc-visual, #session-board .location-thumbnail { flex:0 0 48px; width:48px; height:56px; min-height:0; margin:0; border-radius:4px; overflow:hidden; }
+#session-board .session-portrait { width:100%; height:100%; object-fit:contain; filter:grayscale(1); }
+#session-board .generated-npc-visual { filter:grayscale(1); }
+#session-board .session-row-open:hover .session-portrait, #session-board .session-row-open:focus .session-portrait, #session-board .session-row-open:hover .generated-npc-visual, #session-board .session-row-open:focus .generated-npc-visual, #session-board .session-row-open:hover .generated-visual-background img, #session-board .session-row-open:focus .generated-visual-background img { filter:none; }
+#session-board .generated-profession-badge { width:20px; height:20px; right:1px; bottom:1px; padding:3px; }
+#session-board .generated-profession-badge svg { width:100%; height:100%; }
+#session-board .empty-state { padding:24px 12px; font-size:14px; }
+#session-board .empty-state button { display:block; margin:12px auto 0; min-height:44px; }
+#session-board button:focus-visible, #session-board input:focus-visible { outline:2px solid #735d36; outline-offset:2px; }
+.session-tabs { display:none; }
+.detail-extra-visual { max-width:520px; margin:24px auto 0; }
+.detail-extra-visual .location-thumbnail { height:260px; }
+.detail-extra-visual .generated-npc-visual { width:220px; height:260px; margin:auto; }
+.detail-location-fields { margin-top:24px; }
+[hidden] { display:none !important; }
+@media(max-width:760px) {
+ #session-board { padding:12px; }
+ .session-board-heading h1 { font-size:24px; }
+ .session-board-columns { display:block; }
+ .session-tabs { display:flex; gap:6px; margin-top:12px; }
+ .session-tabs button { flex:1; font-size:14px; }
+ .session-tabs button[aria-selected=true] { background:#38352f; color:#faf8f3; border-color:#38352f; }
+ .session-tabs span { margin-left:6px; font-size:12px; }
+ #session-board #character-grid, #session-location-list { max-height:calc(100dvh - 285px); }
+ .session-row-actions { gap:2px; }
+ #session-board .session-row h3 { font-size:15px; }
+ #session-board .session-row-open { gap:7px; }
+ #session-board .session-npc-thumbnail, #session-board .generated-npc-visual, #session-board .location-thumbnail { flex-basis:40px; width:40px; height:50px; }
+}
+@media(prefers-reduced-motion:reduce) { #session-board *, .detail-panel { transition:none !important; animation:none !important; scroll-behavior:auto !important; } }
+#session-board .session-row-open { border:0; padding:3px; background:none; }
+#session-board .generated-profession-badge { left:auto; transform:none; max-width:none; }

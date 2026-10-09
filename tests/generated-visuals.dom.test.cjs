@@ -4,7 +4,7 @@ const {JSDOM}=require('jsdom'),fs=require('node:fs'),assert=require('node:assert
  const legacy={id:'generated-legacy',name:'Old Friend',locationId:'tavern-inn',professionId:'innkeeper',locationLabel:'Legacy label',professionLabel:'Legacy role',createdAt:'2026-01-01'};
  w.localStorage.setItem('npc-beta:generator:v1:session',JSON.stringify([legacy]));w.localStorage.setItem('npc-beta-saved','["mira-fen"]');w.localStorage.setItem('npc-beta-session','["cassian-holt"]');
  w.fetch=async path=>({ok:true,json:async()=>JSON.parse(fs.readFileSync('docs/'+path))});
- w.eval(['portraits','character-portraits','generator','locations','generated-visuals','app'].map(n=>fs.readFileSync('docs/js/'+n+'.js','utf8')).join('\n')+'\nwindow.test={setView,ensureGenerator,ensureLocations,rollGenerator,generator,generatedNpcVisual,GENERATED_LOCATION_TEMPLATES};');
+ w.eval(['portraits','character-portraits','generator','locations','generated-visuals','session-board','app'].map(n=>fs.readFileSync('docs/js/'+n+'.js','utf8')).join('\n')+'\nwindow.test={setView,ensureGenerator,ensureLocations,rollGenerator,generator,generatedNpcVisual,GENERATED_LOCATION_TEMPLATES};');
  await new Promise(r=>setTimeout(r,20));const t=w.test,d=w.document;t.setView('generator');await t.ensureGenerator();await t.ensureLocations();
  const options=JSON.parse(fs.readFileSync('docs/data/generator/options.json')),templates=JSON.parse(fs.readFileSync('docs/data/locations/templates.json'));
  for(const location of options.locations){assert(Object.hasOwn(t.GENERATED_LOCATION_TEMPLATES,location.id));const mapped=t.GENERATED_LOCATION_TEMPLATES[location.id];assert(mapped && templates.some(x=>x.id===mapped && x.image));}
