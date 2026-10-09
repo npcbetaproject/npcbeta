@@ -17,4 +17,8 @@ window.NPC_PORTRAITS = Object.freeze({
   "mara-flint": "images/characters/mara-flint.webp",
   "jory-pike": "images/characters/jory-pike.webp",
   "bess-crowley": "images/characters/bess-crowley.webp",
+  "nibbin-copperwheel": "images/characters/nibbin-copperwheel.webp",
+  "elra-duskbrook": "images/characters/elra-duskbrook.webp",
+  "sergeant-harl-fenwick": "images/characters/sergeant-harl-fenwick.webp",
+  "pippa-reed": "images/characters/pippa-reed.webp",
 });

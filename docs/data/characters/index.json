@@ -1,5 +1,134 @@
 [
   {
+    "id": "nibbin-copperwheel",
+    "name": "Nibbin Copperwheel",
+    "ancestry": "Goblin",
+    "role": "Goblin traveling merchant",
+    "group": "townsfolk",
+    "subtitle": "Every bargain has a story",
+    "summary": "Cheerful and shrewd, Nibbin sells practical supplies and peculiar bargains from a cluttered wagon. He remembers every customer—and what they bought.",
+    "tableNote": "Rub your palms together, greet returning customers by their last purchase, and offer a practical bargain before an oddity. Nibbin wants repeat customers, but his careful inventory cannot explain the knocking beneath his wagon.",
+    "adventureHook": "Something hidden beneath his wagon starts knocking. He insists it wasn’t there yesterday.",
+    "locationIds": [
+      "market-square",
+      "roadside-campsite"
+    ],
+    "tags": [
+      "merchant",
+      "wanderer"
+    ],
+    "imageAlt": "Cheerful green-skinned goblin merchant with long ears and a patched ochre coat holding copper scales beside a cluttered supply wagon.",
+    "portraitKey": "nibbin-copperwheel",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Village",
+      "Road"
+    ],
+    "publishedAt": "2026-10-09T03:30:00Z",
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel"
+    ]
+  },
+  {
+    "id": "elra-duskbrook",
+    "name": "Elra Duskbrook",
+    "ancestry": "Human",
+    "role": "Desperate laborer",
+    "group": "townsfolk",
+    "subtitle": "A silver pendant for a few coins",
+    "summary": "Exhausted and nervous, Elra offers a silver pendant for far less than its value. She stole it to pay for her brother’s medicine.",
+    "tableNote": "Twist your apron, speak quickly when naming the price, and avoid looking at the pendant. Elra needs medicine for her brother today; she will admit the theft if someone offers a way to help without abandoning him.",
+    "adventureHook": "The pendant bears a local noble’s crest, and its owner is searching for it.",
+    "locationIds": [
+      "market-square",
+      "apothecary"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Tired human laborer with tied-back brown hair, a patched slate dress and linen apron holding a small silver pendant in a village market.",
+    "portraitKey": "elra-duskbrook",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Village"
+    ],
+    "publishedAt": "2026-10-09T03:30:00Z",
+    "roleCategoryIds": [
+      "workers-services",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ]
+  },
+  {
+    "id": "sergeant-harl-fenwick",
+    "name": "Sergeant Harl Fenwick",
+    "ancestry": "Human",
+    "role": "Town guard",
+    "group": "townsfolk",
+    "subtitle": "Patient questions, watchful eyes",
+    "summary": "A patient but watchful guard on patrol, Harl questions unfamiliar travelers about their names, business, and recent movements. He listens for details that do not fit.",
+    "tableNote": "Ask one calm question at a time, repeat exact names, and pause when an account changes. Harl wants a fair investigation; missing watch records trouble him more than an easy arrest.",
+    "adventureHook": "He is investigating the theft of a noble-crested pendant but suspects someone is using it to cover a more serious crime. He asks travelers to compare what they saw with a watch log that has a page torn out.",
+    "locationIds": [
+      "watchhouse",
+      "market-square"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Watchful middle-aged human guard with greying hair and a moustache in worn mail and a burgundy surcoat holding an iron helmet near a village watchhouse.",
+    "portraitKey": "sergeant-harl-fenwick",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town",
+      "Village"
+    ],
+    "publishedAt": "2026-10-09T03:30:00Z",
+    "roleCategoryIds": [
+      "military-authority"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ]
+  },
+  {
+    "id": "pippa-reed",
+    "name": "Pippa Reed",
+    "ancestry": "Human",
+    "role": "Village child",
+    "group": "townsfolk",
+    "subtitle": "Have you ever seen a dragon?",
+    "summary": "Curious and endlessly talkative, Pippa follows newcomers, asking about their weapons, travels, and whether they have ever seen a dragon. Her freckled face lights up at any story worth repeating.",
+    "tableNote": "Fire off questions, mime a dragon with your hands, and interrupt yourself with a new detail. Pippa wants a true adventure story and is proud of noticing things adults overlook; her carved wooden dragon goes everywhere with her.",
+    "adventureHook": "Pippa saw someone slip a wrapped parcel beneath a merchant’s wagon while the guard was busy asking questions. She can point out the muddy shortcut they took, but first wants to hear whether the party has ever seen a real dragon.",
+    "locationIds": [
+      "market-square",
+      "private-residence"
+    ],
+    "tags": [
+      "ally"
+    ],
+    "imageAlt": "Freckled human village girl with auburn braids, a sage tunic and patched brown vest holding a carved wooden dragon on a cottage-lined lane.",
+    "portraitKey": "pippa-reed",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Village"
+    ],
+    "publishedAt": "2026-10-09T03:30:00Z",
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ]
+  },
+  {
     "id": "harl-mercer",
     "name": "Harl “Split Lip” Mercer",
     "ancestry": "Human",
