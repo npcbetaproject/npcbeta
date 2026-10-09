@@ -21,4 +21,8 @@ window.NPC_PORTRAITS = Object.freeze({
   "elra-duskbrook": "images/characters/elra-duskbrook.webp",
   "sergeant-harl-fenwick": "images/characters/sergeant-harl-fenwick.webp",
   "pippa-reed": "images/characters/pippa-reed.webp",
+  "torren-reedbank": "images/characters/torren-reedbank.webp",
+  "elwen-dawnmere": "images/characters/elwen-dawnmere.webp",
+  "wenric-valechord": "images/characters/wenric-valechord.webp",
+  "captain-mara-thornwick": "images/characters/captain-mara-thornwick.webp",
 });
