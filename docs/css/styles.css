@@ -126,7 +126,7 @@
 #session-board button:focus-visible, #session-board input:focus-visible { outline:2px solid #735d36; outline-offset:2px; }
 .session-tabs { display:none; }
 .detail-extra-visual { max-width:520px; margin:24px auto 0; }
-.detail-extra-visual .location-thumbnail { height:260px; }
+.detail-extra-visual .location-thumbnail { width:100%; height:auto; aspect-ratio:16/9; border-radius:6px; }
 .detail-extra-visual .generated-npc-visual { width:220px; height:260px; margin:auto; }
 .detail-location-fields { margin-top:24px; }
 [hidden] { display:none !important; }
@@ -148,7 +148,7 @@
 #session-board .session-row-open { border:0; padding:3px; background:none; }
 #session-board .generated-profession-badge { left:auto; transform:none; max-width:none; }
 
-.location-card .location-card-open { display:block; width:100%; padding:0; border:0; background:none; text-align:left; cursor:pointer; }
+.location-card .location-card-open { display:block; width:100%; margin:0; padding:0; border:0; background:none; text-align:left; cursor:pointer; }
 .location-card-open h2 { padding:18px 22px 0; color:var(--wine); }
 .location-card-open:focus-visible { outline:3px solid var(--wine); outline-offset:-3px; }
 .detail-location-reference section { margin:24px 0; }
@@ -174,3 +174,11 @@
 #session-board .session-location-order-row.drop-before { border-top:3px solid var(--wine); }
 #session-board .session-location-order-row.drop-after { border-bottom:3px solid var(--wine); }
 @media(max-width:760px) { #session-board .session-location-drag { display:none; } }
+
+/* Location frames have no intrinsic SVG sizing or inherited button offsets. */
+.location-thumbnail { width:100%; min-width:0; }
+.location-thumbnail > svg { position:absolute; inset:0; display:block; }
+.location-thumbnail img { display:block; object-fit:cover; object-position:center; }
+.detail-location-reference p { overflow-wrap:anywhere; }
+
+.detail-extra-visual.location-detail-visual { width:100%; margin-top:0; }
