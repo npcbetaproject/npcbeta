@@ -13,4 +13,8 @@ window.NPC_PORTRAITS = Object.freeze({
   "seren-dawnsong": "images/characters/seren-dawnsong.webp",
   "rurik-stoneward": "images/characters/rurik-stoneward.webp",
   "nyra-valecrest": "images/characters/nyra-valecrest.webp",
+  "harl-mercer": "images/characters/harl-mercer.webp",
+  "mara-flint": "images/characters/mara-flint.webp",
+  "jory-pike": "images/characters/jory-pike.webp",
+  "bess-crowley": "images/characters/bess-crowley.webp",
 });
