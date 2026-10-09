@@ -51,6 +51,6 @@ function generatedNpcVisual(entry) {
 }
 function refreshNpcVisuals() {
   renderCast(document.querySelector('#cast-list'));
-  if (state.view === 'session') renderCast(elements.grid, visibleSessionEntries());
+  if (state.view === 'session') renderSessionBoard();
   if (generator.data && generator.current) renderGenerator();
 }

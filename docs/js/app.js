@@ -85,10 +85,10 @@ function render() {
   if ((state.view === "generator" || state.view === "session") && !locationLibrary.templates && !locationLibrary.error) ensureLocations();
   document.title = state.view === "support" ? "Support NPC Beta — NPC Beta" : "NPC Beta — " + ({library:"Character library", locations:"Locations", generator:"Name Generator", saved:"Saved", session:"Session"}[state.view] || "Character library");
   document.querySelector('meta[name="description"]').content = state.view === "support" ? "Patreon support helps keep NPC Beta’s NPCs, locations and tools free for every Game Master." : "Find memorable, ready-to-play fantasy characters for your next session.";
-  document.querySelector(".library").hidden = ["generator", "locations", "support"].includes(state.view);
+  document.querySelector(".library").hidden = ["generator", "locations", "support", "session"].includes(state.view);
   document.querySelector("#locations-view").hidden = state.view !== "locations";
-  document.querySelector("#session-locations").hidden = state.view !== "session";
-  document.querySelector("#session-npcs-title").hidden = state.view !== "session";
+  document.querySelector("#session-board").hidden = state.view !== "session";
+  (state.view === "session" ? document.querySelector("#session-npc-column") : document.querySelector(".library-results")).append(elements.grid);
   document.querySelector("#generator-view").hidden = state.view !== "generator";
   document.querySelector("#pro-view").hidden = state.view !== "support";
   if (state.view === "generator") ensureGenerator();
@@ -106,12 +106,7 @@ function render() {
   if (state.view === "support") return;
   if (state.view === "locations") { ensureLocations(); return; }
   if (state.view === "session") {
-    elements.grid.innerHTML = "";
-    const selected = visibleSessionEntries();
-    elements.results.textContent = `${selected.length} of ${sessionEntries().length} characters selected`;
-    renderCast(elements.grid, selected);
-    renderSessionLocations();
-    if (!locationLibrary.templates && !locationLibrary.error) ensureLocations();
+    renderSessionBoard();
     return;
   }
   if (!characters.length) {
@@ -144,21 +139,48 @@ function renderFilters() {
 }
 function toggleSaved(id) { state.saved.has(id) ? state.saved.delete(id) : state.saved.add(id); saveState(); render(); if (state.activeCharacter?.id === id) updateDetailActions(); }
 function updateDetailActions() {
+  if (!state.activeCharacter) return;
+  elements.sessionButton.hidden = state.view === "session";
   const { id, name } = state.activeCharacter; const isSaved = state.saved.has(id); const isAdded = state.session.has(id);
   elements.detailSave.classList.toggle("is-saved", isSaved); elements.detailSave.setAttribute("aria-label", `${isSaved ? "Remove" : "Save"} ${name}`);
   elements.sessionButton.classList.toggle("added", isAdded); elements.sessionButton.innerHTML = isAdded ? '<span aria-hidden="true">✓</span> Remove from session' : '<span aria-hidden="true">＋</span> Add to session';
 }
+let detailOpener = null, detailEntryId = null, detailEntryKind = null;
+function prepareDetail(kind, fromSession) {
+  detailOpener = document.activeElement;
+  const row = detailOpener?.closest(".session-row");
+  detailEntryId = row?.dataset.entryId; detailEntryKind = row?.dataset.instanceId ? "locations" : "npcs";
+  elements.detail.querySelector(".detail-kind").textContent = kind;
+  elements.sessionButton.hidden = fromSession;
+  elements.detailSave.hidden = false;
+  elements.detail.querySelector(".detail-portrait").hidden = false;
+  elements.detail.querySelector(".detail-facts").hidden = false;
+  for (const selector of [".detail-extra-visual", ".detail-location-fields"]) { const node = elements.detail.querySelector(selector); node.hidden = true; node.replaceChildren(); }
+}
+function showDetail() {
+  elements.detail.inert = false; elements.detail.removeAttribute("inert");
+  elements.detail.classList.add("open"); elements.detail.setAttribute("aria-hidden", "false"); document.body.classList.add("panel-open");
+  elements.detail.querySelector(".detail-scroll").scrollTop = 0; elements.detail.querySelector(".back-button").focus({ preventScroll: true });
+}
 function openDetail(character) {
+  if (!character) return;
+  prepareDetail("Character", state.view === "session");
   state.activeCharacter = character; const portrait = elements.detail.querySelector(".detail-portrait"); portrait.src = state.portraits[character.portraitKey]; portrait.alt = character.imageAlt; portrait.classList.toggle("portrait-contain", character.portraitFit === "contain");
   elements.detail.querySelector("h2").textContent = character.name; elements.detail.querySelector(".detail-meta").textContent = `${character.ancestry ? character.ancestry + " · " : ""}${character.role} · ${character.subtitle}`;
   elements.detail.querySelector(".tag-list").innerHTML = character.tags.map((tag) => `<span>${tag}</span>`).join(""); elements.detail.querySelector(".detail-summary").textContent = character.summary;
   elements.detail.querySelector(".table-note").textContent = character.tableNote; elements.detail.querySelector(".adventure-hook").textContent = character.adventureHook;
-  updateDetailActions(); elements.detail.classList.add("open"); elements.detail.setAttribute("aria-hidden", "false"); document.body.classList.add("panel-open"); elements.detail.querySelector(".detail-scroll").scrollTop = 0; elements.detail.querySelector(".back-button").focus({ preventScroll: true });
+  updateDetailActions(); showDetail();
 }
-function closeDetail() { elements.detail.classList.remove("open"); elements.detail.setAttribute("aria-hidden", "true"); document.body.classList.remove("panel-open"); }
+function closeDetail() {
+  const wasOpen = elements.detail.classList.contains("open");
+  elements.detail.classList.remove("open"); elements.detail.setAttribute("aria-hidden", "true"); elements.detail.inert = true; elements.detail.setAttribute("inert", ""); document.body.classList.remove("panel-open");
+  if (wasOpen && detailOpener?.isConnected) detailOpener.focus({ preventScroll: true });
+  else if (wasOpen && detailEntryId && state.view === "session") focusBoardControl(detailEntryKind, detailEntryId, "open");
+}
+
 const APP_VIEWS = ["library", "locations", "generator", "saved", "session", "support"];
 function routeView(value) { return value === "pro" ? "support" : APP_VIEWS.includes(value) ? value : null; }
-function setView(view) { view = routeView(view); if (!view) return; state.view = view; history.replaceState(null, "", "#" + view); closeDetail(); render(); window.scrollTo({ top: 0, behavior: "smooth" }); }
+function setView(view) { view = routeView(view); if (!view) return; state.view = view; history.replaceState(null, "", "#" + view); closeDetail(); render(); window.scrollTo({ top: 0, behavior: window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }); }
 
 elements.search.addEventListener("input", ({ target }) => { state.query = target.value.trim(); render(); });
 elements.sort.addEventListener("change", ({ target }) => { state.sort = target.value; render(); });
@@ -171,9 +193,16 @@ elements.grid.addEventListener("click", (event) => {
   if (save) toggleSaved(save.dataset.save); else if (remove) { state.session.delete(remove.dataset.removeSession); saveState(); render(); } else if (open) openDetail(state.characters.find(({ id }) => id === open.dataset.character));
 });
 elements.detail.querySelector(".back-button").addEventListener("click", closeDetail); elements.scrim.addEventListener("click", closeDetail);
-elements.detailSave.addEventListener("click", () => toggleSaved(state.activeCharacter.id));
-elements.sessionButton.addEventListener("click", () => { const id = state.activeCharacter.id; state.session.has(id) ? state.session.delete(id) : state.session.add(id); saveState(); updateDetailActions(); render(); });
-document.addEventListener("keydown", ({ key }) => { if (key === "Escape") closeDetail(); });
+elements.detailSave.addEventListener("click", () => { if (state.activeCharacter) toggleSaved(state.activeCharacter.id); });
+elements.sessionButton.addEventListener("click", () => { if (!state.activeCharacter || elements.sessionButton.hidden) return; const id = state.activeCharacter.id; state.session.has(id) ? state.session.delete(id) : state.session.add(id); saveState(); updateDetailActions(); render(); });
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") closeDetail();
+  if (event.key !== "Tab" || !elements.detail.classList.contains("open")) return;
+  const controls = [...elements.detail.querySelectorAll("button, input, textarea, select, a[href]")].filter(node => !node.disabled && !node.closest("[hidden]"));
+  const first = controls[0], last = controls[controls.length - 1];
+  if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+});
 Promise.all(["index", "role-categories", "location-fit-categories"].map(file => fetch(`data/characters/${file}.json`).then(response => { if (!response.ok) throw new Error("Could not load character data"); return response.json(); }))).then(([characters, config, locationConfig]) => { validateRoleCategories(config, characters); validateLocationFitCategories(locationConfig, characters); state.locationFitConfig = locationConfig; state.characters = characters; state.roleConfig = config; renderFilters(); render(); }).catch((error) => { elements.results.textContent = "The character library could not be loaded."; console.error(error); });
 
 // Keep legacy #pro links compatible while new navigation uses #support.

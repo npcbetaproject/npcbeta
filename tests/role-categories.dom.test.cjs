@@ -13,7 +13,7 @@ const seed={
 const w=new JSDOM(fs.readFileSync('docs/index.html','utf8'),{url:'https://example.com/npcbeta/',runScripts:'outside-only'}).window;
 w.scrollTo=()=>{};w.fetch=async path=>({ok:true,json:async()=>JSON.parse(fs.readFileSync('docs/'+path))});
 for(const [key,value]of Object.entries(seed))w.localStorage.setItem(key,value);
-w.eval(['portraits','character-portraits','generator','locations','generated-visuals','app'].map(n=>fs.readFileSync('docs/js/'+n+'.js','utf8')).join('\n')+'\nwindow.test={state,visibleCharacters,visibleSessionEntries,validateRoleCategories,setView,render,openDetail};');
+w.eval(['portraits','character-portraits','generator','locations','generated-visuals','session-board','app'].map(n=>fs.readFileSync('docs/js/'+n+'.js','utf8')).join('\n')+'\nwindow.test={state,visibleCharacters,visibleSessionEntries,validateRoleCategories,setView,render,openDetail};');
 await new Promise(r=>setTimeout(r,30));const t=w.test,d=w.document;
 assert.deepEqual(config.categories.map(x=>x.id),expected);
 assert.deepEqual([...d.querySelectorAll('#role-filters [data-filter="role"]')].map(x=>x.value),expected);
@@ -39,7 +39,7 @@ search.value='';search.dispatchEvent(new w.Event('input'));select('merchants-cra
 t.setView('session');assert.deepEqual(Array.from(t.visibleSessionEntries(),x=>x.id),['seren-dawnsong']);
 all.click();select('merchants-crafters');assert.deepEqual(Array.from(t.visibleSessionEntries(),x=>x.id).sort(),['generated-blacksmith','mira-fen']);
 all.click();select('underworld');assert.deepEqual(Array.from(t.visibleSessionEntries(),x=>x.id),['nessa-vale']);assert(!config.generatorProfessionCategoryIds.cultist.includes('underworld'));
-all.click();assert.equal(t.visibleSessionEntries().length,6);assert.equal(d.querySelector('#results-note').textContent,'6 of 6 characters selected');
+all.click();assert.equal(t.visibleSessionEntries().length,6);assert.equal(d.querySelectorAll('#character-grid .session-row').length,6);
 select('underworld');d.querySelector('.clear-filters').click();assert(all.checked);assert.equal(t.visibleSessionEntries().length,6);
 const sort=d.querySelector('#character-sort');sort.value='role';sort.dispatchEvent(new w.Event('change'));select('faith-healing');assert.equal(t.state.sort,'role');all.click();assert.equal(t.state.sort,'role');
 for(const [key,value]of Object.entries(seed))assert.equal(w.localStorage.getItem(key),value);
