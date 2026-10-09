@@ -1,0 +1,18 @@
+const {JSDOM}=require('jsdom'),fs=require('node:fs'),assert=require('node:assert/strict');
+(async()=>{
+const dom=new JSDOM(fs.readFileSync('docs/index.html','utf8'),{url:'https://example.com/#session',runScripts:'outside-only'}),w=dom.window;w.scrollTo=()=>{};
+w.localStorage.setItem('npc-beta-session','["mira-fen","cassian-holt"]');
+const instances=['a','b'].map(id=>({id:'location-'+id,templateId:'tavern',displayName:'Tavern '+id,notes:'Keep me',settings:['town'],condition:null,createdAt:new Date().toISOString()}));
+w.localStorage.setItem('npc-beta:locations:v1:session',JSON.stringify(instances));
+w.fetch=async path=>({ok:true,json:async()=>JSON.parse(fs.readFileSync('docs/'+path))});
+w.eval(['portraits','character-portraits','generator','locations','generated-visuals','session-board','app'].map(n=>fs.readFileSync('docs/js/'+n+'.js','utf8')).join('\n'));await new Promise(r=>setTimeout(r,60));
+const d=w.document,key='npc-beta:session-board:v1:location-cast',data=()=>JSON.parse(w.localStorage.getItem(key));
+const click=(id,action)=>d.querySelector(`[data-entry-id="${id}"] [data-session-action="${action}"]`).click();
+assert.equal(data().activeLocationId,'location-a');click('mira-fen','assign');assert.equal(data().links.length,1);click('mira-fen','assign');assert.equal(data().links.length,1);assert(d.querySelector('[data-entry-id="mira-fen"] [data-session-action=assign]').disabled);
+click('location-b','active');click('mira-fen','assign');assert.equal(data().links.length,2);
+assert.equal(d.querySelectorAll('.location-cast-profile').length,2);d.querySelector('.location-cast-profile').click();assert.equal(d.querySelector('#detail-panel').getAttribute('aria-hidden'),'false');d.querySelector('.back-button').click();
+d.querySelector('[data-entry-id="location-a"] .location-cast-remove').click();assert.equal(data().links.length,1);assert.equal(w.localStorage.getItem('npc-beta-session'),'["mira-fen","cassian-holt"]');
+click('location-b','remove');assert.equal(data().activeLocationId,'location-a');assert.equal(data().links.length,0);click('mira-fen','assign');click('mira-fen','remove');assert.equal(data().links.length,0);
+assert.equal(JSON.parse(w.localStorage.getItem('npc-beta:locations:v1:session'))[0].notes,'Keep me');click('location-a','remove');assert.equal(data().activeLocationId,null);assert(d.querySelector('[data-session-action=assign]').disabled);
+assert.equal(d.querySelector('#session-adding-to').textContent,'Add a location to assign NPCs');dom.window.close();console.log('PASS location cast: legacy initialization, duplicate prevention, multiple locations, shared modal, unassign, removal cleanup, notes preservation, no-location state');
+})().catch(e=>{console.error(e);process.exit(1)});

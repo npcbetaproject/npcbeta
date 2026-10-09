@@ -1,3 +1,56 @@
+// Location cast is a sidecar keyed by stable NPC IDs and session location instance IDs.
+const SESSION_CAST_KEY = 'npc-beta:session-board:v1:location-cast';
+const validLocationCast = value => value && (value.activeLocationId === null || typeof value.activeLocationId === 'string') && Array.isArray(value.links) && value.links.every(link => link && typeof link.npcId === 'string' && typeof link.locationId === 'string');
+const sessionLocationCast = readStorage(SESSION_CAST_KEY, { activeLocationId: null, links: [] }, validLocationCast);
+function saveLocationCast() { writeStorage(SESSION_CAST_KEY, sessionLocationCast); }
+function reconcileLocationCast() {
+  const before = JSON.stringify(sessionLocationCast), locations = new Set(locationLibrary.instances.map(entry => entry.id));
+  const npcs = new Set(sessionEntries().map(entry => entry.id)), seen = new Set();
+  sessionLocationCast.links = sessionLocationCast.links.filter(link => {
+    const key = JSON.stringify([link.npcId, link.locationId]);
+    if (!locations.has(link.locationId) || (state.characters.length && !npcs.has(link.npcId)) || seen.has(key)) return false;
+    seen.add(key); return true;
+  });
+  if (!locations.has(sessionLocationCast.activeLocationId)) {
+    const ordered = orderedSessionLocations().sort((a,b) => Number(sessionBoard.pins.locations.has(b.id)) - Number(sessionBoard.pins.locations.has(a.id)));
+    sessionLocationCast.activeLocationId = ordered[0]?.id || null;
+  }
+  if (before !== JSON.stringify(sessionLocationCast)) saveLocationCast();
+}
+function activeSessionLocation() { return locationLibrary.instances.find(entry => entry.id === sessionLocationCast.activeLocationId); }
+function setActiveSessionLocation(entry) {
+  sessionLocationCast.activeLocationId = entry.id; saveLocationCast(); renderSessionBoard();
+  focusBoardControl('locations', entry.id, 'active'); announce(`${entry.displayName || 'Unnamed location'} is now active.`);
+}
+function assignSessionNpc(entry) {
+  const location = activeSessionLocation();
+  if (!location || sessionLocationCast.links.some(link => link.npcId === entry.id && link.locationId === location.id)) return;
+  sessionLocationCast.links.push({ npcId: entry.id, locationId: location.id }); saveLocationCast(); renderSessionBoard();
+  focusBoardControl('npcs', entry.id, 'assign'); announce(`${entry.name} added to ${location.displayName || 'Unnamed location'}.`);
+}
+function locationCastSection(location) {
+  const entries = sessionEntries().filter(entry => sessionLocationCast.links.some(link => link.locationId === location.id && link.npcId === entry.id));
+  const section = locationNode('div', 'location-cast');
+  section.append(locationNode('h4', '', `Cast at this location (${entries.length})`));
+  const list = locationNode('div', 'location-cast-icons');
+  for (const entry of entries) {
+    const item = locationNode('div', 'location-cast-member');
+    const open = locationButton('', () => openSessionNpc(entry), `Open ${entry.name} profile`); open.className = 'location-cast-profile';
+    const portrait = locationNode('span', 'location-cast-portrait', entry.name.trim().split(/\s+/).slice(0,2).map(part => part[0]).join(''));
+    if (entry.library) {
+      const character = state.characters.find(character => character.id === entry.id), source = state.portraits[character?.portraitKey];
+      if (source) { const img = locationNode('img', ''); img.src = source; img.alt = ''; img.loading = 'lazy'; img.addEventListener('error', () => img.remove(), { once: true }); portrait.append(img); }
+    } else { portrait.replaceChildren(generatedNpcVisual(entry)); }
+    open.append(portrait, locationNode('span', 'location-cast-name', entry.name.split(' ')[0])); open.title = entry.name;
+    const remove = locationButton('×', () => {
+      sessionLocationCast.links = sessionLocationCast.links.filter(link => !(link.npcId === entry.id && link.locationId === location.id));
+      saveLocationCast(); renderSessionBoard(); focusBoardControl('locations', location.id, 'active'); announce(`${entry.name} unassigned from ${location.displayName || 'Unnamed location'}.`);
+    }, `Unassign ${entry.name} from ${location.displayName || 'Unnamed location'}`);
+    remove.className = 'location-cast-remove'; item.append(open, remove); list.append(item);
+  }
+  if (!entries.length) list.append(locationNode('p', 'location-cast-empty', 'Choose an NPC from Tonight’s Cast to add here.'));
+  section.append(list); return section;
+}
 // Pins are a sidecar: never migrate or rewrite existing NPC/location records on load.
 const SESSION_LOCATION_ORDER_KEY = 'npc-beta:session-board:v1:location-order';
 let sessionLocationOrder = readStorage(SESSION_LOCATION_ORDER_KEY, [], value => validIds(value) && new Set(value).size === value.length);
@@ -80,7 +133,19 @@ function boardRow(kind, entry) {
     row.classList.add('session-location-order-row');
     configureLocationDrop(row, entry);
   }
-  row.append(open, actions); return row;
+  row.append(open, actions);
+  if (kind === 'npcs') {
+    const active = activeSessionLocation(), added = active && sessionLocationCast.links.some(link => link.npcId === entry.id && link.locationId === active.id);
+    const assign = locationButton(added ? 'Added ✓' : 'Add to active location', () => assignSessionNpc(entry), active ? `${added ? 'Already assigned' : 'Assign'} ${name} ${added ? 'to' : 'to'} ${active.displayName || 'Unnamed location'}` : 'Add a location to assign NPCs');
+    assign.dataset.sessionAction = 'assign'; assign.className = 'session-assign-button'; assign.disabled = !active || !!added; row.append(assign);
+  } else {
+    const active = entry.id === sessionLocationCast.activeLocationId;
+    row.classList.toggle('is-active-location', active);
+    const activate = locationButton(active ? 'Active location' : 'Set active', () => setActiveSessionLocation(entry), active ? `${name} is the active location` : `Set ${name} as active location`);
+    activate.dataset.sessionAction = 'active'; activate.className = 'session-active-button'; activate.setAttribute('aria-pressed', String(active));
+    actions.append(activate); row.append(locationCastSection(entry));
+  }
+  return row;
 }
 function boardEmpty(kind, hasEntries) {
   const type = kind === 'npcs' ? 'NPCs' : 'locations';
@@ -89,6 +154,7 @@ function boardEmpty(kind, hasEntries) {
   return empty;
 }
 function renderBoardLocations() {
+  reconcileLocationCast();
   sessionLocationDrag = null;
   document.querySelector('#session-location-reorder-note').hidden = !sessionBoard.query;
   const entries = boardEntries('locations'), total = locationLibrary.instances.length;
@@ -97,6 +163,9 @@ function renderBoardLocations() {
   document.querySelector('#session-location-count').textContent = sessionBoard.query ? `${entries.length} / ${total}` : `${total} ${total === 1 ? 'location' : 'locations'}`;
 }
 function renderSessionBoard() {
+  reconcileLocationCast();
+  const active = activeSessionLocation();
+  document.querySelector('#session-adding-to').textContent = active ? `Adding to: ${active.displayName || 'Unnamed location'}` : 'Add a location to assign NPCs';
   const entries = boardEntries('npcs'), total = sessionEntries().length;
   elements.grid.replaceChildren(...entries.map(entry => boardRow('npcs', entry)));
   if (!entries.length) elements.grid.append(boardEmpty('npcs', total > 0));
@@ -111,12 +180,9 @@ function renderSessionBoard() {
 }
 function syncSessionTabs() {
   for (const kind of ['npcs', 'locations']) {
-    const tab = document.querySelector(`[data-session-tab="${kind}"]`), selected = sessionBoard.tab === kind;
-    tab.setAttribute('aria-selected', String(selected)); tab.tabIndex = selected ? 0 : -1;
     const panel = document.querySelector(kind === 'npcs' ? '#session-npc-column' : '#session-locations');
-    panel.hidden = state.view !== 'session' || (sessionMobile.matches && !selected);
-    if (sessionMobile.matches) { panel.setAttribute('role', 'tabpanel'); panel.setAttribute('aria-labelledby', tab.id); }
-    else { panel.removeAttribute('role'); panel.setAttribute('aria-labelledby', kind === 'npcs' ? 'session-npcs-title' : 'session-locations-title'); }
+    panel.hidden = state.view !== 'session'; panel.removeAttribute('role');
+    panel.setAttribute('aria-labelledby', kind === 'npcs' ? 'session-npcs-title' : 'session-locations-title');
   }
 }
 function clearSessionSearch() { sessionBoard.query = ''; document.querySelector('#session-search').value = ''; renderSessionBoard(); document.querySelector('#session-search').focus(); }

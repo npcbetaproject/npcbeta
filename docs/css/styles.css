@@ -182,3 +182,39 @@
 .detail-location-reference p { overflow-wrap:anywhere; }
 
 .detail-extra-visual.location-detail-visual { width:100%; margin-top:0; }
+
+/* Session location cast: preserve compact controls and separate profile/assignment actions. */
+.session-board-columns { grid-template-columns:minmax(0,2fr) minmax(0,1fr); }
+#session-board .session-tabs { display:none; }
+#session-board .session-location-card { display:grid; grid-template-columns:32px minmax(0,1fr) auto; }
+#session-board .session-location-card .location-cast { grid-column:2 / -1; min-width:0; border-top:1px solid #ddd5c9; padding:8px 4px; }
+#session-board .is-active-location, #session-board .is-active-location.is-pinned { border:2px solid var(--wine); }
+#session-board .session-active-button[aria-pressed=true] { background:var(--wine); color:white; opacity:1; }
+#session-board .session-active-button { grid-column:1 / -1; }
+.location-cast h4 { margin:0 0 6px; font-size:13px; }
+.location-cast-icons { display:flex; flex-wrap:wrap; gap:8px; }
+.location-cast-member { position:relative; width:88px; padding-right:20px; }
+.location-cast-profile { border:0; background:none; color:inherit; padding:0; width:64px; cursor:pointer; }
+.location-cast-portrait { position:relative; display:flex; justify-content:center; align-items:center; width:48px; height:48px; margin:auto; border-radius:50%; overflow:hidden; background:#ded7cc; color:var(--wine); font-weight:bold; }
+.location-cast-portrait img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+#session-board .location-cast-portrait .generated-npc-visual { width:48px; height:48px; flex-basis:48px; border-radius:50%; filter:none; }
+.location-cast-name { display:block; font-size:12px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; margin-top:4px; }
+.location-cast-remove { position:absolute; right:0; top:0; width:32px; height:44px; padding:0; background:#faf8f3; color:var(--wine); border:1px solid #c9c2b6; border-radius:4px; font-size:20px; cursor:pointer; }
+.location-cast-empty, .session-adding-to { font-size:13px; color:#605b52; margin:0 0 8px; }
+#session-board .cast-entry { flex-wrap:wrap; }
+#session-board .cast-entry .session-row-actions { margin-left:auto; }
+.session-assign-button { min-height:44px; width:100%; border:1px solid var(--wine); border-radius:4px; background:var(--wine); color:white; cursor:pointer; padding:8px; }
+.session-assign-button:disabled { background:#e8e1d7; border-color:#c9c2b6; color:#605b52; cursor:default; }
+@media(max-width:760px) {
+ .session-board-columns { display:flex; flex-direction:column; gap:20px; }
+ #session-board #character-grid, #session-location-list { max-height:none; overflow:visible; }
+ #session-board .session-location-card { grid-template-columns:minmax(0,1fr) auto; }
+ #session-board .session-location-card .location-cast { grid-column:1 / -1; }
+ .location-cast-member { width:100px; padding-right:32px; }
+ .location-cast-remove { width:44px; }
+}
+#session-board .session-location-card { flex-shrink:0; }
+#session-board .location-cast-profile { padding:0; border:0; background:none; border-radius:0; }
+#session-board .location-cast-remove { padding:0; border-radius:4px; }
+#session-board .session-assign-button { background:var(--wine); border-color:var(--wine); color:white; }
+#session-board .session-assign-button:disabled { background:#e8e1d7; border-color:#c9c2b6; color:#605b52; }
