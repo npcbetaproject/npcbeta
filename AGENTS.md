@@ -5,3 +5,5 @@ For any new or replacement library NPC portrait, follow project/npc-portrait-sta
 For every new library NPC, include a nonempty `roleCategoryIds` array from `docs/data/characters/role-categories.json`. Preserve the specific `role` profession. Follow `planning/content-guidelines.md` for occupational classification and overlapping categories.
 
 For every new library NPC, include a nonempty `locationFitCategoryIds` array from `docs/data/characters/location-fit-categories.json`. Assign plausible encounter environments based on profession, description and adventure hook. Preserve `locationIds`, descriptive `locationFit`, and `roleCategoryIds`; follow `planning/content-guidelines.md`.
+
+For NPC Library pack creation, read and follow `project/npc-pack-standard.md` and `project/npc-portrait-standard.md` before proposing or implementing characters.
