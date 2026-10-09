@@ -12,7 +12,7 @@ const locationLibrary = {
 };
 function validateLocationData(templates, labels) {
   if (!labels || !SETTING_IDS.every(id => typeof labels.settings?.[id] === 'string') || !CONDITION_IDS.every(id => typeof labels.conditions?.[id] === 'string')) throw new Error('Invalid filter labels');
-  if (!Array.isArray(templates) || new Set(templates.map(item => item.id)).size !== templates.length || !templates.every(item => item && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id) && typeof item.name === 'string' && item.name.trim() && typeof item.description === 'string' && item.description.trim() && ['flavour', 'discovery'].every(key => item[key] === undefined || (typeof item[key] === 'string' && item[key].trim())) && validSettings(item.settings) && validCondition(item.condition) && (item.image === null || safeLocationImage(item.image)) && typeof item.imageAlt === 'string')) throw new Error('Invalid location templates');
+  if (!Array.isArray(templates) || new Set(templates.map(item => item.id)).size !== templates.length || !templates.every(item => item && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id) && typeof item.name === 'string' && item.name.trim() && typeof item.description === 'string' && item.description.trim() && ['readAloud', 'flavour', 'discovery'].every(key => item[key] == null || typeof item[key] === 'string') && validSettings(item.settings) && validCondition(item.condition) && (item.image === null || safeLocationImage(item.image)) && typeof item.imageAlt === 'string')) throw new Error('Invalid location templates');
 }
 function safeLocationImage(path) {
   return typeof path === 'string' && /^(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_.-]+\.(?:svg|png|jpe?g|webp|avif)$/i.test(path) && !path.split('/').includes('..');
@@ -65,7 +65,7 @@ function locationThumbnail(template) {
   wrap.innerHTML = '<svg aria-hidden="true" viewBox="0 0 320 180"><circle cx="244" cy="43" r="17"/><path d="m0 150 80-84 64 60 51-33 125 70M0 169h320M42 140v-32l26-20 26 20v32M60 140v-21h16v21M169 137l22-55 23 55M182 106h19"/></svg>';
   wrap.classList.add(`setting-${template.settings[0]}`);
   if (template.image && safeLocationImage(template.image)) {
-    const img = document.createElement('img'); img.src = template.image; img.alt = template.imageAlt; img.loading = 'lazy'; img.addEventListener('error', () => img.remove(), { once: true }); wrap.append(img);
+    const img = document.createElement('img'); img.src = template.image; img.alt = template.imageAlt || ''; if (safeLocationImagePosition(template.imagePosition)) img.style.objectPosition = template.imagePosition; img.loading = 'lazy'; img.addEventListener('error', () => img.remove(), { once: true }); wrap.append(img);
   }
   return wrap;
 }
@@ -129,7 +129,7 @@ document.querySelector('#location-sort').addEventListener('change', event => { l
 function openLocationDetail(templateId, instance = null) {
   const template = locationLibrary.templates?.find(item => item.id === templateId);
   beginReferenceDetail('Location');
-  const visual = elements.detail.querySelector('.detail-extra-visual'); visual.hidden = false;
+  const visual = elements.detail.querySelector('.detail-extra-visual'); visual.hidden = false; visual.classList.add('location-detail-visual');
   visual.replaceChildren(locationThumbnail(template || { settings: instance?.settings || ['wilderness'], image: null }));
   const title = elements.detail.querySelector('#detail-title'); title.textContent = instance?.displayName || template?.name || 'Unnamed location';
   elements.detail.querySelector('.detail-meta').textContent = '';
@@ -143,13 +143,13 @@ function openLocationDetail(templateId, instance = null) {
   elements.detail.querySelector('.detail-summary').hidden = true;
   const reference = elements.detail.querySelector('.detail-location-reference'); reference.hidden = false;
   const text = value => typeof value === 'string' && value.trim() ? value : null;
-  // Legacy descriptions stay intact in data; the first sentence is the quick introduction.
-  const description = text(template?.description)?.split(/(?<=[.!?])\s+/)[0] || (locationLibrary.loading ? 'Location details are loading.' : 'This location template is unavailable.');
+  const description = text(template?.readAloud) || text(template?.description) || (locationLibrary.loading ? 'Location details are loading.' : 'This location template is unavailable.');
   for (const [heading, className, copy] of [
     ['Description', 'location-introduction', description],
-    ['More Flavour', 'location-flavour', text(template?.flavour) || 'No additional flavour is available for this location yet.'],
-    ['Discovery', 'location-discovery', text(template?.discovery) || 'No discovery is available for this location yet.'],
+    ['More Flavour', 'location-flavour', text(template?.flavour)],
+    ['Discovery', 'location-discovery', text(template?.discovery)],
   ]) {
+    if (!copy) continue;
     const section = locationNode('section', className), header = locationNode('h3', '', heading);
     if (className === 'location-flavour') header.append(locationFlavourHelp());
     section.append(header, locationNode('p', '', copy)); reference.append(section);
@@ -178,3 +178,6 @@ function locationFlavourHelp() {
   button.addEventListener('keydown', event => { if (event.key === 'Escape' && !tip.hidden) { event.stopPropagation(); pinned = false; hide(); } });
   wrap.append(button, tip); return wrap;
 }
+
+// Focal positions are explicit percentages, shared by card/modal/Session artwork.
+function safeLocationImagePosition(value) { return typeof value === 'string' && /^(?:100|[0-9]{1,2})(?:\.[0-9]+)?% (?:100|[0-9]{1,2})(?:\.[0-9]+)?%$/.test(value) && value.split(' ').every(part => parseFloat(part) <= 100); }

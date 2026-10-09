@@ -12,8 +12,9 @@
     "image": "images/locations/inn-location.webp",
     "imageAlt": "Fantasy illustration of inn: A business offering rooms for travelers, usually with meals and a common room.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Warm bread and woodsmoke drift from the common room as floorboards creak overhead. Rain-dark cloaks hang beside the hearth, their hems dripping into a shallow tray.",
-    "discovery": "Behind a loose drawer in a guest room lies a folded route map with one stopping place carefully crossed out."
+    "flavour": "Firelight flickers across the tabletops, and the smell of fresh bread drifts from a nearby doorway. Above you, floorboards creak beneath someone’s slow footsteps.",
+    "discovery": "Behind a loose drawer in a guest room lies a folded route map with one stopping place carefully crossed out.",
+    "readAloud": "A worn staircase rises beside a hearth, with wooden tables filling the common room below."
   },
   {
     "id": "tavern",
@@ -28,8 +29,9 @@
     "image": "images/locations/tavern.webp",
     "imageAlt": "Timber tavern with glowing windows, outdoor tables and barrels beside a cobbled road at sunset.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "The air carries sour ale, roasting onions and the smoky warmth of a crowded hearth. Tankards knock against scarred tables while a shutter rattles above the murmur of conversation.",
-    "discovery": "Repeated scratches beneath one table form a crude map of the nearby streets, with a doorway marked by a small star."
+    "flavour": "Smoke curls beneath the beams, carrying the smell of roasting onions and spilled ale. Tankards knock against the tables beneath a murmur of conversation.",
+    "discovery": "Repeated scratches beneath one table form a crude map of the nearby streets, with a doorway marked by a small star.",
+    "readAloud": "Scarred tables and mismatched chairs crowd a low-beamed room around a glowing hearth."
   },
   {
     "id": "general-store",
@@ -44,8 +46,9 @@
     "image": "images/locations/general-store.webp",
     "imageAlt": "Village general store with an open doorway and baskets, sacks and supplies displayed outside.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Dried herbs and lamp oil scent the close air between shelves of ordinary goods. A bell gives a thin jangle whenever the door brushes a hanging coil of rope.",
-    "discovery": "A sack among the deliveries contains smooth river stones instead of the grain named on its label."
+    "flavour": "Coils of rope brush the shelves as the door opens, setting a small bell jingling. The close air smells of soap, lamp oil and dry grain.",
+    "discovery": "A sack among the deliveries contains smooth river stones instead of the grain named on its label.",
+    "readAloud": "Shelves of jars, tools and folded cloth surround a counter crowded with sacks and bundled supplies."
   },
   {
     "id": "blacksmiths-forge",
@@ -60,8 +63,9 @@
     "image": "images/locations/blacksmiths-forge.webp",
     "imageAlt": "Open blacksmith workshop with a glowing forge, anvil, hammers and horseshoes.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Hammer blows ring through the yard, followed by the sharp hiss of hot metal meeting water. Heat rolls from the forge, carrying the smell of coal and scorched leather.",
-    "discovery": "A newly repaired tool bears an unfamiliar maker’s mark beneath its handle, hidden by a strip of worn wrapping."
+    "flavour": "Sparks scatter across the floor as a hammer strikes glowing metal. Heat washes over your face, followed by the sharp hiss of water and the smell of coal smoke.",
+    "discovery": "A newly repaired tool bears an unfamiliar maker’s mark beneath its handle, hidden by a strip of worn wrapping.",
+    "readAloud": "A red-hot forge illuminates an anvil surrounded by hammers, iron scraps and unfinished tools."
   },
   {
     "id": "apothecary",
@@ -76,8 +80,9 @@
     "image": "images/locations/apothecary.webp",
     "imageAlt": "Warm apothecary interior with shelves of bottles, hanging herbs and a worktable covered in plants and remedies.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Bitter leaves and sweet resin mingle beneath bundles drying from the rafters. Glass bottles catch the window light while a slow drip falls from a copper still.",
-    "discovery": "One jar has two labels, and the older name beneath the peeling paper does not match its contents."
+    "flavour": "Bundles hanging from the rafters turn gently in a draft, releasing a bitter herbal scent. Beneath them, a copper still drips steadily into a narrow flask.",
+    "discovery": "One jar has two labels, and the older name beneath the peeling paper does not match its contents.",
+    "readAloud": "Rows of glass bottles line the walls above a worktable covered in dried herbs and stained bowls."
   },
   {
     "id": "market-square",
@@ -92,8 +97,9 @@
     "image": "images/locations/market-square.webp",
     "imageAlt": "Cobbled town market square with canvas stalls, produce and timber buildings in the evening light.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Canvas awnings snap overhead as voices compete with the rumble of cart wheels. Crushed fruit sweetens the air near the stalls, mixing with damp straw and animal sweat.",
-    "discovery": "A loose paving stone conceals a shallow recess containing several trade tokens from distant markets."
+    "flavour": "Their loose edges snap in the breeze above vendors calling to passing customers. Rattling wheels roll through damp straw, and the air smells of ripe fruit and fresh bread.",
+    "discovery": "A loose paving stone conceals a shallow recess containing several trade tokens from distant markets.",
+    "readAloud": "Canvas awnings stretch over rows of stalls and loaded carts between the buildings surrounding the square."
   },
   {
     "id": "chapel",
@@ -108,8 +114,9 @@
     "image": "images/locations/chapel.webp",
     "imageAlt": "Small stone chapel with a bell tower, an arched doorway and flowers along a cobbled path.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Cool stone and candle wax soften the air around the quiet altar. Light from a narrow window falls across worn floor tiles and a row of polished wooden seats.",
-    "discovery": "An inscription beneath the altar cloth names an earlier dedication, still legible under layers of later carving."
+    "flavour": "Its light falls across worn floor tiles and candles burning beside the altar. The flames lean in a faint draft that carries the smell of wax and cool stone.",
+    "discovery": "An inscription beneath the altar cloth names an earlier dedication, still legible under layers of later carving.",
+    "readAloud": "Rows of wooden seats face a modest altar beneath a narrow window of coloured glass."
   },
   {
     "id": "watchhouse",
@@ -123,8 +130,9 @@
     "image": "images/locations/watchhouse.webp",
     "imageAlt": "Stone and timber watchhouse with blue banners, a tower and a fortified arched entrance.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Oiled leather and damp wool linger around the duty desk. Keys clink on a wall hook while boot heels echo from the passage behind it.",
-    "discovery": "Two copies of a recent entry in the watch ledger disagree about which gate was used."
+    "flavour": "Damp cloaks hang near the entrance, leaving the smell of wet wool and oiled leather. Beyond the desk, keys clink and boot heels echo along the passage.",
+    "discovery": "Two copies of a recent entry in the watch ledger disagree about which gate was used.",
+    "readAloud": "A heavy desk stands before a stone passage lined with equipment racks and thick, iron-bound doors."
   },
   {
     "id": "private-residence",
@@ -139,8 +147,9 @@
     "image": "images/locations/private-residence.webp",
     "imageAlt": "Timber and stone cottage with glowing windows, a fenced garden and flowers beside the front door.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Cooking scents drift through a hallway lined with worn rugs and household keepsakes. A window latch clicks softly in the breeze, and the furniture shows the polish of frequent use.",
-    "discovery": "A patch of newer plaster conceals a shallow wall niche containing a bundle of old household letters."
+    "flavour": "Curtains shift beside a slightly open window, its latch clicking in the breeze. From deeper inside comes the smell of cooking and the soft scrape of a chair.",
+    "discovery": "A patch of newer plaster conceals a shallow wall niche containing a bundle of old household letters.",
+    "readAloud": "Worn rugs lead through a hallway lined with framed keepsakes and doorways into furnished rooms."
   },
   {
     "id": "stables",
@@ -155,8 +164,9 @@
     "image": "images/locations/stables.webp",
     "imageAlt": "Timber stable with horses in open stalls, hay, saddles and a stone water trough.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Warm hay, leather and the earthy smell of horses fill the aisle. Hooves scrape against stall boards as a hanging lantern swings above the feed bins.",
-    "discovery": "A saddle’s inner lining hides a narrow pocket holding a hand-drawn trail map."
+    "flavour": "Horses shift beneath a swaying lantern, their hooves scraping against the boards. Warm hay and worn leather scent the air as one animal gives a low snort.",
+    "discovery": "A saddle’s inner lining hides a narrow pocket holding a hand-drawn trail map.",
+    "readAloud": "Wooden stalls line a straw-covered aisle, with saddles and bridles hanging from pegs along the walls."
   },
   {
     "id": "docks-ferry-landing",
@@ -172,8 +182,9 @@
     "image": "images/locations/docks-ferry-landing.webp",
     "imageAlt": "Wooden riverside landing with mooring posts and a covered ferry beneath a sunset sky.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Water slaps the pilings beneath boards darkened by spray. Wet rope and river mud scent the air as a mooring ring knocks against its post.",
-    "discovery": "At low water, a small sealed box becomes visible beneath the landing, caught between two support beams."
+    "flavour": "The boats rise and settle, pulling the ropes taut with small creaks. Water slaps the supports below, carrying the smell of wet timber and river mud.",
+    "discovery": "At low water, a small sealed box becomes visible beneath the landing, caught between two support beams.",
+    "readAloud": "Weather-darkened boards extend over the water toward mooring posts and boats secured by thick ropes."
   },
   {
     "id": "roadside-campsite",
@@ -186,8 +197,9 @@
     "image": "images/locations/roadside-campsite-location.webp",
     "imageAlt": "Fantasy illustration of roadside campsite: A stopping place beside a travel route where people pitch tents, rest and cook.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Smoke from old fires clings to the stones around a blackened cooking pit. Dry grass whispers beyond the cleared ground, and a kettle hook turns slowly on its peg.",
-    "discovery": "Beneath the newest ash layer, a discarded scrap of cloth carries a stitched symbol and a few grains of glittering sand."
+    "flavour": "Charred sticks lie among the ashes, still carrying a faint smoky smell. Beyond the cleared ground, dry grass whispers in the passing breeze.",
+    "discovery": "Beneath the newest ash layer, a discarded scrap of cloth carries a stitched symbol and a few grains of glittering sand.",
+    "readAloud": "A ring of blackened stones sits in a patch of flattened grass beside the road."
   },
   {
     "id": "river-ford",
@@ -200,8 +212,9 @@
     "image": "images/locations/river-ford-location.webp",
     "imageAlt": "Fantasy illustration of river ford: A shallow stretch of river where people and animals cross without a bridge. Rain can make it dangerous.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Cold water curls around exposed stones, washing reeds against the bank. The river’s steady rush is broken by the hollow clatter of pebbles rolling downstream.",
-    "discovery": "A line of submerged marker stones reveals a shallower crossing a little upstream from the obvious path."
+    "flavour": "Clear water curls around them, bending ribbons of weed downstream. The current rushes steadily, broken by the clatter of pebbles rolling along the riverbed.",
+    "discovery": "A line of submerged marker stones reveals a shallower crossing a little upstream from the obvious path.",
+    "readAloud": "Pale stones break the river’s surface between muddy tracks descending from either bank."
   },
   {
     "id": "forest-clearing",
@@ -214,8 +227,9 @@
     "image": "images/locations/forest-clearing-location.webp",
     "imageAlt": "Fantasy illustration of forest clearing: An open area surrounded by trees, suitable for resting, camping or meeting.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Sunlight pools on soft grass while leaves rustle around the clearing’s edge. The air smells of sap and damp moss, and insects hum in the warmer patches.",
-    "discovery": "A ring of half-buried stones outlines an older fire pit beneath the grass, with a small carved bead among the ashes."
+    "flavour": "Leaves shift overhead, moving the bright patches across moss and fallen branches. The air smells of damp earth and sap, and insects hum in the warmth.",
+    "discovery": "A ring of half-buried stones outlines an older fire pit beneath the grass, with a small carved bead among the ashes.",
+    "readAloud": "A grassy clearing opens between tall trees, with patches of sunlight scattered across the ground."
   },
   {
     "id": "hunters-cabin",
@@ -228,8 +242,9 @@
     "image": "images/locations/hunters-cabin-location.webp",
     "imageAlt": "Fantasy illustration of hunter’s cabin: A small dwelling used by a hunter or trapper, usually containing a bed, fireplace, tools and supplies.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Smoke stains the low rafters above a hearth smelling faintly of pine resin. Dry hides crackle against the wall when a draft slips beneath the door.",
-    "discovery": "Notches on the doorframe match a series of marks on a nearby trail, leading to a carefully concealed supply cache."
+    "flavour": "A thin thread of smoke rises from the chimney and drifts between the branches. The breeze carries pine smoke and makes the loose door latch rattle.",
+    "discovery": "Notches on the doorframe match a series of marks on a nearby trail, leading to a carefully concealed supply cache.",
+    "readAloud": "A small timber cabin stands among the trees, with stacked firewood beside its weathered door."
   },
   {
     "id": "rock-shelter",
@@ -242,8 +257,9 @@
     "image": "images/locations/rock-shelter-location.webp",
     "imageAlt": "Fantasy illustration of rock shelter: A space beneath an overhanging rock or cliff that offers partial protection from weather.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Cool air gathers beneath the overhang, carrying the mineral smell of damp stone. Water ticks into a shallow hollow while wind brushes the exposed scrub outside.",
-    "discovery": "Faded handprints surround a narrow crevice where a small clay container has been pushed out of sight."
+    "flavour": "Beads of water gather along its edge and fall into a shallow hollow. Beneath the rock, the air is cool and smells of damp stone.",
+    "discovery": "Faded handprints surround a narrow crevice where a small clay container has been pushed out of sight.",
+    "readAloud": "A broad overhang casts a deep shadow across a strip of bare ground at the foot of the cliff."
   },
   {
     "id": "marsh-boardwalk",
@@ -256,8 +272,9 @@
     "image": "images/locations/marsh-boardwalk-location.webp",
     "imageAlt": "Fantasy illustration of marsh boardwalk: A raised wooden walkway across wet ground, allowing travelers to pass without sinking into the marsh.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Dark water glints between the planks, edged with reeds and floating weed. Insects drone above the mud while the timbers groan under each step.",
-    "discovery": "One replacement plank lifts easily, revealing a dry-wrapped packet tied to the support beneath it."
+    "flavour": "The reeds sway against the walkway as its timbers groan beneath your steps. Insects drone over the stagnant water, where bubbles rise through the mud.",
+    "discovery": "One replacement plank lifts easily, revealing a dry-wrapped packet tied to the support beneath it.",
+    "readAloud": "A narrow line of wooden planks winds above dark pools and dense stands of reeds."
   },
   {
     "id": "mountain-trail",
@@ -270,8 +287,9 @@
     "image": "images/locations/mountain-trail-location.webp",
     "imageAlt": "Fantasy illustration of mountain trail: A walking route through steep terrain, often narrow and uneven, where travelers may move single file.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Thin wind tugs at clothing and carries the sharp scent of crushed mountain herbs. Loose grit slides toward the drop as distant birds wheel below the path.",
-    "discovery": "An old cairn contains a flat stone scratched with directions to a sheltered route through the ridge."
+    "flavour": "A few pieces of grit slide away beneath your boots and tumble down the slope. Cold wind pulls at your clothing and whistles through the fractured rock.",
+    "discovery": "An old cairn contains a flat stone scratched with directions to a sheltered route through the ridge.",
+    "readAloud": "A narrow trail cuts across a steep mountainside, with loose stones scattered along its outer edge."
   },
   {
     "id": "lakeshore",
@@ -284,8 +302,9 @@
     "image": "images/locations/lakeshore-location.webp",
     "imageAlt": "Fantasy illustration of lakeshore: The edge of a lake, with possible beaches, reeds, fishing spots and boat landings.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Small waves fold against the shore with a soft, steady hiss. Reeds sway in the breeze, carrying the scent of water plants and sun-warmed mud.",
-    "discovery": "A partly buried mooring post bears waterline marks that show the lake once stood much higher."
+    "flavour": "Small waves spread over the stones, leaving them dark and shining. Their soft hiss mingles with rustling reeds and the smell of sun-warmed mud.",
+    "discovery": "A partly buried mooring post bears waterline marks that show the lake once stood much higher.",
+    "readAloud": "A pebbled shore curves around the lake between low reeds and rocks polished smooth by the water."
   },
   {
     "id": "waterfall-pool",
@@ -298,8 +317,9 @@
     "image": "images/locations/waterfall-pool-location.webp",
     "imageAlt": "Fantasy illustration of waterfall pool: A pool beneath falling water, surrounded by slippery rocks and loud rushing water.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Fine spray cools the air and beads on every nearby leaf. The waterfall’s roar swallows quieter sounds while pale foam turns slowly beneath the rocks.",
-    "discovery": "Behind a curtain of spray, a narrow dry shelf holds the remains of a carefully stacked stone marker."
+    "flavour": "Spray hangs above the surface and settles cool against your skin. The waterfall’s roar fills the hollow as pale foam turns along the pool’s edge.",
+    "discovery": "Behind a curtain of spray, a narrow dry shelf holds the remains of a carefully stacked stone marker.",
+    "readAloud": "A white curtain of falling water plunges into a dark pool ringed by slick rocks and dripping greenery."
   },
   {
     "id": "animal-den",
@@ -312,8 +332,9 @@
     "image": "images/locations/animal-den-location.webp",
     "imageAlt": "Fantasy illustration of animal den: A sheltered place where an animal sleeps or raises its young, such as a burrow, cave or hollow beneath roots.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "A musky smell rises from earth pressed smooth by repeated passage. Loose fur catches on the entrance roots, and faint rustling comes from the dark interior.",
-    "discovery": "Among old bones near the entrance lies a worked metal clasp with a torn piece of fabric still attached."
+    "flavour": "Scratched earth leads into the darkness, where something rustles faintly out of sight. A musky smell drifts from within, mingling with damp soil.",
+    "discovery": "Among old bones near the entrance lies a worked metal clasp with a torn piece of fabric still attached.",
+    "readAloud": "A low opening disappears beneath tangled roots, with loose fur caught around its worn entrance."
   },
   {
     "id": "abandoned-logging-camp",
@@ -326,8 +347,9 @@
     "image": "images/locations/abandoned-logging-camp-location.webp",
     "imageAlt": "Fantasy illustration of abandoned logging camp: A former base for timber workers, with empty huts, tool sheds, stacked logs and hauling tracks.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Weathered boards creak in the wind above grass-choked hauling tracks. Damp sawdust and rotting timber scent the air, and rusty chain links tap against an empty shed.",
-    "discovery": "A tally board records deliveries made after the camp appears to have been abandoned."
+    "flavour": "Loose boards creak as the wind passes through the buildings. Damp sawdust and rotting timber scent the air while a rusty chain taps against a shed wall.",
+    "discovery": "A tally board records deliveries made after the camp appears to have been abandoned.",
+    "readAloud": "Sagging huts and empty sheds stand beside stacked logs and hauling tracks buried in grass."
   },
   {
     "id": "ravine-crossing",
@@ -340,8 +362,9 @@
     "image": "images/locations/ravine-crossing-location.webp",
     "imageAlt": "Fantasy illustration of ravine crossing: A place to cross a deep, narrow gap using a bridge, fallen tree or narrow ledge.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Wind funnels through the gap, tugging at loose straps and stirring dust along the edge. Far below, falling pebbles strike stone long after they vanish from sight.",
-    "discovery": "Old footholds cut into the rock reveal a second crossing route beneath the visible one."
+    "flavour": "Dust lifts from the edge as wind funnels through the gap. A dislodged pebble vanishes below, its distant impacts arriving a moment later.",
+    "discovery": "Old footholds cut into the rock reveal a second crossing route beneath the visible one.",
+    "readAloud": "A narrow crossing stretches between jagged rock faces above a deep, shadowed ravine."
   },
   {
     "id": "overgrown-homestead",
@@ -354,8 +377,9 @@
     "image": "images/locations/overgrown-homestead-location.webp",
     "imageAlt": "Fantasy illustration of overgrown homestead: A deserted rural home with a cottage, well, garden or barn overtaken by vegetation and partly collapsed.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Wet leaves press against broken windows, and the smell of mould hangs in the shade. A branch scrapes the roof while insects stir among the collapsed garden beds.",
-    "discovery": "A covered well contains a waterproof tin wedged above the waterline, filled with faded family papers."
+    "flavour": "Branches reach through broken windows and scrape against the sagging roof. Wet leaves and mould scent the shade beneath the tangled growth.",
+    "discovery": "A covered well contains a waterproof tin wedged above the waterline, filled with faded family papers.",
+    "readAloud": "Vines climb a deserted cottage beside a leaning barn and garden beds swallowed by weeds."
   },
   {
     "id": "gatehouse",
@@ -370,8 +394,9 @@
     "image": "images/locations/gatehouse-location.webp",
     "imageAlt": "Fantasy illustration of gatehouse: A fortified entrance where guards control access through gates, sometimes with a heavy sliding grille called a portcullis.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Iron chains grind against their guides as air whistles through the entrance tunnel. The walls smell of damp mortar and lamp smoke, and passing footsteps echo beneath the arch.",
-    "discovery": "A small inspection hatch reveals an older passage sealed behind the gate mechanism."
+    "flavour": "Thick chains run from the grille into dark openings in the masonry. Your footsteps echo through the cool passage, where damp mortar and lamp smoke scent the air.",
+    "discovery": "A small inspection hatch reveals an older passage sealed behind the gate mechanism.",
+    "readAloud": "A stone archway passes beneath the gatehouse, with a heavy iron grille suspended above the entrance."
   },
   {
     "id": "courtyard",
@@ -386,8 +411,9 @@
     "image": "images/locations/courtyard-location.webp",
     "imageAlt": "Fantasy illustration of courtyard: An outdoor space enclosed by walls or buildings, used for deliveries, daily work and access to nearby rooms.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Puddles reflect the enclosing walls, broken by the scrape of cart wheels. Laundry stirs overhead while kitchen smoke drifts through the cool air between buildings.",
-    "discovery": "A drain grate covers a narrow channel containing a recently dropped key and fresh candle wax."
+    "flavour": "The cloth stirs overhead, casting moving shadows across shallow puddles. Kitchen smoke drifts between the walls while cart wheels scrape over the uneven ground.",
+    "discovery": "A drain grate covers a narrow channel containing a recently dropped key and fresh candle wax.",
+    "readAloud": "Paving stones fill an enclosed courtyard beneath shuttered windows and lines of hanging laundry."
   },
   {
     "id": "great-hall",
@@ -402,8 +428,9 @@
     "image": "images/locations/great-hall-location.webp",
     "imageAlt": "Fantasy illustration of great hall: A large room for meals, gatherings and receiving visitors, where a lord or commander may conduct business.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Woodsmoke hangs beneath high rafters above tables rubbed smooth by years of meals. Every footstep carries across the room, mingling with the faint scent of wax and spilled wine.",
-    "discovery": "A movable panel behind a wall hanging exposes an older carving deliberately hidden from the hall."
+    "flavour": "Firelight moves across the benches and wall hangings as smoke gathers overhead. The air smells of wax and spilled wine, and every footstep carries across the stone floor.",
+    "discovery": "A movable panel behind a wall hanging exposes an older carving deliberately hidden from the hall.",
+    "readAloud": "Long tables stretch beneath high rafters toward a raised seat at the far end of the hall."
   },
   {
     "id": "kitchen-and-pantry",
@@ -420,8 +447,9 @@
     "image": "images/locations/kitchen-and-pantry-location.webp",
     "imageAlt": "Fantasy illustration of kitchen and pantry: Rooms for preparing meals and storing food, utensils and ingredients.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Steam clouds the windows while herbs, hot fat and fresh bread scent the room. Ladles tap against pots, and the pantry shelves are cool beneath their rows of jars.",
-    "discovery": "A flour bin has a false bottom holding a wrapped packet of letters kept away from kitchen damp."
+    "flavour": "Steam rises from the cooking vessels and clouds a nearby window. Herbs and fresh bread scent the warmth as a ladle taps against the rim of a pot.",
+    "discovery": "A flour bin has a false bottom holding a wrapped packet of letters kept away from kitchen damp.",
+    "readAloud": "Iron pots hang above crowded preparation tables beside a pantry lined with jars and sacks."
   },
   {
     "id": "barracks",
@@ -437,8 +465,9 @@
     "image": "images/locations/barracks-location.webp",
     "imageAlt": "Fantasy illustration of barracks: Shared accommodation for soldiers or guards, with beds, personal storage and equipment.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Blankets and boot leather give the room a close, familiar smell. Bed frames creak in the draft as light picks out neatly stacked equipment and scattered personal trinkets.",
-    "discovery": "A loose bed slat carries a list of dates and places carved where only its occupant would see it."
+    "flavour": "A draft stirs a hanging strap, making its buckle tap against a bedframe. The room smells of boot leather, wool and recently extinguished lamp oil.",
+    "discovery": "A loose bed slat carries a list of dates and places carved where only its occupant would see it.",
+    "readAloud": "Rows of narrow beds stand beside storage chests, folded blankets and neatly arranged equipment."
   },
   {
     "id": "armory",
@@ -454,8 +483,9 @@
     "image": "images/locations/armory-location.webp",
     "imageAlt": "Fantasy illustration of armory: A secure room storing weapons, armor and military supplies, with controlled access.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Oil and cold metal scent the air between ordered racks. A shuttered window admits a thin stripe of light that catches fresh scratches on the stone floor.",
-    "discovery": "An inventory tag lists a piece of equipment that is missing from its rack, though the dust around it is undisturbed."
+    "flavour": "A stripe of daylight catches polished metal and scratches across the floor. Cold air carries the smell of oil, and a loose hanging buckle clicks against a breastplate.",
+    "discovery": "An inventory tag lists a piece of equipment that is missing from its rack, though the dust around it is undisturbed.",
+    "readAloud": "Racks of weapons and armour line the walls beneath a narrow, shuttered window."
   },
   {
     "id": "storeroom",
@@ -472,8 +502,9 @@
     "image": "images/locations/storeroom-location.webp",
     "imageAlt": "Fantasy illustration of storeroom: A room holding supplies such as oil, rope, tools and provisions, often packed with shelves, crates and barrels.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Dry rope and lamp oil mingle with the dusty smell of stacked sacks. Shelves give soft wooden clicks as the room’s temperature changes around its crowded contents.",
-    "discovery": "Several crates share an identical shipping mark, but one is much lighter and has a concealed compartment."
+    "flavour": "Dust lies across the upper shelves and rises where a sack has split. The air smells of dry rope and lamp oil, with occasional wooden clicks from the crowded stacks.",
+    "discovery": "Several crates share an identical shipping mark, but one is much lighter and has a concealed compartment.",
+    "readAloud": "Shelves, crates and barrels crowd the room, leaving narrow passages between stacks of supplies."
   },
   {
     "id": "guardroom",
@@ -489,8 +520,9 @@
     "image": "images/locations/guardroom-location.webp",
     "imageAlt": "Fantasy illustration of guardroom: A duty station where guards wait and monitor a nearby entrance or passage.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "A cooling brazier leaves the smell of charcoal in the close air. The doorway frames a strip of corridor, and each passing step sounds unusually clear from the waiting bench.",
-    "discovery": "A scratched diagram beneath the duty desk shows a blind corner absent from the official plan of the passages."
+    "flavour": "Its remaining embers glow beneath a layer of gray ash. The smell of charcoal lingers as sounds from the adjoining passage carry into the room.",
+    "discovery": "A scratched diagram beneath the duty desk shows a blind corner absent from the official plan of the passages.",
+    "readAloud": "A plain desk and waiting bench face the doorway beside a small iron brazier."
   },
   {
     "id": "prison-cells",
@@ -506,8 +538,9 @@
     "image": "images/locations/prison-cells-location.webp",
     "imageAlt": "Fantasy illustration of prison cells: Small locked rooms for captives, usually reached through a guarded corridor, with basic furnishings.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Cold iron and damp straw scent the corridor between the doors. A distant drip echoes through the bars while a draft stirs scraps on the floor.",
-    "discovery": "A loose stone beneath a sleeping bench opens onto a small hiding place containing a worn file and a folded note."
+    "flavour": "A draft stirs scraps of straw beneath the bars. Damp stone and cold iron scent the air while a distant drip echoes along the corridor.",
+    "discovery": "A loose stone beneath a sleeping bench opens onto a small hiding place containing a worn file and a folded note.",
+    "readAloud": "Iron-barred doors line a stone corridor, with narrow sleeping benches visible inside the cells."
   },
   {
     "id": "servants-passage",
@@ -523,8 +556,9 @@
     "image": "images/locations/servants-passage-location.webp",
     "imageAlt": "Fantasy illustration of servants’ passage: A secondary corridor or stairway allowing household staff to move between working rooms and living quarters.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "The narrow walls carry the smells of cooking, soap and old plaster. Footsteps sound close in the confined space, and the banister is polished smooth at every turn.",
-    "discovery": "A discoloured wall panel opens onto a forgotten cupboard with sightlines into an adjoining room."
+    "flavour": "The walls draw close around each turn, carrying footsteps from the rooms beyond. Cooking smells and soap linger in the air beside the old plaster.",
+    "discovery": "A discoloured wall panel opens onto a forgotten cupboard with sightlines into an adjoining room.",
+    "readAloud": "Plain doors line a narrow corridor leading to a steep staircase with a polished wooden banister."
   },
   {
     "id": "cistern-chamber",
@@ -540,8 +574,9 @@
     "image": "images/locations/cistern-chamber-location.webp",
     "imageAlt": "Fantasy illustration of cistern chamber: A chamber containing a tank or reservoir of stored water to supply the building.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Cool moisture beads on the walls above the dark water. Each falling drop makes a bright, hollow sound, and the air tastes faintly of minerals.",
-    "discovery": "An old maintenance mark points to a ledge above the water where a sealed clay vessel rests in the shadows."
+    "flavour": "Falling drops spread pale rings across its still surface. Their hollow echoes fill the cool chamber, where the air smells faintly of minerals.",
+    "discovery": "An old maintenance mark points to a ledge above the water where a sealed clay vessel rests in the shadows.",
+    "readAloud": "Dark water fills a stone reservoir beneath walls streaked with moisture."
   },
   {
     "id": "burial-vault",
@@ -554,8 +589,9 @@
     "image": "images/locations/burial-vault-location.webp",
     "imageAlt": "Fantasy illustration of burial vault: An enclosed room, usually underground, containing coffins or tombs belonging to a family or former occupants.",
     "publishedAt": "2026-10-05T20:03:20-04:00",
-    "flavour": "Dry dust and cold stone fill the still air around the resting places. A slight draft moves through the chamber without disturbing the cobwebs stretched across its corners.",
-    "discovery": "One memorial slab bears a second name beneath its edge, carefully chiselled away but not entirely erased."
+    "flavour": "Dust softens the lettering and gathers in the corners beneath hanging cobwebs. A faint draft brushes your skin, carrying the dry smell of old stone.",
+    "discovery": "One memorial slab bears a second name beneath its edge, carefully chiselled away but not entirely erased.",
+    "readAloud": "Sealed coffins and stone tombs occupy a low chamber beneath rows of carved memorial slabs."
   },
   {
     "id": "ritual-chamber",
@@ -569,8 +605,9 @@
     "imageAlt": "A candlelit stone ritual chamber with carved floor sigils and a violet-lit central altar",
     "publishedAt": "2026-10-07T03:18:40Z",
     "pack": "dungeon-chambers",
-    "flavour": "Cold candle wax and burnt herbs cling to the stone around the altar. A faint violet light catches the carved sigils while the chamber amplifies even the smallest movement.",
-    "discovery": "Dust outlines a missing object beside the altar, and a narrow groove connects its place to the floor carvings."
+    "flavour": "A faint violet glow traces the grooves between pools of hardened wax. Burnt herbs scent the cold air, and even a small movement echoes around the chamber.",
+    "discovery": "Dust outlines a missing object beside the altar, and a narrow groove connects its place to the floor carvings.",
+    "readAloud": "Carved circles and angular sigils surround a stone altar crowded with candles and darkened bowls."
   },
   {
     "id": "forgotten-storeroom",
@@ -584,8 +621,9 @@
     "imageAlt": "An underground storeroom of dusty wooden crates, barrels and shelves lit by a warm lantern",
     "publishedAt": "2026-10-07T03:18:40Z",
     "pack": "dungeon-chambers",
-    "flavour": "Dry dust coats the air beneath shelves bowed by forgotten supplies. A lantern’s warmth releases the smell of old wood, and a slow scraping comes from behind the stacked crates.",
-    "discovery": "A hollow space behind a shifted crate contains a recent bundle wrapped in cloth much cleaner than its surroundings."
+    "flavour": "Cobwebs stretch between the stacks, trembling where the air moves through them. The room smells of old wood, and a slow scraping comes from behind the crates.",
+    "discovery": "A hollow space behind a shifted crate contains a recent bundle wrapped in cloth much cleaner than its surroundings.",
+    "readAloud": "Dust-coated crates and cracked barrels fill a cramped chamber beneath shelves bowed with age."
   },
   {
     "id": "dungeon-prison-cells",
@@ -599,8 +637,9 @@
     "imageAlt": "Rusted iron prison cells along a damp stone corridor with shackles and an abandoned guard desk",
     "publishedAt": "2026-10-07T03:18:40Z",
     "pack": "dungeon-chambers",
-    "flavour": "Moisture glitters on the rusted bars, carrying the smell of wet stone and old straw. A cold draft moves along the corridor while a faint metallic tapping comes from the empty guard desk.",
-    "discovery": "One locked cell is conspicuously clean, and the bowl inside still holds a warm meal beside fresh footprints."
+    "flavour": "Moisture glistens on the iron and runs down the stone walls. A cold draft carries the smell of old straw as faint metallic tapping comes from the desk.",
+    "discovery": "One locked cell is conspicuously clean, and the bowl inside still holds a warm meal beside fresh footprints.",
+    "readAloud": "Rusted bars divide a damp corridor into cramped cells beside an abandoned guard’s desk."
   },
   {
     "id": "wizards-tower",
@@ -615,8 +654,9 @@
     "condition": "maintained",
     "image": "images/locations/wizards-tower-location.webp",
     "publishedAt": "2026-10-07T04:25:50Z",
-    "flavour": "Ink, drying herbs and hot lamp oil mingle in the winding stairwell. Above, an open shutter admits a cool breeze that turns the pages of an unfinished chart.",
-    "discovery": "An observation chart marks a recurring light in the sky that does not appear on the tower’s older maps."
+    "flavour": "Light from an upper window catches brass fittings and glass lenses. A breeze turns the pages of an unfinished chart, carrying the smell of ink and drying herbs.",
+    "discovery": "An observation chart marks a recurring light in the sky that does not appear on the tower’s older maps.",
+    "readAloud": "A spiral staircase climbs past shelves of books, pinned charts and tables crowded with strange instruments."
   },
   {
     "id": "ship",
@@ -631,8 +671,9 @@
     "condition": "maintained",
     "image": "images/locations/ship-location.webp",
     "publishedAt": "2026-10-07T04:25:50Z",
-    "flavour": "Tarred rope and salt-damp wood scent the deck beneath the rigging. Canvas rustles overhead as the hull creaks and water knocks softly against its sides.",
-    "discovery": "A cargo plank has been recently lifted, revealing a wrapped parcel absent from the loading list."
+    "flavour": "The deck shifts gently beneath your feet as canvas rustles overhead. Tar and salt-damp timber scent the breeze while water knocks against the hull.",
+    "discovery": "A cargo plank has been recently lifted, revealing a wrapped parcel absent from the loading list.",
+    "readAloud": "Ropes and rigging rise above a wooden deck crowded with lashed barrels and covered cargo."
   },
   {
     "id": "mine-quarry",
@@ -646,8 +687,9 @@
     "condition": "maintained",
     "image": "images/locations/mine-quarry-location.webp",
     "publishedAt": "2026-10-07T04:25:50Z",
-    "flavour": "Stone dust coats the lips, and the smell of damp earth drifts from the tunnels. Picks ring against rock while a lifting chain shivers above a waiting cart.",
-    "discovery": "A freshly split block exposes a worked surface inside the rock, bearing marks unlike those left by the quarry tools."
+    "flavour": "Pale dust hangs around the entrance as cool air flows from the darkness. Picks ring deeper inside, answered by the rattle of a lifting chain.",
+    "discovery": "A freshly split block exposes a worked surface inside the rock, bearing marks unlike those left by the quarry tools.",
+    "readAloud": "Hauling tracks pass stacks of cut stone and disappear into a timber-framed opening in the rock face."
   },
   {
     "id": "academy-library",
@@ -661,8 +703,9 @@
     "condition": "maintained",
     "image": "images/locations/academy-library-location.webp",
     "publishedAt": "2026-10-07T04:25:50Z",
-    "flavour": "Paper, leather bindings and warm candle wax scent the quiet aisles. Pages whisper at the reading tables while dust turns slowly in the window light.",
-    "discovery": "Marginal notes in unrelated books use the same small symbol to point toward a shelf omitted from the catalogue."
+    "flavour": "Daylight picks out floating dust above open books and scattered notes. Pages whisper in the quiet, and the aisles smell of paper and leather bindings.",
+    "discovery": "Marginal notes in unrelated books use the same small symbol to point toward a shelf omitted from the catalogue.",
+    "readAloud": "Tall bookshelves surround broad reading tables beneath stone arches and high windows."
   },
   {
     "id": "traveling-carnival",
@@ -678,7 +721,8 @@
     "condition": "maintained",
     "image": "images/locations/traveling-carnival-location.webp",
     "publishedAt": "2026-10-07T04:25:50Z",
-    "flavour": "Lantern smoke and sweet fried dough drift between the canvas tents. Wagon wheels creak beyond the music while coloured ribbons brush against the guy ropes.",
-    "discovery": "A painted sign has been reversed, and its hidden side shows directions to a stopping place absent from the public route."
+    "flavour": "Ribbons flutter against the tent ropes as shadows move across the canvas. Music drifts between the wagons, mingling with lantern smoke and the smell of sweet fried dough.",
+    "discovery": "A painted sign has been reversed, and its hidden side shows directions to a stopping place absent from the public route.",
+    "readAloud": "Painted wagons and colourful tents surround a small stage along paths lined with lanterns."
   }
 ]

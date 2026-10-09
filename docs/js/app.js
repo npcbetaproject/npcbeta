@@ -152,6 +152,7 @@ function prepareDetail(kind, fromSession) {
   detailEntryId = row?.dataset.entryId; detailEntryKind = row?.dataset.instanceId ? "locations" : "npcs";
   elements.detail.querySelector(".detail-kind").textContent = kind;
   elements.detail.querySelector(".detail-summary").hidden = false;
+  elements.detail.querySelector(".detail-extra-visual").classList.remove("location-detail-visual");
   elements.sessionButton.hidden = fromSession;
   elements.detailSave.hidden = false;
   elements.detail.querySelector(".detail-portrait").hidden = false;
