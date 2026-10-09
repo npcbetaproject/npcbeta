@@ -762,7 +762,7 @@
   {
     "id": "farm",
     "name": "Farm",
-    "description": "A working rural property with fields, livestock and outbuildings; a place to seek food, shelter, local news or everyday work.",
+    "description": "A working property on the rural outskirts, with fields, livestock and outbuildings; a place to seek food, shelter, local news or everyday work.",
     "settings": [
       "village",
       "wilderness"
@@ -771,7 +771,7 @@
     "readAloud": "Rows of crops stretch beside a timber farmhouse and barn, with fresh wagon tracks crossing the yard and chickens pecking along the fence.",
     "flavour": "The smell of turned earth mingles with hay as a light breeze stirs the washing on the line. From behind the barn comes the steady knock of someone repairing a gate.",
     "discovery": "A line of crushed plants leads from the field to a broken fence, where a scrap of unfamiliar cloth catches on a nail.",
-    "imageAlt": "Painted fantasy illustration of an active medieval farm with crop rows, a farmhouse, barn, tools, chickens and wagon tracks.",
+    "imageAlt": "Painted fantasy illustration of an isolated working farm with a farmhouse, barn, crop rows, chickens and tools, backed by open fields and wooded hills.",
     "image": "images/locations/farm.webp",
     "publishedAt": "2026-10-09T00:04:17-04:00",
     "pack": "rest-and-routes"
