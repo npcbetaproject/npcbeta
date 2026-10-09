@@ -151,11 +151,12 @@ function prepareDetail(kind, fromSession) {
   const row = detailOpener?.closest(".session-row");
   detailEntryId = row?.dataset.entryId; detailEntryKind = row?.dataset.instanceId ? "locations" : "npcs";
   elements.detail.querySelector(".detail-kind").textContent = kind;
+  elements.detail.querySelector(".detail-summary").hidden = false;
   elements.sessionButton.hidden = fromSession;
   elements.detailSave.hidden = false;
   elements.detail.querySelector(".detail-portrait").hidden = false;
   elements.detail.querySelector(".detail-facts").hidden = false;
-  for (const selector of [".detail-extra-visual", ".detail-location-fields"]) { const node = elements.detail.querySelector(selector); node.hidden = true; node.replaceChildren(); }
+  for (const selector of [".detail-extra-visual", ".detail-location-fields", ".detail-location-reference"]) { const node = elements.detail.querySelector(selector); node.hidden = true; node.replaceChildren(); }
 }
 function showDetail() {
   elements.detail.inert = false; elements.detail.removeAttribute("inert");

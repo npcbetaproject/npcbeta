@@ -147,3 +147,18 @@
 @media(prefers-reduced-motion:reduce) { #session-board *, .detail-panel { transition:none !important; animation:none !important; scroll-behavior:auto !important; } }
 #session-board .session-row-open { border:0; padding:3px; background:none; }
 #session-board .generated-profession-badge { left:auto; transform:none; max-width:none; }
+
+.location-card .location-card-open { display:block; width:100%; padding:0; border:0; background:none; text-align:left; cursor:pointer; }
+.location-card-open h2 { padding:18px 22px 0; color:var(--wine); }
+.location-card-open:focus-visible { outline:3px solid var(--wine); outline-offset:-3px; }
+.detail-location-reference section { margin:24px 0; }
+.detail-location-reference h3 { display:flex; align-items:center; gap:6px; margin:0 0 8px; font-family:var(--display); font-size:1.15rem; }
+.detail-location-reference p { margin:0; font-size:1rem; line-height:1.65; color:var(--muted); }
+.detail-location-reference .location-introduction p { font-size:1.12rem; color:var(--ink); }
+.flavour-help { display:inline-flex; position:relative; font-family:var(--body); }
+.flavour-help-button { display:grid; place-items:center; width:44px; height:44px; padding:0; border:0; background:none; color:var(--wine); cursor:pointer; font-size:16px; font-weight:600; }
+.flavour-help-button::before { content:''; position:absolute; width:20px; height:20px; border:1px solid currentColor; border-radius:50%; }
+.flavour-help-button:focus-visible { outline:2px solid var(--wine); outline-offset:1px; border-radius:4px; }
+.flavour-tooltip { position:absolute; z-index:5; top:100%; left:-120px; width:240px; padding:12px; border-radius:5px; background:var(--ink); color:var(--paper); font-size:.85rem; font-weight:400; line-height:1.5; box-shadow:0 3px 12px #1d171426; }
+.location-detail-actions button { min-height:44px; padding:12px 18px; border:1px solid var(--wine); border-radius:5px; background:var(--wine); color:var(--paper); cursor:pointer; }
+@media(max-width:600px) { .detail-extra-visual .location-thumbnail { height:auto; aspect-ratio:16/9; } }
