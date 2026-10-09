@@ -724,5 +724,56 @@
     "flavour": "Ribbons flutter against the tent ropes as shadows move across the canvas. Music drifts between the wagons, mingling with lantern smoke and the smell of sweet fried dough.",
     "discovery": "A painted sign has been reversed, and its hidden side shows directions to a stopping place absent from the public route.",
     "readAloud": "Painted wagons and colourful tents surround a small stage along paths lined with lanterns."
+  },
+  {
+    "id": "campsite-with-fire",
+    "name": "Campsite with Fire",
+    "description": "A simple overnight resting place in the wilderness, with a small fire and bedrolls; useful for watches and conversations during a rest.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": null,
+    "readAloud": "A small fire glows inside a rough ring of stones, with a few bedrolls and travel packs lying on the ground beneath the dark trees.",
+    "flavour": "Woodsmoke drifts through the clearing as the flames crackle and settle. Beyond their warm circle of light, leaves rustle in the night breeze.",
+    "discovery": "Fresh bootprints circle the camp before disappearing between the trees, though no one remembers hearing a visitor.",
+    "imageAlt": "Painted fantasy illustration of a sparse wilderness camp at night with a small fire, bedrolls, travel packs and a cooking pot.",
+    "image": "images/locations/campsite-with-fire.webp",
+    "publishedAt": "2026-10-09T00:04:17-04:00",
+    "pack": "rest-and-routes"
+  },
+  {
+    "id": "alleyway",
+    "name": "Alleyway",
+    "description": "A narrow passage between buildings that offers a shortcut, a discreet meeting place or a possible ambush route.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": null,
+    "readAloud": "A narrow cobbled passage runs between leaning buildings, with stacked crates beside a dark doorway and daylight at the far end.",
+    "flavour": "Water drips from a sagging gutter into the puddles underfoot. The bustle of the main street fades behind you, leaving the scrape of your footsteps against the stone.",
+    "discovery": "Behind a loose crate, a small chalk arrow points toward a door with a freshly replaced lock.",
+    "imageAlt": "Painted fantasy illustration of a shadowed medieval alley with cobblestones, crates, hanging laundry and a sunlit exit.",
+    "image": "images/locations/alleyway.webp",
+    "publishedAt": "2026-10-09T00:04:17-04:00",
+    "pack": "rest-and-routes"
+  },
+  {
+    "id": "farm",
+    "name": "Farm",
+    "description": "A working property on the rural outskirts, with fields, livestock and outbuildings; a place to seek food, shelter, local news or everyday work.",
+    "settings": [
+      "village",
+      "wilderness"
+    ],
+    "condition": "maintained",
+    "readAloud": "Rows of crops stretch beside a timber farmhouse and barn, with fresh wagon tracks crossing the yard and chickens pecking along the fence.",
+    "flavour": "The smell of turned earth mingles with hay as a light breeze stirs the washing on the line. From behind the barn comes the steady knock of someone repairing a gate.",
+    "discovery": "A line of crushed plants leads from the field to a broken fence, where a scrap of unfamiliar cloth catches on a nail.",
+    "imageAlt": "Painted fantasy illustration of an isolated working farm with a farmhouse, barn, crop rows, chickens and tools, backed by open fields and wooded hills.",
+    "image": "images/locations/farm.webp",
+    "publishedAt": "2026-10-09T00:04:17-04:00",
+    "pack": "rest-and-routes"
   }
 ]

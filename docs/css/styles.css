@@ -218,3 +218,16 @@
 #session-board .location-cast-remove { padding:0; border-radius:4px; }
 #session-board .session-assign-button { background:var(--wine); border-color:var(--wine); color:white; }
 #session-board .session-assign-button:disabled { background:#e8e1d7; border-color:#c9c2b6; color:#605b52; }
+
+/* Location library matches the NPC Library's subtle card lift and image zoom. */
+#location-grid .location-card { transition:transform .2s,box-shadow .2s; }
+#location-grid .location-thumbnail img { transition:transform .4s; }
+#location-grid .location-card:focus-within { transform:translateY(-3px); box-shadow:0 12px 30px rgba(48,34,25,.11); }
+#location-grid .location-card:focus-within .location-thumbnail img { transform:scale(1.025); }
+@media(hover:hover) {
+ #location-grid .location-card:hover { transform:translateY(-3px); box-shadow:0 12px 30px rgba(48,34,25,.11); }
+ #location-grid .location-card:hover .location-thumbnail img { transform:scale(1.025); }
+}
+@media(prefers-reduced-motion:reduce) {
+ #location-grid .location-card, #location-grid .location-thumbnail img { transition:none!important; transform:none!important; }
+}
