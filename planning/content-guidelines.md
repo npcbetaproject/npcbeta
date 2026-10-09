@@ -25,16 +25,21 @@ Each published character should include:
 
 ## Location records
 
-Each published location should include:
+Published library templates live in `docs/data/locations/templates.json`. Each should include:
 
-- `id`: unique lowercase kebab-case identifier.
+- `id`: unique lowercase kebab-case identifier; preserve existing IDs.
 - `name`: display name.
-- `summary`: one or two sentences describing its defining traits.
-- `region`: its broader geographic area.
-- `characterIds`: an array of related published character IDs.
-- `tags`: an array using values from `tag-definitions.md`.
-- `image`: a path relative to `docs/`, with meaningful alternative text stored in
-  `imageAlt`.
+- `description`: one concise introductory sentence giving the GM enough to introduce the location. Preserve existing descriptions when enriching older entries; the modal uses their first sentence for the quick introduction.
+- `flavour`: exactly two additional sentences with sensory details and atmosphere, suitable for optional reading aloud. Avoid repeating the introduction.
+- `discovery`: one or two sentences describing something players can notice or uncover. Keep it usable across campaigns without requiring named NPCs, specific quests or game mechanics.
+- `settings`: unique IDs from the existing setting filters.
+- `condition`: an existing condition ID or `null`.
+- `image`: a path relative to `docs/`, with meaningful alternative text in `imageAlt`.
+- Preserve `publishedAt`, pack metadata and array ordering when adding content.
+
+The shared location panel displays image/name/filter tags, Description, More Flavour, Discovery, then relevant actions. Both text sections remain visible without expansion. More Flavour has an accessible info button whose hover, keyboard-focus and tap tooltip reads exactly: “Optional detail to read when you have more time.” Do not show that sentence permanently or add Complication.
+
+Keep library copy separate from personal Session instances and notes; do not migrate or overwrite browser records. Older templates without `flavour` or `discovery` must remain readable. Review sentence counts, campaign independence and preservation of existing metadata before publication.
 
 ## Style and review
 

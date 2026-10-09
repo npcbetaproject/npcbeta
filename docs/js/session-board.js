@@ -131,14 +131,4 @@ function openSessionNpc(entry) {
   elements.detail.querySelector('.detail-summary').textContent = `${entry.name} is a generated ${entry.professionLabel.toLowerCase()} associated with ${entry.locationLabel}.`;
   showDetail();
 }
-function openSessionLocation(instance) {
-  beginReferenceDetail('Location');
-  const template = locationLibrary.templates?.find(item => item.id === instance.templateId);
-  const visual = elements.detail.querySelector('.detail-extra-visual'); visual.hidden = false; visual.replaceChildren(locationThumbnail(template || { settings: instance.settings, image: null }));
-  const title = elements.detail.querySelector('h2'); title.textContent = instance.displayName || 'Unnamed location';
-  elements.detail.querySelector('.detail-meta').textContent = instance.settings.map(id => locationLibrary.labels?.settings[id] || id).join(' · ');
-  elements.detail.querySelector('.detail-summary').textContent = template?.description || 'This location template is unavailable. Your personal name, notes and condition remain below.';
-  const fields = elements.detail.querySelector('.detail-location-fields'); fields.hidden = false;
-  fields.replaceChildren(...sessionLocationFields(instance, () => { title.textContent = instance.displayName || 'Unnamed location'; renderSessionBoard(); }));
-  showDetail();
-}
+function openSessionLocation(instance) { openLocationDetail(instance.templateId, instance); }

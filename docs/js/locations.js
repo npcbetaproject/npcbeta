@@ -12,7 +12,7 @@ const locationLibrary = {
 };
 function validateLocationData(templates, labels) {
   if (!labels || !SETTING_IDS.every(id => typeof labels.settings?.[id] === 'string') || !CONDITION_IDS.every(id => typeof labels.conditions?.[id] === 'string')) throw new Error('Invalid filter labels');
-  if (!Array.isArray(templates) || new Set(templates.map(item => item.id)).size !== templates.length || !templates.every(item => item && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id) && typeof item.name === 'string' && item.name.trim() && typeof item.description === 'string' && item.description.trim() && validSettings(item.settings) && validCondition(item.condition) && (item.image === null || safeLocationImage(item.image)) && typeof item.imageAlt === 'string')) throw new Error('Invalid location templates');
+  if (!Array.isArray(templates) || new Set(templates.map(item => item.id)).size !== templates.length || !templates.every(item => item && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id) && typeof item.name === 'string' && item.name.trim() && typeof item.description === 'string' && item.description.trim() && ['flavour', 'discovery'].every(key => item[key] === undefined || (typeof item[key] === 'string' && item[key].trim())) && validSettings(item.settings) && validCondition(item.condition) && (item.image === null || safeLocationImage(item.image)) && typeof item.imageAlt === 'string')) throw new Error('Invalid location templates');
 }
 function safeLocationImage(path) {
   return typeof path === 'string' && /^(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_.-]+\.(?:svg|png|jpe?g|webp|avif)$/i.test(path) && !path.split('/').includes('..');
@@ -83,8 +83,11 @@ function renderLocations() {
     const content = locationNode('div', 'location-card-content'); const chips = locationNode('div', 'location-chips');
     template.settings.forEach(id => chips.append(locationNode('span', 'setting-chip', locationLibrary.labels.settings[id])));
     if (template.condition) chips.append(locationNode('span', `condition-chip condition-${template.condition}`, locationLibrary.labels.conditions[template.condition]));
-    content.append(locationNode('h2', '', template.name), locationNode('p', 'location-description', template.description), chips, locationButton('Add to Session', () => addSessionLocation(template), `Add ${template.name} to session`));
-    card.append(locationThumbnail(template), content); grid.append(card);
+    const open = locationButton('', () => openLocationDetail(template.id), `View ${template.name} details`); open.className = 'location-card-open';
+    open.append(locationThumbnail(template), locationNode('h2', '', template.name));
+    const add = locationButton('Add to Session', () => addSessionLocation(template), `Add ${template.name} to session`); add.dataset.locationAdd = template.id;
+    content.append(locationNode('p', 'location-description', template.description), chips, add);
+    card.append(open, content); grid.append(card);
   }
 }
 function saveSessionLocations() { writeStorage(SESSION_LOCATIONS_KEY, locationLibrary.instances); }
@@ -121,3 +124,57 @@ document.querySelector('#location-filter-toggle').addEventListener('click', even
 });
 
 document.querySelector('#location-sort').addEventListener('change', event => { locationLibrary.sort = event.target.value; renderLocations(); });
+
+// Library templates and personal Session instances share the same reference panel.
+function openLocationDetail(templateId, instance = null) {
+  const template = locationLibrary.templates?.find(item => item.id === templateId);
+  beginReferenceDetail('Location');
+  const visual = elements.detail.querySelector('.detail-extra-visual'); visual.hidden = false;
+  visual.replaceChildren(locationThumbnail(template || { settings: instance?.settings || ['wilderness'], image: null }));
+  const title = elements.detail.querySelector('#detail-title'); title.textContent = instance?.displayName || template?.name || 'Unnamed location';
+  elements.detail.querySelector('.detail-meta').textContent = '';
+  const tags = elements.detail.querySelector('.tag-list');
+  function updateTags() {
+    const source = instance || template;
+    tags.replaceChildren(...(source?.settings || []).map(id => locationNode('span', 'setting-chip', locationLibrary.labels?.settings[id] || id)));
+    if (source?.condition) tags.append(locationNode('span', `condition-chip condition-${source.condition}`, locationLibrary.labels?.conditions[source.condition] || source.condition));
+  }
+  updateTags();
+  elements.detail.querySelector('.detail-summary').hidden = true;
+  const reference = elements.detail.querySelector('.detail-location-reference'); reference.hidden = false;
+  const text = value => typeof value === 'string' && value.trim() ? value : null;
+  // Legacy descriptions stay intact in data; the first sentence is the quick introduction.
+  const description = text(template?.description)?.split(/(?<=[.!?])\s+/)[0] || (locationLibrary.loading ? 'Location details are loading.' : 'This location template is unavailable.');
+  for (const [heading, className, copy] of [
+    ['Description', 'location-introduction', description],
+    ['More Flavour', 'location-flavour', text(template?.flavour) || 'No additional flavour is available for this location yet.'],
+    ['Discovery', 'location-discovery', text(template?.discovery) || 'No discovery is available for this location yet.'],
+  ]) {
+    const section = locationNode('section', className), header = locationNode('h3', '', heading);
+    if (className === 'location-flavour') header.append(locationFlavourHelp());
+    section.append(header, locationNode('p', '', copy)); reference.append(section);
+  }
+  if (instance) {
+    const fields = elements.detail.querySelector('.detail-location-fields'); fields.hidden = false;
+    fields.replaceChildren(...sessionLocationFields(instance, () => { title.textContent = instance.displayName || 'Unnamed location'; updateTags(); renderSessionBoard(); }));
+  } else if (template) {
+    const actions = locationNode('div', 'location-detail-actions');
+    actions.append(locationButton('Add to Session', () => addSessionLocation(template), `Add ${template.name} to session`)); reference.append(actions);
+  }
+  showDetail();
+}
+function locationFlavourHelp() {
+  const wrap = locationNode('span', 'flavour-help');
+  const button = locationButton('i', () => {}, 'About More Flavour: optional detail to read when you have more time');
+  button.className = 'flavour-help-button'; button.setAttribute('aria-describedby', 'flavour-help-tooltip'); button.setAttribute('aria-expanded', 'false');
+  const tip = locationNode('span', 'flavour-tooltip', 'Optional detail to read when you have more time.'); tip.id = 'flavour-help-tooltip'; tip.setAttribute('role', 'tooltip'); tip.hidden = true;
+  let pinned = false;
+  const show = () => { tip.hidden = false; button.setAttribute('aria-expanded', 'true'); };
+  const hide = () => { tip.hidden = true; button.setAttribute('aria-expanded', 'false'); };
+  wrap.addEventListener('mouseenter', show);
+  wrap.addEventListener('mouseleave', () => { if (!pinned && document.activeElement !== button) hide(); });
+  button.addEventListener('focus', show); button.addEventListener('blur', () => { pinned = false; hide(); });
+  button.addEventListener('click', () => { pinned = !pinned; pinned ? show() : hide(); });
+  button.addEventListener('keydown', event => { if (event.key === 'Escape' && !tip.hidden) { event.stopPropagation(); pinned = false; hide(); } });
+  wrap.append(button, tip); return wrap;
+}
