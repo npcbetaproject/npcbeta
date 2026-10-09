@@ -162,3 +162,15 @@
 .flavour-tooltip { position:absolute; z-index:5; top:100%; left:-120px; width:240px; padding:12px; border-radius:5px; background:var(--ink); color:var(--paper); font-size:.85rem; font-weight:400; line-height:1.5; box-shadow:0 3px 12px #1d171426; }
 .location-detail-actions button { min-height:44px; padding:12px 18px; border:1px solid var(--wine); border-radius:5px; background:var(--wine); color:var(--paper); cursor:pointer; }
 @media(max-width:600px) { .detail-extra-visual .location-thumbnail { height:auto; aspect-ratio:16/9; } }
+
+.session-reorder-note { margin:0 0 10px; font-size:13px; color:var(--wine); }
+#session-board .session-location-order-row .session-row-actions { display:grid; grid-template-columns:44px auto; gap:3px; }
+#session-board .session-location-order-row .session-row-actions button { min-width:44px; }
+#session-board .session-location-order-row [data-session-action=up], #session-board .session-location-order-row [data-session-action=down] { font-size:20px; }
+#session-board .session-location-drag { flex:0 0 32px; width:32px; align-self:stretch; border:0; border-radius:4px; background:none; font-size:24px; cursor:grab; touch-action:auto; }
+#session-board .session-location-drag:active { cursor:grabbing; }
+#session-board .session-location-order-row button:disabled { opacity:.4; cursor:default; }
+#session-board .session-location-order-row.is-dragging { opacity:.5; }
+#session-board .session-location-order-row.drop-before { border-top:3px solid var(--wine); }
+#session-board .session-location-order-row.drop-after { border-bottom:3px solid var(--wine); }
+@media(max-width:760px) { #session-board .session-location-drag { display:none; } }

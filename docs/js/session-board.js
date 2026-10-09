@@ -1,4 +1,7 @@
 // Pins are a sidecar: never migrate or rewrite existing NPC/location records on load.
+const SESSION_LOCATION_ORDER_KEY = 'npc-beta:session-board:v1:location-order';
+let sessionLocationOrder = readStorage(SESSION_LOCATION_ORDER_KEY, [], value => validIds(value) && new Set(value).size === value.length);
+let sessionLocationDrag = null;
 const SESSION_PINS_KEY = 'npc-beta:session-board:v1:pins';
 const validPins = value => value && ['npcs', 'locations'].every(key => validIds(value[key]) && new Set(value[key]).size === value[key].length);
 const storedPins = readStorage(SESSION_PINS_KEY, { npcs: [], locations: [] }, validPins);
@@ -12,7 +15,7 @@ function sessionNpcOrder(a, b) {
   return comparePublished({ publishedAt: date(a) }, { publishedAt: date(b) });
 }
 function boardEntries(kind) {
-  const base = kind === 'npcs' ? sessionEntries().sort(sessionNpcOrder) : [...locationLibrary.instances];
+  const base = kind === 'npcs' ? sessionEntries().sort(sessionNpcOrder) : orderedSessionLocations();
   const query = sessionBoard.query.toLowerCase();
   return base.filter(entry => {
     const searchable = kind === 'npcs' ? `${entry.name} ${entry.professionLabel}` : `${entry.displayName} ${locationLibrary.templates?.find(item => item.id === entry.templateId)?.name || ''} ${locationLibrary.templates?.find(item => item.id === entry.templateId)?.description || ''}`;
@@ -27,7 +30,10 @@ function focusBoardControl(kind, id, action) {
   next.focus({ preventScroll: true });
 }
 function removeBoardEntry(kind, entry) {
-  if (kind === 'locations') { locationLibrary.instances = locationLibrary.instances.filter(item => item.id !== entry.id); saveSessionLocations(); }
+  if (kind === 'locations') {
+    sessionLocationOrder = sessionLocationOrder.filter(id => id !== entry.id); saveSessionLocationOrder();
+    locationLibrary.instances = locationLibrary.instances.filter(item => item.id !== entry.id); saveSessionLocations();
+  }
   else if (entry.library) { state.session.delete(entry.id); saveState(); }
   else { generator.records = generator.records.filter(item => item.id !== entry.id); writeStorage(GENERATOR_KEYS.records, generator.records); }
   if (sessionBoard.pins[kind].delete(entry.id)) saveSessionPins();
@@ -60,12 +66,21 @@ function boardRow(kind, entry) {
   const meta = locationNode('p', 'session-row-description', description); meta.title = description; copy.append(meta); open.append(copy);
   const actions = locationNode('div', 'session-row-actions');
   const pin = locationButton('', () => {
+    const locations = kind === 'locations' ? orderedSessionLocations() : null;
     pinned ? sessionBoard.pins[kind].delete(entry.id) : sessionBoard.pins[kind].add(entry.id);
+    if (locations) { sessionLocationOrder = [...locations.filter(item => item.id !== entry.id), entry].map(item => item.id); saveSessionLocationOrder(); }
     saveSessionPins(); renderSessionBoard(); focusBoardControl(kind, entry.id, 'pin'); announce(`${name} ${pinned ? 'unpinned' : 'pinned'}.`);
   }, `${pinned ? 'Unpin' : 'Pin'} ${name}`);
   pin.innerHTML = pinIcon(); pin.className = 'session-pin-button'; pin.dataset.sessionAction = 'pin'; pin.setAttribute('aria-pressed', String(pinned)); pin.title = `${pinned ? 'Unpin' : 'Pin'} ${name}`;
   const remove = locationButton('Remove', () => removeBoardEntry(kind, entry), `Remove ${name} from session`); remove.dataset.sessionAction = 'remove';
-  actions.append(pin, remove); row.append(open, actions); return row;
+  actions.append(pin, remove);
+  if (kind === 'locations') {
+    const reorder = locationReorderControls(entry);
+    row.append(reorder.handle); actions.append(reorder.up, reorder.down);
+    row.classList.add('session-location-order-row');
+    configureLocationDrop(row, entry);
+  }
+  row.append(open, actions); return row;
 }
 function boardEmpty(kind, hasEntries) {
   const type = kind === 'npcs' ? 'NPCs' : 'locations';
@@ -74,6 +89,8 @@ function boardEmpty(kind, hasEntries) {
   return empty;
 }
 function renderBoardLocations() {
+  sessionLocationDrag = null;
+  document.querySelector('#session-location-reorder-note').hidden = !sessionBoard.query;
   const entries = boardEntries('locations'), total = locationLibrary.instances.length;
   const list = document.querySelector('#session-location-list'); list.replaceChildren(...entries.map(entry => boardRow('locations', entry)));
   if (!entries.length) list.append(boardEmpty('locations', total > 0));
@@ -132,3 +149,74 @@ function openSessionNpc(entry) {
   showDetail();
 }
 function openSessionLocation(instance) { openLocationDetail(instance.templateId, instance); }
+
+// Manual order is a guarded sidecar; instance records and library sorting stay intact.
+function orderedSessionLocations() {
+  const rank = new Map(sessionLocationOrder.map((id, index) => [id, index]));
+  return [...locationLibrary.instances].sort((a, b) => (rank.get(a.id) ?? Number.MAX_SAFE_INTEGER) - (rank.get(b.id) ?? Number.MAX_SAFE_INTEGER));
+}
+function saveSessionLocationOrder() { writeStorage(SESSION_LOCATION_ORDER_KEY, sessionLocationOrder); }
+function sessionLocationGroup(id) {
+  const pinned = sessionBoard.pins.locations.has(id);
+  return orderedSessionLocations().filter(item => sessionBoard.pins.locations.has(item.id) === pinned);
+}
+function commitLocationGroup(group, movedId, action) {
+  const ids = new Set(group.map(item => item.id)), ordered = orderedSessionLocations();
+  let next = 0;
+  sessionLocationOrder = ordered.map(item => ids.has(item.id) ? group[next++].id : item.id);
+  saveSessionLocationOrder(); renderBoardLocations();
+  const row = [...document.querySelectorAll('#session-location-list .session-row')].find(node => node.dataset.entryId === movedId);
+  const preferred = row?.querySelector(`[data-session-action="${action}"]`);
+  if (preferred && !preferred.disabled) preferred.focus({ preventScroll: true });
+  else row?.querySelector('.session-row-open').focus({ preventScroll: true });
+  const entry = group.find(item => item.id === movedId), index = group.findIndex(item => item.id === movedId);
+  announce(`${entry.displayName || 'Unnamed location'} moved to position ${index + 1} of ${group.length} in ${sessionBoard.pins.locations.has(movedId) ? 'pinned' : 'unpinned'} locations.`);
+}
+function moveSessionLocation(id, direction) {
+  if (sessionBoard.query || ![-1, 1].includes(direction)) return;
+  const group = sessionLocationGroup(id), index = group.findIndex(item => item.id === id), destination = index + direction;
+  if (index < 0 || destination < 0 || destination >= group.length) return;
+  [group[index], group[destination]] = [group[destination], group[index]];
+  commitLocationGroup(group, id, direction < 0 ? 'up' : 'down');
+}
+function locationReorderControls(entry) {
+  const name = entry.displayName || 'Unnamed location', group = sessionLocationGroup(entry.id), index = group.findIndex(item => item.id === entry.id);
+  const up = locationButton('↑', () => moveSessionLocation(entry.id, -1), `Move ${name} up`);
+  const down = locationButton('↓', () => moveSessionLocation(entry.id, 1), `Move ${name} down`);
+  for (const [button, action] of [[up, 'up'], [down, 'down']]) {
+    button.dataset.sessionAction = action; button.title = action === 'up' ? 'Move up' : 'Move down';
+    if (sessionBoard.query) button.setAttribute('aria-describedby', 'session-location-reorder-note');
+  }
+  up.disabled = !!sessionBoard.query || index === 0; down.disabled = !!sessionBoard.query || index === group.length - 1;
+  const handle = locationButton('⠿', () => {}, `Drag ${name} to reorder within ${sessionBoard.pins.locations.has(entry.id) ? 'pinned' : 'unpinned'} locations. Use Move up or Move down for keyboard access.`);
+  handle.className = 'session-location-drag'; handle.dataset.sessionAction = 'drag'; handle.tabIndex = -1;
+  handle.disabled = !!sessionBoard.query || group.length < 2; handle.draggable = !handle.disabled && !sessionMobile.matches;
+  handle.title = sessionBoard.query ? 'Clear search to reorder locations.' : 'Drag to reorder locations';
+  handle.addEventListener('dragstart', event => {
+    if (handle.disabled || sessionMobile.matches || sessionBoard.query) { event.preventDefault(); return; }
+    sessionLocationDrag = entry.id; event.dataTransfer.effectAllowed = 'move'; event.dataTransfer.setData('text/plain', entry.id);
+    handle.closest('.session-row').classList.add('is-dragging');
+  });
+  handle.addEventListener('dragend', () => { sessionLocationDrag = null; document.querySelectorAll('.is-dragging, .drop-before, .drop-after').forEach(node => node.classList.remove('is-dragging', 'drop-before', 'drop-after')); });
+  return { handle, up, down };
+}
+function configureLocationDrop(row, entry) {
+  const allowed = () => !sessionBoard.query && !sessionMobile.matches && sessionLocationDrag && sessionLocationDrag !== entry.id && sessionLocationGroup(entry.id).some(item => item.id === sessionLocationDrag);
+  const after = event => event.clientY > row.getBoundingClientRect().top + row.getBoundingClientRect().height / 2;
+  row.addEventListener('dragover', event => {
+    if (!allowed()) return;
+    event.preventDefault(); event.dataTransfer.dropEffect = 'move';
+    row.classList.toggle('drop-after', after(event)); row.classList.toggle('drop-before', !after(event));
+    const list = row.parentElement, bounds = list.getBoundingClientRect();
+    if (event.clientY < bounds.top + 36) list.scrollTop -= 12;
+    else if (event.clientY > bounds.bottom - 36) list.scrollTop += 12;
+  });
+  row.addEventListener('dragleave', event => { if (!row.contains(event.relatedTarget)) row.classList.remove('drop-before', 'drop-after'); });
+  row.addEventListener('drop', event => {
+    if (!allowed()) return;
+    event.preventDefault(); event.stopPropagation();
+    const id = sessionLocationDrag, group = sessionLocationGroup(id), moved = group.find(item => item.id === id), others = group.filter(item => item.id !== id);
+    const target = others.findIndex(item => item.id === entry.id); others.splice(target + (after(event) ? 1 : 0), 0, moved);
+    commitLocationGroup(others, id, 'drag');
+  });
+}

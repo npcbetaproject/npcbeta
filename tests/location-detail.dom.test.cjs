@@ -1,7 +1,7 @@
 const {JSDOM}=require('jsdom'),fs=require('node:fs'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process');
 (async()=>{
  const templates=JSON.parse(fs.readFileSync('docs/data/locations/templates.json')),base=JSON.parse(execFileSync('git',['show','origin/main:docs/data/locations/templates.json'],{encoding:'utf8'}));
- assert.equal(templates.length,44);assert.deepEqual(templates.map(({flavour,discovery,...old})=>old),base);
+ assert.equal(templates.length,44);assert.deepEqual(templates.map(({flavour,discovery,...old})=>old),base.map(({flavour,discovery,...old})=>old));
  for(const item of templates){assert.equal(item.flavour.split(/(?<=[.!?])\s+/).length,2,item.id);assert([1,2].includes(item.discovery.split(/(?<=[.!?])\s+/).length),item.id);assert(!Object.hasOwn(item,'complication'));}
  const dom=new JSDOM(fs.readFileSync('docs/index.html','utf8'),{url:'https://example.com/#locations',runScripts:'outside-only'}),w=dom.window;w.scrollTo=()=>{};
  const old=[{id:'location-legacy',templateId:'inn',displayName:'Personal Inn',notes:'Keep my notes <script>unchanged</script>',settings:['village'],condition:'ruined',createdAt:'2026-01-01'}];w.localStorage.setItem('npc-beta:locations:v1:session',JSON.stringify(old));w.localStorage.setItem('npc-beta-session','["mira-fen"]');w.localStorage.setItem('npc-beta-saved','["mira-fen"]');
