@@ -236,3 +236,9 @@
 @media(prefers-reduced-motion:reduce) {
  #location-grid .location-card, #location-grid .location-thumbnail img { transition:none!important; transform:none!important; }
 }
+
+/* Quick generator copy/remove controls retain comfortable touch targets. */
+#generator-view .generator-icon-button, #copy-name.generator-icon-button, #cast-list .generator-icon-button { display:inline-flex; align-items:center; justify-content:center; width:44px; min-width:44px; height:44px; min-height:44px; padding:10px; }
+.generator-icon-button svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+#cast-list .generator-icon-button:hover, #copy-name.generator-icon-button:hover { background:var(--soft-wine); }
+.generator-icon-button:focus-visible { outline:2px solid var(--wine); outline-offset:2px; }

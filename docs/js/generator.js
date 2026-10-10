@@ -178,7 +178,7 @@ function renderCast(container, entries = sessionEntries()) {
     else heading.textContent = entry.name;
     const meta = document.createElement('p'); meta.textContent = [entry.professionLabel, entry.locationLabel].filter(Boolean).join(' · ');
     const actions = document.createElement('div'); actions.className = 'cast-actions';
-    for (const action of ['Copy', 'Remove']) { const button = document.createElement('button'); button.type = 'button'; button.textContent = action; button.setAttribute('aria-label', `${action} ${entry.name}`); button.onclick = () => {
+    for (const action of ['Copy', 'Remove']) { const button = document.createElement('button'); button.type = 'button'; button.className = 'generator-icon-button'; button.innerHTML = action === 'Copy' ? '<svg aria-hidden="true" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h4"/></svg>' : '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"/></svg>'; button.title = `${action} ${entry.name}`; button.setAttribute('aria-label', `${action} ${entry.name}`); button.onclick = () => {
       if (action === 'Copy') { copyName(entry.name); return; }
       if (entry.library) { state.session.delete(entry.id); saveState(); }
       else { generator.records = generator.records.filter(record => record.id !== entry.id); writeStorage(GENERATOR_KEYS.records, generator.records); }
