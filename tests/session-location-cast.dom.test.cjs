@@ -14,7 +14,7 @@ assert.equal(d.querySelectorAll('.location-cast-profile').length,2);d.querySelec
 assert.equal(d.querySelectorAll('.location-cast-remove').length,0);
 d.querySelector('[data-entry-id="location-a"] .location-cast-profile').click();
 assert.equal(data().activeLocationId,'location-a');assert.equal(d.querySelector('#detail-title').textContent,'Mira Fen');
-assert.equal(d.querySelector('.detail-location-remove').textContent,'Remove from this active location');
+assert(d.querySelector('.detail-location-remove svg'));assert(d.querySelector('.detail-location-remove').getAttribute('aria-label').includes('from this active location'));
 d.querySelector('.detail-location-remove').click();assert.equal(data().links.length,1);assert.equal(data().links[0].locationId,'location-b');assert.equal(d.querySelector('#detail-panel').getAttribute('aria-hidden'),'true');assert.equal(w.localStorage.getItem('npc-beta-session'),'["mira-fen","cassian-holt"]');
 click('cassian-holt','open');assert.equal(d.querySelector('.detail-location-remove'),null);d.querySelector('.back-button').click();
 click('location-b','remove');assert.equal(data().activeLocationId,'location-a');assert.equal(data().links.length,0);click('mira-fen','assign');click('mira-fen','remove');assert.equal(data().links.length,0);

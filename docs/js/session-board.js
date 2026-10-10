@@ -125,7 +125,7 @@ function boardRow(kind, entry) {
     saveSessionPins(); renderSessionBoard(); focusBoardControl(kind, entry.id, 'pin'); announce(`${name} ${pinned ? 'unpinned' : 'pinned'}.`);
   }, `${pinned ? 'Unpin' : 'Pin'} ${name}`);
   pin.innerHTML = pinIcon(); pin.className = 'session-pin-button'; pin.dataset.sessionAction = 'pin'; pin.setAttribute('aria-pressed', String(pinned)); pin.title = `${pinned ? 'Unpin' : 'Pin'} ${name}`;
-  const remove = locationButton('Remove', () => removeBoardEntry(kind, entry), `Remove ${name} from session`); remove.dataset.sessionAction = 'remove';
+  const remove = locationButton('', () => removeBoardEntry(kind, entry), `Remove ${name} from session`); remove.dataset.sessionAction = 'remove'; remove.className = 'remove-icon-button'; remove.innerHTML = removeActionIcon(); remove.title = `Remove ${name} from session`;
   actions.append(pin, remove);
   if (kind === 'locations') {
     const reorder = locationReorderControls(entry);
@@ -217,13 +217,13 @@ function openSessionNpc(entry) {
 function showLocationRemoval(entry) {
   const location = activeSessionLocation();
   if (!location || !sessionLocationCast.links.some(link => link.npcId === entry.id && link.locationId === location.id)) return;
-  const button = locationButton('Remove from this active location', () => {
+  const button = locationButton('', () => {
     sessionLocationCast.links = sessionLocationCast.links.filter(link => !(link.npcId === entry.id && link.locationId === location.id));
     saveLocationCast(); renderSessionBoard(); closeDetail();
     focusBoardControl('locations', location.id, 'active');
     announce(`${entry.name} removed from ${location.displayName || 'Unnamed location'}.`);
   }, `Remove ${entry.name} from this active location: ${location.displayName || 'Unnamed location'}`);
-  button.className = 'session-button detail-location-remove';
+  button.className = 'session-button detail-location-remove remove-icon-button'; button.innerHTML = removeActionIcon(); button.title = button.getAttribute('aria-label');
   elements.detail.append(button);
 }
 function openSessionLocation(instance) { openLocationDetail(instance.templateId, instance); }

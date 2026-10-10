@@ -242,3 +242,9 @@
 .generator-icon-button svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
 #cast-list .generator-icon-button:hover, #copy-name.generator-icon-button:hover { background:var(--soft-wine); }
 .generator-icon-button:focus-visible { outline:2px solid var(--wine); outline-offset:2px; }
+
+/* Shared remove icon treatment throughout the site. */
+.remove-icon-button { display:inline-flex; align-items:center; justify-content:center; min-width:44px; min-height:44px; }
+.remove-icon-button svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.remove-icon-button:focus-visible { outline:2px solid var(--wine); outline-offset:2px; }
+.session-button.remove-icon-button { left:auto; width:54px; }

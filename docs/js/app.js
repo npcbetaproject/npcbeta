@@ -118,7 +118,7 @@ function render() {
       <div class="portrait-wrap"><img class="${character.portraitFit === "contain" ? "portrait-contain" : ""}" src="${state.portraits[character.portraitKey]}" alt="${character.imageAlt}"></div>
       <div class="card-copy"><h3>${character.name}</h3><p class="role-line">${roleIcon(character.role)}<span>${character.role}</span></p><p class="card-subtitle">${character.subtitle}</p></div>
     </button>
-    ${state.view === "session" ? `<button class="session-remove" type="button" data-remove-session="${character.id}" aria-label="Remove ${character.name} from session">Remove</button>` : `<button class="card-save ${state.saved.has(character.id) ? "is-saved" : ""}" type="button" data-save="${character.id}" aria-label="${state.saved.has(character.id) ? "Remove" : "Save"} ${character.name}">${bookmarkIcon()}</button>`}
+    ${state.view === "session" ? `<button class="session-remove remove-icon-button" type="button" data-remove-session="${character.id}" aria-label="Remove ${character.name} from session" title="Remove from session">${removeActionIcon()}</button>` : `<button class="card-save ${state.saved.has(character.id) ? "is-saved" : ""}" type="button" data-save="${character.id}" aria-label="${state.saved.has(character.id) ? "Remove" : "Save"} ${character.name}">${bookmarkIcon()}</button>`}
   </article>`).join("");
 }
 function renderFilters() {
@@ -143,7 +143,8 @@ function updateDetailActions() {
   elements.sessionButton.hidden = state.view === "session";
   const { id, name } = state.activeCharacter; const isSaved = state.saved.has(id); const isAdded = state.session.has(id);
   elements.detailSave.classList.toggle("is-saved", isSaved); elements.detailSave.setAttribute("aria-label", `${isSaved ? "Remove" : "Save"} ${name}`);
-  elements.sessionButton.classList.toggle("added", isAdded); elements.sessionButton.innerHTML = isAdded ? '<span aria-hidden="true">✓</span> Remove from session' : '<span aria-hidden="true">＋</span> Add to session';
+  elements.sessionButton.classList.toggle("added", isAdded); elements.sessionButton.classList.toggle('remove-icon-button', isAdded); elements.sessionButton.innerHTML = isAdded ? removeActionIcon() : '<span aria-hidden="true">＋</span> Add to session';
+  const sessionLabel = `${isAdded ? 'Remove' : 'Add'} ${name} ${isAdded ? 'from' : 'to'} session`; elements.sessionButton.setAttribute('aria-label', sessionLabel); elements.sessionButton.title = sessionLabel;
 }
 let detailOpener = null, detailEntryId = null, detailEntryKind = null;
 function prepareDetail(kind, fromSession) {
