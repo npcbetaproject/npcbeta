@@ -217,6 +217,9 @@
  #session-board .session-location-card .location-cast { grid-column:1 / -1; }
 }
 #session-board .session-location-card { flex-shrink:0; }
+/* Give session locations a landscape preview across the available card width. */
+#session-board .session-location-card .session-row-open { flex-direction:column; align-items:stretch; }
+#session-board .session-location-card .location-thumbnail { flex:0 0 auto; width:100%; height:auto; aspect-ratio:16/9; }
 #session-board .location-cast-profile { padding:0; border:0; background:none; border-radius:0; }
 #session-board .session-assign-button { background:var(--wine); border-color:var(--wine); color:white; }
 #session-board .session-assign-button:disabled { background:#e8e1d7; border-color:#c9c2b6; color:#605b52; }

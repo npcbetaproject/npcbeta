@@ -83,6 +83,7 @@ function focusBoardControl(kind, id, action) {
 }
 function removeBoardEntry(kind, entry) {
   if (kind === 'locations') {
+    if (!window.confirm(`Remove "${entry.displayName || 'Unnamed location'}" from this session? Its notes and NPC assignments to this location will be removed. The NPCs will remain in your session.`)) return;
     sessionLocationOrder = sessionLocationOrder.filter(id => id !== entry.id); saveSessionLocationOrder();
     locationLibrary.instances = locationLibrary.instances.filter(item => item.id !== entry.id); saveSessionLocations();
   }
