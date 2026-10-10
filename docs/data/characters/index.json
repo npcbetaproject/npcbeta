@@ -1,5 +1,153 @@
 [
   {
+    "id": "torren-reedbank",
+    "name": "Torren Reedbank",
+    "ancestry": "Human",
+    "role": "Fisherman",
+    "group": "townsfolk",
+    "subtitle": "The catch that got away",
+    "summary": "Weathered and sociable, Torren boasts about enormous catches and knows every bend in the river. His voice drops when he describes shapes moving through the woods across the water.",
+    "tableNote": "Spread your hands wider with each fishing story, then stop smiling when the opposite bank is mentioned. Torren wants his nets left alone and someone to believe what he saw.",
+    "adventureHook": "Something disturbs his nets at night. Yesterday he found one hanging high in a tree across the river; he asks the party to watch the bank while he checks the others.",
+    "locationIds": [
+      "docks-ferry-landing",
+      "lakeshore",
+      "river-ford"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Weathered grey-haired human fisherman in a patched green tunic and tan vest holding a coiled net beside a reed-lined river.",
+    "portraitKey": "torren-reedbank",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Village",
+      "Waterfront",
+      "Wilderness"
+    ],
+    "publishedAt": "2026-10-09T04:21:13Z",
+    "pack": "along-the-river-road",
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "wilderness",
+      "waterfront"
+    ]
+  },
+  {
+    "id": "elwen-dawnmere",
+    "name": "Elwen Dawnmere",
+    "ancestry": "Elf",
+    "role": "Acolyte",
+    "group": "townsfolk",
+    "subtitle": "Questions beneath quiet obedience",
+    "summary": "Earnest and obedient to her faith, Elwen travels between small shrines recording their inscriptions and customs. Her thirst for knowledge tests her loyalty when evidence contradicts her teacher.",
+    "tableNote": "Consult a worn journal before answering and ask permission before touching sacred objects. Elwen wants to understand her faith honestly, but fears that questioning her instructions will disappoint her teacher.",
+    "adventureHook": "Sent to copy a roadside shrine’s inscriptions, she finds a sacred passage recently altered. She asks for help locating an older copy before reporting what she has discovered.",
+    "locationIds": [
+      "chapel",
+      "academy-library",
+      "roadside-campsite"
+    ],
+    "tags": [
+      "wanderer",
+      "quest-giver"
+    ],
+    "imageAlt": "Thoughtful young elven acolyte with braided brown hair, pointed ears, plain ivory robes and a blue cord belt holding a journal near a roadside shrine.",
+    "portraitKey": "elwen-dawnmere",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Village",
+      "Road"
+    ],
+    "publishedAt": "2026-10-09T04:21:13Z",
+    "pack": "along-the-river-road",
+    "roleCategoryIds": [
+      "faith-healing",
+      "scholars-magic"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel"
+    ]
+  },
+  {
+    "id": "wenric-valechord",
+    "name": "Wenric Valechord",
+    "ancestry": "Halfling",
+    "role": "Bard",
+    "group": "townsfolk",
+    "subtitle": "A song for supper",
+    "summary": "Friendly and persistent, Wenric travels from village to village seeking paying performances, supper and a bed. He gathers local stories for his songs without always checking who might object.",
+    "tableNote": "Tap a rhythm while negotiating, offer a short sample tune, and ask which stories the village tells about itself. Wenric needs his next booking and hopes a memorable song will make his name.",
+    "adventureHook": "His newest song describes a robbery in suspicious detail, and the bandits want to know his source. Wenric needs an escort to his next performance and help finding the storyteller first.",
+    "locationIds": [
+      "tavern",
+      "inn",
+      "market-square",
+      "roadside-campsite"
+    ],
+    "tags": [
+      "wanderer"
+    ],
+    "imageAlt": "Smiling auburn-haired halfling bard in a patched rust and teal coat holding a battered lute beside a village tavern porch.",
+    "portraitKey": "wenric-valechord",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Village",
+      "Road"
+    ],
+    "publishedAt": "2026-10-09T04:21:13Z",
+    "pack": "along-the-river-road",
+    "roleCategoryIds": [
+      "hospitality-entertainment"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel"
+    ]
+  },
+  {
+    "id": "captain-mara-thornwick",
+    "name": "Captain Mara Thornwick",
+    "ancestry": "Human",
+    "role": "Bandit captain",
+    "group": "townsfolk",
+    "subtitle": "Safe passage has a price",
+    "summary": "Charming in town and threatening on the road, Mara buys strangers drinks while her crew assesses their purses and travel plans. She prefers easy targets and abandons a fight when the cost outweighs the gain.",
+    "tableNote": "Offer a friendly bargain, ask casually when travelers leave, and keep an escape route in sight. Mara wants steady income from intimidation, but a reckless crew member is undermining her promises.",
+    "adventureHook": "Mara offers safe passage for a fee, but someone in her crew robs travelers who have already paid. She proposes a temporary truce if the party helps expose the culprit.",
+    "locationIds": [
+      "tavern",
+      "alleyway",
+      "roadside-campsite",
+      "campsite-with-fire"
+    ],
+    "tags": [
+      "antagonist"
+    ],
+    "imageAlt": "Confident dark-haired human bandit captain in weathered charcoal leather armour and a faded burgundy scarf beside a wooded road, with one hand near her belt.",
+    "portraitKey": "captain-mara-thornwick",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town",
+      "Road",
+      "Wilderness"
+    ],
+    "publishedAt": "2026-10-09T04:21:13Z",
+    "pack": "along-the-river-road",
+    "roleCategoryIds": [
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel",
+      "wilderness"
+    ]
+  },
+  {
     "id": "nibbin-copperwheel",
     "name": "Nibbin Copperwheel",
     "ancestry": "Goblin",
