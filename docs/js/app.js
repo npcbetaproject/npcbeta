@@ -147,6 +147,7 @@ function updateDetailActions() {
 }
 let detailOpener = null, detailEntryId = null, detailEntryKind = null;
 function prepareDetail(kind, fromSession) {
+  elements.detail.querySelector('.detail-location-remove')?.remove();
   detailOpener = document.activeElement;
   const row = detailOpener?.closest(".session-row");
   detailEntryId = row?.dataset.entryId; detailEntryKind = row?.dataset.instanceId ? "locations" : "npcs";

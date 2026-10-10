@@ -35,18 +35,17 @@ function locationCastSection(location) {
   const list = locationNode('div', 'location-cast-icons');
   for (const entry of entries) {
     const item = locationNode('div', 'location-cast-member');
-    const open = locationButton('', () => openSessionNpc(entry), `Open ${entry.name} profile`); open.className = 'location-cast-profile';
+    const open = locationButton('', () => {
+      setActiveSessionLocation(location);
+      openSessionNpc(entry);
+    }, `Open ${entry.name} profile`); open.className = 'location-cast-profile';
     const portrait = locationNode('span', 'location-cast-portrait', entry.name.trim().split(/\s+/).slice(0,2).map(part => part[0]).join(''));
     if (entry.library) {
       const character = state.characters.find(character => character.id === entry.id), source = state.portraits[character?.portraitKey];
       if (source) { const img = locationNode('img', ''); img.src = source; img.alt = ''; img.loading = 'lazy'; img.addEventListener('error', () => img.remove(), { once: true }); portrait.append(img); }
     } else { portrait.replaceChildren(generatedNpcVisual(entry)); }
     open.append(portrait, locationNode('span', 'location-cast-name', entry.name.split(' ')[0])); open.title = entry.name;
-    const remove = locationButton('×', () => {
-      sessionLocationCast.links = sessionLocationCast.links.filter(link => !(link.npcId === entry.id && link.locationId === location.id));
-      saveLocationCast(); renderSessionBoard(); focusBoardControl('locations', location.id, 'active'); announce(`${entry.name} unassigned from ${location.displayName || 'Unnamed location'}.`);
-    }, `Unassign ${entry.name} from ${location.displayName || 'Unnamed location'}`);
-    remove.className = 'location-cast-remove'; item.append(open, remove); list.append(item);
+    item.append(open); list.append(item);
   }
   if (!entries.length) list.append(locationNode('p', 'location-cast-empty', 'Choose an NPC from Tonight’s Cast to add here.'));
   section.append(list); return section;
@@ -206,13 +205,25 @@ function beginReferenceDetail(kind) {
   elements.detail.querySelector('.tag-list').replaceChildren();
 }
 function openSessionNpc(entry) {
-  if (entry.library) { openDetail(state.characters.find(item => item.id === entry.id)); return; }
+  if (entry.library) { openDetail(state.characters.find(item => item.id === entry.id)); showLocationRemoval(entry); return; }
   beginReferenceDetail('Generated NPC');
   const visual = elements.detail.querySelector('.detail-extra-visual'); visual.hidden = false; visual.replaceChildren(generatedNpcVisual(entry));
   elements.detail.querySelector('h2').textContent = entry.name;
   elements.detail.querySelector('.detail-meta').textContent = [entry.professionLabel, entry.locationLabel].filter(Boolean).join(' · ');
   elements.detail.querySelector('.detail-summary').textContent = `${entry.name} is a generated ${entry.professionLabel.toLowerCase()} associated with ${entry.locationLabel}.`;
-  showDetail();
+  showLocationRemoval(entry); showDetail();
+}
+function showLocationRemoval(entry) {
+  const location = activeSessionLocation();
+  if (!location || !sessionLocationCast.links.some(link => link.npcId === entry.id && link.locationId === location.id)) return;
+  const button = locationButton('Remove from this active location', () => {
+    sessionLocationCast.links = sessionLocationCast.links.filter(link => !(link.npcId === entry.id && link.locationId === location.id));
+    saveLocationCast(); renderSessionBoard(); closeDetail();
+    focusBoardControl('locations', location.id, 'active');
+    announce(`${entry.name} removed from ${location.displayName || 'Unnamed location'}.`);
+  }, `Remove ${entry.name} from this active location: ${location.displayName || 'Unnamed location'}`);
+  button.className = 'session-button detail-location-remove';
+  elements.detail.append(button);
 }
 function openSessionLocation(instance) { openLocationDetail(instance.templateId, instance); }
 
