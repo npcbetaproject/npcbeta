@@ -9,7 +9,9 @@ Use this standard for all future library NPC portraits.
 - One centered character, waist-up, both shoulders in frame. Entire head, hair, ears and hood/hat visible. Aim for 15–20% clear background above the highest head point. Face in upper-middle. Profession props below the face.
 - Background appropriate to the NPC, softly focused and secondary. No text, labels, frames, watermark or additional characters.
 - Use an approved existing portrait as the style reference. For replacements, preserve the recognizable appearance and established character description.
-- Generate square artwork, resize without cropping or stretching, export WebP quality around 90, and verify dimensions and file format.
+- Generate square artwork, resize without cropping or stretching, export opaque WebP at **quality 75, method 6** (Pillow settings), and verify dimensions and file format. These compression settings apply to future portraits and supersede older pack-specific quality 90 instructions.
+- Aim for roughly 100–180 KB per portrait when the artwork permits; this is a target, not a hard cap. Review facial detail, hair, clothing and background at card and expanded profile sizes. Increase quality only if compression artifacts are visible.
+- Keep lossless source artwork when available and export from it for future revisions; avoid repeatedly recompressing a lossy WebP. When compressing existing portraits, keep their 960 × 960 dimensions, framing, filenames and references.
 - Prefer square card and profile image frames. Where an existing frame differs, use object-fit: contain with a matching background to preserve the entire square artwork. Do not use hover zoom that cuts off headroom.
 - Preserve existing NPC IDs, descriptions, browser storage and session selections when replacing portraits. Update portrait mappings to the external WebP paths and meaningful imageAlt text. Do not leave an old embedded portrait taking precedence.
 
