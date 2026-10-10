@@ -248,3 +248,11 @@
 .remove-icon-button svg { width:20px; height:20px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
 .remove-icon-button:focus-visible { outline:2px solid var(--wine); outline-offset:2px; }
 .session-button.remove-icon-button { left:auto; width:54px; }
+
+/* Compact session NPC rows: larger portraits with assignment below the profession. */
+#session-board .cast-entry { display:grid; grid-template-columns:72px minmax(0,1fr) auto; grid-template-rows:auto 44px; gap:3px 8px; padding:8px; }
+#session-board .cast-entry .session-row-open { grid-column:1 / 3; grid-row:1 / 3; display:grid; grid-template-columns:72px minmax(0,1fr); align-items:start; gap:8px; padding:0; }
+#session-board .cast-entry .session-npc-thumbnail, #session-board .cast-entry > .session-row-open > .generated-npc-visual { width:72px; height:72px; align-self:center; }
+#session-board .cast-entry .session-row-copy { padding-bottom:47px; }
+#session-board .cast-entry .session-row-actions { grid-column:3; grid-row:1 / 3; flex-direction:column; align-self:start; margin-left:0; }
+#session-board .cast-entry .session-assign-button { position:relative; grid-column:2; grid-row:2; justify-self:start; width:auto; min-width:76px; min-height:44px; padding:6px 12px; font-size:13px; }
