@@ -1,5 +1,73 @@
 [
   {
+    "id": "gribbin-brassnose",
+    "name": "Gribbin Brassnose",
+    "ancestry": "Goblin",
+    "role": "Treasure seeker",
+    "group": "adventurers",
+    "subtitle": "First pick of the dusty riches",
+    "summary": "An eager goblin scavenger with an oversized satchel and a bent crowbar, Gribbin taps stones for hollow spaces and insists every dusty trinket is valuable. He offers to split any treasure—after he gets first pick.",
+    "tableNote": "Peer into every crack, pocket harmless scraps, and whisper loudly about hidden riches. Gribbin wants a valuable find and a capable companion, but his enthusiasm outruns his caution.",
+    "adventureHook": "Gribbin found a locked coffer behind a burial niche. Something inside whispers directions to more treasure, and he wants help following them.",
+    "locationIds": [
+      "crypt",
+      "guardroom"
+    ],
+    "tags": [
+      "wanderer",
+      "quest-giver"
+    ],
+    "imageAlt": "Olive-green goblin treasure seeker with pointed ears, patched brown clothes, a worn satchel and bent crowbar in a stone dungeon.",
+    "roleCategoryIds": [
+      "adventurers"
+    ],
+    "portraitKey": "gribbin-brassnose",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Dungeon",
+      "Ruins"
+    ],
+    "locationFitCategoryIds": [
+      "dungeons-ruins"
+    ],
+    "publishedAt": "2026-10-10T14:44:32Z",
+    "pack": "dungeon-denizens"
+  },
+  {
+    "id": "tikrik-clickclaw",
+    "name": "Tikrik Clickclaw",
+    "ancestry": "Kobold",
+    "role": "Trap maker",
+    "group": "townsfolk",
+    "subtitle": "Mind the pressure plate",
+    "summary": "A meticulous kobold carrying wire, wooden wedges and mismatched tools, Tikrik mutters about careless workmanship while resetting dungeon pressure plates. He resents adventurers who break his traps but admires anyone clever enough to disarm them.",
+    "tableNote": "Click your tongue at damaged mechanisms and explain repairs with fussy precision. Tikrik wants his work respected; he pauses his repairs to warn anyone who shows an honest interest in his craft.",
+    "adventureHook": "Someone keeps sabotaging Tikrik’s repairs. He offers a safe route through the dungeon if the party catches the culprit—and leaves his favourite trap intact.",
+    "locationIds": [
+      "guardroom",
+      "ritual-chamber"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Rust-red reptilian kobold with amber eyes and small horns wearing a leather work apron and repairing a dungeon pressure plate with pliers and wire.",
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "workers-services"
+    ],
+    "portraitKey": "tikrik-clickclaw",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Dungeon",
+      "Ruins"
+    ],
+    "locationFitCategoryIds": [
+      "dungeons-ruins"
+    ],
+    "publishedAt": "2026-10-10T14:44:32Z",
+    "pack": "dungeon-denizens"
+  },
+  {
     "id": "torren-reedbank",
     "name": "Torren Reedbank",
     "ancestry": "Human",
@@ -286,15 +354,25 @@
     "summary": "A muddy farmhand who drinks away his wages and takes any mention of his brother as an invitation to fight. Tousled brown hair, an old split lip and a frayed waistcoat mark a man who would rather look angry than admit he is worried.",
     "tableNote": "Grip your mug with both hands, laugh too loudly at small jokes, and stiffen at talk of family. Harl's brother owes the miller money; Harl is working extra shifts to keep their mother from losing her cottage.",
     "adventureHook": "The miller's men are coming to take his mother's furniture at dawn. Harl offers three days of field work if someone helps him find his brother and the missing wages before then.",
-    "locationIds": ["tavern"],
-    "tags": ["quest-giver"],
+    "locationIds": [
+      "tavern"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
     "imageAlt": "Tousle-haired human farmhand with an old split lip, muddy linen shirt and frayed waistcoat holding a wooden ale mug in a village tavern.",
     "portraitKey": "harl-mercer",
     "portraitFit": "contain",
-    "locationFit": ["Village"],
+    "locationFit": [
+      "Village"
+    ],
     "publishedAt": "2026-10-09T00:42:32Z",
-    "roleCategoryIds": ["workers-services"],
-    "locationFitCategoryIds": ["settlements"]
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ]
   },
   {
     "id": "mara-flint",
@@ -306,15 +384,27 @@
     "summary": "A charcoal burner who sits near the door, nursing one ale all evening and listening for work worth taking. Soot-smudged cheeks and a patched wool coat betray long days in the woods; she expects payment before promises.",
     "tableNote": "Let others fill the silence, warm your hands around a cup, and ask what a job pays before anything else. Mara is saving to replace her cracked charcoal cart and will not risk it on a stranger's vague assurances.",
     "adventureHook": "Mara saw a cart unload sacks at the abandoned limekiln after midnight, but nobody has bought fuel for it in months. She will describe the driver and route in exchange for help repairing her axle.",
-    "locationIds": ["tavern"],
-    "tags": ["merchant"],
+    "locationIds": [
+      "tavern"
+    ],
+    "tags": [
+      "merchant"
+    ],
     "imageAlt": "Soot-smudged human charcoal burner with tied-back dark hair and a patched charcoal-grey coat holding an earthenware cup near a village tavern door.",
     "portraitKey": "mara-flint",
     "portraitFit": "contain",
-    "locationFit": ["Village", "Wilderness"],
+    "locationFit": [
+      "Village",
+      "Wilderness"
+    ],
     "publishedAt": "2026-10-09T00:42:32Z",
-    "roleCategoryIds": ["workers-services"],
-    "locationFitCategoryIds": ["settlements", "wilderness"]
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "wilderness"
+    ]
   },
   {
     "id": "jory-pike",
@@ -326,15 +416,28 @@
     "summary": "A poacher with a lame hunting dog beneath his stool who trades fresh meat for ale and keeps watch for the village reeve. A battered felt cap and patched coat suit a wiry man who knows every gap in the estate fence.",
     "tableNote": "Check the door between sentences, tuck scraps aside for your dog, and call every deer a rabbit. Jory poaches to feed himself and his old hound, but his snares have lately caught someone else's attention.",
     "adventureHook": "Someone is moving Jory's snares onto the public footpath, and a child has already been hurt. He can show the sites, but confronting the reeve would mean admitting whose traps they are.",
-    "locationIds": ["tavern"],
-    "tags": ["merchant"],
+    "locationIds": [
+      "tavern"
+    ],
+    "tags": [
+      "merchant"
+    ],
     "imageAlt": "Wiry human poacher with a greying beard, battered brown felt cap and patched olive jerkin resting a hand on an ale mug in a village tavern.",
     "portraitKey": "jory-pike",
     "portraitFit": "contain",
-    "locationFit": ["Village", "Wilderness"],
+    "locationFit": [
+      "Village",
+      "Wilderness"
+    ],
     "publishedAt": "2026-10-09T00:42:32Z",
-    "roleCategoryIds": ["workers-services", "underworld"],
-    "locationFitCategoryIds": ["settlements", "wilderness"]
+    "roleCategoryIds": [
+      "workers-services",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "wilderness"
+    ]
   },
   {
     "id": "bess-crowley",
@@ -346,15 +449,25 @@
     "summary": "A washerwoman with cracked hands and a vicious sense of humour who knows whose blood she scrubbed out this morning. A plain kerchief, faded burgundy dress and worn apron accompany a regular who can puncture a boast with one sentence.",
     "tableNote": "Dry your hands on your apron, deliver insults without raising your voice, and become brisk when someone is genuinely frightened. Bess protects her customers' privacy, but keeping quiet about this morning's laundry is beginning to trouble her.",
     "adventureHook": "A local carter paid Bess double to clean a bloodied coat before his wife saw it. When she learns that the miller's apprentice is missing, she asks the party to check his yard before she names him in public.",
-    "locationIds": ["tavern"],
-    "tags": ["ally"],
+    "locationIds": [
+      "tavern"
+    ],
+    "tags": [
+      "ally"
+    ],
     "imageAlt": "Grey-haired human washerwoman in a cream kerchief, faded burgundy dress and worn linen apron with rough hands and a knowing smile in a village tavern.",
     "portraitKey": "bess-crowley",
     "portraitFit": "contain",
-    "locationFit": ["Village"],
+    "locationFit": [
+      "Village"
+    ],
     "publishedAt": "2026-10-09T00:42:32Z",
-    "roleCategoryIds": ["workers-services"],
-    "locationFitCategoryIds": ["settlements"]
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ]
   },
   {
     "id": "cassian-holt",
