@@ -189,6 +189,11 @@
 #session-board .session-location-card { display:grid; grid-template-columns:32px minmax(0,1fr) auto; }
 #session-board .session-location-card .location-cast { grid-column:2 / -1; min-width:0; border-top:1px solid #ddd5c9; padding:8px 4px; }
 #session-board .is-active-location, #session-board .is-active-location.is-pinned { border:2px solid var(--wine); }
+#session-board .session-location-card .location-thumbnail,
+#session-board .session-location-card .location-cast-portrait { filter:grayscale(1); }
+#session-board .session-location-card.is-active-location .location-thumbnail,
+#session-board .session-location-card.is-active-location .location-cast-portrait,
+#session-board .session-location-card.is-active-location .generated-visual-background img { filter:none; }
 #session-board .session-active-button[aria-pressed=true] { background:var(--wine); color:white; opacity:1; }
 #session-board .session-active-button { grid-column:1 / -1; }
 .location-cast h4 { margin:0 0 6px; font-size:13px; }
