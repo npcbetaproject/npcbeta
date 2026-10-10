@@ -775,5 +775,52 @@
     "image": "images/locations/farm.webp",
     "publishedAt": "2026-10-09T00:04:17-04:00",
     "pack": "rest-and-routes"
+  },
+  {
+    "id": "crypt",
+    "name": "Crypt",
+    "description": "An underground burial chamber with stone coffins, burial niches and disturbed graves, suited to tomb exploration and signs of recent intrusion.",
+    "settings": [
+      "underground"
+    ],
+    "condition": "abandoned",
+    "imageAlt": "Illustrated crypt with stone coffins, burial niches, a displaced sarcophagus lid and candlelit vaulted arches.",
+    "readAloud": "Stone coffins fill a vaulted chamber lined with burial niches, and a heavy lid lies displaced beside an open sarcophagus.",
+    "flavour": "Cold air carries the dry smell of dust and old candle wax. Grit crunches underfoot, and fresh scrape marks cut through the dust beside the disturbed graves.",
+    "discovery": "Behind a loose burial plaque lies a folded map of the lower passages, with one sealed tomb marked in fresh ink.",
+    "image": "images/locations/crypt.webp",
+    "publishedAt": "2026-10-09T22:03:35-04:00"
+  },
+  {
+    "id": "alchemists-laboratory",
+    "name": "Alchemist’s Laboratory",
+    "description": "An abandoned workshop containing broken vessels, unstable mixtures and unfinished experiments, offering clues, salvage and possible hazards.",
+    "settings": [
+      "underground",
+      "town",
+      "city"
+    ],
+    "condition": "abandoned",
+    "imageAlt": "Illustrated abandoned alchemist’s laboratory with broken glass vessels, copper apparatus and glowing amber and green mixtures.",
+    "readAloud": "Broken vessels and scattered notes surround a cluttered workbench, where amber and green mixtures glow beneath a tangle of copper pipes.",
+    "flavour": "A sharp mineral smell hangs over the tables, and sticky spills glisten between shards of glass. From the copper apparatus comes a slow bubbling, though nobody tends the experiment.",
+    "discovery": "A notebook tucked beneath the workbench records a failed antidote; its final page names the missing ingredient and a nearby source.",
+    "image": "images/locations/alchemists-laboratory.webp",
+    "publishedAt": "2026-10-09T22:03:35-04:00"
+  },
+  {
+    "id": "cavern-pool",
+    "name": "Cavern Pool",
+    "description": "A still underground pool bordered by glowing fungi and damp rock shelves, with clear shallows that hint at submerged secrets.",
+    "settings": [
+      "underground"
+    ],
+    "condition": null,
+    "imageAlt": "Illustrated limestone cavern with a still blue-green pool, glowing fungi and a carved stone arch beneath the water.",
+    "readAloud": "Glowing fungi trace the edge of a still cavern pool, and a carved stone arch rests beneath its clear blue-green shallows.",
+    "flavour": "Cool moisture settles on your skin as scattered drops echo from the stalactites. Blue light trembles across the wet rocks, fading where the water deepens into darkness.",
+    "discovery": "Beyond the submerged arch, a narrow passage rises into an air pocket where a sealed travel case rests above the waterline.",
+    "image": "images/locations/cavern-pool.webp",
+    "publishedAt": "2026-10-09T22:03:35-04:00"
   }
 ]
