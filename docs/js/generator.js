@@ -97,10 +97,30 @@ function rollGenerator(field, manualValue) {
   generator.previous = previous ? { ...previous } : null; generator.current = next;
   saveGenerator(); renderGenerator(); announce(field === 'location' ? 'Location and profession updated.' : 'NPC updated.');
 }
-function announce(message) {
+function dismissAnnouncement() {
+  clearTimeout(announce.timer);
+  clearTimeout(announce.dismissTimer);
   const feedback = document.querySelector('#action-feedback');
-  feedback.textContent = ''; clearTimeout(announce.timer);
-  announce.timer = setTimeout(() => { feedback.textContent = message; }, 20);
+  feedback.textContent = '';
+  feedback.removeAttribute('tabindex');
+  feedback.removeAttribute('title');
+}
+const actionFeedback = document.querySelector('#action-feedback');
+actionFeedback.addEventListener('click', dismissAnnouncement);
+actionFeedback.addEventListener('keydown', event => {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    dismissAnnouncement();
+  }
+});
+function announce(message) {
+  dismissAnnouncement();
+  announce.timer = setTimeout(() => {
+    actionFeedback.textContent = message;
+    actionFeedback.setAttribute('tabindex', '0');
+    actionFeedback.title = 'Tap or click to dismiss';
+    announce.dismissTimer = setTimeout(dismissAnnouncement, 5000);
+  }, 20);
 }
 async function copyName(name) {
   try { await navigator.clipboard.writeText(name); announce('Name copied.'); }
