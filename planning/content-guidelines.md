@@ -83,3 +83,5 @@ new missing slugs are initialized once from the stable NPC ID. Commit generated
 pages, the NPC directory, sitemap and data together. Public pages are derived
 from these same records; do not edit generated HTML directly or publish personal
 generated NPCs. Run `node scripts/build-npc-pages.cjs --check` before review.
+
+Every public NPC creation task must also retain the shared popup’s **Copy link** and **View full page** actions. Verify the absolute permanent URL, brief copy confirmation, new-tab behavior, and unchanged application URL/tab/scroll/session. This applies to individual NPCs and packs; private generated Session NPCs do not receive public links.
