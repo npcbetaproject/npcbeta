@@ -1,5 +1,137 @@
 [
   {
+    "id": "brakka-hearthhand",
+    "name": "Brakka Hearthhand",
+    "ancestry": "Half-orc",
+    "role": "Tavern Cook",
+    "group": "townsfolk",
+    "subtitle": "Return the containers",
+    "summary": "Broad-shouldered and flour-dusted, Brakka packs hearty travelling meals and takes fierce pride in her cooking. Gruff and practical, she judges adventurers by whether they return her containers.",
+    "tableNote": "Fold your arms, ask how many days of food they need, and tuck an extra portion into the bundle. Brakka quietly cares about her customers and wants her missing supplier brought home.",
+    "adventureHook": "A supplier’s delivery never arrived. Its cart was found near an old ruin with the food untouched and the driver missing; Brakka asks the party to follow the tracks.",
+    "locationIds": [
+      "tavern",
+      "inn"
+    ],
+    "tags": [
+      "ally",
+      "quest-giver"
+    ],
+    "imageAlt": "Olive-green half-orc tavern cook with small tusks, black hair in a bun, a flour-dusted burgundy tunic and linen apron holding wrapped meals beside a kitchen hearth.",
+    "portraitKey": "brakka-hearthhand",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town"
+    ],
+    "publishedAt": "2026-10-11T14:40:00Z",
+    "pack": "delve-preparations",
+    "roleCategoryIds": [
+      "hospitality-entertainment"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ]
+  },
+  {
+    "id": "elwen-reedmere",
+    "name": "Elwen Reedmere",
+    "ancestry": "Elf",
+    "role": "Town Librarian",
+    "group": "townsfolk",
+    "subtitle": "Which version have you heard?",
+    "summary": "Elwen knows the region’s ruined settlements, noble families and disputed legends. With ink-stained fingers and layered spectacles, she compares competing accounts before offering an answer.",
+    "tableNote": "Adjust your spectacles and ask, “Which version of the story have you heard?” Elwen wants the local record preserved accurately and becomes quietly stubborn when someone hides evidence.",
+    "adventureHook": "Someone has neatly removed the same ruined monastery from several unrelated maps. Elwen lends the party an older reference and asks them to find what the altered maps conceal.",
+    "locationIds": [
+      "academy-library"
+    ],
+    "tags": [
+      "ally",
+      "quest-giver"
+    ],
+    "imageAlt": "Silver-streaked dark-haired elf librarian with pointed ears, small layered spectacles and sage robes holding a regional map before old library shelves.",
+    "portraitKey": "elwen-reedmere",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town"
+    ],
+    "publishedAt": "2026-10-11T14:40:00Z",
+    "pack": "delve-preparations",
+    "roleCategoryIds": [
+      "scholars-magic",
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ]
+  },
+  {
+    "id": "tovin-amberwick",
+    "name": "Tovin Amberwick",
+    "ancestry": "Gnome",
+    "role": "Potion Vendor",
+    "group": "townsfolk",
+    "subtitle": "Surviving brings repeat business",
+    "summary": "An energetic merchant, Tovin arranges his counter into practical bundles of healing, light, antidotes and escape supplies. He asks where adventurers are going before recommending a purchase.",
+    "tableNote": "Line up bottles as you speak and ask about the route, the hazards and the budget. Say, “Surviving is excellent for repeat business.” Tovin values useful advice over an easy sale.",
+    "adventureHook": "A returned potion bottle contains something Tovin never sold. Its former owner insists the contents changed underground; Tovin asks the party to investigate the source before he restocks.",
+    "locationIds": [
+      "apothecary",
+      "market-square"
+    ],
+    "tags": [
+      "merchant"
+    ],
+    "imageAlt": "Auburn-haired gnome potion vendor with a neat beard, ochre waistcoat and teal shirt holding a stoppered bottle at a medieval apothecary counter.",
+    "portraitKey": "tovin-amberwick",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town"
+    ],
+    "publishedAt": "2026-10-11T14:40:00Z",
+    "pack": "delve-preparations",
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "faith-healing"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ]
+  },
+  {
+    "id": "mara-fenwick",
+    "name": "Mara Fenwick",
+    "ancestry": "Human",
+    "role": "Town Patrol",
+    "group": "townsfolk",
+    "subtitle": "First nights on the beat",
+    "summary": "A new recruit in oversized equipment, Mara rehearses questions before approaching strangers and writes everything down. Nervous but observant, she has more courage than confidence.",
+    "tableNote": "Check your notebook before asking a formal question, then lower your voice when sharing a concern. Mara wants to earn her place on patrol without overlooking someone who needs help.",
+    "adventureHook": "Mara spotted muddy figures entering a sealed cellar during her first night patrol. Her senior dismissed it, so she asks the party to investigate discreetly and bring back evidence.",
+    "locationIds": [
+      "watchhouse",
+      "alleyway",
+      "market-square"
+    ],
+    "tags": [
+      "ally"
+    ],
+    "imageAlt": "Young brown-haired human patrol recruit in oversized mail and a burgundy tabard holding an iron helmet and notebook on a lane near a town watchhouse.",
+    "portraitKey": "mara-fenwick",
+    "portraitFit": "contain",
+    "locationFit": [
+      "Town"
+    ],
+    "publishedAt": "2026-10-11T14:40:00Z",
+    "pack": "delve-preparations",
+    "roleCategoryIds": [
+      "military-authority"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ]
+  },
+  {
     "id": "gribbin-brassnose",
     "name": "Gribbin Brassnose",
     "ancestry": "Goblin",
