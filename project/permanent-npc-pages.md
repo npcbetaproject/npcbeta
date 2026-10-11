@@ -22,6 +22,7 @@ Branch: `feat/permanent-npc-pages`. Review only; no production deployment or hos
 - Direct HTTP loads and repeated refresh requests passed for all 34 pages, including assets and robots/sitemap/404 documents.
 - Eight existing DOM suites passed: Support, Role categories, Location Fit categories, Generator, Generated visuals, Session location order, Session board and Workbench.
 - Six existing suites fail identically on unchanged main: three assume 44 locations rather than 50, Recent sort assumes superseded packs, and two need window.confirm stubs after the recent confirmation change. These unrelated tests are left unchanged.
+- GitHub Actions run 38149778366 passed both dedicated DOM and native Chromium browser suites at 375px/1440px. Browser checks cover popup/link/clipboard/keyboard/scroll behavior, direct loads and refreshes, cross-tab session additions, mobile overflow and unknown-route handling. The deployment job was skipped.
 - Chromium is unavailable locally; its download failed in this environment during the preceding task. Desktop/mobile browser checks are supplied in `tests/public-npc-pages.browser.test.cjs` and included in PR CI. Local DOM tests cover keyboard mechanics but are not a substitute for native mobile layout verification.
 
 ## Hosting limits
