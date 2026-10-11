@@ -1,6 +1,6 @@
 # NPC Pack Standard
 
-Version: 1.0 · Updated: 2026-10-08
+Version: 1.1 · Updated: 2026-10-11
 
 ## Purpose
 
@@ -112,6 +112,18 @@ Use the project's current release-date/order fields so the newly released pack a
 
 Reuse existing pack metadata if available. Do not introduce a new pack registry or sorting system merely to add a pack. If the project lacks the agreed classification or ordering support, identify that gap and implement only what is necessary within the requested scope.
 
+### Permanent pages and popup sharing — required for every new public NPC
+
+Each NPC creation task, including individual characters and packs, must include:
+
+- A unique stored stable `slug` and a permanent public page generated from the same NPC record as the popup. Never change an existing slug automatically when renaming a character.
+- Compact **Copy link** and **View full page** actions in the shared popup. Copy link copies the absolute permanent URL with brief confirmation. View full page opens a new tab, preserving the current application session.
+- Existing popup content/actions and normal Library/Saved/Session popup behavior, without changing the current URL, selected tab, scroll position or active session when opening, closing or sharing.
+- The existing portrait and authored fields on the page, unique metadata, crawlable links and sitemap coverage. Do not invent absent NPC information.
+- Idempotent Add to session using the existing library ID and browser storage.
+
+Run `node scripts/build-npc-pages.cjs` and commit the generated pages, directory, sitemap and any initialized slugs with each NPC update. Use the production origin/base path in `docs/data/site.json`. Run the generator’s `--check`, `tests/public-npc-pages.test.cjs` and the native browser checks when available; verify each new NPC’s URL, copy confirmation, new-tab link, direct load/refresh and session behavior. Reuse the shared actions instead of duplicating controls per character. This feature excludes private generated Session NPCs. While it is pending review, include/build on the permanent-page feature branch; its inclusion does not authorize a merge.
+
 ## 5. Branch and integrate
 
 Start from the latest intended base branch, normally `main`, and use a dedicated branch such as `add-tavern-patrons-pack`. Preserve unrelated work and avoid overwriting shared documentation or image mappings wholesale.
@@ -133,6 +145,7 @@ Perform appropriate existing repository checks and verify:
 - The pack appears first under Most Recent without changing older release dates.
 - Saving and adding new NPCs to Session work, and existing selections remain intact.
 - Profiles open correctly and begin at the top.
+- Every new NPC has its permanent page and working **Copy link** / **View full page** popup actions; verify URLs, metadata/sitemap, direct refreshes and preserved session state.
 
 Open a pull request summarizing the pack theme, four NPCs, data/artwork changes and validation performed. State any checks that could not be completed. Provide screenshots when available.
 
