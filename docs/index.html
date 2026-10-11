@@ -14,6 +14,7 @@
     <script src="js/pro.js" defer></script>
     <script src="js/generated-visuals.js" defer></script>
     <script src="js/session-board.js" defer></script>
+    <script src="js/npc-urls.js" defer></script>
     <script src="js/app.js" defer></script>
   </head>
   <body>
@@ -118,12 +119,46 @@
           <button class="back-button" type="button"><span aria-hidden="true">←</span> Back</button><span class="detail-kind">Character</span>
           <button class="icon-button detail-save" type="button" aria-label="Save character"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.5 4.5h11v16l-5.5-3.4-5.5 3.4z"/></svg></button>
         </div>
-        <div class="detail-scroll"><img class="detail-portrait" src="" alt=""><div class="detail-extra-visual" hidden></div><div class="detail-content"><h2 id="detail-title"></h2><p class="detail-meta"></p><div class="tag-list"></div><p class="detail-summary"></p><dl class="detail-facts"><div><dt><span aria-hidden="true">◯</span> At the table</dt><dd class="table-note"></dd></div><div><dt><span aria-hidden="true">◇</span> Adventure hook</dt><dd class="adventure-hook"></dd></div></dl><div class="detail-location-reference" hidden></div><div class="detail-location-fields" hidden></div></div></div>
+        <div class="detail-scroll"><img class="detail-portrait" src="" alt=""><div class="detail-extra-visual" hidden></div><div class="detail-content"><h2 id="detail-title"></h2><p class="detail-meta"></p><div class="tag-list"></div><p class="detail-summary"></p><div class="npc-share-actions" hidden><button type="button" class="npc-copy-link" aria-label="Copy permanent NPC link" title="Copy link"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-2 2M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l2-2"/></svg><span>Copy link</span></button><a class="npc-full-page" target="_blank" rel="noopener" aria-label="View full NPC page in a new tab"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M14 3h7v7M21 3l-9 9M10 3H3v18h18v-7"/></svg><span>View full page</span></a><span class="npc-share-status" role="status" aria-live="polite"></span></div><dl class="detail-facts"><div><dt><span aria-hidden="true">◯</span> At the table</dt><dd class="table-note"></dd></div><div><dt><span aria-hidden="true">◇</span> Adventure hook</dt><dd class="adventure-hook"></dd></div></dl><div class="detail-location-reference" hidden></div><div class="detail-location-fields" hidden></div></div></div>
         <button class="session-button" type="button"><span aria-hidden="true">＋</span> Add to session</button>
       </aside>
       <button class="panel-scrim" type="button" aria-label="Close character details" tabindex="-1"></button>
     </main>
 
+    <!-- NPC DIRECTORY START --><nav class="public-npc-directory" aria-label="Permanent NPC pages"><details><summary>NPC profile directory</summary><ul><li><a href="npcs/brakka-hearthhand/">Brakka Hearthhand — Tavern Cook</a></li>
+<li><a href="npcs/elwen-reedmere/">Elwen Reedmere — Town Librarian</a></li>
+<li><a href="npcs/tovin-amberwick/">Tovin Amberwick — Potion Vendor</a></li>
+<li><a href="npcs/mara-fenwick/">Mara Fenwick — Town Patrol</a></li>
+<li><a href="npcs/gribbin-brassnose/">Gribbin Brassnose — Treasure seeker</a></li>
+<li><a href="npcs/tikrik-clickclaw/">Tikrik Clickclaw — Trap maker</a></li>
+<li><a href="npcs/torren-reedbank/">Torren Reedbank — Fisherman</a></li>
+<li><a href="npcs/elwen-dawnmere/">Elwen Dawnmere — Acolyte</a></li>
+<li><a href="npcs/wenric-valechord/">Wenric Valechord — Bard</a></li>
+<li><a href="npcs/captain-mara-thornwick/">Captain Mara Thornwick — Bandit captain</a></li>
+<li><a href="npcs/nibbin-copperwheel/">Nibbin Copperwheel — Goblin traveling merchant</a></li>
+<li><a href="npcs/elra-duskbrook/">Elra Duskbrook — Desperate laborer</a></li>
+<li><a href="npcs/sergeant-harl-fenwick/">Sergeant Harl Fenwick — Town guard</a></li>
+<li><a href="npcs/pippa-reed/">Pippa Reed — Village child</a></li>
+<li><a href="npcs/harl-mercer/">Harl “Split Lip” Mercer — Farmhand</a></li>
+<li><a href="npcs/mara-flint/">Mara Flint — Charcoal burner</a></li>
+<li><a href="npcs/jory-pike/">Jory Pike — Poacher</a></li>
+<li><a href="npcs/bess-crowley/">Bess Crowley — Washerwoman</a></li>
+<li><a href="npcs/cassian-holt/">Cassian Holt — Adventurer</a></li>
+<li><a href="npcs/mira-fen/">Mira Fen — Apothecary</a></li>
+<li><a href="npcs/brother-alden/">Brother Alden — Priest</a></li>
+<li><a href="npcs/nessa-vale/">Nessa Vale — Smuggler</a></li>
+<li><a href="npcs/wenrin-duskshield/">Wenrin Duskshield — Guard captain</a></li>
+<li><a href="npcs/harira-ashhaven/">Harira Ashhaven — Innkeeper</a></li>
+<li><a href="npcs/norzor-stormfield/">Norzor Stormfield — Blacksmith</a></li>
+<li><a href="npcs/aretha-frostcrest/">Aretha Frostcrest — Scholar</a></li>
+<li><a href="npcs/sergorn-wolffall/">Sergorn Wolffall — Wilderness guide</a></li>
+<li><a href="npcs/elmir-valebrook/">Elmir Valebrook — Merchant</a></li>
+<li><a href="npcs/harthos-ravenmoor/">Harthos Ravenmoor — Ferryman</a></li>
+<li><a href="npcs/valaris-blackwhisper/">Valaris Blackwhisper — Gravedigger</a></li>
+<li><a href="npcs/kaelen-ashford/">Kaelen Ashford — Knight</a></li>
+<li><a href="npcs/seren-dawnsong/">Seren Dawnsong — Rebel mage</a></li>
+<li><a href="npcs/rurik-stoneward/">Rurik Stoneward — Expedition leader</a></li>
+<li><a href="npcs/nyra-valecrest/">Nyra Valecrest — Monster hunter</a></li></ul></details></nav><!-- NPC DIRECTORY END -->
     <nav class="bottom-nav" aria-label="Application">
         <button class="active" type="button" data-view="library"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 5.5c3.1-.8 5.8-.2 8 1.7v12c-2.2-1.9-4.9-2.5-8-1.7zM20 5.5c-3.1-.8-5.8-.2-8 1.7v12c2.2-1.9 4.9-2.5 8-1.7z"/></svg><span>Library</span></button>
         <button type="button" data-view="locations"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3 11 9-7 9 7M5 10v10h14V10M10 20v-6h4v6"/></svg><span>Locations</span></button>

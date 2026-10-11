@@ -30,7 +30,8 @@
     ],
     "locationFitCategoryIds": [
       "settlements"
-    ]
+    ],
+    "slug": "brakka-hearthhand"
   },
   {
     "id": "elwen-reedmere",
@@ -63,7 +64,8 @@
     ],
     "locationFitCategoryIds": [
       "settlements"
-    ]
+    ],
+    "slug": "elwen-reedmere"
   },
   {
     "id": "tovin-amberwick",
@@ -96,7 +98,8 @@
     ],
     "locationFitCategoryIds": [
       "settlements"
-    ]
+    ],
+    "slug": "tovin-amberwick"
   },
   {
     "id": "mara-fenwick",
@@ -129,7 +132,8 @@
     ],
     "locationFitCategoryIds": [
       "settlements"
-    ]
+    ],
+    "slug": "mara-fenwick"
   },
   {
     "id": "gribbin-brassnose",
@@ -163,7 +167,8 @@
       "dungeons-ruins"
     ],
     "publishedAt": "2026-10-10T14:44:32Z",
-    "pack": "dungeon-denizens"
+    "pack": "dungeon-denizens",
+    "slug": "gribbin-brassnose"
   },
   {
     "id": "tikrik-clickclaw",
@@ -197,7 +202,8 @@
       "dungeons-ruins"
     ],
     "publishedAt": "2026-10-10T14:44:32Z",
-    "pack": "dungeon-denizens"
+    "pack": "dungeon-denizens",
+    "slug": "tikrik-clickclaw"
   },
   {
     "id": "torren-reedbank",
@@ -234,7 +240,8 @@
       "settlements",
       "wilderness",
       "waterfront"
-    ]
+    ],
+    "slug": "torren-reedbank"
   },
   {
     "id": "elwen-dawnmere",
@@ -271,7 +278,8 @@
     "locationFitCategoryIds": [
       "settlements",
       "roads-travel"
-    ]
+    ],
+    "slug": "elwen-dawnmere"
   },
   {
     "id": "wenric-valechord",
@@ -307,7 +315,8 @@
     "locationFitCategoryIds": [
       "settlements",
       "roads-travel"
-    ]
+    ],
+    "slug": "wenric-valechord"
   },
   {
     "id": "captain-mara-thornwick",
@@ -345,7 +354,8 @@
       "settlements",
       "roads-travel",
       "wilderness"
-    ]
+    ],
+    "slug": "captain-mara-thornwick"
   },
   {
     "id": "nibbin-copperwheel",
@@ -379,7 +389,8 @@
     "locationFitCategoryIds": [
       "settlements",
       "roads-travel"
-    ]
+    ],
+    "slug": "nibbin-copperwheel"
   },
   {
     "id": "elra-duskbrook",
@@ -411,7 +422,8 @@
     ],
     "locationFitCategoryIds": [
       "settlements"
-    ]
+    ],
+    "slug": "elra-duskbrook"
   },
   {
     "id": "sergeant-harl-fenwick",
@@ -443,7 +455,8 @@
     ],
     "locationFitCategoryIds": [
       "settlements"
-    ]
+    ],
+    "slug": "sergeant-harl-fenwick"
   },
   {
     "id": "pippa-reed",
@@ -474,7 +487,8 @@
     ],
     "locationFitCategoryIds": [
       "settlements"
-    ]
+    ],
+    "slug": "pippa-reed"
   },
   {
     "id": "harl-mercer",
@@ -504,7 +518,8 @@
     ],
     "locationFitCategoryIds": [
       "settlements"
-    ]
+    ],
+    "slug": "harl-mercer"
   },
   {
     "id": "mara-flint",
@@ -536,7 +551,8 @@
     "locationFitCategoryIds": [
       "settlements",
       "wilderness"
-    ]
+    ],
+    "slug": "mara-flint"
   },
   {
     "id": "jory-pike",
@@ -569,7 +585,8 @@
     "locationFitCategoryIds": [
       "settlements",
       "wilderness"
-    ]
+    ],
+    "slug": "jory-pike"
   },
   {
     "id": "bess-crowley",
@@ -599,7 +616,8 @@
     ],
     "locationFitCategoryIds": [
       "settlements"
-    ]
+    ],
+    "slug": "bess-crowley"
   },
   {
     "id": "cassian-holt",
@@ -630,7 +648,8 @@
       "settlements",
       "roads-travel",
       "dungeons-ruins"
-    ]
+    ],
+    "slug": "cassian-holt"
   },
   {
     "id": "mira-fen",
@@ -661,7 +680,8 @@
     "locationFitCategoryIds": [
       "settlements",
       "wilderness"
-    ]
+    ],
+    "slug": "mira-fen"
   },
   {
     "id": "brother-alden",
@@ -691,7 +711,8 @@
     "locationFitCategoryIds": [
       "settlements",
       "dungeons-ruins"
-    ]
+    ],
+    "slug": "brother-alden"
   },
   {
     "id": "nessa-vale",
@@ -721,7 +742,8 @@
     "locationFitCategoryIds": [
       "settlements",
       "waterfront"
-    ]
+    ],
+    "slug": "nessa-vale"
   },
   {
     "id": "wenrin-duskshield",
@@ -754,7 +776,8 @@
       "settlements",
       "dungeons-ruins",
       "castles-estates"
-    ]
+    ],
+    "slug": "wenrin-duskshield"
   },
   {
     "id": "harira-ashhaven",
@@ -784,7 +807,8 @@
     ],
     "locationFitCategoryIds": [
       "settlements"
-    ]
+    ],
+    "slug": "harira-ashhaven"
   },
   {
     "id": "norzor-stormfield",
@@ -814,7 +838,8 @@
     ],
     "locationFitCategoryIds": [
       "settlements"
-    ]
+    ],
+    "slug": "norzor-stormfield"
   },
   {
     "id": "aretha-frostcrest",
@@ -846,7 +871,8 @@
     "locationFitCategoryIds": [
       "settlements",
       "dungeons-ruins"
-    ]
+    ],
+    "slug": "aretha-frostcrest"
   },
   {
     "id": "sergorn-wolffall",
@@ -878,7 +904,8 @@
     "locationFitCategoryIds": [
       "roads-travel",
       "wilderness"
-    ]
+    ],
+    "slug": "sergorn-wolffall"
   },
   {
     "id": "elmir-valebrook",
@@ -908,7 +935,8 @@
     ],
     "locationFitCategoryIds": [
       "settlements"
-    ]
+    ],
+    "slug": "elmir-valebrook"
   },
   {
     "id": "harthos-ravenmoor",
@@ -940,7 +968,8 @@
     "locationFitCategoryIds": [
       "roads-travel",
       "waterfront"
-    ]
+    ],
+    "slug": "harthos-ravenmoor"
   },
   {
     "id": "valaris-blackwhisper",
@@ -972,7 +1001,8 @@
     "locationFitCategoryIds": [
       "settlements",
       "dungeons-ruins"
-    ]
+    ],
+    "slug": "valaris-blackwhisper"
   },
   {
     "id": "kaelen-ashford",
@@ -1006,7 +1036,8 @@
       "roads-travel",
       "dungeons-ruins",
       "castles-estates"
-    ]
+    ],
+    "slug": "kaelen-ashford"
   },
   {
     "id": "seren-dawnsong",
@@ -1039,7 +1070,8 @@
     "locationFitCategoryIds": [
       "settlements",
       "roads-travel"
-    ]
+    ],
+    "slug": "seren-dawnsong"
   },
   {
     "id": "rurik-stoneward",
@@ -1072,7 +1104,8 @@
       "roads-travel",
       "wilderness",
       "dungeons-ruins"
-    ]
+    ],
+    "slug": "rurik-stoneward"
   },
   {
     "id": "nyra-valecrest",
@@ -1105,6 +1138,7 @@
       "settlements",
       "roads-travel",
       "wilderness"
-    ]
+    ],
+    "slug": "nyra-valecrest"
   }
 ]
