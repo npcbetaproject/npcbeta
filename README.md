@@ -193,3 +193,50 @@ Run `node tests/location-fit-categories.dom.test.cjs` for assignment validation,
 Wizard’s Tower, Ship, Mine / Quarry, Academy / Library and Traveling Carnival now have illustrated location templates, completing background coverage for all 23 existing Name Generator locations. The Locations library contains 44 illustrated templates. Generator previews and generated Cast/Session cards reuse the same location files beneath the silhouette. Existing generator choices, profession mappings, location filters and stored records are unchanged.
 
 Descriptions, setting assignments and final image prompts are documented in `project/location-packs/missing-generator-locations.md`. Validate the five new templates and legacy generated records with `node tests/missing-generator-locations.dom.test.cjs`. Run `node tests/missing-generator-locations.test.cjs` with Chromium and localhost:8000, or use the supported `NPC_TEST_CHROME` and `NPC_TEST_LOCAL_FILES=1` overrides for an alternate executable and local-file routing.
+
+## Permanent public NPC pages
+
+Public library records have a stable `slug` in `docs/data/characters/index.json`.
+The popup and HTML generator read that same record; generated personal NPCs do
+not receive public URLs. Keep an existing slug when renaming an NPC. Never reuse
+an old slug for a different identity.
+
+After adding or editing library content, run:
+
+```bash
+node scripts/build-npc-pages.cjs
+node scripts/build-npc-pages.cjs --check
+node tests/public-npc-pages.test.cjs
+```
+
+The generator initializes a new record's missing slug from its stable ID once,
+then produces `docs/npcs/<slug>/index.html`, static directory links in the main
+HTML, metadata, sitemap and a custom 404. Commit these generated files with the
+content update. Pages use the existing portrait mappings and omit missing fields.
+
+`docs/data/site.json` owns the production origin and base path. This repository
+currently publishes at `https://npcbetaproject.github.io/npcbeta/`, has no CNAME,
+and is distinct from the existing `npcbeta.com` site. Do not change canonicals to
+the custom domain until this application is actually hosted there. Relative page
+assets also work at `http://localhost:8000/docs/npcs/nibbin-copperwheel/`.
+
+The public-NPC workflow generates the whole site for pull requests and main, runs
+the page checks, and uploads a Pages artifact. Only main can deploy; feature
+branches and pull requests never publish. Before adopting workflow deployments,
+review GitHub **Settings → Pages → Source** and select **GitHub Actions** if it is
+still configured for branch-based `/docs` publishing. That hosting setting is
+not changed by this implementation. Committed generated pages also remain usable
+with the existing `/docs` branch deployment.
+
+`docs/robots.txt` allows crawling and references the sitemap. Robots rules are
+only authoritative at an origin's `/robots.txt`; a project site's `/npcbeta/robots.txt`
+cannot override rules at `https://npcbetaproject.github.io/robots.txt`. The root
+robots response could not be checked in this environment. Submit
+`https://npcbetaproject.github.io/npcbeta/sitemap.xml` to your search console.
+No page contains a noindex directive except the custom 404. Unknown routes remain
+real 404s on GitHub Pages; there is no SPA redirect that turns them into success.
+
+Full pages and the application share `npc-beta-session` on the same origin. Add
+is idempotent and preserves existing IDs, generated NPCs and location state.
+Open application tabs listen for storage updates. Clipboard copying requires a
+secure context (HTTPS or localhost); failure shows a message without navigating.

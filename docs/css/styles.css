@@ -256,3 +256,26 @@
 #session-board .cast-entry .session-row-copy { padding-bottom:47px; }
 #session-board .cast-entry .session-row-actions { grid-column:3; grid-row:1 / 3; flex-direction:column; align-self:start; margin-left:0; }
 #session-board .cast-entry .session-assign-button { position:relative; grid-column:2; grid-row:2; justify-self:start; width:auto; min-width:76px; min-height:44px; padding:6px 12px; font-size:13px; }
+
+/* Public NPC profiles and compact popup sharing controls. */
+.npc-share-actions { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:14px 0; }
+.npc-share-actions[hidden] { display:none; }
+.npc-share-actions button,.npc-share-actions a { display:inline-flex; align-items:center; gap:6px; min-height:44px; padding:6px 9px; border:1px solid var(--line); border-radius:5px; background:transparent; color:var(--wine); font:inherit; font-size:13px; text-decoration:none; cursor:pointer; }
+.npc-share-actions svg { width:17px; height:17px; }
+.npc-share-status { font-size:12px; }
+.npc-page .site-header { justify-content:space-between; }
+.npc-profile { max-width:1100px; margin:32px auto; padding:0 24px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:32px; }
+.npc-page-portrait { width:100%; height:auto; object-fit:contain; border-radius:8px; }
+.npc-profile h1 { color:var(--wine); font-size:2.5rem; margin:0 0 12px; }
+.npc-profile h2 { font-size:1.35rem; margin:24px 0 8px; }
+.npc-profile p { line-height:1.65; }
+.npc-page-actions { display:flex; flex-wrap:wrap; gap:16px; align-items:center; margin-top:24px; }
+.npc-page-actions button { min-height:44px; padding:10px 16px; background:var(--wine); color:white; border:0; border-radius:5px; cursor:pointer; }
+.npc-page a { color:var(--wine); }
+.npc-page button:focus-visible,.npc-page a:focus-visible,.npc-share-actions :focus-visible { outline:3px solid var(--wine); outline-offset:3px; }
+.public-npc-directory { padding:18px 24px 100px; color:var(--wine); }
+.public-npc-directory ul { columns:3; padding-left:20px; }
+.public-npc-directory li { margin:8px 0; break-inside:avoid; }
+.public-npc-directory a { color:var(--wine); }
+.npc-not-found { max-width:700px; padding:40px 24px; margin:auto; }
+@media(max-width:700px) { .npc-profile { grid-template-columns:1fr; gap:20px; margin:20px auto; padding:0 18px; }.npc-profile h1 { font-size:2rem; }.public-npc-directory ul { columns:1; } }

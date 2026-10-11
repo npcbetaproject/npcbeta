@@ -74,3 +74,12 @@ Every future NPC pack must include a nonempty array of unique `locationFitCatego
 Cassian Holt uses `["settlements", "roads-travel", "dungeons-ruins"]`. Preserve `locationIds` for specific published location references and `locationFit` for existing descriptive Session labels. Keep all NPC IDs and `roleCategoryIds` unchanged. Validate category membership and uniqueness before publication. Avoid assigning every category based on theoretical possibilities.
 
 `generatorLocationCategoryIds` maps existing Name Generator location IDs solely for filtering generated Session entries at display time. It does not alter generator options or browser records. Add a mapping if future work introduces a generator location.
+
+## Public NPC URLs
+
+Every public library NPC has a unique `slug`. Keep it stable when editing the
+name or profession. Run `node scripts/build-npc-pages.cjs` after library edits;
+new missing slugs are initialized once from the stable NPC ID. Commit generated
+pages, the NPC directory, sitemap and data together. Public pages are derived
+from these same records; do not edit generated HTML directly or publish personal
+generated NPCs. Run `node scripts/build-npc-pages.cjs --check` before review.

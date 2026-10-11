@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://npcbetaproject.github.io/npcbeta/sitemap.xml

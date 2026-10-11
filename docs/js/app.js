@@ -82,6 +82,7 @@ function visibleCharacters() {
 function render() {
   syncRoleFilters(); syncLocationFitFilters();
   renderCompanion();
+  document.querySelector(".public-npc-directory").hidden = state.view !== "library";
   if ((state.view === "generator" || state.view === "session") && !locationLibrary.templates && !locationLibrary.error) ensureLocations();
   document.title = state.view === "support" ? "Support NPC Beta — NPC Beta" : "NPC Beta — " + ({library:"Character library", locations:"Locations", generator:"Name Generator", saved:"Saved", session:"Session"}[state.view] || "Character library");
   document.querySelector('meta[name="description"]').content = state.view === "support" ? "Patreon support helps keep NPC Beta’s NPCs, locations and tools free for every Game Master." : "Find memorable, ready-to-play fantasy characters for your next session.";
@@ -146,9 +147,17 @@ function updateDetailActions() {
   elements.sessionButton.classList.toggle("added", isAdded); elements.sessionButton.classList.toggle('remove-icon-button', isAdded); elements.sessionButton.innerHTML = isAdded ? removeActionIcon() : '<span aria-hidden="true">＋</span> Add to session';
   const sessionLabel = `${isAdded ? 'Remove' : 'Add'} ${name} ${isAdded ? 'from' : 'to'} session`; elements.sessionButton.setAttribute('aria-label', sessionLabel); elements.sessionButton.title = sessionLabel;
 }
+function npcPermanentURL(character) {
+  const site = window.NPC_PUBLIC_SITE;
+  // Derive from the application script for older previews that omit generated config.
+  const base = site ? site.origin + site.basePath : new URL('../', document.querySelector('script[src$="js/app.js"]').src).href;
+  return new URL('npcs/' + character.slug + '/', base).href;
+}
 let detailOpener = null, detailEntryId = null, detailEntryKind = null;
 function prepareDetail(kind, fromSession) {
   elements.detail.querySelector('.detail-location-remove')?.remove();
+  elements.detail.querySelector('.npc-share-actions').hidden = true;
+  elements.detail.querySelector('.npc-share-status').textContent = '';
   detailOpener = document.activeElement;
   const row = detailOpener?.closest(".session-row");
   detailEntryId = row?.dataset.entryId; detailEntryKind = row?.dataset.instanceId ? "locations" : "npcs";
@@ -173,6 +182,9 @@ function openDetail(character) {
   elements.detail.querySelector("h2").textContent = character.name; elements.detail.querySelector(".detail-meta").textContent = `${character.ancestry ? character.ancestry + " · " : ""}${character.role} · ${character.subtitle}`;
   elements.detail.querySelector(".tag-list").innerHTML = character.tags.map((tag) => `<span>${tag}</span>`).join(""); elements.detail.querySelector(".detail-summary").textContent = character.summary;
   elements.detail.querySelector(".table-note").textContent = character.tableNote; elements.detail.querySelector(".adventure-hook").textContent = character.adventureHook;
+  const share = elements.detail.querySelector('.npc-share-actions');
+  share.hidden = !character.slug;
+  if (character.slug) share.querySelector('.npc-full-page').href = npcPermanentURL(character);
   updateDetailActions(); showDetail();
 }
 function closeDetail() {
@@ -195,6 +207,20 @@ document.querySelector(".clear-filters").addEventListener("click", () => { state
 elements.grid.addEventListener("click", (event) => {
   const save = event.target.closest("[data-save]"); const remove = event.target.closest("[data-remove-session]"); const open = event.target.closest("[data-character]");
   if (save) toggleSaved(save.dataset.save); else if (remove) { state.session.delete(remove.dataset.removeSession); saveState(); render(); } else if (open) openDetail(state.characters.find(({ id }) => id === open.dataset.character));
+});
+elements.detail.querySelector('.npc-copy-link').addEventListener('click', async () => {
+  const character = state.activeCharacter;
+  if (!character?.slug) return;
+  const status = elements.detail.querySelector('.npc-share-status');
+  try { await navigator.clipboard.writeText(npcPermanentURL(character)); if (state.activeCharacter === character) status.textContent = 'Link copied.'; }
+  catch { if (state.activeCharacter === character) status.textContent = 'Could not copy. Use the full-page link to copy the address.'; }
+  setTimeout(() => { if (state.activeCharacter === character) status.textContent = ''; }, 2500);
+});
+// Other tabs can add public NPCs using the same persistent session collection.
+window.addEventListener('storage', event => {
+  if (event.key !== STORAGE_KEYS.session && event.key !== null) return;
+  state.session = new Set(readStorage(STORAGE_KEYS.session, [], validIds));
+  render(); if (state.activeCharacter && elements.detail.classList.contains('open')) updateDetailActions();
 });
 elements.detail.querySelector(".back-button").addEventListener("click", closeDetail); elements.scrim.addEventListener("click", closeDetail);
 elements.detailSave.addEventListener("click", () => { if (state.activeCharacter) toggleSaved(state.activeCharacter.id); });
