@@ -224,7 +224,18 @@ window.addEventListener('storage', event => {
 });
 elements.detail.querySelector(".back-button").addEventListener("click", closeDetail); elements.scrim.addEventListener("click", closeDetail);
 elements.detailSave.addEventListener("click", () => { if (state.activeCharacter) toggleSaved(state.activeCharacter.id); });
-elements.sessionButton.addEventListener("click", () => { if (!state.activeCharacter || elements.sessionButton.hidden) return; const id = state.activeCharacter.id; state.session.has(id) ? state.session.delete(id) : state.session.add(id); saveState(); updateDetailActions(); render(); });
+elements.sessionButton.addEventListener("click", () => {
+  if (!state.activeCharacter || elements.sessionButton.hidden) return;
+  const { id, name } = state.activeCharacter;
+  const adding = !state.session.has(id);
+  adding ? state.session.add(id) : state.session.delete(id);
+  saveState(); updateDetailActions(); render();
+  if (adding) {
+    detailOpener = [...elements.grid.querySelectorAll("[data-character]")].find(button => button.dataset.character === id) || detailOpener;
+    closeDetail();
+  }
+  announce(`${name} ${adding ? 'added to' : 'removed from'} session.`);
+});
 document.addEventListener("keydown", event => {
   if (event.key === "Escape") closeDetail();
   if (event.key !== "Tab" || !elements.detail.classList.contains("open")) return;
