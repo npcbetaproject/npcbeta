@@ -34,7 +34,7 @@ async function setup(storage=initialStorage, failure){
  const persisted={};for(let i=0;i<w.localStorage.length;i++){const k=w.localStorage.key(i);persisted[k]=w.localStorage.getItem(k)};
  const refresh=await setup(persisted);assert.deepEqual(JSON.parse(JSON.stringify(refresh.window.test.generator.current)),stored);assert.equal(refresh.window.test.sessionEntries().length,2);refresh.window.close();
  generated().querySelector('[data-session-action=remove]').click();assert.equal(t.generator.records.length,0);assert.deepEqual(snapshot(),stored);assert.equal(w.document.querySelectorAll('#cast-list .cast-entry').length,1);
- t.setView('generator');click('#add-generated');w.document.querySelectorAll('#cast-list .cast-entry')[1].querySelectorAll('button')[1].click();assert.equal(t.generator.records.length,0);
+ t.setView('generator');click('#add-generated');w.document.querySelector('#cast-list .cast-entry .cast-actions button[title^="Remove"]').click();assert.equal(t.generator.records.length,0);
  assert.equal(w.localStorage.getItem('npc-beta-saved'),initialStorage['npc-beta-saved']);assert.equal(w.localStorage.getItem('npc-beta-session'),initialStorage['npc-beta-session']);
  t.state.query='Cassian';assert.equal(t.visibleSessionEntries().length,1);t.state.query='no match';assert.equal(t.visibleSessionEntries().length,0);t.state.query='';
  w.navigator.clipboard.writeText=async()=>{throw Error('denied')};await t.copyName('test');await new Promise(r=>setTimeout(r,30));assert.match(w.document.querySelector('#action-feedback').textContent,/Could not copy/);
