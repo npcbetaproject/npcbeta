@@ -135,7 +135,7 @@ function renderGenerator() {
   document.querySelector('#generator-controls').hidden = false;
   document.querySelector('#generated-name').textContent = current.name;
   const fill = (selector, entries, value) => {
-    const select = document.querySelector(selector); select.replaceChildren(...entries.map(entry => new Option(entry.label, entry.id))); select.value = value;
+    const select = document.querySelector(selector); select.replaceChildren(...[...entries].sort((a, b) => a.label.localeCompare(b.label, 'en', { sensitivity: 'base' })).map(entry => new Option(entry.label, entry.id))); select.value = value;
   };
   fill('#generator-location', generator.data.locations, current.locationId);
   const location = generator.data.locations.find(item => item.id === current.locationId);
