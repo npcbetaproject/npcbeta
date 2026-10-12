@@ -283,3 +283,11 @@
 .public-npc-directory a { color:var(--wine); }
 .npc-not-found { max-width:700px; padding:40px 24px; margin:auto; }
 @media(max-width:700px) { .npc-profile { grid-template-columns:1fr; gap:20px; margin:20px auto; padding:0 18px; }.npc-profile h1 { font-size:2rem; }.public-npc-directory ul { columns:1; } }
+
+/* Clear information glyph and a direct route to the session NPC list. */
+.location-help > svg { width:20px; height:20px; flex-shrink:0; stroke-width:2; }
+.location-cast-heading { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; margin-bottom:6px; }
+.location-cast-heading h4 { margin:0; }
+.location-cast-add { display:inline-flex; align-items:center; min-height:44px; color:var(--wine); font-size:13px; text-underline-offset:3px; }
+.location-cast-add:focus-visible { outline:2px solid var(--wine); outline-offset:2px; }
+#session-npc-column { scroll-margin-top:150px; }

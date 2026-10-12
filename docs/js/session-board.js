@@ -31,7 +31,22 @@ function assignSessionNpc(entry) {
 function locationCastSection(location) {
   const entries = sessionEntries().filter(entry => sessionLocationCast.links.some(link => link.locationId === location.id && link.npcId === entry.id));
   const section = locationNode('div', 'location-cast');
-  section.append(locationNode('h4', '', `Cast at this location (${entries.length})`));
+  const heading = locationNode('div', 'location-cast-heading');
+  const add = locationNode('a', 'location-cast-add', 'Add NPCs');
+  add.href = '#session-npc-column';
+  add.setAttribute('aria-label', `Add NPCs to ${location.displayName || 'Unnamed location'}`);
+  add.addEventListener('click', event => {
+    event.preventDefault();
+    sessionLocationCast.activeLocationId = location.id; saveLocationCast();
+    sessionBoard.query = ''; document.querySelector('#session-search').value = '';
+    renderSessionBoard();
+    const target = document.querySelector('#session-npc-column');
+    target.setAttribute('tabindex', '-1'); target.focus({ preventScroll: true });
+    target.scrollIntoView({ behavior: window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
+    announce(`Choose NPCs to add to ${location.displayName || 'Unnamed location'}.`);
+  });
+  heading.append(locationNode('h4', '', `Cast at this location (${entries.length})`), add);
+  section.append(heading);
   const list = locationNode('div', 'location-cast-icons');
   for (const entry of entries) {
     const item = locationNode('div', 'location-cast-member');
