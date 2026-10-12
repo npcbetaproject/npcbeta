@@ -188,7 +188,7 @@ function renderCast(container, entries = sessionEntries()) {
     card.append(heading, meta, actions); container.append(card);
   });
 }
-function renderCompanion() { renderCast(document.querySelector('#cast-list')); document.querySelector('#cast-count').textContent = `${sessionEntries().length} NPCs`; if (generator.data) renderGenerator(); }
+function renderCompanion() { renderCast(document.querySelector('#cast-list'), sessionEntries().sort((a, b) => Number(!!a.library) - Number(!!b.library))); document.querySelector('#cast-count').textContent = `${sessionEntries().length} NPCs`; if (generator.data) renderGenerator(); }
 document.querySelectorAll('[data-roll]').forEach(button => button.addEventListener('click', () => rollGenerator(button.dataset.roll)));
 document.querySelector('#generator-location').addEventListener('change', event => rollGenerator('location', event.target.value));
 document.querySelector('#generator-profession').addEventListener('change', event => rollGenerator('profession', event.target.value));
@@ -203,10 +203,3 @@ function addGeneratedToSession() {
   writeStorage(GENERATOR_KEYS.records, generator.records); render(); announce('Added to session');
 }
 document.querySelector('#add-generated').addEventListener('click', addGeneratedToSession);
-document.querySelector('#add-roll-next').addEventListener('click', () => {
-  if (!generator.data || !generator.current) return;
-  const name = generator.current.name;
-  addGeneratedToSession();
-  rollGenerator('all');
-  announce(`${name} is in Session. Next NPC generated.`);
-});
