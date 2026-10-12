@@ -291,3 +291,18 @@
 .location-cast-add { display:inline-flex; align-items:center; min-height:44px; color:var(--wine); font-size:13px; text-underline-offset:3px; }
 .location-cast-add:focus-visible { outline:2px solid var(--wine); outline-offset:2px; }
 #session-npc-column { scroll-margin-top:150px; }
+
+/* Mobile library: search, filter and sort share one compact row. */
+@media(max-width:760px) {
+ .library-toolbar { grid-template-columns:minmax(0,1fr) 44px 110px; gap:8px; padding:14px 12px 8px; }
+ .library-toolbar h1 { grid-column:1 / -1; margin-bottom:2px; }
+ .library-toolbar .search-field { grid-column:1; grid-row:2; min-width:0; height:44px; padding:0 8px; }
+ .library-toolbar .search-field svg { width:18px; height:18px; }
+ .library-toolbar .search-field input { min-width:0; padding-left:6px; font-family:var(--body); font-size:16px; }
+ .library-toolbar .filter-toggle { grid-column:2; grid-row:2; width:44px; height:44px; padding:0; align-items:center; justify-content:center; }
+ .library-toolbar .filter-toggle-label { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+ .library-toolbar .sort-field { display:flex; grid-column:3; grid-row:2; min-width:0; height:44px; padding:0 4px; }
+ .library-toolbar .sort-field > span { display:none; }
+ .library-toolbar .sort-field select { min-width:0; padding:0 2px; font-family:var(--body); font-size:16px; }
+ .library-toolbar button:focus-visible, .library-toolbar select:focus-visible { outline:2px solid var(--wine); outline-offset:2px; }
+}

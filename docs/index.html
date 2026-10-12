@@ -41,7 +41,7 @@
           </label>
           <label class="sort-field"><span>Sort:</span><select id="character-sort" aria-label="Sort characters"><option value="recent">Most recent</option><option value="name">Name</option><option value="role">Role</option></select></label>
           <button class="filter-toggle" type="button" aria-expanded="false" aria-controls="filter-panel">
-            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M14 4v6M6 14v6"/></svg> Filters
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h2M10 17h10M14 4v6M6 14v6"/></svg><span class="filter-toggle-label">Filters</span>
           </button>
         </div>
 
@@ -97,7 +97,7 @@
             <p id="location-helper" class="visually-hidden">Changing location also rolls a profession.</p>
             <div class="generator-field"><label for="generator-profession">Profession</label><div><select id="generator-profession"></select><button type="button" data-roll="profession" aria-label="Reroll profession">↻</button></div></div>
             </div>
-            <div class="generator-actions"><button type="button" data-roll="all">Roll All</button><button type="button" id="add-generated">Add to Session</button><button type="button" id="add-roll-next" class="primary-action">Add &amp; Roll Next</button><button type="button" id="undo-generator" aria-label="Undo last roll" disabled>Undo</button></div>
+            <div class="generator-actions"><button type="button" data-roll="all">Roll All</button><button type="button" id="add-generated" class="primary-action">Add to Session</button><button type="button" id="undo-generator" aria-label="Undo last roll" disabled>Undo</button></div>
           </div>
         </div>
         <aside class="tonight-cast" aria-labelledby="cast-title"><div class="cast-heading"><h2 id="cast-title">Tonight’s cast</h2><span id="cast-count"></span></div><div id="cast-list"></div></aside>
