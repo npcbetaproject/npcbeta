@@ -1,7 +1,7 @@
 const STORAGE_KEYS = { saved: "npc-beta-saved", session: "npc-beta-session" };
 const state = {
   characters: [], roleConfig: null, locationFitConfig: null, portraits: window.NPC_PORTRAITS || {}, query: "", sort: "recent", view: "library",
-  roles: new Set(), locations: new Set(), activeCharacter: null,
+  roles: new Set(), locations: new Set(), savedOnly: false, activeCharacter: null,
   saved: new Set(readStorage(STORAGE_KEYS.saved, [], validIds)),
   session: new Set(readStorage(STORAGE_KEYS.session, [], validIds)),
 };
@@ -76,11 +76,15 @@ function visibleCharacters() {
     const roleMatch = matchesRoleCategories(character.roleCategoryIds);
     const locationMatch = matchesLocationFitCategories(character.locationFitCategoryIds);
     const viewMatch = state.view === "library" || (state.view === "saved" ? state.saved.has(character.id) : state.session.has(character.id));
-    return searchable.includes(query) && roleMatch && locationMatch && viewMatch;
+    const savedMatch = state.view !== "library" || !state.savedOnly || state.saved.has(character.id);
+    return searchable.includes(query) && roleMatch && locationMatch && viewMatch && savedMatch;
   }).sort((a, b) => state.sort === "recent" ? comparePublished(a, b) : a[state.sort].localeCompare(b[state.sort]));
 }
 function render() {
   syncRoleFilters(); syncLocationFitFilters();
+  document.querySelector("#saved-filter-group").hidden = state.view !== "library";
+  document.querySelector("#saved-filter").checked = state.savedOnly;
+  document.querySelector("#saved-filter-label").textContent = `Saved (${state.characters.filter(character => state.saved.has(character.id)).length})`;
   renderCompanion();
   document.querySelector(".public-npc-directory").hidden = state.view !== "library";
   if ((state.view === "generator" || state.view === "session") && !locationLibrary.templates && !locationLibrary.error) ensureLocations();
@@ -111,7 +115,9 @@ function render() {
     return;
   }
   if (!characters.length) {
-    const message = state.view === "session" ? "Your session is empty. Add characters from their profiles." : state.view === "saved" ? "You have not saved any matching characters yet." : "No characters match those filters.";
+    const showingSaved = state.view === "saved" || (state.view === "library" && state.savedOnly);
+    const hasSaved = state.characters.some(character => state.saved.has(character.id));
+    const message = showingSaved ? (hasSaved ? "No saved NPCs match those filters." : "No saved NPCs yet.") : "No characters match those filters.";
     elements.grid.innerHTML = `<p class="empty-state">${message}</p>`; return;
   }
   elements.grid.innerHTML = characters.map((character) => `<article class="character-card">
@@ -202,8 +208,9 @@ elements.search.addEventListener("input", ({ target }) => { state.query = target
 elements.sort.addEventListener("change", ({ target }) => { state.sort = target.value; render(); });
 document.querySelectorAll("[data-view]").forEach((button) => button.addEventListener("click", (event) => { event.preventDefault(); setView(button.dataset.view); }));
 elements.filterToggle.addEventListener("click", () => { const open = elements.filterPanel.classList.toggle("open"); elements.filterToggle.setAttribute("aria-expanded", String(open)); });
+document.querySelector("#saved-filter").addEventListener("change", ({ target }) => { state.savedOnly = target.checked; render(); });
 elements.filterPanel.addEventListener("change", ({ target }) => { if (target.matches("[data-all-roles]")) { state.roles.clear(); render(); return; } if (target.matches("[data-all-locations]")) { state.locations.clear(); render(); return; } if (!target.matches("[data-filter]")) return; const set = target.dataset.filter === "role" ? state.roles : state.locations; target.checked ? set.add(target.value) : set.delete(target.value); render(); });
-document.querySelector(".clear-filters").addEventListener("click", () => { state.roles.clear(); state.locations.clear(); elements.filterPanel.querySelectorAll("input").forEach((input) => { input.checked = false; }); render(); });
+document.querySelector(".clear-filters").addEventListener("click", () => { state.roles.clear(); state.locations.clear(); state.savedOnly = false; elements.filterPanel.querySelectorAll("input").forEach((input) => { input.checked = false; }); render(); });
 elements.grid.addEventListener("click", (event) => {
   const save = event.target.closest("[data-save]"); const remove = event.target.closest("[data-remove-session]"); const open = event.target.closest("[data-character]");
   if (save) toggleSaved(save.dataset.save); else if (remove) { state.session.delete(remove.dataset.removeSession); saveState(); render(); } else if (open) openDetail(state.characters.find(({ id }) => id === open.dataset.character));
@@ -218,8 +225,9 @@ elements.detail.querySelector('.npc-copy-link').addEventListener('click', async 
 });
 // Other tabs can add public NPCs using the same persistent session collection.
 window.addEventListener('storage', event => {
-  if (event.key !== STORAGE_KEYS.session && event.key !== null) return;
+  if (event.key !== STORAGE_KEYS.session && event.key !== STORAGE_KEYS.saved && event.key !== null) return;
   state.session = new Set(readStorage(STORAGE_KEYS.session, [], validIds));
+  state.saved = new Set(readStorage(STORAGE_KEYS.saved, [], validIds));
   render(); if (state.activeCharacter && elements.detail.classList.contains('open')) updateDetailActions();
 });
 elements.detail.querySelector(".back-button").addEventListener("click", closeDetail); elements.scrim.addEventListener("click", closeDetail);
