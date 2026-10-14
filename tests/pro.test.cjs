@@ -8,7 +8,7 @@ const assert = require('node:assert/strict');
  const stored=await page.evaluate(()=>({...localStorage}));
  await page.locator('.desktop-nav [data-view="support"]').click();
  assert.equal(await page.title(),'Support NPC Beta — NPC Beta');
- for(const menu of ['.desktop-nav','.bottom-nav']) assert.deepEqual(await page.locator(menu+' button').evaluateAll(buttons=>buttons.map(b=>b.querySelector('span')?.textContent||b.textContent)),['Library','Locations','Name Generator','Saved','Session','Support Us']);
+ for(const menu of ['.desktop-nav','.bottom-nav']) assert.deepEqual(await page.locator(menu+' button').evaluateAll(buttons=>buttons.map(b=>b.querySelector('span')?.textContent||b.textContent)),['Library','Locations','Name Generator','Session','Support Us']);
  assert(await page.locator('#pro-view').isVisible());assert(await page.locator('.library').isHidden());
  assert.equal(await page.locator('.pro-badge').count(),6);assert.equal(await page.locator('[data-support]').count(),2);
  assert.equal(await page.locator('.desktop-nav [data-view="support"]').getAttribute('aria-current'),'page');

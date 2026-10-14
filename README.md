@@ -119,7 +119,7 @@ The hero reuses the embedded Cassian Holt portrait. Set `heroImage` in
 `#support` opens Support Us directly; the legacy `#pro` route and `setView("pro")`
 remain compatible. Internal pro-prefixed CSS/DOM names are retained for style
 compatibility, with no Pro messaging displayed to visitors. Navigation order is
-Library, Locations, Name Generator, Saved, Session, Support Us in both menus.
+Library, Locations, Name Generator, Session, Support Us in both menus. Saved NPCs are available through the Library Saved filter; legacy #saved links open that filtered library.
 Browser storage keys and saved/session data formats remain unchanged.
 
 Run `node tests/pro.dom.test.cjs` for support integration checks and
