@@ -1,5 +1,117 @@
 [
   {
+    "id": "brenna-ironleash",
+    "name": "Brenna Ironleash",
+    "ancestry": "Human",
+    "role": "Dog Trainer",
+    "subtitle": "Train the handler first",
+    "summary": "Broad-shouldered and flint-eyed, Brenna breeds and trains loyal guard dogs, trackers and working hounds. A brass whistle hangs above her scarred leather jerkin; she judges a buyer by how they treat an animal that cannot earn its keep.",
+    "tableNote": "Stand squarely, give short instructions and make the customer repeat them. Brenna is tough with people and patient with animals: loyalty is earned through steady care, never beaten into a beast. She wants capable homes for her dogs and refuses a sale to a careless handler.",
+    "adventureHook": "One of Brenna’s sold tracking hounds returns alone, carrying a cut length of its handler’s coat. It refuses food and keeps facing the north road. She will lend the party the dog and its familiar whistle if they help find the missing handler.",
+    "locationIds": [
+      "stables",
+      "farm"
+    ],
+    "tags": [
+      "merchant",
+      "ally"
+    ],
+    "imageAlt": "Weathered human dog trainer with a silver-streaked dark braid, russet leather jerkin and brass training whistle holding a coiled lead before timber kennels.",
+    "locationFit": [
+      "Town",
+      "Wilderness"
+    ],
+    "roleCategoryIds": [
+      "workers-services",
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "wilderness"
+    ],
+    "group": "townsfolk",
+    "portraitKey": "brenna-ironleash",
+    "portraitFit": "contain",
+    "image": "images/characters/brenna-ironleash.webp",
+    "publishedAt": "2026-10-14T21:15:00Z",
+    "pack": "kennels-coaches-and-cures",
+    "slug": "brenna-ironleash"
+  },
+  {
+    "id": "osric-rutledge",
+    "name": "Osric Rutledge",
+    "ancestry": "Human",
+    "role": "Stagecoach Driver",
+    "subtitle": "The road owes you nothing",
+    "summary": "Weather-beaten Osric drives a patched stagecoach with the caution of a man who has buried friends along the route. A former sailor, he calls passengers his cargo, horses his crew and every steep descent a bad stretch of sea.",
+    "tableNote": "Speak in a gravelly mutter, squint at the weather and punctuate advice with a dry chuckle. Osric complains about passengers but counts every head before moving off. He wants to finish his final season with everyone delivered safely, and will turn back rather than risk an exhausted team.",
+    "adventureHook": "At the next change station, a fresh detour notice directs coaches onto an abandoned toll road. Osric spots that its official seal is wrong. He offers the party passage if they scout the regular route and discover who wants travellers diverted.",
+    "locationIds": [
+      "stables",
+      "inn",
+      "roadside-campsite"
+    ],
+    "tags": [
+      "ally",
+      "wanderer"
+    ],
+    "imageAlt": "Grizzled grey-bearded stagecoach driver in a battered broad-brimmed felt hat and patched brown driving cape holding slack reins beside a coach wheel.",
+    "locationFit": [
+      "Town",
+      "Road"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel"
+    ],
+    "group": "townsfolk",
+    "portraitKey": "osric-rutledge",
+    "portraitFit": "contain",
+    "image": "images/characters/osric-rutledge.webp",
+    "publishedAt": "2026-10-14T21:15:00Z",
+    "pack": "kennels-coaches-and-cures",
+    "slug": "osric-rutledge"
+  },
+  {
+    "id": "tansy-briarwell",
+    "name": "Tansy Briarwell",
+    "ancestry": "Halfling",
+    "role": "Herbal Medicine Merchant",
+    "subtitle": "Tell me what it is for",
+    "summary": "Tansy runs a tidy market stand of dried herbs, poultices and carefully measured salves. Grey curls escape her headscarf as she questions customers about their ailments; she sells modest remedies and has little patience for miraculous promises.",
+    "tableNote": "Ask precise questions, sniff a sample before naming it and wrap purchases while talking. Tansy is warm but exacting, and readily admits when a remedy is beyond her skill. She wants honest medicine within ordinary people’s reach; quietly setting aside stock for poorer neighbours leaves her margins painfully thin.",
+    "adventureHook": "A rival stall is selling cheap tonic in jars bearing a clumsy copy of Tansy’s mark, and customers are blaming her when it fails. She asks the party to buy a sealed jar and trace its supplier before the market reeve closes her stand.",
+    "locationIds": [
+      "market-square",
+      "apothecary"
+    ],
+    "tags": [
+      "merchant",
+      "ally"
+    ],
+    "imageAlt": "Grey-streaked curly-haired halfling herbal medicine merchant in a sage headscarf, green dress and linen apron holding dried herbs and an amber jar at a simple market stall.",
+    "locationFit": [
+      "Town"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "faith-healing"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "group": "townsfolk",
+    "portraitKey": "tansy-briarwell",
+    "portraitFit": "contain",
+    "image": "images/characters/tansy-briarwell.webp",
+    "publishedAt": "2026-10-14T21:15:00Z",
+    "pack": "kennels-coaches-and-cures",
+    "slug": "tansy-briarwell"
+  },
+  {
     "id": "brakka-hearthhand",
     "name": "Brakka Hearthhand",
     "ancestry": "Half-orc",
