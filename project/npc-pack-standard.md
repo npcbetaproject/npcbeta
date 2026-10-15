@@ -1,151 +1,104 @@
 # NPC Pack Standard
 
-Version: 1.0 · Updated: 2026-10-08
+Version: 2.0 · Updated: 2026-10-15
 
-## Purpose
+## Scope and authoritative references
 
-Use this document for creating repeatable NPC Library packs for NPC Beta. A pack contains **four authored NPCs around one theme**. These are permanent library entries with individual portraits, distinct from temporary NPCs produced by the Name Generator.
+A pack is four permanent authored Library NPCs around a theme. An explicitly requested single NPC or a different count follows the same workflow at that scope. Name Generator NPCs are separate.
 
-Repository: https://github.com/npcbetaproject/npcbeta
+Read `AGENTS.md`, [NPC Portrait Standard](npc-portrait-standard.md), [NPC Token Standard](npc-token-standard.md) and [Permanent NPC Pages](permanent-npc-pages.md). Inspect the current schema and implementation before editing. User instructions and approvals already given in the task take precedence; do not ask for the same approval again.
 
-Read this standard, the repository's `AGENTS.md`, and [NPC Portrait Standard](npc-portrait-standard.md) before starting. Inspect the current character schema, filters, image mappings and sorting implementation. Follow the existing implementation rather than assuming fields or paths from an earlier conversation remain current. The user's explicit instructions for a particular pack take precedence over these defaults.
+Use these references as the source of truth instead of copying settings into each pack document:
 
-## 1. Propose the pack
+| Area | Source |
+| --- | --- |
+| Portrait appearance, framing and compression | `project/npc-portrait-standard.md` |
+| Token appearance, export, naming and download placement | `project/npc-token-standard.md` |
+| Character content and classification guidance | `planning/content-guidelines.md` |
+| Valid Role IDs | `docs/data/characters/role-categories.json` |
+| Valid Location Fit IDs | `docs/data/characters/location-fit-categories.json` |
+| Public pages, metadata, slugs and share actions | `project/permanent-npc-pages.md` |
 
-Choose a theme, such as Tavern Patrons, Roadside Travellers, Court Intrigue, Wilderness Guides or Troublemakers.
+## 1. Agree on the characters
 
-Propose four NPCs in a reviewable table containing:
+Present a concise table with name, ancestry, specific profession, concept/appearance, a playable mannerism, motivation or complication, actionable hook and proposed filter assignments. Default to four distinct NPCs who work independently; connections are optional. Avoid extensive backstories, statistics, lengthy dialogue, new fields or assumptions about the user's campaign.
 
-- Name and ancestry.
-- Specific profession, retained as the NPC's display role.
-- One-sentence concept and short appearance direction.
-- Personality or mannerism that is easy for a DM to portray.
-- Motivation, secret or complication.
-- One actionable adventure hook.
-- Role categories and Location Fit categories.
+Obtain concept approval before artwork. Existing approval to create the named NPCs is sufficient. Concept approval covers portraits, tokens, data and a reviewable branch; publish only when the user has authorized publication.
 
-Give the four characters distinct personalities, appearances and uses at the table. They may have optional connections but must also work individually in other campaigns. Avoid making every character a quest giver or building in assumptions about the user's personal campaign.
+## 2. Prepare one branch and a content batch
 
-Prefer concise, usable descriptions over extensive backstories. Offer a mix of social interactions, useful information, complications and adventure opportunities. Do not include statistics, lengthy dialogue or extra content fields unless requested or supported by the current project.
+Start an isolated checkout/worktree on a new branch from current `main`. Inspect the data, portrait mappings, filters, recent sorting, popup and browser storage. Preserve unrelated work.
 
-## 2. Approve the direction
+Check names/IDs for collisions. Prepare the complete records and artwork descriptions together so identity, clothing and profession agree before generation. Retain the specific profession in `role`; assign valid nonempty `roleCategoryIds` and `locationFitCategoryIds`. No Story Role field/filter is required.
 
-Present the four concepts before generating portraits or implementing the pack. Wait for the user's approval of the direction. If approval has already been given in the current task, proceed without asking again.
+Use only valid existing `locationIds`; preserve display-oriented `locationFit` where used. Add concise summary, portrayal note, adventure hook, meaningful portrait alt text and the project's existing release/pack metadata. Do not create extra registries or classification systems.
 
-Resolve requested changes to names, concepts and appearances before artwork. Approval of the pack authorizes preparing its portraits, data and reviewable branch/PR; it does not itself instruct merging to the live branch.
+## 3. Create portrait, then token
 
-## 3. Create portraits
+For each approved NPC:
 
-Follow `project/npc-portrait-standard.md` as the authoritative artwork specification.
+1. Create and inspect the **960 × 960 opaque WebP portrait**, following the portrait standard. Prefer painted fantasy illustration over a photographic look. Preserve complete heads and headroom.
+2. Derive the **280 × 280 transparent WebP token** from that finalized portrait, using the approved circular border and subtle dragon-only emblem. Follow the token standard; do not target 2 KB.
+3. Export from high-resolution/lossless sources, verify dimensions/format/transparency/size, and retain sources when available. Avoid repeatedly recompressing lossy assets.
 
-The baseline requirements are:
+Prepare independent portraits together where supported; generate each token only after its own portrait is settled. Use one clear reference-based prompt per asset; iterate only to correct identified issues. No separate concept variations or montages are required unless requested.
 
-- One **960 × 960 pixel WebP** per NPC.
-- Consistent realistic fantasy illustration style, muted earth tones and natural cinematic lighting.
-- Centered composition with complete head, hair, ears, horns and headwear visible; generous headroom, typically 15–20%.
-- Framing that works in both library cards and expanded profiles, normally waist-up.
-- Clothing, equipment and background consistent with the approved character.
-- No text, watermark or decorative frame.
-- One high-resolution file shared by card and profile unless the project explicitly adopts another strategy.
+Expected deployed files per NPC:
 
-Use stable lowercase kebab-case NPC IDs and matching filenames, for example `cassian-holt.webp`. Check for ID/name collisions before adding records.
+```text
+docs/images/characters/<npc-id>.webp
+docs/images/tokens/<npc-id>-token.webp
+```
 
-Place final portraits in `docs/images/characters/`. Inspect the actual card and profile presentation after integration; fix framing or display fit if heads are cropped. Do not substitute generated-NPC silhouettes or experimental grayscale thumbnails for library portraits unless explicitly requested.
+## 4. Integrate once
 
-## 4. Add character data
-
-Use the current repository's schema and required fields. Populate supported fields for the name, ancestry, role, subtitle/summary, DM portrayal notes and adventure hook. Preserve existing NPC records and stable IDs.
-
-Required classification arrays for new packs:
+Add all approved records, portraits, tokens and required portrait mappings in the same branch. Each new NPC includes:
 
 ```json
 {
   "id": "example-npc",
-  "name": "Example NPC",
+  "slug": "example-npc",
   "role": "Innkeeper",
   "roleCategoryIds": ["hospitality-entertainment"],
-  "locationFitCategoryIds": ["settlements", "roads-travel"]
+  "locationFitCategoryIds": ["settlements"],
+  "tokenImage": "images/tokens/example-npc-token.webp"
 }
 ```
 
-This is a partial record demonstrating classification, not a complete importable NPC record.
+This is a partial example, not a complete importable record. Use stable IDs/slugs and the existing schema. Preserve old records, publication dates, Saved selections and Session storage.
 
-### Role categories
+- Use existing release fields so the pack appears first under **Most Recent**, with deterministic ordering for a shared date.
+- Keep the portrait as the main card/profile image.
+- The shared popup automatically uses `tokenImage`. **Download token**, its small preview, **Copy link** and **View full page** belong directly below the introduction paragraph. Download filename: `<npc-id>-token.webp`.
+- Older NPCs without tokens hide the action; do not backfill the whole library unless requested.
+- Generate every new NPC's permanent HTML page and preserve the popup as the quick-reference view. Verify the public URL, metadata, directory and sitemap through the existing page builder.
 
-Keep the specific profession in `role`. Assign one or more broad category IDs using the shared category configuration.
+## 5. Validate the batch
 
-| ID | Label |
-| --- | --- |
-| `adventurers` | Adventurers |
-| `merchants-crafters` | Merchants & Crafters |
-| `hospitality-entertainment` | Hospitality & Entertainment |
-| `scholars-magic` | Scholars & Magic |
-| `faith-healing` | Faith & Healing |
-| `military-authority` | Military & Authority |
-| `workers-services` | Workers & Services |
-| `underworld` | Underworld |
+Run checks once after integration; repeat only for a relevant change or failure.
 
-Assign based on profession and content. Multiple categories are appropriate where useful, such as an apothecary under Merchants & Crafters and Faith & Healing. A villain is not automatically Underworld. Do not add a Story Role filter or field for this workflow.
+- Expected number of unique new records; valid references/classification and complete concise content.
+- Portrait files decode at 960 × 960; tokens decode at 280 × 280 with genuinely transparent exterior and readable faces. Report actual byte sizes.
+- Desktop/mobile cards and profiles: correct images, no cropped heads, modal starts at top, no overflow.
+- Token preview/action below introduction; correct download bytes/name; no stale action when opening another NPC or location. Check Library and Session.
+- Copy link and View full page work; permanent pages refresh directly with correct server HTML/metadata.
+- Search, combined role/location filters, Most Recent, Saved filter and Session work without clearing existing selections.
 
-### Location Fit categories
+Use relevant existing repository tests, including `tests/npc-token.dom.test.cjs`, public-page tests and browser checks. Build and verify generated pages with:
 
-These describe plausible encounter settings, not permanent residence.
+```sh
+node scripts/build-npc-pages.cjs
+node scripts/build-npc-pages.cjs --check
+```
 
-| ID | Label |
-| --- | --- |
-| `settlements` | Settlements |
-| `roads-travel` | Roads & Travel |
-| `wilderness` | Wilderness |
-| `dungeons-ruins` | Dungeons & Ruins |
-| `castles-estates` | Castles & Estates |
-| `waterfront` | Waterfront |
+Use the repository's installed dependencies/environment for tests. A file decode does not replace browser verification. Report blocked checks honestly; avoid creating repetitive per-pack tests that merely mirror records when shared checks already cover the behavior.
 
-Assign at least one relevant category, with multiple when justified. Avoid assigning all categories merely because a character could theoretically appear anywhere.
+## 6. Review or publish
 
-Keep `locationIds` for references to actual location records; use valid existing IDs. Do not invent a location reference without creating the referenced record within authorized scope. Preserve any existing `locationFit` field used for other text or presentation purposes.
+Open a PR describing the characters, assets, content and validation. Keep the handoff concise and include a useful preview when available. A pack note may record approved concepts and final prompts without repeating the standards.
 
-### Image references and release ordering
-
-Inspect the current image lookup implementation and update all necessary portrait keys/mappings or image paths. Match the repository's path conventions, including its GitHub Pages base path.
-
-Use the project's current release-date/order fields so the newly released pack appears at the top under **Most Recent**. Adding records to the end of a JSON array alone does not guarantee display order. Preserve existing records' dates and ensure ordering is deterministic when all four NPCs share a release date.
-
-Reuse existing pack metadata if available. Do not introduce a new pack registry or sorting system merely to add a pack. If the project lacks the agreed classification or ordering support, identify that gap and implement only what is necessary within the requested scope.
-
-## 5. Branch and integrate
-
-Start from the latest intended base branch, normally `main`, and use a dedicated branch such as `add-tavern-patrons-pack`. Preserve unrelated work and avoid overwriting shared documentation or image mappings wholesale.
-
-Integrate all four approved records and final portraits. Keep existing Saved and Session storage compatible; do not change old NPC IDs or clear browser storage.
-
-An email montage, pack landing page or one-shot adventure is an optional separate deliverable, not an automatic part of every pack.
-
-## 6. Validate and hand off
-
-Perform appropriate existing repository checks and verify:
-
-- Exactly four new library records, with unique IDs.
-- Portraits decode as WebP at 960 × 960 pixels and load through the site's actual path conventions.
-- No cropped heads in cards or profiles on desktop and mobile.
-- Correct character content, image alt text and portrait references.
-- Category IDs are valid and each NPC appears under its assigned filters.
-- Search and combined Role/Location Fit filtering work.
-- The pack appears first under Most Recent without changing older release dates.
-- Saving and adding new NPCs to Session work, and existing selections remain intact.
-- Profiles open correctly and begin at the top.
-
-Open a pull request summarizing the pack theme, four NPCs, data/artwork changes and validation performed. State any checks that could not be completed. Provide screenshots when available.
-
-Do not claim changes are live before they have been merged and deployment verified. If GitHub write access is unavailable, deliver the files and exact integration instructions instead of claiming a push or PR.
+If publication is authorized, merge and verify successful deployment. Otherwise provide the PR for review. Never claim a push, merge or live deployment without evidence. An email montage, adventure or pack landing page is a separate deliverable.
 
 ## Reusable request
 
-> Propose an NPC Library pack of four characters with the theme “[THEME]”, following `project/npc-pack-standard.md`. First show the concepts, appearance directions, hooks and filter assignments for approval. After I approve, create portraits following `project/npc-portrait-standard.md`, integrate the data and images in a new branch, validate the pack and open a pull request. Do not merge unless instructed.
-
-## Make this standard discoverable
-
-Store this file at `project/npc-pack-standard.md`. Add the following pointer to the existing `AGENTS.md` without replacing its other instructions:
-
-> For NPC Library pack creation, read and follow `project/npc-pack-standard.md` and `project/npc-portrait-standard.md` before proposing or implementing characters.
-
-Future tasks should explicitly reference this path. Agents should read the checked-out file each time they use the standard rather than relying on remembered conversation details.
+> Propose an NPC pack of four characters with the theme “[THEME]” following `project/npc-pack-standard.md`. Show concepts, appearance directions, hooks and filter assignments for approval. After approval, create each NPC's portrait and downloadable token using the linked standards, integrate the records and permanent pages in a new branch, validate and open a PR. Publish only when instructed.
