@@ -194,7 +194,7 @@ function openDetail(character) {
   const token = share.querySelector('.npc-token-download');
   if (character.tokenImage) {
     token.hidden = false; token.href = character.tokenImage;
-    token.download = `${character.id}-roll20.webp`;
+    token.download = `${character.id}-token.webp`;
     token.setAttribute('aria-label', `Download ${character.name} token, transparent WebP`);
     token.querySelector('img').src = character.tokenImage;
   }
