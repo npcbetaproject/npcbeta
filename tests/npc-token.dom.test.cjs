@@ -17,7 +17,7 @@ const assert = require('node:assert/strict');
   assert.equal(token.download, 'brakka-hearthhand-token.webp');
   assert(token.getAttribute('aria-label').includes('Brakka Hearthhand'));
   assert.equal(token.querySelector('img').getAttribute('src'), 'images/tokens/brakka-hearthhand-token.webp');
-  assert(d.querySelector('.npc-share-actions').compareDocumentPosition(d.querySelector('#detail-title')) & 4);
+  assert(d.querySelector('.detail-summary').compareDocumentPosition(d.querySelector('.npc-share-actions')) & 4);
   w.test.openDetail(w.test.state.characters.find(c => c.id === 'cassian-holt'));
   assert(token.hidden); assert(!token.hasAttribute('href'));
   w.test.openDetail(w.test.state.characters.find(c => c.id === 'brakka-hearthhand')); w.test.prepareDetail('Location', true);
