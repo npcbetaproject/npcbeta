@@ -14,7 +14,7 @@ const assert = require('node:assert/strict');
   w.test.openDetail(w.test.state.characters.find(c => c.id === 'brakka-hearthhand'));
   const token = d.querySelector('.npc-token-download');
   assert(!token.hidden); assert(token.href.endsWith('/images/tokens/brakka-hearthhand.webp'));
-  assert.equal(token.download, 'brakka-hearthhand-roll20-512.webp');
+  assert.equal(token.download, 'brakka-hearthhand-roll20.webp');
   assert(token.getAttribute('aria-label').includes('Brakka Hearthhand'));
   assert.equal(token.querySelector('img').getAttribute('src'), 'images/tokens/brakka-hearthhand.webp');
   assert(d.querySelector('.npc-share-actions').compareDocumentPosition(d.querySelector('#detail-title')) & 4);
