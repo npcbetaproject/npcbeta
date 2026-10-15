@@ -113,6 +113,7 @@
   },
   {
     "id": "brakka-hearthhand",
+    "tokenImage": "images/tokens/brakka-hearthhand.webp",
     "name": "Brakka Hearthhand",
     "ancestry": "Half-orc",
     "role": "Tavern Cook",

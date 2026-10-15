@@ -162,6 +162,8 @@ let detailOpener = null, detailEntryId = null, detailEntryKind = null;
 function prepareDetail(kind, fromSession) {
   elements.detail.querySelector('.detail-location-remove')?.remove();
   elements.detail.querySelector('.npc-share-actions').hidden = true;
+  const token = elements.detail.querySelector('.npc-token-download');
+  token.hidden = true; token.removeAttribute('href'); token.querySelector('img').removeAttribute('src');
   elements.detail.querySelector('.npc-share-status').textContent = '';
   detailOpener = document.activeElement;
   const row = detailOpener?.closest(".session-row");
@@ -188,7 +190,14 @@ function openDetail(character) {
   elements.detail.querySelector(".tag-list").innerHTML = character.tags.map((tag) => `<span>${tag}</span>`).join(""); elements.detail.querySelector(".detail-summary").textContent = character.summary;
   elements.detail.querySelector(".table-note").textContent = character.tableNote; elements.detail.querySelector(".adventure-hook").textContent = character.adventureHook;
   const share = elements.detail.querySelector('.npc-share-actions');
-  share.hidden = !character.slug;
+  share.hidden = !character.slug && !character.tokenImage;
+  const token = share.querySelector('.npc-token-download');
+  if (character.tokenImage) {
+    token.hidden = false; token.href = character.tokenImage;
+    token.download = `${character.id}-roll20-512.webp`;
+    token.setAttribute('aria-label', `Download ${character.name} token, 512 by 512 WebP`);
+    token.querySelector('img').src = character.tokenImage;
+  }
   if (character.slug) share.querySelector('.npc-full-page').href = npcPermanentURL(character);
   updateDetailActions(); showDetail();
 }

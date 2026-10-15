@@ -306,3 +306,7 @@
  .library-toolbar .sort-field select { min-width:0; padding:0 2px; font-family:var(--body); font-size:16px; }
  .library-toolbar button:focus-visible, .library-toolbar select:focus-visible { outline:2px solid var(--wine); outline-offset:2px; }
 }
+
+/* Token downloads share the compact profile action row. */
+.npc-share-actions .npc-token-download[hidden] { display:none; }
+.npc-token-download img { width:32px; height:32px; object-fit:contain; }
