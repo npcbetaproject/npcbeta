@@ -1,5 +1,42 @@
 [
   {
+    "id": "edric-mossfield",
+    "slug": "edric-mossfield",
+    "name": "Edric Mossfield",
+    "ancestry": "Human",
+    "role": "Farmhand",
+    "group": "townsfolk",
+    "subtitle": "Brave until something answers",
+    "summary": "With a pitchfork in one hand and a lantern in the other, Edric joins his neighbours searching the village edge for restless dead or a prowling werewolf. He repeats the mob’s boldest claims, but every rustle makes him wonder whether they should have waited for daylight.",
+    "tableNote": "Grip an imaginary pitchfork, talk too loudly, then stop to listen. Edric wants his family safe and his neighbours to think him dependable; he follows the crowd until someone gives him a convincing reason to question it.",
+    "adventureHook": "The mob has cornered a wounded stranger in an empty barn, convinced they have found their werewolf. Edric quietly shows the party claw marks higher than any wolf could reach and asks them to investigate before his neighbours set the barn alight.",
+    "locationIds": [
+      "farm",
+      "forest-clearing",
+      "market-square"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Worried human farmhand in a worn wool cap and patched brown clothes holding a three-tined pitchfork and glowing lantern beside a village fence under a full moon.",
+    "portraitKey": "edric-mossfield",
+    "portraitFit": "contain",
+    "image": "images/characters/edric-mossfield.webp",
+    "tokenImage": "images/tokens/edric-mossfield-token.webp",
+    "locationFit": [
+      "Village",
+      "Wilderness"
+    ],
+    "publishedAt": "2026-10-15T22:33:13Z",
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "wilderness"
+    ]
+  },
+  {
     "id": "brenna-ironleash",
     "name": "Brenna Ironleash",
     "ancestry": "Human",

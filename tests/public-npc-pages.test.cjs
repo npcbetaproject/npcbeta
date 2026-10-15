@@ -31,7 +31,7 @@ d.querySelector('.npc-copy-link').click();await new Promise(r=>setTimeout(r,10))
 assert.equal(d.querySelector('.npc-full-page').href,copied);assert.equal(d.querySelector('.npc-full-page').target,'_blank');assert.equal(d.querySelector('.npc-full-page').rel,'noopener');
 // Focus trap includes the new link and restores the opener.
 const opener=d.querySelector(`[data-entry-id="${records[0].id}"] .session-row-open`);
-d.querySelector('.back-button').focus();d.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Tab',shiftKey:true,bubbles:true,cancelable:true}));assert.equal(d.activeElement,d.querySelector('.npc-full-page'));
+d.querySelector('.back-button').focus();d.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Tab',shiftKey:true,bubbles:true,cancelable:true}));assert.equal(d.activeElement,d.querySelector(records[0].tokenImage ? '.npc-token-download' : '.npc-full-page'));
 t.closeDetail();assert.equal(d.activeElement,opener);assert.deepEqual({url:w.location.href,tab:t.state.view,storage:JSON.stringify(w.localStorage),scroll:w.scrollY},before);
 t.setView('library');d.querySelector(`[data-character="${records[0].id}"]`).click();assert.equal(d.querySelector('#detail-panel').getAttribute('aria-hidden'),'false');
 // A full-page addition in another tab updates the existing application collection.
