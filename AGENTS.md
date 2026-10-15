@@ -9,3 +9,5 @@ For every new library NPC, include a nonempty `roleCategoryIds` array from `docs
 For every new library NPC, include a nonempty `locationFitCategoryIds` array from `docs/data/characters/location-fit-categories.json`. Assign plausible encounter environments based on profession, description and adventure hook. Preserve `locationIds`, descriptive `locationFit`, and `roleCategoryIds`; follow `planning/content-guidelines.md`.
 
 For NPC Library pack creation, read and follow `project/npc-pack-standard.md` and `project/npc-portrait-standard.md` before proposing or implementing characters.
+
+Every new public Library NPC must include a downloadable token following `project/npc-token-standard.md`: 280 × 280 transparent WebP, quality 80/method 6, `docs/images/tokens/<npc-id>-token.webp`, and `tokenImage` in the NPC record. Use the approved circular frame with a subtle dragon-only emblem. Keep the download action below the popup introduction alongside Copy link and View full page.
