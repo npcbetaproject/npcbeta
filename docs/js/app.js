@@ -194,8 +194,8 @@ function openDetail(character) {
   const token = share.querySelector('.npc-token-download');
   if (character.tokenImage) {
     token.hidden = false; token.href = character.tokenImage;
-    token.download = `${character.id}-roll20-512.webp`;
-    token.setAttribute('aria-label', `Download ${character.name} token, 512 by 512 WebP`);
+    token.download = `${character.id}-roll20.webp`;
+    token.setAttribute('aria-label', `Download ${character.name} token, transparent WebP`);
     token.querySelector('img').src = character.tokenImage;
   }
   if (character.slug) share.querySelector('.npc-full-page').href = npcPermanentURL(character);
