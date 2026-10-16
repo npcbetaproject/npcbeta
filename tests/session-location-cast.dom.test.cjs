@@ -1,6 +1,6 @@
 const {JSDOM}=require('jsdom'),fs=require('node:fs'),assert=require('node:assert/strict');
 (async()=>{
-const dom=new JSDOM(fs.readFileSync('docs/index.html','utf8'),{url:'https://example.com/#session',runScripts:'outside-only'}),w=dom.window;w.scrollTo=()=>{};
+const dom=new JSDOM(fs.readFileSync('docs/index.html','utf8'),{url:'https://example.com/#session',runScripts:'outside-only'}),w=dom.window;w.scrollTo=()=>{};w.confirm=()=>true;
 w.localStorage.setItem('npc-beta-session','["mira-fen","cassian-holt"]');
 const instances=['a','b'].map(id=>({id:'location-'+id,templateId:'tavern',displayName:'Tavern '+id,notes:'Keep me',settings:['town'],condition:null,createdAt:new Date().toISOString()}));
 w.localStorage.setItem('npc-beta:locations:v1:session',JSON.stringify(instances));

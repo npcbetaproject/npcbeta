@@ -310,3 +310,9 @@
 /* Token downloads share the compact profile action row. */
 .npc-share-actions .npc-token-download[hidden] { display:none; }
 .npc-token-download img { width:32px; height:32px; object-fit:contain; }
+
+/* Small grayscale portraits are shared across all generated NPC views. */
+.generated-npc-portrait{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(1)}
+.has-generated-portrait .generated-npc-silhouette,.has-generated-portrait .generated-visual-background{display:none}
+.has-generated-portrait::after{display:none}
+.detail-extra-visual .has-generated-portrait{width:140px;height:140px}
