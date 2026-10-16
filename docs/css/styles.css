@@ -104,7 +104,7 @@
 .session-column-heading h2 { margin:0; font-size:20px; }
 .session-column-heading > span { font-size:13px; color:#65615a; }
 #session-board #character-grid, #session-location-list { display:flex; flex-direction:column; gap:6px; overflow-y:auto; max-height:calc(100dvh - 230px); scrollbar-gutter:stable; padding:2px 3px 12px; }
-#session-board .session-row { display:flex; align-items:center; gap:6px; padding:4px; margin:0; min-height:72px; border:1px solid #d7d0c4; border-radius:6px; background:#faf8f3; box-shadow:none; }
+#session-board .session-row { flex-shrink:0; display:flex; align-items:center; gap:6px; padding:4px; margin:0; min-height:72px; border:1px solid #d7d0c4; border-radius:6px; background:#faf8f3; box-shadow:none; }
 #session-board .session-row.is-pinned { border-left:3px solid #837047; }
 .session-row-open { display:flex; align-items:center; text-align:left; flex:1; min-width:0; gap:10px; border:0; border-radius:3px; background:none; padding:3px; color:inherit; cursor:pointer; }
 .session-row-copy { min-width:0; flex:1; }
