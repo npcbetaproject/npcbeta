@@ -86,7 +86,7 @@ function generatedNpcVisual(entry) {
   if (portrait) {
     const face = document.createElement('img');
     face.className = 'generated-npc-portrait'; face.src = portrait.image; face.alt = '';
-    face.width = 70; face.height = 70; face.loading = 'lazy'; face.decoding = 'async';
+    face.width = 280; face.height = 280; face.loading = 'lazy'; face.decoding = 'async';
     visual.classList.add('has-generated-portrait');
     face.addEventListener('error', () => { face.remove(); visual.classList.remove('has-generated-portrait'); loadLocationFallback(); }, { once: true });
     visual.insertBefore(face, badge);
