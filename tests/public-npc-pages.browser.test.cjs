@@ -27,5 +27,27 @@ const site=require('../docs/data/site.json'),records=require('../docs/data/chara
   await full.close();await page.evaluate(()=>setView('session'));await page.locator(`[data-entry-id="${records[0].id}"] .session-row-open`).click();await page.locator('.detail-portrait').evaluate(img=>img.decode());
   await page.keyboard.press('Escape');assert.equal(await page.locator('#detail-panel').getAttribute('aria-hidden'),'true');assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  }
+ // All public NPC token downloads use the correct asset and filename on mobile and desktop.
+ await page.goto(base); await page.waitForSelector('[data-character]');
+ for (const width of [375,1440]) {
+  await page.setViewportSize({width,height:900});
+  for (const record of records) {
+   if (!record.tokenImage) continue;
+   await page.evaluate(id=>openDetail(state.characters.find(c=>c.id===id)),record.id);
+   const token=page.locator('.npc-token-download');
+   assert(await token.isVisible());
+   assert.equal(await token.getAttribute('download'),record.id+'-token.webp');
+   await token.locator('img').evaluate(img=>img.decode());
+   assert(await token.locator('img').evaluate(img=>img.naturalWidth===280&&img.naturalHeight===280));
+   assert(await page.evaluate(()=>document.querySelector('.detail-summary').compareDocumentPosition(document.querySelector('.npc-share-actions'))&Node.DOCUMENT_POSITION_FOLLOWING));
+   const [download]=await Promise.all([page.waitForEvent('download'),token.click()]);
+   assert.equal(download.suggestedFilename(),record.id+'-token.webp');
+   assert.equal(await download.failure(),null);
+   assert(fs.readFileSync(await download.path()).equals(fs.readFileSync('docs/'+record.tokenImage)));
+   await download.delete();
+   assert(await page.evaluate(()=>document.querySelector('.detail-scroll').scrollWidth<=document.querySelector('.detail-scroll').clientWidth));
+  }
+  await page.keyboard.press('Escape');
+ }
  await page.goto(base+'npcs/not-a-real-npc/');assert.equal(await page.locator('h1').textContent(),'Page not found');assert.deepEqual(errors,[]);await browser.close();console.log('PASS browser: 375/1440 layouts, native popup/link/clipboard/keyboard/scroll behavior, direct refresh, cross-tab sessions and 404');
 })().catch(e=>{console.error(e);process.exit(1)});

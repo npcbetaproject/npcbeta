@@ -18,6 +18,7 @@ jobs:
       - run: node scripts/build-npc-pages.cjs --check
       - run: npm install --no-save --package-lock=false jsdom playwright
       - run: node tests/public-npc-pages.test.cjs
+      - run: node tests/npc-token.dom.test.cjs
       - run: npx playwright install --with-deps chromium
       - run: node tests/public-npc-pages.browser.test.cjs
       - uses: actions/upload-pages-artifact@v3

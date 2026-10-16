@@ -38,6 +38,7 @@
   },
   {
     "id": "brenna-ironleash",
+    "tokenImage": "images/tokens/brenna-ironleash-token.webp",
     "name": "Brenna Ironleash",
     "ancestry": "Human",
     "role": "Dog Trainer",
@@ -76,6 +77,7 @@
   },
   {
     "id": "osric-rutledge",
+    "tokenImage": "images/tokens/osric-rutledge-token.webp",
     "name": "Osric Rutledge",
     "ancestry": "Human",
     "role": "Stagecoach Driver",
@@ -114,6 +116,7 @@
   },
   {
     "id": "tansy-briarwell",
+    "tokenImage": "images/tokens/tansy-briarwell-token.webp",
     "name": "Tansy Briarwell",
     "ancestry": "Halfling",
     "role": "Herbal Medicine Merchant",
@@ -185,6 +188,7 @@
   },
   {
     "id": "elwen-reedmere",
+    "tokenImage": "images/tokens/elwen-reedmere-token.webp",
     "name": "Elwen Reedmere",
     "ancestry": "Elf",
     "role": "Town Librarian",
@@ -219,6 +223,7 @@
   },
   {
     "id": "tovin-amberwick",
+    "tokenImage": "images/tokens/tovin-amberwick-token.webp",
     "name": "Tovin Amberwick",
     "ancestry": "Gnome",
     "role": "Potion Vendor",
@@ -253,6 +258,7 @@
   },
   {
     "id": "mara-fenwick",
+    "tokenImage": "images/tokens/mara-fenwick-token.webp",
     "name": "Mara Fenwick",
     "ancestry": "Human",
     "role": "Town Patrol",
@@ -287,6 +293,7 @@
   },
   {
     "id": "gribbin-brassnose",
+    "tokenImage": "images/tokens/gribbin-brassnose-token.webp",
     "name": "Gribbin Brassnose",
     "ancestry": "Goblin",
     "role": "Treasure seeker",
@@ -322,6 +329,7 @@
   },
   {
     "id": "tikrik-clickclaw",
+    "tokenImage": "images/tokens/tikrik-clickclaw-token.webp",
     "name": "Tikrik Clickclaw",
     "ancestry": "Kobold",
     "role": "Trap maker",
@@ -357,6 +365,7 @@
   },
   {
     "id": "torren-reedbank",
+    "tokenImage": "images/tokens/torren-reedbank-token.webp",
     "name": "Torren Reedbank",
     "ancestry": "Human",
     "role": "Fisherman",
@@ -395,6 +404,7 @@
   },
   {
     "id": "elwen-dawnmere",
+    "tokenImage": "images/tokens/elwen-dawnmere-token.webp",
     "name": "Elwen Dawnmere",
     "ancestry": "Elf",
     "role": "Acolyte",
@@ -433,6 +443,7 @@
   },
   {
     "id": "wenric-valechord",
+    "tokenImage": "images/tokens/wenric-valechord-token.webp",
     "name": "Wenric Valechord",
     "ancestry": "Halfling",
     "role": "Bard",
@@ -470,6 +481,7 @@
   },
   {
     "id": "captain-mara-thornwick",
+    "tokenImage": "images/tokens/captain-mara-thornwick-token.webp",
     "name": "Captain Mara Thornwick",
     "ancestry": "Human",
     "role": "Bandit captain",
@@ -509,6 +521,7 @@
   },
   {
     "id": "nibbin-copperwheel",
+    "tokenImage": "images/tokens/nibbin-copperwheel-token.webp",
     "name": "Nibbin Copperwheel",
     "ancestry": "Goblin",
     "role": "Goblin traveling merchant",
@@ -544,6 +557,7 @@
   },
   {
     "id": "elra-duskbrook",
+    "tokenImage": "images/tokens/elra-duskbrook-token.webp",
     "name": "Elra Duskbrook",
     "ancestry": "Human",
     "role": "Desperate laborer",
@@ -577,6 +591,7 @@
   },
   {
     "id": "sergeant-harl-fenwick",
+    "tokenImage": "images/tokens/sergeant-harl-fenwick-token.webp",
     "name": "Sergeant Harl Fenwick",
     "ancestry": "Human",
     "role": "Town guard",
@@ -610,6 +625,7 @@
   },
   {
     "id": "pippa-reed",
+    "tokenImage": "images/tokens/pippa-reed-token.webp",
     "name": "Pippa Reed",
     "ancestry": "Human",
     "role": "Village child",
@@ -642,6 +658,7 @@
   },
   {
     "id": "harl-mercer",
+    "tokenImage": "images/tokens/harl-mercer-token.webp",
     "name": "Harl “Split Lip” Mercer",
     "ancestry": "Human",
     "role": "Farmhand",
@@ -673,6 +690,7 @@
   },
   {
     "id": "mara-flint",
+    "tokenImage": "images/tokens/mara-flint-token.webp",
     "name": "Mara Flint",
     "ancestry": "Human",
     "role": "Charcoal burner",
@@ -706,6 +724,7 @@
   },
   {
     "id": "jory-pike",
+    "tokenImage": "images/tokens/jory-pike-token.webp",
     "name": "Jory Pike",
     "ancestry": "Human",
     "role": "Poacher",
@@ -740,6 +759,7 @@
   },
   {
     "id": "bess-crowley",
+    "tokenImage": "images/tokens/bess-crowley-token.webp",
     "name": "Bess Crowley",
     "ancestry": "Human",
     "role": "Washerwoman",
@@ -771,6 +791,7 @@
   },
   {
     "id": "cassian-holt",
+    "tokenImage": "images/tokens/cassian-holt-token.webp",
     "name": "Cassian Holt",
     "role": "Adventurer",
     "group": "adventurers",
@@ -803,6 +824,7 @@
   },
   {
     "id": "mira-fen",
+    "tokenImage": "images/tokens/mira-fen-token.webp",
     "name": "Mira Fen",
     "role": "Apothecary",
     "group": "townsfolk",
@@ -835,6 +857,7 @@
   },
   {
     "id": "brother-alden",
+    "tokenImage": "images/tokens/brother-alden-token.webp",
     "name": "Brother Alden",
     "role": "Priest",
     "group": "townsfolk",
@@ -866,6 +889,7 @@
   },
   {
     "id": "nessa-vale",
+    "tokenImage": "images/tokens/nessa-vale-token.webp",
     "name": "Nessa Vale",
     "role": "Smuggler",
     "group": "adventurers",
@@ -897,6 +921,7 @@
   },
   {
     "id": "wenrin-duskshield",
+    "tokenImage": "images/tokens/wenrin-duskshield-token.webp",
     "name": "Wenrin Duskshield",
     "ancestry": "Human",
     "role": "Guard captain",
@@ -931,6 +956,7 @@
   },
   {
     "id": "harira-ashhaven",
+    "tokenImage": "images/tokens/harira-ashhaven-token.webp",
     "name": "Harira Ashhaven",
     "ancestry": "Halfling",
     "role": "Innkeeper",
@@ -962,6 +988,7 @@
   },
   {
     "id": "norzor-stormfield",
+    "tokenImage": "images/tokens/norzor-stormfield-token.webp",
     "name": "Norzor Stormfield",
     "ancestry": "Dwarf",
     "role": "Blacksmith",
@@ -993,6 +1020,7 @@
   },
   {
     "id": "aretha-frostcrest",
+    "tokenImage": "images/tokens/aretha-frostcrest-token.webp",
     "name": "Aretha Frostcrest",
     "ancestry": "Elf",
     "role": "Scholar",
@@ -1026,6 +1054,7 @@
   },
   {
     "id": "sergorn-wolffall",
+    "tokenImage": "images/tokens/sergorn-wolffall-token.webp",
     "name": "Sergorn Wolffall",
     "ancestry": "Human",
     "role": "Wilderness guide",
@@ -1059,6 +1088,7 @@
   },
   {
     "id": "elmir-valebrook",
+    "tokenImage": "images/tokens/elmir-valebrook-token.webp",
     "name": "Elmir Valebrook",
     "ancestry": "Gnome",
     "role": "Merchant",
@@ -1090,6 +1120,7 @@
   },
   {
     "id": "harthos-ravenmoor",
+    "tokenImage": "images/tokens/harthos-ravenmoor-token.webp",
     "name": "Harthos Ravenmoor",
     "ancestry": "Orc",
     "role": "Ferryman",
@@ -1123,6 +1154,7 @@
   },
   {
     "id": "valaris-blackwhisper",
+    "tokenImage": "images/tokens/valaris-blackwhisper-token.webp",
     "name": "Valaris Blackwhisper",
     "ancestry": "Human",
     "role": "Gravedigger",
@@ -1156,6 +1188,7 @@
   },
   {
     "id": "kaelen-ashford",
+    "tokenImage": "images/tokens/kaelen-ashford-token.webp",
     "name": "Kaelen Ashford",
     "ancestry": "Human",
     "role": "Knight",
@@ -1191,6 +1224,7 @@
   },
   {
     "id": "seren-dawnsong",
+    "tokenImage": "images/tokens/seren-dawnsong-token.webp",
     "name": "Seren Dawnsong",
     "ancestry": "Elf",
     "role": "Rebel mage",
@@ -1225,6 +1259,7 @@
   },
   {
     "id": "rurik-stoneward",
+    "tokenImage": "images/tokens/rurik-stoneward-token.webp",
     "name": "Rurik Stoneward",
     "ancestry": "Dwarf",
     "role": "Expedition leader",
@@ -1259,6 +1294,7 @@
   },
   {
     "id": "nyra-valecrest",
+    "tokenImage": "images/tokens/nyra-valecrest-token.webp",
     "name": "Nyra Valecrest",
     "ancestry": "Tiefling",
     "role": "Monster hunter",
