@@ -27,8 +27,18 @@ const site=require('../docs/data/site.json'),records=require('../docs/data/chara
   await full.close();await page.evaluate(()=>setView('session'));await page.locator(`[data-entry-id="${records[0].id}"] .session-row-open`).click();await page.locator('.detail-portrait').evaluate(img=>img.decode());
   await page.keyboard.press('Escape');assert.equal(await page.locator('#detail-panel').getAttribute('aria-hidden'),'true');assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  }
+ // Use a real local HTTP server for downloads: Chromium cancels download requests
+ // fulfilled by the synthetic HTTPS route used for the page/navigation assertions.
+ const server=require('node:http').createServer((req,res)=>{
+  const relative=decodeURIComponent(new URL(req.url,'http://localhost').pathname).replace(/^\//,'')||'index.html';
+  const file=path.resolve('docs',relative);
+  if(!file.startsWith(path.resolve('docs')+path.sep)||!fs.existsSync(file)||!fs.statSync(file).isFile()){res.writeHead(404);res.end();return;}
+  const type={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webp':'image/webp','.png':'image/png'}[path.extname(file)]||'application/octet-stream';
+  res.writeHead(200,{'Content-Type':type});res.end(fs.readFileSync(file));
+ });
+ await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  // All public NPC token downloads use the correct asset and filename on mobile and desktop.
- await page.goto(base); await page.waitForSelector('[data-character]');
+ await page.goto('http://127.0.0.1:'+server.address().port+'/'); await page.waitForSelector('[data-character]');
  for (const width of [375,1440]) {
   await page.setViewportSize({width,height:900});
   for (const record of records) {
@@ -49,5 +59,6 @@ const site=require('../docs/data/site.json'),records=require('../docs/data/chara
   }
   await page.keyboard.press('Escape');
  }
+ await new Promise(resolve=>server.close(resolve));
  await page.goto(base+'npcs/not-a-real-npc/');assert.equal(await page.locator('h1').textContent(),'Page not found');assert.deepEqual(errors,[]);await browser.close();console.log('PASS browser: 375/1440 layouts, native popup/link/clipboard/keyboard/scroll behavior, direct refresh, cross-tab sessions and 404');
 })().catch(e=>{console.error(e);process.exit(1)});
