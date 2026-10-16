@@ -316,3 +316,16 @@
 .has-generated-portrait .generated-npc-silhouette,.has-generated-portrait .generated-visual-background{display:none}
 .has-generated-portrait::after{display:none}
 .detail-extra-visual .has-generated-portrait{width:140px;height:140px}
+
+/* Generated NPC portraits are a prominent, keyboard-accessible card opener. */
+.generator-result-row{grid-template-columns:160px minmax(0,1fr);gap:20px;margin:20px 0}
+#generator-visual-preview{width:160px;padding:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--paper);cursor:pointer;box-shadow:0 3px 12px #211b1714}
+#generator-visual-preview .generated-profession-badge{width:30px;height:30px}
+.generator-layout .generated-name-open{display:inline;padding:0;border:0;background:none;color:inherit;font:inherit;text-align:left;overflow-wrap:anywhere;cursor:pointer}
+.generated-name-open:hover,.cast-profile:hover{text-decoration:underline;text-underline-offset:4px}
+#generator-visual-preview:focus-visible,.generated-name-open:focus-visible,.cast-portrait-open:focus-visible{outline:2px solid var(--wine);outline-offset:4px}
+#cast-list .cast-portrait-open{grid-column:1;grid-row:1/3;display:block;width:48px;height:48px;padding:0;border:0;border-radius:6px;overflow:hidden;background:transparent;cursor:pointer}
+#cast-list .cast-portrait-open .generated-npc-visual{width:100%;height:100%;margin:0}
+.detail-extra-visual .has-generated-portrait{width:200px;height:200px;max-width:100%}
+@media(max-width:760px){.generator-result-row{grid-template-columns:120px minmax(0,1fr);gap:14px;margin:18px 0}#generator-visual-preview{width:120px}.name-result h2{font-size:1.45rem}}
+@media(max-width:360px){.generator-result-row{grid-template-columns:104px minmax(0,1fr);gap:12px}#generator-visual-preview{width:104px}}
