@@ -38,26 +38,31 @@ const site=require('../docs/data/site.json'),records=require('../docs/data/chara
  });
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  // All public NPC token downloads use the correct asset and filename on mobile and desktop.
- await page.goto('http://127.0.0.1:'+server.address().port+'/'); await page.waitForSelector('[data-character]');
+ const tokenBase='http://127.0.0.1:'+server.address().port+'/';
  for (const width of [375,1440]) {
-  await page.setViewportSize({width,height:900});
+  const downloads=await browser.newContext({acceptDownloads:true,viewport:{width,height:900}});
   for (const record of records) {
    if (!record.tokenImage) continue;
-   await page.evaluate(id=>openDetail(state.characters.find(c=>c.id===id)),record.id);
-   const token=page.locator('.npc-token-download');
+   // A fresh tab keeps Chromium's multiple-download permission prompt out of the test.
+   const tokenPage=await downloads.newPage();
+   await tokenPage.goto(tokenBase); await tokenPage.waitForSelector('[data-character]');
+   await tokenPage.evaluate(id=>openDetail(state.characters.find(c=>c.id===id)),record.id);
+   const token=tokenPage.locator('.npc-token-download');
    assert(await token.isVisible());
    assert.equal(await token.getAttribute('download'),record.id+'-token.webp');
    await token.locator('img').evaluate(img=>img.decode());
    assert(await token.locator('img').evaluate(img=>img.naturalWidth===280&&img.naturalHeight===280));
-   assert(await page.evaluate(()=>document.querySelector('.detail-summary').compareDocumentPosition(document.querySelector('.npc-share-actions'))&Node.DOCUMENT_POSITION_FOLLOWING));
-   const [download]=await Promise.all([page.waitForEvent('download'),token.click()]);
+   assert(await tokenPage.evaluate(()=>document.querySelector('.detail-summary').compareDocumentPosition(document.querySelector('.npc-share-actions'))&Node.DOCUMENT_POSITION_FOLLOWING));
+   console.log('Download token:',width,record.id);
+   const [download]=await Promise.all([tokenPage.waitForEvent('download'),token.click()]);
    assert.equal(download.suggestedFilename(),record.id+'-token.webp');
-   assert.equal(await download.failure(),null);
+   assert.equal(await download.failure(),null,record.id);
    assert(fs.readFileSync(await download.path()).equals(fs.readFileSync('docs/'+record.tokenImage)));
    await download.delete();
-   assert(await page.evaluate(()=>document.querySelector('.detail-scroll').scrollWidth<=document.querySelector('.detail-scroll').clientWidth));
+   assert(await tokenPage.evaluate(()=>document.querySelector('.detail-scroll').scrollWidth<=document.querySelector('.detail-scroll').clientWidth));
+   await tokenPage.close();
   }
-  await page.keyboard.press('Escape');
+  await downloads.close();
  }
  await new Promise(resolve=>server.close(resolve));
  await page.goto(base+'npcs/not-a-real-npc/');assert.equal(await page.locator('h1').textContent(),'Page not found');assert.deepEqual(errors,[]);await browser.close();console.log('PASS browser: 375/1440 layouts, native popup/link/clipboard/keyboard/scroll behavior, direct refresh, cross-tab sessions and 404');
