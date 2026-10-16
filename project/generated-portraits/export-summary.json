@@ -1,0 +1,502 @@
+[
+  {
+    "id": "labourers-01",
+    "bytes": 976,
+    "quality": 82
+  },
+  {
+    "id": "labourers-02",
+    "bytes": 984,
+    "quality": 77
+  },
+  {
+    "id": "labourers-03",
+    "bytes": 980,
+    "quality": 71
+  },
+  {
+    "id": "labourers-04",
+    "bytes": 992,
+    "quality": 77
+  },
+  {
+    "id": "labourers-05",
+    "bytes": 964,
+    "quality": 76
+  },
+  {
+    "id": "labourers-06",
+    "bytes": 986,
+    "quality": 71
+  },
+  {
+    "id": "labourers-07",
+    "bytes": 976,
+    "quality": 79
+  },
+  {
+    "id": "labourers-08",
+    "bytes": 976,
+    "quality": 75
+  },
+  {
+    "id": "labourers-09",
+    "bytes": 996,
+    "quality": 69
+  },
+  {
+    "id": "labourers-10",
+    "bytes": 958,
+    "quality": 77
+  },
+  {
+    "id": "merchants-01",
+    "bytes": 986,
+    "quality": 79
+  },
+  {
+    "id": "merchants-02",
+    "bytes": 986,
+    "quality": 78
+  },
+  {
+    "id": "merchants-03",
+    "bytes": 996,
+    "quality": 65
+  },
+  {
+    "id": "merchants-04",
+    "bytes": 976,
+    "quality": 75
+  },
+  {
+    "id": "merchants-05",
+    "bytes": 998,
+    "quality": 74
+  },
+  {
+    "id": "merchants-06",
+    "bytes": 976,
+    "quality": 75
+  },
+  {
+    "id": "merchants-07",
+    "bytes": 994,
+    "quality": 77
+  },
+  {
+    "id": "merchants-08",
+    "bytes": 982,
+    "quality": 76
+  },
+  {
+    "id": "merchants-09",
+    "bytes": 998,
+    "quality": 69
+  },
+  {
+    "id": "merchants-10",
+    "bytes": 984,
+    "quality": 73
+  },
+  {
+    "id": "guards-01",
+    "bytes": 980,
+    "quality": 80
+  },
+  {
+    "id": "guards-02",
+    "bytes": 988,
+    "quality": 79
+  },
+  {
+    "id": "guards-03",
+    "bytes": 986,
+    "quality": 73
+  },
+  {
+    "id": "guards-04",
+    "bytes": 990,
+    "quality": 78
+  },
+  {
+    "id": "guards-05",
+    "bytes": 988,
+    "quality": 76
+  },
+  {
+    "id": "guards-06",
+    "bytes": 1000,
+    "quality": 79
+  },
+  {
+    "id": "guards-07",
+    "bytes": 978,
+    "quality": 78
+  },
+  {
+    "id": "guards-08",
+    "bytes": 988,
+    "quality": 78
+  },
+  {
+    "id": "guards-09",
+    "bytes": 980,
+    "quality": 75
+  },
+  {
+    "id": "guards-10",
+    "bytes": 990,
+    "quality": 76
+  },
+  {
+    "id": "scholars-01",
+    "bytes": 992,
+    "quality": 81
+  },
+  {
+    "id": "scholars-02",
+    "bytes": 986,
+    "quality": 76
+  },
+  {
+    "id": "scholars-03",
+    "bytes": 990,
+    "quality": 62
+  },
+  {
+    "id": "scholars-04",
+    "bytes": 992,
+    "quality": 76
+  },
+  {
+    "id": "scholars-05",
+    "bytes": 1000,
+    "quality": 75
+  },
+  {
+    "id": "scholars-06",
+    "bytes": 986,
+    "quality": 77
+  },
+  {
+    "id": "scholars-07",
+    "bytes": 990,
+    "quality": 76
+  },
+  {
+    "id": "scholars-08",
+    "bytes": 992,
+    "quality": 79
+  },
+  {
+    "id": "scholars-09",
+    "bytes": 982,
+    "quality": 68
+  },
+  {
+    "id": "scholars-10",
+    "bytes": 996,
+    "quality": 75
+  },
+  {
+    "id": "travellers-01",
+    "bytes": 980,
+    "quality": 80
+  },
+  {
+    "id": "travellers-02",
+    "bytes": 1000,
+    "quality": 77
+  },
+  {
+    "id": "travellers-03",
+    "bytes": 992,
+    "quality": 62
+  },
+  {
+    "id": "travellers-04",
+    "bytes": 980,
+    "quality": 75
+  },
+  {
+    "id": "travellers-05",
+    "bytes": 942,
+    "quality": 75
+  },
+  {
+    "id": "travellers-06",
+    "bytes": 974,
+    "quality": 77
+  },
+  {
+    "id": "travellers-07",
+    "bytes": 978,
+    "quality": 77
+  },
+  {
+    "id": "travellers-08",
+    "bytes": 990,
+    "quality": 76
+  },
+  {
+    "id": "travellers-09",
+    "bytes": 976,
+    "quality": 68
+  },
+  {
+    "id": "travellers-10",
+    "bytes": 998,
+    "quality": 76
+  },
+  {
+    "id": "artisans-01",
+    "bytes": 984,
+    "quality": 82
+  },
+  {
+    "id": "artisans-02",
+    "bytes": 988,
+    "quality": 75
+  },
+  {
+    "id": "artisans-03",
+    "bytes": 994,
+    "quality": 66
+  },
+  {
+    "id": "artisans-04",
+    "bytes": 984,
+    "quality": 75
+  },
+  {
+    "id": "artisans-05",
+    "bytes": 984,
+    "quality": 71
+  },
+  {
+    "id": "artisans-06",
+    "bytes": 982,
+    "quality": 75
+  },
+  {
+    "id": "artisans-07",
+    "bytes": 992,
+    "quality": 78
+  },
+  {
+    "id": "artisans-08",
+    "bytes": 1000,
+    "quality": 75
+  },
+  {
+    "id": "artisans-09",
+    "bytes": 998,
+    "quality": 69
+  },
+  {
+    "id": "artisans-10",
+    "bytes": 996,
+    "quality": 73
+  },
+  {
+    "id": "faith-01",
+    "bytes": 998,
+    "quality": 82
+  },
+  {
+    "id": "faith-02",
+    "bytes": 996,
+    "quality": 77
+  },
+  {
+    "id": "faith-03",
+    "bytes": 998,
+    "quality": 60
+  },
+  {
+    "id": "faith-04",
+    "bytes": 986,
+    "quality": 75
+  },
+  {
+    "id": "faith-05",
+    "bytes": 982,
+    "quality": 76
+  },
+  {
+    "id": "faith-06",
+    "bytes": 986,
+    "quality": 76
+  },
+  {
+    "id": "faith-07",
+    "bytes": 984,
+    "quality": 75
+  },
+  {
+    "id": "faith-08",
+    "bytes": 996,
+    "quality": 78
+  },
+  {
+    "id": "faith-09",
+    "bytes": 986,
+    "quality": 67
+  },
+  {
+    "id": "faith-10",
+    "bytes": 1000,
+    "quality": 75
+  },
+  {
+    "id": "hospitality-01",
+    "bytes": 952,
+    "quality": 80
+  },
+  {
+    "id": "hospitality-02",
+    "bytes": 974,
+    "quality": 76
+  },
+  {
+    "id": "hospitality-03",
+    "bytes": 994,
+    "quality": 72
+  },
+  {
+    "id": "hospitality-04",
+    "bytes": 976,
+    "quality": 76
+  },
+  {
+    "id": "hospitality-05",
+    "bytes": 996,
+    "quality": 75
+  },
+  {
+    "id": "hospitality-06",
+    "bytes": 986,
+    "quality": 75
+  },
+  {
+    "id": "hospitality-07",
+    "bytes": 996,
+    "quality": 77
+  },
+  {
+    "id": "hospitality-08",
+    "bytes": 978,
+    "quality": 76
+  },
+  {
+    "id": "hospitality-09",
+    "bytes": 992,
+    "quality": 68
+  },
+  {
+    "id": "hospitality-10",
+    "bytes": 974,
+    "quality": 76
+  },
+  {
+    "id": "officials-01",
+    "bytes": 974,
+    "quality": 81
+  },
+  {
+    "id": "officials-02",
+    "bytes": 998,
+    "quality": 77
+  },
+  {
+    "id": "officials-03",
+    "bytes": 998,
+    "quality": 63
+  },
+  {
+    "id": "officials-04",
+    "bytes": 976,
+    "quality": 75
+  },
+  {
+    "id": "officials-05",
+    "bytes": 982,
+    "quality": 77
+  },
+  {
+    "id": "officials-06",
+    "bytes": 966,
+    "quality": 76
+  },
+  {
+    "id": "officials-07",
+    "bytes": 982,
+    "quality": 76
+  },
+  {
+    "id": "officials-08",
+    "bytes": 976,
+    "quality": 75
+  },
+  {
+    "id": "officials-09",
+    "bytes": 996,
+    "quality": 68
+  },
+  {
+    "id": "officials-10",
+    "bytes": 996,
+    "quality": 76
+  },
+  {
+    "id": "entertainers-01",
+    "bytes": 982,
+    "quality": 75
+  },
+  {
+    "id": "entertainers-02",
+    "bytes": 994,
+    "quality": 59
+  },
+  {
+    "id": "entertainers-03",
+    "bytes": 996,
+    "quality": 52
+  },
+  {
+    "id": "entertainers-04",
+    "bytes": 984,
+    "quality": 59
+  },
+  {
+    "id": "entertainers-05",
+    "bytes": 988,
+    "quality": 60
+  },
+  {
+    "id": "entertainers-06",
+    "bytes": 988,
+    "quality": 68
+  },
+  {
+    "id": "entertainers-07",
+    "bytes": 986,
+    "quality": 69
+  },
+  {
+    "id": "entertainers-08",
+    "bytes": 1000,
+    "quality": 63
+  },
+  {
+    "id": "entertainers-09",
+    "bytes": 996,
+    "quality": 56
+  },
+  {
+    "id": "entertainers-10",
+    "bytes": 994,
+    "quality": 68
+  }
+]

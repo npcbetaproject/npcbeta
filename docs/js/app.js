@@ -96,7 +96,7 @@ function render() {
   (state.view === "session" ? document.querySelector("#session-npc-column") : document.querySelector(".library-results")).append(elements.grid);
   document.querySelector("#generator-view").hidden = state.view !== "generator";
   document.querySelector("#pro-view").hidden = state.view !== "support";
-  if (state.view === "generator") ensureGenerator();
+  if (state.view === "generator" || state.view === "session") ensureGenerator();
   const characters = visibleCharacters();
   const labels = { library: "NPC Library", session: "Session", generator: "Quick Name Generator", locations: "Locations", support: "Support NPC Beta" };
   elements.title.textContent = labels[state.view];

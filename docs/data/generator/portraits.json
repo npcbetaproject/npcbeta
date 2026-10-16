@@ -1,0 +1,565 @@
+{
+  "version": 1,
+  "selectionAlgorithm": "fnv1a-first-name-v1",
+  "types": [
+    {
+      "id": "labourers",
+      "label": "Labourer",
+      "portraits": [
+        {
+          "id": "labourers-01",
+          "image": "images/generated-npcs/labourers/labourers-01.webp"
+        },
+        {
+          "id": "labourers-02",
+          "image": "images/generated-npcs/labourers/labourers-02.webp"
+        },
+        {
+          "id": "labourers-03",
+          "image": "images/generated-npcs/labourers/labourers-03.webp"
+        },
+        {
+          "id": "labourers-04",
+          "image": "images/generated-npcs/labourers/labourers-04.webp"
+        },
+        {
+          "id": "labourers-05",
+          "image": "images/generated-npcs/labourers/labourers-05.webp"
+        },
+        {
+          "id": "labourers-06",
+          "image": "images/generated-npcs/labourers/labourers-06.webp"
+        },
+        {
+          "id": "labourers-07",
+          "image": "images/generated-npcs/labourers/labourers-07.webp"
+        },
+        {
+          "id": "labourers-08",
+          "image": "images/generated-npcs/labourers/labourers-08.webp"
+        },
+        {
+          "id": "labourers-09",
+          "image": "images/generated-npcs/labourers/labourers-09.webp"
+        },
+        {
+          "id": "labourers-10",
+          "image": "images/generated-npcs/labourers/labourers-10.webp"
+        }
+      ]
+    },
+    {
+      "id": "merchants",
+      "label": "Merchant",
+      "portraits": [
+        {
+          "id": "merchants-01",
+          "image": "images/generated-npcs/merchants/merchants-01.webp"
+        },
+        {
+          "id": "merchants-02",
+          "image": "images/generated-npcs/merchants/merchants-02.webp"
+        },
+        {
+          "id": "merchants-03",
+          "image": "images/generated-npcs/merchants/merchants-03.webp"
+        },
+        {
+          "id": "merchants-04",
+          "image": "images/generated-npcs/merchants/merchants-04.webp"
+        },
+        {
+          "id": "merchants-05",
+          "image": "images/generated-npcs/merchants/merchants-05.webp"
+        },
+        {
+          "id": "merchants-06",
+          "image": "images/generated-npcs/merchants/merchants-06.webp"
+        },
+        {
+          "id": "merchants-07",
+          "image": "images/generated-npcs/merchants/merchants-07.webp"
+        },
+        {
+          "id": "merchants-08",
+          "image": "images/generated-npcs/merchants/merchants-08.webp"
+        },
+        {
+          "id": "merchants-09",
+          "image": "images/generated-npcs/merchants/merchants-09.webp"
+        },
+        {
+          "id": "merchants-10",
+          "image": "images/generated-npcs/merchants/merchants-10.webp"
+        }
+      ]
+    },
+    {
+      "id": "guards",
+      "label": "Guard / soldier",
+      "portraits": [
+        {
+          "id": "guards-01",
+          "image": "images/generated-npcs/guards/guards-01.webp"
+        },
+        {
+          "id": "guards-02",
+          "image": "images/generated-npcs/guards/guards-02.webp"
+        },
+        {
+          "id": "guards-03",
+          "image": "images/generated-npcs/guards/guards-03.webp"
+        },
+        {
+          "id": "guards-04",
+          "image": "images/generated-npcs/guards/guards-04.webp"
+        },
+        {
+          "id": "guards-05",
+          "image": "images/generated-npcs/guards/guards-05.webp"
+        },
+        {
+          "id": "guards-06",
+          "image": "images/generated-npcs/guards/guards-06.webp"
+        },
+        {
+          "id": "guards-07",
+          "image": "images/generated-npcs/guards/guards-07.webp"
+        },
+        {
+          "id": "guards-08",
+          "image": "images/generated-npcs/guards/guards-08.webp"
+        },
+        {
+          "id": "guards-09",
+          "image": "images/generated-npcs/guards/guards-09.webp"
+        },
+        {
+          "id": "guards-10",
+          "image": "images/generated-npcs/guards/guards-10.webp"
+        }
+      ]
+    },
+    {
+      "id": "scholars",
+      "label": "Scholar / spellcaster",
+      "portraits": [
+        {
+          "id": "scholars-01",
+          "image": "images/generated-npcs/scholars/scholars-01.webp"
+        },
+        {
+          "id": "scholars-02",
+          "image": "images/generated-npcs/scholars/scholars-02.webp"
+        },
+        {
+          "id": "scholars-03",
+          "image": "images/generated-npcs/scholars/scholars-03.webp"
+        },
+        {
+          "id": "scholars-04",
+          "image": "images/generated-npcs/scholars/scholars-04.webp"
+        },
+        {
+          "id": "scholars-05",
+          "image": "images/generated-npcs/scholars/scholars-05.webp"
+        },
+        {
+          "id": "scholars-06",
+          "image": "images/generated-npcs/scholars/scholars-06.webp"
+        },
+        {
+          "id": "scholars-07",
+          "image": "images/generated-npcs/scholars/scholars-07.webp"
+        },
+        {
+          "id": "scholars-08",
+          "image": "images/generated-npcs/scholars/scholars-08.webp"
+        },
+        {
+          "id": "scholars-09",
+          "image": "images/generated-npcs/scholars/scholars-09.webp"
+        },
+        {
+          "id": "scholars-10",
+          "image": "images/generated-npcs/scholars/scholars-10.webp"
+        }
+      ]
+    },
+    {
+      "id": "travellers",
+      "label": "Wilderness traveller",
+      "portraits": [
+        {
+          "id": "travellers-01",
+          "image": "images/generated-npcs/travellers/travellers-01.webp"
+        },
+        {
+          "id": "travellers-02",
+          "image": "images/generated-npcs/travellers/travellers-02.webp"
+        },
+        {
+          "id": "travellers-03",
+          "image": "images/generated-npcs/travellers/travellers-03.webp"
+        },
+        {
+          "id": "travellers-04",
+          "image": "images/generated-npcs/travellers/travellers-04.webp"
+        },
+        {
+          "id": "travellers-05",
+          "image": "images/generated-npcs/travellers/travellers-05.webp"
+        },
+        {
+          "id": "travellers-06",
+          "image": "images/generated-npcs/travellers/travellers-06.webp"
+        },
+        {
+          "id": "travellers-07",
+          "image": "images/generated-npcs/travellers/travellers-07.webp"
+        },
+        {
+          "id": "travellers-08",
+          "image": "images/generated-npcs/travellers/travellers-08.webp"
+        },
+        {
+          "id": "travellers-09",
+          "image": "images/generated-npcs/travellers/travellers-09.webp"
+        },
+        {
+          "id": "travellers-10",
+          "image": "images/generated-npcs/travellers/travellers-10.webp"
+        }
+      ]
+    },
+    {
+      "id": "artisans",
+      "label": "Artisan",
+      "portraits": [
+        {
+          "id": "artisans-01",
+          "image": "images/generated-npcs/artisans/artisans-01.webp"
+        },
+        {
+          "id": "artisans-02",
+          "image": "images/generated-npcs/artisans/artisans-02.webp"
+        },
+        {
+          "id": "artisans-03",
+          "image": "images/generated-npcs/artisans/artisans-03.webp"
+        },
+        {
+          "id": "artisans-04",
+          "image": "images/generated-npcs/artisans/artisans-04.webp"
+        },
+        {
+          "id": "artisans-05",
+          "image": "images/generated-npcs/artisans/artisans-05.webp"
+        },
+        {
+          "id": "artisans-06",
+          "image": "images/generated-npcs/artisans/artisans-06.webp"
+        },
+        {
+          "id": "artisans-07",
+          "image": "images/generated-npcs/artisans/artisans-07.webp"
+        },
+        {
+          "id": "artisans-08",
+          "image": "images/generated-npcs/artisans/artisans-08.webp"
+        },
+        {
+          "id": "artisans-09",
+          "image": "images/generated-npcs/artisans/artisans-09.webp"
+        },
+        {
+          "id": "artisans-10",
+          "image": "images/generated-npcs/artisans/artisans-10.webp"
+        }
+      ]
+    },
+    {
+      "id": "faith",
+      "label": "Religious figure",
+      "portraits": [
+        {
+          "id": "faith-01",
+          "image": "images/generated-npcs/faith/faith-01.webp"
+        },
+        {
+          "id": "faith-02",
+          "image": "images/generated-npcs/faith/faith-02.webp"
+        },
+        {
+          "id": "faith-03",
+          "image": "images/generated-npcs/faith/faith-03.webp"
+        },
+        {
+          "id": "faith-04",
+          "image": "images/generated-npcs/faith/faith-04.webp"
+        },
+        {
+          "id": "faith-05",
+          "image": "images/generated-npcs/faith/faith-05.webp"
+        },
+        {
+          "id": "faith-06",
+          "image": "images/generated-npcs/faith/faith-06.webp"
+        },
+        {
+          "id": "faith-07",
+          "image": "images/generated-npcs/faith/faith-07.webp"
+        },
+        {
+          "id": "faith-08",
+          "image": "images/generated-npcs/faith/faith-08.webp"
+        },
+        {
+          "id": "faith-09",
+          "image": "images/generated-npcs/faith/faith-09.webp"
+        },
+        {
+          "id": "faith-10",
+          "image": "images/generated-npcs/faith/faith-10.webp"
+        }
+      ]
+    },
+    {
+      "id": "hospitality",
+      "label": "Hospitality worker",
+      "portraits": [
+        {
+          "id": "hospitality-01",
+          "image": "images/generated-npcs/hospitality/hospitality-01.webp"
+        },
+        {
+          "id": "hospitality-02",
+          "image": "images/generated-npcs/hospitality/hospitality-02.webp"
+        },
+        {
+          "id": "hospitality-03",
+          "image": "images/generated-npcs/hospitality/hospitality-03.webp"
+        },
+        {
+          "id": "hospitality-04",
+          "image": "images/generated-npcs/hospitality/hospitality-04.webp"
+        },
+        {
+          "id": "hospitality-05",
+          "image": "images/generated-npcs/hospitality/hospitality-05.webp"
+        },
+        {
+          "id": "hospitality-06",
+          "image": "images/generated-npcs/hospitality/hospitality-06.webp"
+        },
+        {
+          "id": "hospitality-07",
+          "image": "images/generated-npcs/hospitality/hospitality-07.webp"
+        },
+        {
+          "id": "hospitality-08",
+          "image": "images/generated-npcs/hospitality/hospitality-08.webp"
+        },
+        {
+          "id": "hospitality-09",
+          "image": "images/generated-npcs/hospitality/hospitality-09.webp"
+        },
+        {
+          "id": "hospitality-10",
+          "image": "images/generated-npcs/hospitality/hospitality-10.webp"
+        }
+      ]
+    },
+    {
+      "id": "officials",
+      "label": "Noble / official",
+      "portraits": [
+        {
+          "id": "officials-01",
+          "image": "images/generated-npcs/officials/officials-01.webp"
+        },
+        {
+          "id": "officials-02",
+          "image": "images/generated-npcs/officials/officials-02.webp"
+        },
+        {
+          "id": "officials-03",
+          "image": "images/generated-npcs/officials/officials-03.webp"
+        },
+        {
+          "id": "officials-04",
+          "image": "images/generated-npcs/officials/officials-04.webp"
+        },
+        {
+          "id": "officials-05",
+          "image": "images/generated-npcs/officials/officials-05.webp"
+        },
+        {
+          "id": "officials-06",
+          "image": "images/generated-npcs/officials/officials-06.webp"
+        },
+        {
+          "id": "officials-07",
+          "image": "images/generated-npcs/officials/officials-07.webp"
+        },
+        {
+          "id": "officials-08",
+          "image": "images/generated-npcs/officials/officials-08.webp"
+        },
+        {
+          "id": "officials-09",
+          "image": "images/generated-npcs/officials/officials-09.webp"
+        },
+        {
+          "id": "officials-10",
+          "image": "images/generated-npcs/officials/officials-10.webp"
+        }
+      ]
+    },
+    {
+      "id": "entertainers",
+      "label": "Entertainer",
+      "portraits": [
+        {
+          "id": "entertainers-01",
+          "image": "images/generated-npcs/entertainers/entertainers-01.webp"
+        },
+        {
+          "id": "entertainers-02",
+          "image": "images/generated-npcs/entertainers/entertainers-02.webp"
+        },
+        {
+          "id": "entertainers-03",
+          "image": "images/generated-npcs/entertainers/entertainers-03.webp"
+        },
+        {
+          "id": "entertainers-04",
+          "image": "images/generated-npcs/entertainers/entertainers-04.webp"
+        },
+        {
+          "id": "entertainers-05",
+          "image": "images/generated-npcs/entertainers/entertainers-05.webp"
+        },
+        {
+          "id": "entertainers-06",
+          "image": "images/generated-npcs/entertainers/entertainers-06.webp"
+        },
+        {
+          "id": "entertainers-07",
+          "image": "images/generated-npcs/entertainers/entertainers-07.webp"
+        },
+        {
+          "id": "entertainers-08",
+          "image": "images/generated-npcs/entertainers/entertainers-08.webp"
+        },
+        {
+          "id": "entertainers-09",
+          "image": "images/generated-npcs/entertainers/entertainers-09.webp"
+        },
+        {
+          "id": "entertainers-10",
+          "image": "images/generated-npcs/entertainers/entertainers-10.webp"
+        }
+      ]
+    }
+  ],
+  "professionTypes": {
+    "farmer": "labourers",
+    "shepherd": "labourers",
+    "courier": "labourers",
+    "laborer": "labourers",
+    "beggar": "labourers",
+    "porter": "labourers",
+    "sailor": "labourers",
+    "dockworker": "labourers",
+    "fisher": "labourers",
+    "caretaker": "labourers",
+    "gardener": "labourers",
+    "stable-keeper": "labourers",
+    "messenger": "labourers",
+    "rancher": "labourers",
+    "beekeeper": "labourers",
+    "caravan-driver": "labourers",
+    "miner": "labourers",
+    "prospector": "labourers",
+    "gravedigger": "labourers",
+    "scavenger": "labourers",
+    "animal-handler": "labourers",
+    "merchant": "merchants",
+    "peddler": "merchants",
+    "smuggler": "merchants",
+    "thief": "merchants",
+    "pickpocket": "merchants",
+    "guard": "guards",
+    "mercenary": "guards",
+    "customs-officer": "guards",
+    "pirate": "guards",
+    "bodyguard": "guards",
+    "soldier": "guards",
+    "commander": "guards",
+    "watch-captain": "guards",
+    "jailer": "guards",
+    "bounty-hunter": "guards",
+    "bandit": "guards",
+    "quartermaster": "guards",
+    "scholar": "scholars",
+    "scribe": "scholars",
+    "librarian": "scholars",
+    "tutor": "scholars",
+    "investigator": "scholars",
+    "clerk": "scholars",
+    "researcher": "scholars",
+    "student": "scholars",
+    "mage": "scholars",
+    "alchemist": "scholars",
+    "enchanter": "scholars",
+    "diviner": "scholars",
+    "historian": "scholars",
+    "archaeologist": "scholars",
+    "herbalist": "travellers",
+    "adventurer": "travellers",
+    "captain": "travellers",
+    "navigator": "travellers",
+    "hunter": "travellers",
+    "trapper": "travellers",
+    "forester": "travellers",
+    "ranger": "travellers",
+    "guide": "travellers",
+    "hermit": "travellers",
+    "grave-robber": "travellers",
+    "explorer": "travellers",
+    "treasure-hunter": "travellers",
+    "scout": "travellers",
+    "blacksmith": "artisans",
+    "artisan": "artisans",
+    "shipwright": "artisans",
+    "foreman": "artisans",
+    "engineer": "artisans",
+    "mason": "artisans",
+    "carpenter": "artisans",
+    "jeweler": "artisans",
+    "leatherworker": "artisans",
+    "potter": "artisans",
+    "tinker": "artisans",
+    "apprentice": "artisans",
+    "undertaker": "artisans",
+    "priest": "faith",
+    "surgeon": "faith",
+    "acolyte": "faith",
+    "healer": "faith",
+    "pilgrim": "faith",
+    "monk": "faith",
+    "cultist": "faith",
+    "innkeeper": "hospitality",
+    "cook": "hospitality",
+    "server": "hospitality",
+    "brewer": "hospitality",
+    "servant": "hospitality",
+    "steward": "officials",
+    "street-performer": "entertainers",
+    "musician": "entertainers",
+    "fortune-teller": "entertainers",
+    "acrobat": "entertainers",
+    "actor": "entertainers"
+  }
+}

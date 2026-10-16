@@ -28,7 +28,7 @@ const validIds = value => Array.isArray(value) && value.every(id => typeof id ==
 const validResult = value => value && ['name', 'locationId', 'professionId'].every(key => typeof value[key] === 'string');
 const validRecord = value => validResult(value) && ['id', 'locationLabel', 'professionLabel', 'createdAt'].every(key => typeof value[key] === 'string') && value.id.startsWith('generated-');
 const generator = {
-  data: null, names: null, loading: null,
+  data: null, names: null, portraits: null, loading: null,
   ...readStorage(GENERATOR_KEYS.result, { current: null, previous: null }, value => value && (value.current === null || validResult(value.current)) && (value.previous === null || validResult(value.previous))),
   records: readStorage(GENERATOR_KEYS.records, [], value => Array.isArray(value) && value.every(validRecord)),
 };
@@ -68,13 +68,21 @@ async function ensureGenerator() {
   if (generator.loading) return generator.loading;
   generator.loading = (async () => {
     try {
-      const responses = await Promise.all(['options', 'names'].map(file => fetch(`data/generator/${file}.json`)));
+      const responses = await Promise.all(['options', 'names', 'portraits'].map(file => fetch(`data/generator/${file}.json`)));
       if (responses.some(response => !response.ok)) throw new Error('Data request failed');
-      const [data, names] = await Promise.all(responses.map(response => response.json()));
-      validateGeneratorData(data, names); generator.data = data; generator.names = names;
+      const [data, names, portraits] = await Promise.all(responses.map(response => response.json()));
+      validateGeneratorData(data, names); validateGeneratedPortraits(portraits, data);
+      generator.data = data; generator.names = names; generator.portraits = portraits;
+      // Give legacy saved records a stable portrait without changing their identity or labels.
+      let migratedPortraits = false;
+      for (const record of generator.records) {
+        if (!record.portraitId) { const portrait = selectGeneratedPortrait(record); if (portrait) { record.portraitId = portrait.id; migratedPortraits = true; } }
+      }
+      if (migratedPortraits) writeStorage(GENERATOR_KEYS.records, generator.records);
       if (!supportedResult(generator.previous)) generator.previous = null;
       if (!supportedResult(generator.current)) { generator.current = null; rollGenerator('all'); }
-      renderGenerator();
+      renderGenerator(); renderCompanion();
+      if (state.view === 'session') renderSessionBoard();
       document.querySelector('#generator-error').hidden = true;
     } catch {
       const error = document.querySelector('#generator-error'); error.hidden = false;
@@ -95,6 +103,8 @@ function rollGenerator(field, manualValue) {
   }
   if (field === 'profession') next.professionId = manualValue || chooseDifferent(generator.data.locations.find(item => item.id === next.locationId).professionIds, previous?.professionId);
   if (JSON.stringify(previous) === JSON.stringify(next)) { announce('No alternative is available.'); return; }
+  const portrait = selectGeneratedPortrait({ ...next, portraitId: undefined });
+  if (portrait) next.portraitId = portrait.id; else delete next.portraitId;
   generator.previous = previous ? { ...previous } : null; generator.current = next;
   saveGenerator(); renderGenerator(); announce(field === 'location' ? 'Location and profession updated.' : 'NPC updated.');
 }
@@ -199,7 +209,8 @@ function addGeneratedToSession() {
   if (!current || generator.records.some(record => resultSignature(record) === resultSignature(current))) return;
   const location = generator.data.locations.find(item => item.id === current.locationId);
   const profession = generator.data.professions.find(item => item.id === current.professionId);
-  generator.records.push({ ...current, id: `generated-${crypto.randomUUID()}`, locationLabel: location.label, professionLabel: profession.label, createdAt: new Date().toISOString() });
+  const portrait = selectGeneratedPortrait(current);
+  generator.records.push({ ...current, ...(portrait ? { portraitId: portrait.id } : {}), id: `generated-${crypto.randomUUID()}`, locationLabel: location.label, professionLabel: profession.label, createdAt: new Date().toISOString() });
   writeStorage(GENERATOR_KEYS.records, generator.records); render(); announce('Added to session');
 }
 document.querySelector('#add-generated').addEventListener('click', addGeneratedToSession);

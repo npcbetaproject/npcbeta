@@ -1,3 +1,34 @@
+// First-name selection is deterministic; persisted IDs survive collection expansion.
+function validateGeneratedPortraits(config, data) {
+  if (config?.version !== 1 || !Array.isArray(config.types) || !config.types.length || !config.professionTypes) throw new Error('Invalid generated portrait collection');
+  const typeIds = new Set(), portraitIds = new Set();
+  for (const type of config.types) {
+    if (!/^[a-z]+$/.test(type.id) || typeIds.has(type.id) || !Array.isArray(type.portraits) || !type.portraits.length) throw new Error('Invalid portrait type');
+    typeIds.add(type.id);
+    for (const portrait of type.portraits) {
+      if (!/^[a-z]+-[0-9]{2}$/.test(portrait.id) || portraitIds.has(portrait.id) || portrait.image !== `images/generated-npcs/${type.id}/${portrait.id}.webp`) throw new Error('Invalid portrait asset');
+      portraitIds.add(portrait.id);
+    }
+  }
+  if (!data.professions.every(item => Object.hasOwn(config.professionTypes, item.id) && typeIds.has(config.professionTypes[item.id]))) throw new Error('Missing profession portrait type');
+}
+function firstNamePortraitHash(name) {
+  const firstName = String(name || '').trim().split(/\s+/)[0].normalize('NFKC').toLowerCase();
+  let hash = 2166136261;
+  for (const character of firstName) { hash ^= character.codePointAt(0); hash = Math.imul(hash, 16777619); }
+  return hash >>> 0;
+}
+function selectGeneratedPortrait(entry) {
+  const config = generator.portraits;
+  if (!config) return null;
+  if (typeof entry.portraitId === 'string') {
+    const saved = config.types.flatMap(type => type.portraits).find(portrait => portrait.id === entry.portraitId);
+    if (saved) return saved;
+  }
+  if (!entry.name?.trim() || !Object.hasOwn(config.professionTypes, entry.professionId)) return null;
+  const type = config.types.find(type => type.id === config.professionTypes[entry.professionId]);
+  return type?.portraits[firstNamePortraitHash(entry.name) % type.portraits.length] || null;
+}
 // Generator settings differ from location-template IDs; each has a reusable location image.
 const GENERATED_LOCATION_TEMPLATES = Object.freeze({
   village: 'market-square', 'city-street': 'market-square', 'tavern-inn': 'tavern',
@@ -38,16 +69,29 @@ function generatedNpcVisual(entry) {
   const background = document.createElement('div'); background.className = 'generated-visual-background';
   const templateId = Object.hasOwn(GENERATED_LOCATION_TEMPLATES, entry.locationId) ? GENERATED_LOCATION_TEMPLATES[entry.locationId] : null;
   const template = locationLibrary.templates?.find(item => item.id === templateId);
+  const portrait = selectGeneratedPortrait(entry);
   // Always keep a decorative parchment/location fallback beneath optional artwork.
   background.innerHTML = '<svg class="generated-location-symbol" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12ZM12 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>';
-  if (template?.image && safeLocationImage(template.image)) {
+  function loadLocationFallback() {
+   if (template?.image && safeLocationImage(template.image)) {
     const image = document.createElement('img'); image.src = template.image; image.alt = ''; image.loading = 'lazy'; image.decoding = 'async';
     image.addEventListener('error', () => image.remove(), { once: true }); background.append(image);
+   }
   }
+  if (!portrait) loadLocationFallback();
   const badge = document.createElement('span'); badge.className = 'generated-profession-badge'; badge.innerHTML = professionBadgeIcon(entry.professionId);
   const silhouette = document.createElement('img');
   silhouette.className = 'generated-npc-silhouette'; silhouette.src = 'images/generated-npc-silhouette.svg'; silhouette.alt = '';
-  visual.append(background, silhouette, badge); return visual;
+  visual.append(background, silhouette, badge);
+  if (portrait) {
+    const face = document.createElement('img');
+    face.className = 'generated-npc-portrait'; face.src = portrait.image; face.alt = '';
+    face.width = 70; face.height = 70; face.loading = 'lazy'; face.decoding = 'async';
+    visual.classList.add('has-generated-portrait');
+    face.addEventListener('error', () => { face.remove(); visual.classList.remove('has-generated-portrait'); loadLocationFallback(); }, { once: true });
+    visual.insertBefore(face, badge);
+  }
+  return visual;
 }
 function refreshNpcVisuals() {
   renderCast(document.querySelector('#cast-list'));
