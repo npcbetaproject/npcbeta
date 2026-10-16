@@ -226,7 +226,7 @@ function openSessionNpc(entry) {
   const visual = elements.detail.querySelector('.detail-extra-visual'); visual.hidden = false; visual.replaceChildren(generatedNpcVisual(entry));
   elements.detail.querySelector('h2').textContent = entry.name;
   elements.detail.querySelector('.detail-meta').textContent = [entry.professionLabel, entry.locationLabel].filter(Boolean).join(' · ');
-  elements.detail.querySelector('.detail-summary').textContent = `${entry.name} is a generated ${entry.professionLabel.toLowerCase()} associated with ${entry.locationLabel}.`;
+  elements.detail.querySelector('.detail-summary').textContent = `${entry.name} is a ${entry.professionLabel.toLowerCase()} at ${entry.locationLabel}.`;
   showLocationRemoval(entry); showDetail();
 }
 function showLocationRemoval(entry) {

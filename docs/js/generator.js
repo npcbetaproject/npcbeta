@@ -144,6 +144,7 @@ function renderGenerator() {
   document.querySelector('#generator-visual-preview').replaceChildren(generatedNpcVisual(current));
   document.querySelector('#generator-controls').hidden = false;
   document.querySelector('#generated-name').textContent = current.name;
+  for (const selector of ['#generated-name', '#generator-visual-preview']) document.querySelector(selector).setAttribute('aria-label', `View ${current.name} NPC card`);
   const fill = (selector, entries, value) => {
     const select = document.querySelector(selector); select.replaceChildren(...[...entries].sort((a, b) => a.label.localeCompare(b.label, 'en', { sensitivity: 'base' })).map(entry => new Option(entry.label, entry.id))); select.value = value;
   };
@@ -183,10 +184,14 @@ function renderCast(container, entries = sessionEntries()) {
         card.append(portrait);
       }
     }
-    if (!entry.library) card.append(generatedNpcVisual(entry));
+    if (!entry.library) {
+      const openPortrait = document.createElement('button'); openPortrait.type = 'button'; openPortrait.className = 'cast-portrait-open';
+      openPortrait.setAttribute('aria-label', `View ${entry.name} NPC card`); openPortrait.onclick = () => openSessionNpc(entry);
+      openPortrait.append(generatedNpcVisual(entry)); card.append(openPortrait);
+    }
     const heading = document.createElement('h3');
     if (entry.library) { const open = document.createElement('button'); open.type = 'button'; open.className = 'cast-profile'; open.textContent = entry.name; open.onclick = () => openDetail(state.characters.find(character => character.id === entry.id)); heading.append(open); }
-    else heading.textContent = entry.name;
+    else { const open = document.createElement('button'); open.type = 'button'; open.className = 'cast-profile'; open.textContent = entry.name; open.onclick = () => openSessionNpc(entry); heading.append(open); }
     const meta = document.createElement('p'); meta.textContent = [entry.professionLabel, entry.locationLabel].filter(Boolean).join(' · ');
     const actions = document.createElement('div'); actions.className = 'cast-actions';
     for (const action of ['Copy', 'Remove']) { const button = document.createElement('button'); button.type = 'button'; button.className = 'generator-icon-button'; button.innerHTML = action === 'Copy' ? '<svg aria-hidden="true" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h4"/></svg>' : removeActionIcon(); button.title = `${action} ${entry.name}`; button.setAttribute('aria-label', `${action} ${entry.name}`); button.onclick = () => {
@@ -214,3 +219,12 @@ function addGeneratedToSession() {
   writeStorage(GENERATOR_KEYS.records, generator.records); render(); announce('Added to session');
 }
 document.querySelector('#add-generated').addEventListener('click', addGeneratedToSession);
+
+function openGeneratedPreview() {
+  const current = generator.current;
+  if (!current || !generator.data) return;
+  const location = generator.data.locations.find(item => item.id === current.locationId);
+  const profession = generator.data.professions.find(item => item.id === current.professionId);
+  openSessionNpc({ ...current, locationLabel: location.label, professionLabel: profession.label });
+}
+for (const selector of ['#generator-visual-preview', '#generated-name']) document.querySelector(selector).addEventListener('click', openGeneratedPreview);
