@@ -152,6 +152,12 @@ function boardRow(kind, entry) {
   if (kind === 'npcs') {
     const active = activeSessionLocation(), added = active && sessionLocationCast.links.some(link => link.npcId === entry.id && link.locationId === active.id);
     const assign = locationButton(added ? '✓ Added' : '＋ Add', () => assignSessionNpc(entry), active ? `${added ? 'Already assigned' : 'Assign'} ${name} ${added ? 'to' : 'to'} ${active.displayName || 'Unnamed location'}` : 'Add a location to assign NPCs');
+    assign.replaceChildren();
+    const icon = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    icon.setAttribute('viewBox', '0 0 24 24'); icon.setAttribute('aria-hidden', 'true');
+    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttribute('d', added ? 'm5 12 4 4L19 6' : 'M12 5v14M5 12h14'); icon.append(path);
+    assign.append(icon, locationNode('span', '', added ? 'Added' : 'Add'));
     assign.dataset.sessionAction = 'assign'; assign.className = 'session-assign-button'; assign.disabled = !active || !!added; assign.title = active ? `${added ? 'Already added to' : 'Add to'} ${active.displayName || 'Unnamed location'}` : 'Add a location to assign NPCs'; row.append(assign);
   } else {
     const active = entry.id === sessionLocationCast.activeLocationId;
