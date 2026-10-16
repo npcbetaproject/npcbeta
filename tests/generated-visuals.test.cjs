@@ -20,7 +20,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
    }
    const root=view==='generator'?'#cast-list':'#character-grid';
    const portrait=page.locator(root+' .generated-npc-portrait').first();await portrait.scrollIntoViewIfNeeded();assert(await portrait.isVisible());await portrait.evaluate(im=>im.decode());
-   assert.equal(await portrait.evaluate(im=>im.naturalWidth),70);assert.equal(await portrait.evaluate(im=>getComputedStyle(im).filter),'grayscale(1)');
+   assert.equal(await portrait.evaluate(im=>im.naturalWidth),280);assert.equal(await portrait.evaluate(im=>getComputedStyle(im).filter),'grayscale(1)');
    assert.equal(await page.locator(root+' .generated-npc-silhouette').first().isVisible(),false);
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${view} overflow at ${width}`);
   }

@@ -8,13 +8,13 @@ const {JSDOM}=require('jsdom'),fs=require('node:fs'),assert=require('node:assert
  await new Promise(r=>setTimeout(r,20));const t=w.test,d=w.document;t.setView('session');await t.ensureGenerator();await t.ensureLocations();
  const options=JSON.parse(fs.readFileSync('docs/data/generator/options.json')),config=JSON.parse(fs.readFileSync('docs/data/generator/portraits.json'));
  t.validateGeneratedPortraits(config,options);assert.equal(config.types.length,10);assert.equal(Object.keys(config.professionTypes).length,97);
- for(const type of config.types){assert.equal(type.portraits.length,10);for(const p of type.portraits){assert(fs.existsSync('docs/'+p.image));assert(fs.statSync('docs/'+p.image).size<=1000);}}
+ for(const type of config.types){assert.equal(type.portraits.length,30);for(const p of type.portraits){assert(fs.existsSync('docs/'+p.image));assert(fs.statSync('docs/'+p.image).size<=20000);}}
  const select=(name,professionId,portraitId)=>t.selectGeneratedPortrait({name,professionId,portraitId});
  assert.equal(select('Brenwick Ashmere','guard').id,select('brenwick Thornfield','guard').id);
  assert.equal(select(' Brenwick   Ashmere ','guard').id,select('Brenwick Ashmere','guard').id);
  assert(select('Brenwick Ashmere','guard').id.startsWith('guards-'));assert(select('Brenwick Ashmere','merchant').id.startsWith('merchants-'));
  assert.equal(select('Changed Name','merchant','guards-02').id,'guards-02');assert.equal(select('Someone','unknown'),null);
- const nameParts=JSON.parse(fs.readFileSync('docs/data/generator/names.json'));const slots=new Set();for(const a of nameParts.firstPrefix)for(const b of nameParts.firstSuffix)slots.add(t.firstNamePortraitHash(a+b)%10);assert.equal(slots.size,10);
+ const nameParts=JSON.parse(fs.readFileSync('docs/data/generator/names.json'));const slots=new Set();for(const a of nameParts.firstPrefix)for(const b of nameParts.firstSuffix)slots.add(t.firstNamePortraitHash(a+b)%30);assert.equal(slots.size,30);
  assert.equal(t.generator.records[0].id,legacy.id);assert.equal(t.generator.records[0].name,legacy.name);assert.equal(t.generator.records[0].locationLabel,legacy.locationLabel);assert(t.generator.records[0].portraitId.startsWith('hospitality-'));
  assert(d.querySelector('#character-grid .generated-npc-portrait'));assert(d.querySelector('#character-grid .session-portrait'));
  t.setView('generator');t.rollGenerator('location','marketplace');t.rollGenerator('profession','merchant');
@@ -26,5 +26,5 @@ const {JSDOM}=require('jsdom'),fs=require('node:fs'),assert=require('node:assert
  const unknown=t.generatedNpcVisual({name:'Test Name',locationId:'unknown',professionId:'unknown'});assert(!unknown.querySelector('.generated-npc-portrait'));assert(unknown.querySelector('.generated-npc-silhouette'));
  assert.equal(w.localStorage.getItem('npc-beta-saved'),'["mira-fen"]');assert.equal(w.localStorage.getItem('npc-beta-session'),'["cassian-holt"]');
  const bad=structuredClone(config);bad.types[0].portraits[0].image='https://invalid.test/a.webp';assert.throws(()=>t.validateGeneratedPortraits(bad,options));
- dom.window.close();console.log('PASS: 100 assets <=1KB, 97 mappings, first-name hashing, normalization, all ten slots, saved IDs, legacy migration, session-first loading, rerolls, undo, fallback and safe config');
+ dom.window.close();console.log('PASS: 300 portraits at 280px, 97 mappings, first-name hashing, normalization, all thirty slots, saved IDs, legacy migration, session-first loading, rerolls, undo, fallback and safe config');
 })().catch(e=>{console.error(e);process.exit(1)});

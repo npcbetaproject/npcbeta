@@ -45,6 +45,86 @@
         {
           "id": "labourers-10",
           "image": "images/generated-npcs/labourers/labourers-10.webp"
+        },
+        {
+          "id": "labourers-11",
+          "image": "images/generated-npcs/labourers/labourers-11.webp"
+        },
+        {
+          "id": "labourers-12",
+          "image": "images/generated-npcs/labourers/labourers-12.webp"
+        },
+        {
+          "id": "labourers-13",
+          "image": "images/generated-npcs/labourers/labourers-13.webp"
+        },
+        {
+          "id": "labourers-14",
+          "image": "images/generated-npcs/labourers/labourers-14.webp"
+        },
+        {
+          "id": "labourers-15",
+          "image": "images/generated-npcs/labourers/labourers-15.webp"
+        },
+        {
+          "id": "labourers-16",
+          "image": "images/generated-npcs/labourers/labourers-16.webp"
+        },
+        {
+          "id": "labourers-17",
+          "image": "images/generated-npcs/labourers/labourers-17.webp"
+        },
+        {
+          "id": "labourers-18",
+          "image": "images/generated-npcs/labourers/labourers-18.webp"
+        },
+        {
+          "id": "labourers-19",
+          "image": "images/generated-npcs/labourers/labourers-19.webp"
+        },
+        {
+          "id": "labourers-20",
+          "image": "images/generated-npcs/labourers/labourers-20.webp"
+        },
+        {
+          "id": "labourers-21",
+          "image": "images/generated-npcs/labourers/labourers-21.webp"
+        },
+        {
+          "id": "labourers-22",
+          "image": "images/generated-npcs/labourers/labourers-22.webp"
+        },
+        {
+          "id": "labourers-23",
+          "image": "images/generated-npcs/labourers/labourers-23.webp"
+        },
+        {
+          "id": "labourers-24",
+          "image": "images/generated-npcs/labourers/labourers-24.webp"
+        },
+        {
+          "id": "labourers-25",
+          "image": "images/generated-npcs/labourers/labourers-25.webp"
+        },
+        {
+          "id": "labourers-26",
+          "image": "images/generated-npcs/labourers/labourers-26.webp"
+        },
+        {
+          "id": "labourers-27",
+          "image": "images/generated-npcs/labourers/labourers-27.webp"
+        },
+        {
+          "id": "labourers-28",
+          "image": "images/generated-npcs/labourers/labourers-28.webp"
+        },
+        {
+          "id": "labourers-29",
+          "image": "images/generated-npcs/labourers/labourers-29.webp"
+        },
+        {
+          "id": "labourers-30",
+          "image": "images/generated-npcs/labourers/labourers-30.webp"
         }
       ]
     },
@@ -91,6 +171,86 @@
         {
           "id": "merchants-10",
           "image": "images/generated-npcs/merchants/merchants-10.webp"
+        },
+        {
+          "id": "merchants-11",
+          "image": "images/generated-npcs/merchants/merchants-11.webp"
+        },
+        {
+          "id": "merchants-12",
+          "image": "images/generated-npcs/merchants/merchants-12.webp"
+        },
+        {
+          "id": "merchants-13",
+          "image": "images/generated-npcs/merchants/merchants-13.webp"
+        },
+        {
+          "id": "merchants-14",
+          "image": "images/generated-npcs/merchants/merchants-14.webp"
+        },
+        {
+          "id": "merchants-15",
+          "image": "images/generated-npcs/merchants/merchants-15.webp"
+        },
+        {
+          "id": "merchants-16",
+          "image": "images/generated-npcs/merchants/merchants-16.webp"
+        },
+        {
+          "id": "merchants-17",
+          "image": "images/generated-npcs/merchants/merchants-17.webp"
+        },
+        {
+          "id": "merchants-18",
+          "image": "images/generated-npcs/merchants/merchants-18.webp"
+        },
+        {
+          "id": "merchants-19",
+          "image": "images/generated-npcs/merchants/merchants-19.webp"
+        },
+        {
+          "id": "merchants-20",
+          "image": "images/generated-npcs/merchants/merchants-20.webp"
+        },
+        {
+          "id": "merchants-21",
+          "image": "images/generated-npcs/merchants/merchants-21.webp"
+        },
+        {
+          "id": "merchants-22",
+          "image": "images/generated-npcs/merchants/merchants-22.webp"
+        },
+        {
+          "id": "merchants-23",
+          "image": "images/generated-npcs/merchants/merchants-23.webp"
+        },
+        {
+          "id": "merchants-24",
+          "image": "images/generated-npcs/merchants/merchants-24.webp"
+        },
+        {
+          "id": "merchants-25",
+          "image": "images/generated-npcs/merchants/merchants-25.webp"
+        },
+        {
+          "id": "merchants-26",
+          "image": "images/generated-npcs/merchants/merchants-26.webp"
+        },
+        {
+          "id": "merchants-27",
+          "image": "images/generated-npcs/merchants/merchants-27.webp"
+        },
+        {
+          "id": "merchants-28",
+          "image": "images/generated-npcs/merchants/merchants-28.webp"
+        },
+        {
+          "id": "merchants-29",
+          "image": "images/generated-npcs/merchants/merchants-29.webp"
+        },
+        {
+          "id": "merchants-30",
+          "image": "images/generated-npcs/merchants/merchants-30.webp"
         }
       ]
     },
@@ -137,6 +297,86 @@
         {
           "id": "guards-10",
           "image": "images/generated-npcs/guards/guards-10.webp"
+        },
+        {
+          "id": "guards-11",
+          "image": "images/generated-npcs/guards/guards-11.webp"
+        },
+        {
+          "id": "guards-12",
+          "image": "images/generated-npcs/guards/guards-12.webp"
+        },
+        {
+          "id": "guards-13",
+          "image": "images/generated-npcs/guards/guards-13.webp"
+        },
+        {
+          "id": "guards-14",
+          "image": "images/generated-npcs/guards/guards-14.webp"
+        },
+        {
+          "id": "guards-15",
+          "image": "images/generated-npcs/guards/guards-15.webp"
+        },
+        {
+          "id": "guards-16",
+          "image": "images/generated-npcs/guards/guards-16.webp"
+        },
+        {
+          "id": "guards-17",
+          "image": "images/generated-npcs/guards/guards-17.webp"
+        },
+        {
+          "id": "guards-18",
+          "image": "images/generated-npcs/guards/guards-18.webp"
+        },
+        {
+          "id": "guards-19",
+          "image": "images/generated-npcs/guards/guards-19.webp"
+        },
+        {
+          "id": "guards-20",
+          "image": "images/generated-npcs/guards/guards-20.webp"
+        },
+        {
+          "id": "guards-21",
+          "image": "images/generated-npcs/guards/guards-21.webp"
+        },
+        {
+          "id": "guards-22",
+          "image": "images/generated-npcs/guards/guards-22.webp"
+        },
+        {
+          "id": "guards-23",
+          "image": "images/generated-npcs/guards/guards-23.webp"
+        },
+        {
+          "id": "guards-24",
+          "image": "images/generated-npcs/guards/guards-24.webp"
+        },
+        {
+          "id": "guards-25",
+          "image": "images/generated-npcs/guards/guards-25.webp"
+        },
+        {
+          "id": "guards-26",
+          "image": "images/generated-npcs/guards/guards-26.webp"
+        },
+        {
+          "id": "guards-27",
+          "image": "images/generated-npcs/guards/guards-27.webp"
+        },
+        {
+          "id": "guards-28",
+          "image": "images/generated-npcs/guards/guards-28.webp"
+        },
+        {
+          "id": "guards-29",
+          "image": "images/generated-npcs/guards/guards-29.webp"
+        },
+        {
+          "id": "guards-30",
+          "image": "images/generated-npcs/guards/guards-30.webp"
         }
       ]
     },
@@ -183,6 +423,86 @@
         {
           "id": "scholars-10",
           "image": "images/generated-npcs/scholars/scholars-10.webp"
+        },
+        {
+          "id": "scholars-11",
+          "image": "images/generated-npcs/scholars/scholars-11.webp"
+        },
+        {
+          "id": "scholars-12",
+          "image": "images/generated-npcs/scholars/scholars-12.webp"
+        },
+        {
+          "id": "scholars-13",
+          "image": "images/generated-npcs/scholars/scholars-13.webp"
+        },
+        {
+          "id": "scholars-14",
+          "image": "images/generated-npcs/scholars/scholars-14.webp"
+        },
+        {
+          "id": "scholars-15",
+          "image": "images/generated-npcs/scholars/scholars-15.webp"
+        },
+        {
+          "id": "scholars-16",
+          "image": "images/generated-npcs/scholars/scholars-16.webp"
+        },
+        {
+          "id": "scholars-17",
+          "image": "images/generated-npcs/scholars/scholars-17.webp"
+        },
+        {
+          "id": "scholars-18",
+          "image": "images/generated-npcs/scholars/scholars-18.webp"
+        },
+        {
+          "id": "scholars-19",
+          "image": "images/generated-npcs/scholars/scholars-19.webp"
+        },
+        {
+          "id": "scholars-20",
+          "image": "images/generated-npcs/scholars/scholars-20.webp"
+        },
+        {
+          "id": "scholars-21",
+          "image": "images/generated-npcs/scholars/scholars-21.webp"
+        },
+        {
+          "id": "scholars-22",
+          "image": "images/generated-npcs/scholars/scholars-22.webp"
+        },
+        {
+          "id": "scholars-23",
+          "image": "images/generated-npcs/scholars/scholars-23.webp"
+        },
+        {
+          "id": "scholars-24",
+          "image": "images/generated-npcs/scholars/scholars-24.webp"
+        },
+        {
+          "id": "scholars-25",
+          "image": "images/generated-npcs/scholars/scholars-25.webp"
+        },
+        {
+          "id": "scholars-26",
+          "image": "images/generated-npcs/scholars/scholars-26.webp"
+        },
+        {
+          "id": "scholars-27",
+          "image": "images/generated-npcs/scholars/scholars-27.webp"
+        },
+        {
+          "id": "scholars-28",
+          "image": "images/generated-npcs/scholars/scholars-28.webp"
+        },
+        {
+          "id": "scholars-29",
+          "image": "images/generated-npcs/scholars/scholars-29.webp"
+        },
+        {
+          "id": "scholars-30",
+          "image": "images/generated-npcs/scholars/scholars-30.webp"
         }
       ]
     },
@@ -229,6 +549,86 @@
         {
           "id": "travellers-10",
           "image": "images/generated-npcs/travellers/travellers-10.webp"
+        },
+        {
+          "id": "travellers-11",
+          "image": "images/generated-npcs/travellers/travellers-11.webp"
+        },
+        {
+          "id": "travellers-12",
+          "image": "images/generated-npcs/travellers/travellers-12.webp"
+        },
+        {
+          "id": "travellers-13",
+          "image": "images/generated-npcs/travellers/travellers-13.webp"
+        },
+        {
+          "id": "travellers-14",
+          "image": "images/generated-npcs/travellers/travellers-14.webp"
+        },
+        {
+          "id": "travellers-15",
+          "image": "images/generated-npcs/travellers/travellers-15.webp"
+        },
+        {
+          "id": "travellers-16",
+          "image": "images/generated-npcs/travellers/travellers-16.webp"
+        },
+        {
+          "id": "travellers-17",
+          "image": "images/generated-npcs/travellers/travellers-17.webp"
+        },
+        {
+          "id": "travellers-18",
+          "image": "images/generated-npcs/travellers/travellers-18.webp"
+        },
+        {
+          "id": "travellers-19",
+          "image": "images/generated-npcs/travellers/travellers-19.webp"
+        },
+        {
+          "id": "travellers-20",
+          "image": "images/generated-npcs/travellers/travellers-20.webp"
+        },
+        {
+          "id": "travellers-21",
+          "image": "images/generated-npcs/travellers/travellers-21.webp"
+        },
+        {
+          "id": "travellers-22",
+          "image": "images/generated-npcs/travellers/travellers-22.webp"
+        },
+        {
+          "id": "travellers-23",
+          "image": "images/generated-npcs/travellers/travellers-23.webp"
+        },
+        {
+          "id": "travellers-24",
+          "image": "images/generated-npcs/travellers/travellers-24.webp"
+        },
+        {
+          "id": "travellers-25",
+          "image": "images/generated-npcs/travellers/travellers-25.webp"
+        },
+        {
+          "id": "travellers-26",
+          "image": "images/generated-npcs/travellers/travellers-26.webp"
+        },
+        {
+          "id": "travellers-27",
+          "image": "images/generated-npcs/travellers/travellers-27.webp"
+        },
+        {
+          "id": "travellers-28",
+          "image": "images/generated-npcs/travellers/travellers-28.webp"
+        },
+        {
+          "id": "travellers-29",
+          "image": "images/generated-npcs/travellers/travellers-29.webp"
+        },
+        {
+          "id": "travellers-30",
+          "image": "images/generated-npcs/travellers/travellers-30.webp"
         }
       ]
     },
@@ -275,6 +675,86 @@
         {
           "id": "artisans-10",
           "image": "images/generated-npcs/artisans/artisans-10.webp"
+        },
+        {
+          "id": "artisans-11",
+          "image": "images/generated-npcs/artisans/artisans-11.webp"
+        },
+        {
+          "id": "artisans-12",
+          "image": "images/generated-npcs/artisans/artisans-12.webp"
+        },
+        {
+          "id": "artisans-13",
+          "image": "images/generated-npcs/artisans/artisans-13.webp"
+        },
+        {
+          "id": "artisans-14",
+          "image": "images/generated-npcs/artisans/artisans-14.webp"
+        },
+        {
+          "id": "artisans-15",
+          "image": "images/generated-npcs/artisans/artisans-15.webp"
+        },
+        {
+          "id": "artisans-16",
+          "image": "images/generated-npcs/artisans/artisans-16.webp"
+        },
+        {
+          "id": "artisans-17",
+          "image": "images/generated-npcs/artisans/artisans-17.webp"
+        },
+        {
+          "id": "artisans-18",
+          "image": "images/generated-npcs/artisans/artisans-18.webp"
+        },
+        {
+          "id": "artisans-19",
+          "image": "images/generated-npcs/artisans/artisans-19.webp"
+        },
+        {
+          "id": "artisans-20",
+          "image": "images/generated-npcs/artisans/artisans-20.webp"
+        },
+        {
+          "id": "artisans-21",
+          "image": "images/generated-npcs/artisans/artisans-21.webp"
+        },
+        {
+          "id": "artisans-22",
+          "image": "images/generated-npcs/artisans/artisans-22.webp"
+        },
+        {
+          "id": "artisans-23",
+          "image": "images/generated-npcs/artisans/artisans-23.webp"
+        },
+        {
+          "id": "artisans-24",
+          "image": "images/generated-npcs/artisans/artisans-24.webp"
+        },
+        {
+          "id": "artisans-25",
+          "image": "images/generated-npcs/artisans/artisans-25.webp"
+        },
+        {
+          "id": "artisans-26",
+          "image": "images/generated-npcs/artisans/artisans-26.webp"
+        },
+        {
+          "id": "artisans-27",
+          "image": "images/generated-npcs/artisans/artisans-27.webp"
+        },
+        {
+          "id": "artisans-28",
+          "image": "images/generated-npcs/artisans/artisans-28.webp"
+        },
+        {
+          "id": "artisans-29",
+          "image": "images/generated-npcs/artisans/artisans-29.webp"
+        },
+        {
+          "id": "artisans-30",
+          "image": "images/generated-npcs/artisans/artisans-30.webp"
         }
       ]
     },
@@ -321,6 +801,86 @@
         {
           "id": "faith-10",
           "image": "images/generated-npcs/faith/faith-10.webp"
+        },
+        {
+          "id": "faith-11",
+          "image": "images/generated-npcs/faith/faith-11.webp"
+        },
+        {
+          "id": "faith-12",
+          "image": "images/generated-npcs/faith/faith-12.webp"
+        },
+        {
+          "id": "faith-13",
+          "image": "images/generated-npcs/faith/faith-13.webp"
+        },
+        {
+          "id": "faith-14",
+          "image": "images/generated-npcs/faith/faith-14.webp"
+        },
+        {
+          "id": "faith-15",
+          "image": "images/generated-npcs/faith/faith-15.webp"
+        },
+        {
+          "id": "faith-16",
+          "image": "images/generated-npcs/faith/faith-16.webp"
+        },
+        {
+          "id": "faith-17",
+          "image": "images/generated-npcs/faith/faith-17.webp"
+        },
+        {
+          "id": "faith-18",
+          "image": "images/generated-npcs/faith/faith-18.webp"
+        },
+        {
+          "id": "faith-19",
+          "image": "images/generated-npcs/faith/faith-19.webp"
+        },
+        {
+          "id": "faith-20",
+          "image": "images/generated-npcs/faith/faith-20.webp"
+        },
+        {
+          "id": "faith-21",
+          "image": "images/generated-npcs/faith/faith-21.webp"
+        },
+        {
+          "id": "faith-22",
+          "image": "images/generated-npcs/faith/faith-22.webp"
+        },
+        {
+          "id": "faith-23",
+          "image": "images/generated-npcs/faith/faith-23.webp"
+        },
+        {
+          "id": "faith-24",
+          "image": "images/generated-npcs/faith/faith-24.webp"
+        },
+        {
+          "id": "faith-25",
+          "image": "images/generated-npcs/faith/faith-25.webp"
+        },
+        {
+          "id": "faith-26",
+          "image": "images/generated-npcs/faith/faith-26.webp"
+        },
+        {
+          "id": "faith-27",
+          "image": "images/generated-npcs/faith/faith-27.webp"
+        },
+        {
+          "id": "faith-28",
+          "image": "images/generated-npcs/faith/faith-28.webp"
+        },
+        {
+          "id": "faith-29",
+          "image": "images/generated-npcs/faith/faith-29.webp"
+        },
+        {
+          "id": "faith-30",
+          "image": "images/generated-npcs/faith/faith-30.webp"
         }
       ]
     },
@@ -367,6 +927,86 @@
         {
           "id": "hospitality-10",
           "image": "images/generated-npcs/hospitality/hospitality-10.webp"
+        },
+        {
+          "id": "hospitality-11",
+          "image": "images/generated-npcs/hospitality/hospitality-11.webp"
+        },
+        {
+          "id": "hospitality-12",
+          "image": "images/generated-npcs/hospitality/hospitality-12.webp"
+        },
+        {
+          "id": "hospitality-13",
+          "image": "images/generated-npcs/hospitality/hospitality-13.webp"
+        },
+        {
+          "id": "hospitality-14",
+          "image": "images/generated-npcs/hospitality/hospitality-14.webp"
+        },
+        {
+          "id": "hospitality-15",
+          "image": "images/generated-npcs/hospitality/hospitality-15.webp"
+        },
+        {
+          "id": "hospitality-16",
+          "image": "images/generated-npcs/hospitality/hospitality-16.webp"
+        },
+        {
+          "id": "hospitality-17",
+          "image": "images/generated-npcs/hospitality/hospitality-17.webp"
+        },
+        {
+          "id": "hospitality-18",
+          "image": "images/generated-npcs/hospitality/hospitality-18.webp"
+        },
+        {
+          "id": "hospitality-19",
+          "image": "images/generated-npcs/hospitality/hospitality-19.webp"
+        },
+        {
+          "id": "hospitality-20",
+          "image": "images/generated-npcs/hospitality/hospitality-20.webp"
+        },
+        {
+          "id": "hospitality-21",
+          "image": "images/generated-npcs/hospitality/hospitality-21.webp"
+        },
+        {
+          "id": "hospitality-22",
+          "image": "images/generated-npcs/hospitality/hospitality-22.webp"
+        },
+        {
+          "id": "hospitality-23",
+          "image": "images/generated-npcs/hospitality/hospitality-23.webp"
+        },
+        {
+          "id": "hospitality-24",
+          "image": "images/generated-npcs/hospitality/hospitality-24.webp"
+        },
+        {
+          "id": "hospitality-25",
+          "image": "images/generated-npcs/hospitality/hospitality-25.webp"
+        },
+        {
+          "id": "hospitality-26",
+          "image": "images/generated-npcs/hospitality/hospitality-26.webp"
+        },
+        {
+          "id": "hospitality-27",
+          "image": "images/generated-npcs/hospitality/hospitality-27.webp"
+        },
+        {
+          "id": "hospitality-28",
+          "image": "images/generated-npcs/hospitality/hospitality-28.webp"
+        },
+        {
+          "id": "hospitality-29",
+          "image": "images/generated-npcs/hospitality/hospitality-29.webp"
+        },
+        {
+          "id": "hospitality-30",
+          "image": "images/generated-npcs/hospitality/hospitality-30.webp"
         }
       ]
     },
@@ -413,6 +1053,86 @@
         {
           "id": "officials-10",
           "image": "images/generated-npcs/officials/officials-10.webp"
+        },
+        {
+          "id": "officials-11",
+          "image": "images/generated-npcs/officials/officials-11.webp"
+        },
+        {
+          "id": "officials-12",
+          "image": "images/generated-npcs/officials/officials-12.webp"
+        },
+        {
+          "id": "officials-13",
+          "image": "images/generated-npcs/officials/officials-13.webp"
+        },
+        {
+          "id": "officials-14",
+          "image": "images/generated-npcs/officials/officials-14.webp"
+        },
+        {
+          "id": "officials-15",
+          "image": "images/generated-npcs/officials/officials-15.webp"
+        },
+        {
+          "id": "officials-16",
+          "image": "images/generated-npcs/officials/officials-16.webp"
+        },
+        {
+          "id": "officials-17",
+          "image": "images/generated-npcs/officials/officials-17.webp"
+        },
+        {
+          "id": "officials-18",
+          "image": "images/generated-npcs/officials/officials-18.webp"
+        },
+        {
+          "id": "officials-19",
+          "image": "images/generated-npcs/officials/officials-19.webp"
+        },
+        {
+          "id": "officials-20",
+          "image": "images/generated-npcs/officials/officials-20.webp"
+        },
+        {
+          "id": "officials-21",
+          "image": "images/generated-npcs/officials/officials-21.webp"
+        },
+        {
+          "id": "officials-22",
+          "image": "images/generated-npcs/officials/officials-22.webp"
+        },
+        {
+          "id": "officials-23",
+          "image": "images/generated-npcs/officials/officials-23.webp"
+        },
+        {
+          "id": "officials-24",
+          "image": "images/generated-npcs/officials/officials-24.webp"
+        },
+        {
+          "id": "officials-25",
+          "image": "images/generated-npcs/officials/officials-25.webp"
+        },
+        {
+          "id": "officials-26",
+          "image": "images/generated-npcs/officials/officials-26.webp"
+        },
+        {
+          "id": "officials-27",
+          "image": "images/generated-npcs/officials/officials-27.webp"
+        },
+        {
+          "id": "officials-28",
+          "image": "images/generated-npcs/officials/officials-28.webp"
+        },
+        {
+          "id": "officials-29",
+          "image": "images/generated-npcs/officials/officials-29.webp"
+        },
+        {
+          "id": "officials-30",
+          "image": "images/generated-npcs/officials/officials-30.webp"
         }
       ]
     },
@@ -459,6 +1179,86 @@
         {
           "id": "entertainers-10",
           "image": "images/generated-npcs/entertainers/entertainers-10.webp"
+        },
+        {
+          "id": "entertainers-11",
+          "image": "images/generated-npcs/entertainers/entertainers-11.webp"
+        },
+        {
+          "id": "entertainers-12",
+          "image": "images/generated-npcs/entertainers/entertainers-12.webp"
+        },
+        {
+          "id": "entertainers-13",
+          "image": "images/generated-npcs/entertainers/entertainers-13.webp"
+        },
+        {
+          "id": "entertainers-14",
+          "image": "images/generated-npcs/entertainers/entertainers-14.webp"
+        },
+        {
+          "id": "entertainers-15",
+          "image": "images/generated-npcs/entertainers/entertainers-15.webp"
+        },
+        {
+          "id": "entertainers-16",
+          "image": "images/generated-npcs/entertainers/entertainers-16.webp"
+        },
+        {
+          "id": "entertainers-17",
+          "image": "images/generated-npcs/entertainers/entertainers-17.webp"
+        },
+        {
+          "id": "entertainers-18",
+          "image": "images/generated-npcs/entertainers/entertainers-18.webp"
+        },
+        {
+          "id": "entertainers-19",
+          "image": "images/generated-npcs/entertainers/entertainers-19.webp"
+        },
+        {
+          "id": "entertainers-20",
+          "image": "images/generated-npcs/entertainers/entertainers-20.webp"
+        },
+        {
+          "id": "entertainers-21",
+          "image": "images/generated-npcs/entertainers/entertainers-21.webp"
+        },
+        {
+          "id": "entertainers-22",
+          "image": "images/generated-npcs/entertainers/entertainers-22.webp"
+        },
+        {
+          "id": "entertainers-23",
+          "image": "images/generated-npcs/entertainers/entertainers-23.webp"
+        },
+        {
+          "id": "entertainers-24",
+          "image": "images/generated-npcs/entertainers/entertainers-24.webp"
+        },
+        {
+          "id": "entertainers-25",
+          "image": "images/generated-npcs/entertainers/entertainers-25.webp"
+        },
+        {
+          "id": "entertainers-26",
+          "image": "images/generated-npcs/entertainers/entertainers-26.webp"
+        },
+        {
+          "id": "entertainers-27",
+          "image": "images/generated-npcs/entertainers/entertainers-27.webp"
+        },
+        {
+          "id": "entertainers-28",
+          "image": "images/generated-npcs/entertainers/entertainers-28.webp"
+        },
+        {
+          "id": "entertainers-29",
+          "image": "images/generated-npcs/entertainers/entertainers-29.webp"
+        },
+        {
+          "id": "entertainers-30",
+          "image": "images/generated-npcs/entertainers/entertainers-30.webp"
         }
       ]
     }
@@ -561,5 +1361,6 @@
     "fortune-teller": "entertainers",
     "acrobat": "entertainers",
     "actor": "entertainers"
-  }
+  },
+  "imageSize": 280
 }
