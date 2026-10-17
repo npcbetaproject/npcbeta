@@ -134,7 +134,14 @@ function boardRow(kind, entry) {
     } else open.append(generatedNpcVisual(entry));
   } else {
     const template = locationLibrary.templates?.find(item => item.id === entry.templateId);
-    open.append(locationThumbnail(template || { settings: entry.settings, image: null }));
+    // Use the same vetted artwork as the location detail, covering the whole tile.
+    // A CSS background avoids the shared thumbnail component's fixed dimensions.
+    if (template?.image && safeLocationImage(template.image)) {
+      row.style.backgroundImage = `linear-gradient(180deg, rgba(18,16,14,.65), rgba(22,18,16,.42) 42%, rgba(18,16,14,.75)), url("${template.image}")`;
+      row.style.backgroundSize = 'cover';
+      row.style.backgroundPosition = safeLocationImagePosition(template.imagePosition) ? template.imagePosition : 'center';
+      row.classList.add('has-session-location-art');
+    }
   }
   const copy = locationNode('div', 'session-row-copy');
   copy.append(locationNode('h3', '', name));
@@ -255,8 +262,12 @@ function renderActiveSessionScene() {
     img.addEventListener('error', () => { backdrop.classList.remove('has-artwork'); img.remove(); }, { once: true });
     backdrop.append(img);
   }
-  const label = locationNode('span', 'session-scene-active-label', 'Active location');
-  const hero = locationNode('div', 'session-scene-hero');
+
+  const hero = locationButton('', () => openSessionLocation(active),
+    `View details for ${active.displayName || 'Unnamed location'}`);
+  hero.className = 'session-scene-hero session-scene-hero-open';
+  hero.dataset.sessionAction = 'scene-details';
+  hero.title = `View ${active.displayName || 'Unnamed location'} details`;
   if (template?.image && safeLocationImage(template.image)) {
     const artwork = document.createElement('img');
     artwork.src = template.image;
@@ -281,7 +292,7 @@ function renderActiveSessionScene() {
   const summary = locationNode('summary', '', 'Edit location name & condition');
   advanced.append(summary, ...others);
   const details = locationNode('div', 'session-scene-details');
-  details.append(label, hero, heading, description, locationCastSection(active));
+  details.append(hero, heading, description, locationCastSection(active));
   if (notes) {
     notes.classList.add('session-scene-notes');
     details.append(notes);
