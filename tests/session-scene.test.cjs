@@ -28,13 +28,12 @@ const assert = require('node:assert/strict');
  assert(await page.locator('#session-active-scene').isVisible());
  assert(await page.locator('#session-scene-content .session-scene-hero img').isVisible(), 'Scene artwork visible');
  assert.equal(await page.locator('#session-active-scene .session-scene-active-label').count(),0,'No redundant Active location label');
- // Location artwork covers the entire tile, not a small left-side thumbnail.
+ // Each location tile uses a genuine cover-sized background image.
  const tile=page.locator('#session-location-list [data-entry-id="location-0"]');
- const tileArt=tile.locator('.session-location-tile-artwork');
- assert(await tileArt.count()===1);
- const tileLayout=await tile.evaluate(n=>{const a=n.querySelector('.session-location-tile-artwork');const r=n.getBoundingClientRect(),v=a.getBoundingClientRect();return {position:getComputedStyle(a).position, fullWidth:Math.abs(r.width-v.width)<3,fullHeight:Math.abs(r.height-v.height)<3}});
- assert.equal(tileLayout.position,'absolute');
- assert(tileLayout.fullWidth&&tileLayout.fullHeight,'Tile artwork covers card bounds: '+JSON.stringify(tileLayout));
+ const tileLayout=await tile.evaluate(n=>({image:getComputedStyle(n).backgroundImage,size:getComputedStyle(n).backgroundSize,position:getComputedStyle(n).backgroundPosition}));
+ assert(tileLayout.image.includes('url('),'Location tile includes image as background');
+ assert.equal(tileLayout.size,'cover','Artwork covers the full tile');
+ assert(await tile.locator('.location-thumbnail').count()===0,'No separate fixed-size thumbnail is rendered');
  // The central scene artwork opens existing location details and closes with Escape.
  await page.locator('#session-active-scene .session-scene-hero-open').click();
  assert.equal(await page.locator('#detail-panel').getAttribute('aria-hidden'),'false');
