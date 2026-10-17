@@ -47,6 +47,8 @@ const assert = require('node:assert/strict');
  await page.locator('[data-entry-id="mira-fen"] [data-session-action=assign]').click();
  assert.match(await page.locator('#session-scene-content .location-cast').innerText(),/Mira/);
  assert.equal(await page.locator('#session-location-list [data-entry-id="location-1"] .session-location-npc-count').innerText(),'1 NPC');
+ assert.equal(await page.locator('#session-location-list [data-entry-id="location-1"] .session-location-npc-avatar').count(),1,'assigned NPC has a circle beside location title');
+ assert.equal(await page.locator('#session-location-list [data-entry-id="location-0"] .session-location-npc-avatar').count(),0,'unassigned location has no avatar circles');
  await page.reload(); await page.waitForSelector('#character-grid .session-row'); await page.waitForFunction(()=>locationLibrary.templates);
  assert.match(await page.locator('#session-adding-to').innerText(),/Silver Fox Inn/);
  assert.equal(await page.locator('#session-scene-content [data-location-field=notes]').inputValue(),'Scene-focused note survives reload');
