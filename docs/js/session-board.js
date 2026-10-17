@@ -102,7 +102,7 @@ function pinIcon() { return '<svg aria-hidden="true" viewBox="0 0 24 24"><path d
 function focusBoardControl(kind, id, action) {
   const container = kind === 'npcs' ? elements.grid : document.querySelector('#session-location-list');
   const row = [...container.querySelectorAll('.session-row')].find(item => item.dataset.entryId === id);
-  const next = (kind === 'locations' && ['pin', 'remove', 'up', 'down', 'active', 'details'].includes(action) ? row?.querySelector('.session-location-menu-trigger') : row?.querySelector(`[data-session-action="${action}"]`)) || container.querySelector('.session-row-open, .empty-state button') || document.querySelector('#session-search');
+  const next = (kind === 'locations' && ['pin', 'remove', 'active', 'details'].includes(action) ? row?.querySelector('.session-location-menu-trigger') : row?.querySelector(`[data-session-action="${action}"]`)) || container.querySelector('.session-row-open, .empty-state button') || document.querySelector('#session-search');
   next.focus({ preventScroll: true });
 }
 function removeBoardEntry(kind, entry) {
@@ -165,7 +165,9 @@ function boardRow(kind, entry) {
   actions.append(pin, remove);
   if (kind === 'locations') {
     const reorder = locationReorderControls(entry);
-    row.append(reorder.handle); actions.append(reorder.up, reorder.down);
+    row.append(reorder.handle);
+    // Reordering controls are shown directly beside the compact location actions.
+    row._reorderControls = reorder;
     row.classList.add('session-location-order-row');
     configureLocationDrop(row, entry);
   }
@@ -200,8 +202,19 @@ function boardRow(kind, entry) {
     quickRemove.dataset.sessionAction = 'quick-delete';
     quickRemove.innerHTML = removeActionIcon();
     quickRemove.title = `Remove ${name} from session`;
-    quickActions.append(quickActive, quickRemove);
+    const quickDetails = locationButton('Details', () => openSessionLocation(entry),
+      `View details for ${name}`);
+    quickDetails.className = 'session-location-quick-details';
+    quickDetails.dataset.sessionAction = 'quick-details';
+    const moveUp = row._reorderControls.up;
+    const moveDown = row._reorderControls.down;
+    const line1 = locationNode('div', 'session-location-action-line');
+    const line2 = locationNode('div', 'session-location-action-line');
+    line1.append(quickActive, quickDetails);
+    line2.append(moveUp, moveDown, quickRemove);
+    quickActions.append(line1, line2);
     row.append(quickActions);
+    delete row._reorderControls;
     actions.append(activate, details);
   }
   return row;
