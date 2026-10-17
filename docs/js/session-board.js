@@ -102,7 +102,7 @@ function pinIcon() { return '<svg aria-hidden="true" viewBox="0 0 24 24"><path d
 function focusBoardControl(kind, id, action) {
   const container = kind === 'npcs' ? elements.grid : document.querySelector('#session-location-list');
   const row = [...container.querySelectorAll('.session-row')].find(item => item.dataset.entryId === id);
-  const next = row?.querySelector(`[data-session-action="${action}"]`) || container.querySelector('.session-row-open, .empty-state button') || document.querySelector('#session-search');
+  const next = (kind === 'locations' && ['pin', 'remove', 'up', 'down', 'active', 'details'].includes(action) ? row?.querySelector('.session-location-menu-trigger') : row?.querySelector(`[data-session-action="${action}"]`)) || container.querySelector('.session-row-open, .empty-state button') || document.querySelector('#session-search');
   next.focus({ preventScroll: true });
 }
 function removeBoardEntry(kind, entry) {
@@ -146,7 +146,13 @@ function boardRow(kind, entry) {
     copy.append(locationNode('span', 'session-location-npc-count', `${count} ${count === 1 ? 'NPC' : 'NPCs'}`));
   }
   open.append(copy);
-  const actions = locationNode('div', 'session-row-actions');
+  const actions = locationNode(kind === 'locations' ? 'details' : 'div', 'session-row-actions');
+  if (kind === 'locations') {
+    const menu = locationNode('summary', 'session-location-menu-trigger', '⋯');
+    menu.setAttribute('aria-label', `Manage ${name}: details, pin, reorder, or remove`);
+    menu.setAttribute('title', `Manage ${name}`);
+    actions.append(menu);
+  }
   const pin = locationButton('', () => {
     const locations = kind === 'locations' ? orderedSessionLocations() : null;
     pinned ? sessionBoard.pins[kind].delete(entry.id) : sessionBoard.pins[kind].add(entry.id);
