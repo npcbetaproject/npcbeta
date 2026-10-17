@@ -150,7 +150,6 @@ function boardRow(kind, entry) {
       sessionLocationCast.links.some(link => link.locationId === entry.id && link.npcId === npc.id));
     if (people.length) {
       const strip = locationNode('span', 'session-location-npc-avatars');
-      strip.setAttribute('aria-hidden', 'true');
       for (const npc of people.slice(0, 4)) {
         const circle = locationNode('span', 'session-location-npc-avatar');
         circle.title = npc.name;
@@ -167,9 +166,13 @@ function boardRow(kind, entry) {
         } else {
           circle.replaceChildren(generatedNpcVisual(npc));
         }
-        strip.append(circle);
+        const mini = locationNode('span', 'session-location-npc-mini-card');
+        const identity = locationNode('span', 'session-location-npc-mini-copy');
+        identity.append(locationNode('span', 'session-location-npc-mini-name', npc.name),
+                        locationNode('span', 'session-location-npc-mini-profession', npc.professionLabel || 'NPC'));
+        mini.append(circle, identity); strip.append(mini);
       }
-      if (people.length > 4) strip.append(locationNode('span', 'session-location-npc-overflow', `+${people.length - 4}`));
+      if (people.length > 4) strip.append(locationNode('span', 'session-location-npc-more', `+${people.length - 4} more NPCs`));
       copy.append(strip);
     }
   }
