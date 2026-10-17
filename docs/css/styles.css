@@ -339,3 +339,49 @@
 
 #generator-controls .name-result h2 { flex-basis:100%; }
 #generator-controls .generator-dialogue { flex:1 1 100%; min-width:0; margin:2px 0 6px; }
+
+/* Scene focus: compact locations, editable active scene, and complete cast. */
+#session-board { max-width:1720px; position:relative; isolation:isolate; }
+#session-board .session-board-columns { position:relative; isolation:isolate; display:grid; grid-template-columns:minmax(230px, .85fr) minmax(330px, 1.45fr) minmax(310px, 1.25fr); gap:16px; padding:18px; border-radius:12px; background:#e8dfcf; overflow:hidden; }
+#session-scene-backdrop { position:absolute; inset:0; z-index:-1; overflow:hidden; pointer-events:none; background:#e8dfcf; }
+#session-scene-backdrop::after { content:""; position:absolute; inset:0; background:rgba(232,223,207,.76); }
+#session-scene-backdrop img { width:100%; height:100%; object-fit:cover; filter:grayscale(.68) saturate(.35) blur(8px); transform:scale(1.04); opacity:0; }
+#session-scene-backdrop.has-artwork img { opacity:1; }
+#session-board .session-column { min-width:0; background:#faf6ed; border:1px solid #d6cbb9; border-radius:9px; padding:12px; align-self:start; }
+#session-board .session-column-heading { padding:4px 2px 12px; }
+#session-board #session-location-list, #session-board #character-grid { max-height:min(74dvh,900px); }
+#session-board #session-location-list .session-row { flex-wrap:wrap; gap:4px; }
+#session-board #session-location-list .session-row-open { flex-basis:calc(100% - 48px); }
+#session-board #session-location-list .session-location-drag { flex-basis:28px; width:28px; min-height:48px; }
+#session-board #session-location-list .session-row-actions { width:100%; display:flex; flex-wrap:wrap; justify-content:flex-end; }
+#session-board #session-location-list .session-location-card .location-thumbnail { width:46px; height:46px; flex:0 0 46px; }
+#session-board #session-location-list .session-row-description { display:none; }
+#session-board #session-location-list .session-row h3 { white-space:normal; overflow-wrap:anywhere; }
+#session-board .session-location-npc-count { display:block; font-size:12px; color:#645f56; margin-top:3px; }
+#session-board .session-location-card.is-active-location { border:2px solid #80623f; background:#f1e6d0; }
+#session-board .session-location-card.is-active-location .session-active-button { background:#5d4531; color:#fffaf0; }
+#session-active-scene { min-height:320px; }
+#session-scene-content { overflow-wrap:anywhere; }
+#session-board .session-scene-name { font-size:1.45rem; margin:0 0 9px; }
+#session-board .session-scene-description { color:#574e43; line-height:1.55; margin:0 0 16px; }
+#session-board .session-scene-fields { margin-bottom:16px; }
+#session-board .session-scene-empty { padding:18px 8px; color:#5b554c; }
+#session-board .location-cast-icons { display:flex; flex-wrap:wrap; gap:10px; }
+#session-board .location-cast-member { min-width:0; }
+#session-board .session-row-actions button, #session-board .session-assign-button { min-height:44px; }
+#session-board .session-row h3 { white-space:normal; overflow-wrap:anywhere; }
+#session-board .session-adding-to { font-weight:600; color:#62472f; overflow-wrap:anywhere; }
+@media(max-width:1170px) {
+  #session-board .session-board-columns { grid-template-columns:minmax(180px,.8fr) minmax(0,1.4fr); }
+  #session-npc-column { grid-column:1/-1; }
+}
+@media(max-width:760px) {
+  #session-board .session-board-columns { grid-template-columns:minmax(0,1fr); padding:10px; gap:12px; }
+  #session-board #session-locations, #session-board #session-active-scene, #session-board #session-npc-column { display:block; grid-column:1; }
+  #session-board .session-tabs { display:none; }
+  #session-board #session-location-list { display:flex; flex-direction:row; overflow-x:auto; max-height:190px; scroll-snap-type:x proximity; padding-bottom:10px; }
+  #session-board #session-location-list .session-row { min-width:215px; max-width:260px; scroll-snap-align:start; }
+  #session-board #character-grid { max-height:none; overflow:visible; }
+  #session-board .session-scene-name { font-size:1.3rem; }
+}
+@media(prefers-reduced-motion:reduce) { #session-board #session-location-list { scroll-behavior:auto; scroll-snap-type:none; } }
