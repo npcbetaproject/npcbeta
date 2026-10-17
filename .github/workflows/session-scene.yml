@@ -6,6 +6,7 @@ on:
       - feature/session-reference-layout-20261017
       - feature/session-location-avatar-chips-20261017
       - feature/session-three-column-compact-20261017
+      - feature/session-column-balance-20261017
   workflow_dispatch:
 jobs:
   browser-tests:
