@@ -60,7 +60,14 @@ function locationCastSection(location) {
       if (source) { const img = locationNode('img', ''); img.src = source; img.alt = ''; img.loading = 'lazy'; img.addEventListener('error', () => img.remove(), { once: true }); portrait.append(img); }
     } else { portrait.replaceChildren(generatedNpcVisual(entry)); }
     open.append(portrait, locationNode('span', 'location-cast-name', entry.name.split(' ')[0])); open.title = entry.name;
-    item.append(open); list.append(item);
+    const unassign = locationButton('Remove from location', () => {
+      if (!window.confirm(`Remove ${entry.name} from ${location.displayName || 'Unnamed location'}? This NPC will remain in your session.`)) return;
+      sessionLocationCast.links = sessionLocationCast.links.filter(link => !(link.npcId === entry.id && link.locationId === location.id));
+      saveLocationCast(); renderSessionBoard();
+      announce(`${entry.name} removed from ${location.displayName || 'Unnamed location'}; still in session.`);
+    }, `Remove ${entry.name} from ${location.displayName || 'Unnamed location'}, keep NPC in session`);
+    unassign.className = 'session-unassign-button';
+    item.append(open, unassign); list.append(item);
   }
   if (!entries.length) list.append(locationNode('p', 'location-cast-empty', 'Choose an NPC from Tonight’s Cast to add here.'));
   section.append(list); return section;
