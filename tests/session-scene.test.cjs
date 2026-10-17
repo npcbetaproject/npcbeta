@@ -27,13 +27,14 @@ const assert = require('node:assert/strict');
  assert.equal(await page.locator('#session-location-list .session-row').count(),3);
  assert(await page.locator('#session-active-scene').isVisible());
  assert(await page.locator('#session-scene-content .session-scene-hero img').isVisible(), 'Scene artwork visible');
+ assert.equal(await page.locator('#session-active-scene .session-scene-active-label').count(),0,'No redundant Active location label');
  // Location artwork covers the entire tile, not a small left-side thumbnail.
  const tile=page.locator('#session-location-list [data-entry-id="location-0"]');
  const tileArt=tile.locator('.session-location-tile-artwork');
  assert(await tileArt.count()===1);
  const tileLayout=await tile.evaluate(n=>{const a=n.querySelector('.session-location-tile-artwork');const r=n.getBoundingClientRect(),v=a.getBoundingClientRect();return {position:getComputedStyle(a).position, fullWidth:Math.abs(r.width-v.width)<3,fullHeight:Math.abs(r.height-v.height)<3}});
  assert.equal(tileLayout.position,'absolute');
- assert(tileLayout.fullWidth&&tileLayout.fullHeight,'Tile artwork covers card bounds');
+ assert(tileLayout.fullWidth&&tileLayout.fullHeight,'Tile artwork covers card bounds: '+JSON.stringify(tileLayout));
  // The central scene artwork opens existing location details and closes with Escape.
  await page.locator('#session-active-scene .session-scene-hero-open').click();
  assert.equal(await page.locator('#detail-panel').getAttribute('aria-hidden'),'false');
@@ -87,16 +88,16 @@ const assert = require('node:assert/strict');
  await page.locator('#session-clear-search').click();
  // Assigned characters are compact mini-cards: circular portraits and
  // name/profession on the same line, up to three across on desktop.
- for(const npc of ['mira-fen','generated-test','cassian-holt']) {
+ for(const npc of ['mira-fen','generated-test','cassian-holt','harl-mercer']) {
    await page.locator(`[data-entry-id="${npc}"] [data-session-action=assign]`).click();
  }
  const sceneCards=page.locator('#session-active-scene .location-cast-member');
- assert.equal(await sceneCards.count(),3);
- assert.equal(await page.locator('#session-active-scene .session-scene-member-copy').count(),3);
+ assert.equal(await sceneCards.count(),4);
+ assert.equal(await page.locator('#session-active-scene .session-scene-member-copy').count(),4);
  assert(await page.locator('#session-active-scene .session-scene-member-role').first().isVisible());
  const rows=await sceneCards.evaluateAll(nodes=>nodes.map(n=>({top:Math.round(n.getBoundingClientRect().top),width:n.getBoundingClientRect().width})));
- assert(rows.every(r=>r.top===rows[0].top),'Three NPC mini-cards share one desktop row');
- assert(rows.every(r=>r.width>=145),'Mini-cards retain adequate width');
+ assert(rows.every(r=>r.top===rows[0].top),'Four NPC mini-cards share one desktop row');
+ assert(rows.every(r=>r.width>=125),'Mini-cards retain adequate width');
  assert(await page.locator('#session-active-scene .location-cast-portrait').first().evaluate(n=>getComputedStyle(n).borderRadius)==='50%');
  fs.mkdirSync('project/screenshots',{recursive:true});
  await page.screenshot({path:'project/screenshots/session-scene-desktop.png',fullPage:true});
