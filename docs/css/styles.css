@@ -385,3 +385,7 @@
   #session-board .session-scene-name { font-size:1.3rem; }
 }
 @media(prefers-reduced-motion:reduce) { #session-board #session-location-list { scroll-behavior:auto; scroll-snap-type:none; } }
+
+#session-board .location-cast-member { display:flex; flex-direction:column; gap:5px; align-items:center; max-width:132px; }
+#session-board .session-unassign-button { min-height:44px; max-width:132px; white-space:normal; overflow-wrap:anywhere; border:1px solid #b8a68e; border-radius:5px; background:#fffaf0; color:#5d392f; padding:6px 9px; font-size:12px; cursor:pointer; }
+#session-board .session-unassign-button:focus-visible { outline:2px solid #735d36; outline-offset:2px; }
