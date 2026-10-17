@@ -580,3 +580,42 @@
 @container (min-width:675px) {
   #session-board #session-active-scene .location-cast-icons { grid-template-columns:repeat(3,minmax(0,1fr)); }
 }
+
+/* Location rail: assigned NPC identity mini-cards with circular portraits. */
+#session-board #session-location-list .session-location-npc-avatars {
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:3px;
+  padding:2px 0 0;
+  width:100%;
+  min-width:0;
+}
+#session-board #session-location-list .session-location-npc-mini-card {
+  display:flex;
+  align-items:center;
+  gap:5px;
+  width:100%;
+  min-width:0;
+  border-radius:5px;
+  padding:3px 4px;
+  background:#f1e9de;
+  text-align:left;
+}
+#session-board #session-location-list .session-location-npc-mini-card .session-location-npc-avatar {
+  margin:0;
+  flex:0 0 25px;
+  width:25px;
+  height:25px;
+}
+#session-board #session-location-list .session-location-npc-mini-copy {
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  gap:1px;
+  line-height:1.2;
+  overflow-wrap:anywhere;
+}
+#session-board #session-location-list .session-location-npc-mini-name { font-size:11px; font-weight:600; }
+#session-board #session-location-list .session-location-npc-mini-profession { color:#665c53; font-size:10px; }
+#session-board #session-location-list .session-location-npc-more { font-size:10px; color:#5b514a; padding-left:4px; }
