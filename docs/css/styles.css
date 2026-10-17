@@ -336,3 +336,6 @@
 
 /* Approved location/profession dialogue beneath the generated name. */
 .generator-dialogue { margin:0 0 18px; padding:10px 14px; border-left:3px solid var(--line); color:var(--muted); font-style:italic; line-height:1.5; overflow-wrap:anywhere; }
+
+#generator-controls .name-result h2 { flex-basis:100%; }
+#generator-controls .generator-dialogue { flex:1 1 100%; min-width:0; margin:2px 0 6px; }
