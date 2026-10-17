@@ -1,6 +1,9 @@
 // High-resolution assets shared by cards, profiles and Session.
 window.NPC_PORTRAITS = Object.freeze({
   ...window.NPC_PORTRAITS,
+  "riggles-flintnose": "images/characters/riggles-flintnose.webp",
+  "maera-cinderhand": "images/characters/maera-cinderhand.webp",
+  "oswald-venn": "images/characters/oswald-venn.webp",
   "edric-mossfield": "images/characters/edric-mossfield.webp",
   "brenna-ironleash": "images/characters/brenna-ironleash.webp",
   "osric-rutledge": "images/characters/osric-rutledge.webp",

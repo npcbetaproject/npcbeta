@@ -1,5 +1,124 @@
 [
   {
+    "id": "riggles-flintnose",
+    "name": "Riggles Flintnose",
+    "ancestry": "Deep gnome",
+    "role": "Gem prospector and trader",
+    "group": "townsfolk",
+    "subtitle": "A nose for buried trouble",
+    "summary": "Cautious and soft-spoken, Riggles hunts gems in the deep tunnels and trades his finds in small, carefully weighed lots. His unusually acute nose distinguishes ore dust, lamp oils and familiar belongings, making him a useful finder of lost items when a trail is fresh.",
+    "tableNote": "Sniff twice before answering, keep your back near a wall, and ask who else knows about the job. Riggles wants enough trade to support his mining crew without revealing their richest seam; strong perfume and smoke can overwhelm his nose.",
+    "adventureHook": "Riggles recognizes his crew’s distinctive violet ore dust on a merchant’s boots, though their latest shipment never reached the surface. He offers a share of the recovered gems if the party escorts him through the old workings beneath the market; the missing miners may still be alive.",
+    "locationIds": [
+      "mine-quarry",
+      "cavern-pool",
+      "market-square"
+    ],
+    "tags": [
+      "merchant",
+      "quest-giver"
+    ],
+    "imageAlt": "Wary slate-grey deep gnome with silver hair and large pointed ears sniffing violet ore, wearing a patched brown mining coat and moss scarf in a lamplit tunnel.",
+    "locationFit": [
+      "Underground mines",
+      "Caverns",
+      "Market"
+    ],
+    "roleCategoryIds": [
+      "workers-services",
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "dungeons-ruins",
+      "settlements"
+    ],
+    "slug": "riggles-flintnose",
+    "portraitKey": "riggles-flintnose",
+    "portraitFit": "contain",
+    "image": "images/characters/riggles-flintnose.webp",
+    "tokenImage": "images/tokens/riggles-flintnose-token.webp",
+    "publishedAt": "2026-10-17T04:10:00Z"
+  },
+  {
+    "id": "maera-cinderhand",
+    "name": "Maera Cinderhand",
+    "ancestry": "Dwarf",
+    "role": "Weaponsmith",
+    "group": "townsfolk",
+    "subtitle": "Good steel needs a steady hand",
+    "summary": "Maera forges dependable weapons and repairs battered gear at a soot-darkened village forge. She promises an honest edge rather than miracles: “Fire can forge you fine weapons. Keeping them sharp is your part.”",
+    "tableNote": "Inspect imaginary blade edges while speaking, then set the tool down when something matters. Plain-spoken and proud of her craft, Maera wants her work to protect people; she refuses rushed commissions that would leave a dangerous flaw.",
+    "adventureHook": "A traveller brings Maera a broken sword stamped with her maker’s mark. She recognizes a repair she made for a caravan guard missing since a robbery, and asks the party to trace the traveller’s story before the watch blames the missing guard for the theft.",
+    "locationIds": [
+      "blacksmiths-forge",
+      "market-square",
+      "armory"
+    ],
+    "tags": [
+      "merchant",
+      "quest-giver"
+    ],
+    "imageAlt": "Broad-shouldered dwarf weaponsmith with black braids, soot-marked cheeks and a leather apron holding a hammer and unfinished blade beside a warm forge.",
+    "locationFit": [
+      "Forge",
+      "Village",
+      "Armory"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "castles-estates"
+    ],
+    "slug": "maera-cinderhand",
+    "portraitKey": "maera-cinderhand",
+    "portraitFit": "contain",
+    "image": "images/characters/maera-cinderhand.webp",
+    "tokenImage": "images/tokens/maera-cinderhand-token.webp",
+    "publishedAt": "2026-10-17T04:10:00Z"
+  },
+  {
+    "id": "oswald-venn",
+    "name": "Oswald Venn",
+    "ancestry": "Human",
+    "role": "Deputy reeve",
+    "group": "townsfolk",
+    "subtitle": "Every delay has its price",
+    "summary": "Oswald oversees trading permits, market fines and the paperwork needed to move goods through town. Courteous and meticulously dressed, he invents small procedural obstacles, then hints that a private “expediting fee” will make them disappear.",
+    "tableNote": "Straighten a stack of papers, lower your voice for the price, and never call a bribe a bribe. Oswald wants a comfortable retirement and the protection of powerful traders; a witness or a request for a written receipt makes him suddenly careful.",
+    "adventureHook": "Oswald offers to waive the party’s permit fees if they recover a stolen ledger before an inspector arrives. He calls it routine municipal property, but its duplicate entries identify the merchants he has extorted—and payments for letting stolen goods pass the gate.",
+    "locationIds": [
+      "gatehouse",
+      "market-square",
+      "watchhouse"
+    ],
+    "tags": [
+      "antagonist",
+      "quest-giver"
+    ],
+    "imageAlt": "Narrow-faced human official with a trimmed moustache, burgundy coat and brass chain holding a sealed permit and stamp in a cramped records office.",
+    "locationFit": [
+      "Town offices",
+      "Gatehouse",
+      "Market"
+    ],
+    "roleCategoryIds": [
+      "military-authority",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "castles-estates"
+    ],
+    "slug": "oswald-venn",
+    "portraitKey": "oswald-venn",
+    "portraitFit": "contain",
+    "image": "images/characters/oswald-venn.webp",
+    "tokenImage": "images/tokens/oswald-venn-token.webp",
+    "publishedAt": "2026-10-17T04:10:00Z"
+  },
+  {
     "id": "edric-mossfield",
     "slug": "edric-mossfield",
     "name": "Edric Mossfield",
