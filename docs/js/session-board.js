@@ -45,7 +45,7 @@ function locationCastSection(location) {
     target.scrollIntoView({ behavior: window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
     announce(`Choose NPCs to add to ${location.displayName || 'Unnamed location'}.`);
   });
-  heading.append(locationNode('h4', '', `Cast at this location (${entries.length})`), add);
+  heading.append(locationNode('h4', '', 'At this location'), locationNode('span', 'session-scene-cast-count', `${entries.length} ${entries.length === 1 ? 'NPC' : 'NPCs'}`), add);
   section.append(heading);
   const list = locationNode('div', 'location-cast-icons');
   for (const entry of entries) {
@@ -59,8 +59,10 @@ function locationCastSection(location) {
       const character = state.characters.find(character => character.id === entry.id), source = state.portraits[character?.portraitKey];
       if (source) { const img = locationNode('img', ''); img.src = source; img.alt = ''; img.loading = 'lazy'; img.addEventListener('error', () => img.remove(), { once: true }); portrait.append(img); }
     } else { portrait.replaceChildren(generatedNpcVisual(entry)); }
-    open.append(portrait, locationNode('span', 'location-cast-name', entry.name.split(' ')[0])); open.title = entry.name;
-    const unassign = locationButton('Remove from location', () => {
+    const identity = locationNode('span', 'session-scene-member-copy');
+    identity.append(locationNode('span', 'location-cast-name', entry.name), locationNode('small', 'session-scene-member-role', entry.professionLabel || 'NPC'));
+    open.append(portrait, identity); open.title = entry.name;
+    const unassign = locationButton('−', () => {
       if (!window.confirm(`Remove ${entry.name} from ${location.displayName || 'Unnamed location'}? This NPC will remain in your session.`)) return;
       sessionLocationCast.links = sessionLocationCast.links.filter(link => !(link.npcId === entry.id && link.locationId === location.id));
       saveLocationCast(); renderSessionBoard();
@@ -120,7 +122,7 @@ function boardRow(kind, entry) {
   const row = locationNode('article', `session-row ${kind === 'npcs' ? 'cast-entry' : 'session-location-card'}${pinned ? ' is-pinned' : ''}`);
   row.dataset.entryId = entry.id;
   if (kind === 'locations') row.dataset.instanceId = entry.id;
-  const open = locationButton('', () => kind === 'npcs' ? openSessionNpc(entry) : openSessionLocation(entry), `View ${name} ${kind === 'npcs' ? 'profile' : 'details'}`);
+  const open = locationButton('', () => kind === 'npcs' ? openSessionNpc(entry) : setActiveSessionLocation(entry), kind === 'npcs' ? `View ${name} profile` : `Select ${name} as active location`);
   open.className = 'session-row-open'; open.dataset.sessionAction = 'open';
   if (kind === 'npcs') {
     if (entry.library) {
@@ -176,7 +178,9 @@ function boardRow(kind, entry) {
     row.classList.toggle('is-active-location', active);
     const activate = locationButton(active ? 'Active location' : 'Set active', () => setActiveSessionLocation(entry), active ? `${name} is the active location` : `Set ${name} as active location`);
     activate.dataset.sessionAction = 'active'; activate.className = 'session-active-button'; activate.setAttribute('aria-pressed', String(active));
-    actions.append(activate);
+    const details = locationButton('Details', () => openSessionLocation(entry), `Open ${name} details and additional fields`);
+    details.className = 'session-location-details-button'; details.dataset.sessionAction = 'details';
+    actions.append(activate, details);
   }
   return row;
 }
@@ -216,19 +220,38 @@ function renderActiveSessionScene() {
     img.addEventListener('error', () => { backdrop.classList.remove('has-artwork'); img.remove(); }, { once: true });
     backdrop.append(img);
   }
+  const label = locationNode('span', 'session-scene-active-label', 'Active location');
+  const hero = locationNode('div', 'session-scene-hero');
+  if (template?.image && safeLocationImage(template.image)) {
+    const artwork = document.createElement('img');
+    artwork.src = template.image;
+    artwork.alt = template.imageAlt || '';
+    artwork.loading = 'lazy';
+    if (safeLocationImagePosition(template.imagePosition)) artwork.style.objectPosition = template.imagePosition;
+    artwork.addEventListener('error', () => { artwork.remove(); hero.classList.add('no-artwork'); }, { once:true });
+    hero.append(artwork);
+  } else hero.classList.add('no-artwork');
   const heading = locationNode('h3', 'session-scene-name', active.displayName || 'Unnamed location');
   const description = locationNode('p', 'session-scene-description', template?.description || 'Scene description unavailable.');
-  const fields = locationNode('div', 'session-scene-fields');
-  fields.append(...sessionLocationFields(active, () => {
+  const fields = sessionLocationFields(active, () => {
     heading.textContent = active.displayName || 'Unnamed location';
-    const selected = document.querySelector('#session-adding-to');
-    selected.textContent = `Adding to: ${active.displayName || 'Unnamed location'}`;
-    const locationRow = [...document.querySelectorAll('#session-location-list .session-row')].find(item => item.dataset.entryId === active.id);
-    const name = locationRow?.querySelector('h3');
+    document.querySelector('#session-adding-to').textContent = `Adding to: ${active.displayName || 'Unnamed location'}`;
+    const row = [...document.querySelectorAll('#session-location-list .session-row')].find(item => item.dataset.entryId === active.id);
+    const name = row?.querySelector('h3');
     if (name) name.textContent = active.displayName || 'Unnamed location';
-  }));
+  });
+  const notes = fields.find(field => field.querySelector('[data-location-field="notes"]'));
+  const others = fields.filter(field => field !== notes);
+  const advanced = locationNode('details', 'session-scene-advanced');
+  const summary = locationNode('summary', '', 'Edit location name & condition');
+  advanced.append(summary, ...others);
   const details = locationNode('div', 'session-scene-details');
-  details.append(heading, description, fields, locationCastSection(active));
+  details.append(label, hero, heading, description, locationCastSection(active));
+  if (notes) {
+    notes.classList.add('session-scene-notes');
+    details.append(notes);
+  }
+  details.append(advanced);
   panel.replaceChildren(details);
 }
 
@@ -242,6 +265,7 @@ function renderSessionBoard() {
   renderBoardLocations();
   renderActiveSessionScene();
   const locationMatches = boardEntries('locations').length, locationsTotal = locationLibrary.instances.length;
+  document.querySelector('#session-overview-counts').textContent = `${locationsTotal} ${locationsTotal === 1 ? 'location' : 'locations'} · ${total} ${total === 1 ? 'NPC' : 'NPCs'}`;
   document.querySelector('#session-npc-count').textContent = sessionBoard.query ? `${entries.length} / ${total}` : `${total} ${total === 1 ? 'NPC' : 'NPCs'}`;
   document.querySelector('#session-tab-npc-count').textContent = sessionBoard.query ? `${entries.length}/${total}` : total;
   document.querySelector('#session-tab-location-count').textContent = sessionBoard.query ? `${locationMatches}/${locationsTotal}` : locationsTotal;
