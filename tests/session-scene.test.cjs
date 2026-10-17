@@ -49,7 +49,7 @@ const assert = require('node:assert/strict');
  assert.match(await page.locator('.detail-content h2').innerText(),/Mira Fen/);
  await page.keyboard.press('Escape');
  await page.locator('[data-entry-id="generated-test"] .session-row-open').click();
- assert(await page.locator('.detail-extra-visual .generated-npc-silhouette').isVisible());
+ assert.match(await page.locator('.detail-content h2').innerText(),/Edwin Ash/); assert(await page.locator('#detail-panel').getAttribute('aria-hidden') === 'false');
  await page.keyboard.press('Escape');
  await page.locator('[data-entry-id="location-2"] [data-session-action=active]').click();
  assert.match(await page.locator('#session-adding-to').innerText(),/Market Square/);
