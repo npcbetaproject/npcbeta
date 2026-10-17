@@ -154,7 +154,7 @@ function boardRow(kind, entry) {
       for (const npc of people.slice(0, 4)) {
         const circle = locationNode('span', 'session-location-npc-avatar');
         circle.title = npc.name;
-        circle.textContent = npc.name.trim().split(/\\s+/).slice(0, 2).map(part => part[0]).join('').toUpperCase();
+        circle.textContent = npc.name.trim().split(/\s+/).slice(0, 2).map(part => part[0]).join('').toUpperCase();
         if (npc.library) {
           const character = state.characters.find(character => character.id === npc.id);
           const source = state.portraits[character?.portraitKey];
