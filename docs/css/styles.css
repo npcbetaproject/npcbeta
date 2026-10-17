@@ -505,3 +505,78 @@
 #session-board #session-location-list .session-location-npc-avatar .generated-profession-badge { display:none; }
 #session-board #session-location-list .session-location-npc-overflow { background:#e8dbca; font-size:10px; border-color:#fffaf3; }
 @media(max-width:600px) { #session-board #session-location-list .session-row { min-width:205px; max-width:260px; } }
+
+/* Assigned NPCs in the active scene: readable mini-cards, not stacked full-width rows. */
+#session-board #session-active-scene .location-cast { container-type:inline-size; }
+#session-board #session-active-scene .location-cast-icons {
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:8px;
+  align-items:stretch;
+}
+#session-board #session-active-scene .location-cast-member {
+  display:flex;
+  align-items:center;
+  gap:4px;
+  width:auto;
+  max-width:none;
+  min-width:0;
+  min-height:68px;
+  padding:7px 6px;
+  border:1px solid #dfd1c2;
+  border-radius:7px;
+  background:#f8f0e5;
+}
+#session-board #session-active-scene .location-cast-profile {
+  display:flex;
+  align-items:center;
+  gap:7px;
+  flex:1 1 auto;
+  min-width:0;
+  padding:0;
+  border:0;
+  background:transparent;
+  text-align:left;
+}
+#session-board #session-active-scene .location-cast-portrait {
+  display:block;
+  flex:0 0 38px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  overflow:hidden;
+  background:#d8c4ae;
+  border:1px solid #d5c4b4;
+}
+#session-board #session-active-scene .location-cast-portrait > img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:grayscale(1);
+}
+#session-board #session-active-scene .location-cast-portrait .generated-npc-visual {
+  width:100%;
+  height:100%;
+  margin:0;
+  min-height:0;
+  border-radius:50%;
+  overflow:hidden;
+}
+#session-board #session-active-scene .location-cast-portrait .generated-profession-badge { display:none; }
+#session-board #session-active-scene .session-scene-member-copy { flex:1; min-width:0; overflow-wrap:anywhere; }
+#session-board #session-active-scene .location-cast-name { font-size:13px; font-weight:600; line-height:1.25; }
+#session-board #session-active-scene .session-scene-member-role { font-size:11px; line-height:1.35; }
+#session-board #session-active-scene .session-unassign-button {
+  flex:0 0 36px;
+  width:36px;
+  height:44px;
+  min-height:44px;
+  border-radius:5px;
+  font-size:17px;
+}
+@container (min-width:420px) {
+  #session-board #session-active-scene .location-cast-icons { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@container (min-width:675px) {
+  #session-board #session-active-scene .location-cast-icons { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
