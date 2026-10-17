@@ -131,7 +131,12 @@ function boardRow(kind, entry) {
   copy.append(locationNode('h3', '', name));
   if (pinned) { const indicator = locationNode('span', 'session-pin-indicator', 'Pinned'); copy.append(indicator); }
   const description = kind === 'npcs' ? entry.professionLabel : locationLibrary.templates?.find(item => item.id === entry.templateId)?.description || (locationLibrary.error ? 'Details unavailable — your notes are preserved.' : locationLibrary.templates ? 'Location template unavailable — your notes are preserved.' : 'Loading location description…');
-  const meta = locationNode('p', 'session-row-description', description); meta.title = description; copy.append(meta); open.append(copy);
+  const meta = locationNode('p', 'session-row-description', description); meta.title = description; copy.append(meta);
+  if (kind === 'locations') {
+    const count = sessionLocationCast.links.filter(link => link.locationId === entry.id).length;
+    copy.append(locationNode('span', 'session-location-npc-count', `${count} ${count === 1 ? 'NPC' : 'NPCs'}`));
+  }
+  open.append(copy);
   const actions = locationNode('div', 'session-row-actions');
   const pin = locationButton('', () => {
     const locations = kind === 'locations' ? orderedSessionLocations() : null;
@@ -164,7 +169,7 @@ function boardRow(kind, entry) {
     row.classList.toggle('is-active-location', active);
     const activate = locationButton(active ? 'Active location' : 'Set active', () => setActiveSessionLocation(entry), active ? `${name} is the active location` : `Set ${name} as active location`);
     activate.dataset.sessionAction = 'active'; activate.className = 'session-active-button'; activate.setAttribute('aria-pressed', String(active));
-    actions.append(activate); row.append(locationCastSection(entry));
+    actions.append(activate);
   }
   return row;
 }
@@ -183,6 +188,43 @@ function renderBoardLocations() {
   if (!entries.length) list.append(boardEmpty('locations', total > 0));
   document.querySelector('#session-location-count').textContent = sessionBoard.query ? `${entries.length} / ${total}` : `${total} ${total === 1 ? 'location' : 'locations'}`;
 }
+
+// The scene is a view onto existing location instances and assignment sidecars.
+function renderActiveSessionScene() {
+  const panel = document.querySelector('#session-scene-content');
+  const backdrop = document.querySelector('#session-scene-backdrop');
+  const active = activeSessionLocation();
+  backdrop.replaceChildren();
+  backdrop.classList.remove('has-artwork');
+  if (!active) {
+    panel.replaceChildren(locationNode('p', 'session-scene-empty', 'Choose or add a location to begin your scene.'));
+    return;
+  }
+  const template = locationLibrary.templates?.find(item => item.id === active.templateId);
+  if (template?.image && safeLocationImage(template.image)) {
+    const img = document.createElement('img');
+    img.src = template.image; img.alt = ''; img.decoding = 'async';
+    if (safeLocationImagePosition(template.imagePosition)) img.style.objectPosition = template.imagePosition;
+    img.addEventListener('load', () => backdrop.classList.add('has-artwork'), { once: true });
+    img.addEventListener('error', () => { backdrop.classList.remove('has-artwork'); img.remove(); }, { once: true });
+    backdrop.append(img);
+  }
+  const heading = locationNode('h3', 'session-scene-name', active.displayName || 'Unnamed location');
+  const description = locationNode('p', 'session-scene-description', template?.description || 'Scene description unavailable.');
+  const fields = locationNode('div', 'session-scene-fields');
+  fields.append(...sessionLocationFields(active, () => {
+    heading.textContent = active.displayName || 'Unnamed location';
+    const selected = document.querySelector('#session-adding-to');
+    selected.textContent = `Adding to: ${active.displayName || 'Unnamed location'}`;
+    const locationRow = [...document.querySelectorAll('#session-location-list .session-row')].find(item => item.dataset.entryId === active.id);
+    const name = locationRow?.querySelector('h3');
+    if (name) name.textContent = active.displayName || 'Unnamed location';
+  }));
+  const details = locationNode('div', 'session-scene-details');
+  details.append(heading, description, fields, locationCastSection(active));
+  panel.replaceChildren(details);
+}
+
 function renderSessionBoard() {
   reconcileLocationCast();
   const active = activeSessionLocation();
@@ -191,6 +233,7 @@ function renderSessionBoard() {
   elements.grid.replaceChildren(...entries.map(entry => boardRow('npcs', entry)));
   if (!entries.length) elements.grid.append(boardEmpty('npcs', total > 0));
   renderBoardLocations();
+  renderActiveSessionScene();
   const locationMatches = boardEntries('locations').length, locationsTotal = locationLibrary.instances.length;
   document.querySelector('#session-npc-count').textContent = sessionBoard.query ? `${entries.length} / ${total}` : `${total} ${total === 1 ? 'NPC' : 'NPCs'}`;
   document.querySelector('#session-tab-npc-count').textContent = sessionBoard.query ? `${entries.length}/${total}` : total;
@@ -200,6 +243,8 @@ function renderSessionBoard() {
   syncSessionTabs();
 }
 function syncSessionTabs() {
+  const scene = document.querySelector('#session-active-scene');
+  scene.hidden = state.view !== 'session';
   for (const kind of ['npcs', 'locations']) {
     const panel = document.querySelector(kind === 'npcs' ? '#session-npc-column' : '#session-locations');
     panel.hidden = state.view !== 'session'; panel.removeAttribute('role');
