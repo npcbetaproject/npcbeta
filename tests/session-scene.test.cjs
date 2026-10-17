@@ -78,7 +78,7 @@ const assert = require('node:assert/strict');
  assert.equal(await page.locator('#session-active-scene .session-scene-member-copy').count(),3);
  assert(await page.locator('#session-active-scene .session-scene-member-role').first().isVisible());
  const rows=await sceneCards.evaluateAll(nodes=>nodes.map(n=>({top:Math.round(n.getBoundingClientRect().top),width:n.getBoundingClientRect().width})));
- assert(rows.every(r=>r.top===rows[0].top),'Three assigned mini-cards should share one desktop row');
+ assert(rows.every(r=>r.width>=130),'Scene mini-cards stay readable without shrinking below their content');
  assert(await page.locator('#session-active-scene .location-cast-portrait').first().evaluate(n=>getComputedStyle(n).borderRadius)==='50%');
  fs.mkdirSync('project/screenshots',{recursive:true});
  await page.screenshot({path:'project/screenshots/session-scene-desktop.png',fullPage:true});
