@@ -27,6 +27,20 @@ const assert = require('node:assert/strict');
  assert.equal(await page.locator('#session-location-list .session-row').count(),3);
  assert(await page.locator('#session-active-scene').isVisible());
  assert(await page.locator('#session-scene-content .session-scene-hero img').isVisible(), 'Scene artwork visible');
+ // Location artwork covers the entire tile, not a small left-side thumbnail.
+ const tile=page.locator('#session-location-list [data-entry-id="location-0"]');
+ const tileArt=tile.locator('.session-location-tile-artwork');
+ assert(await tileArt.count()===1);
+ const tileLayout=await tile.evaluate(n=>{const a=n.querySelector('.session-location-tile-artwork');const r=n.getBoundingClientRect(),v=a.getBoundingClientRect();return {position:getComputedStyle(a).position, fullWidth:Math.abs(r.width-v.width)<3,fullHeight:Math.abs(r.height-v.height)<3}});
+ assert.equal(tileLayout.position,'absolute');
+ assert(tileLayout.fullWidth&&tileLayout.fullHeight,'Tile artwork covers card bounds');
+ // The central scene artwork opens existing location details and closes with Escape.
+ await page.locator('#session-active-scene .session-scene-hero-open').click();
+ assert.equal(await page.locator('#detail-panel').getAttribute('aria-hidden'),'false');
+ assert.match(await page.locator('.detail-content h2').innerText(),/The Bent Nail/);
+ await page.keyboard.press('Escape');
+ assert.equal(await page.locator('#detail-panel').getAttribute('aria-hidden'),'true');
+
  assert(await page.locator('#session-board #character-grid').evaluate(n=>getComputedStyle(n).display)==='flex','Cast uses compact vertically scrolling cards');
  const order=await page.locator('#session-board .session-board-columns > .session-column').evaluateAll(nodes=>nodes.map(n=>{const r=n.getBoundingClientRect();return {top:r.top,left:r.left}}));
  assert(order[0].left < order[1].left && order[1].left < order[2].left,'Locations, scene and cast appear in three columns');
