@@ -134,10 +134,14 @@ function boardRow(kind, entry) {
     } else open.append(generatedNpcVisual(entry));
   } else {
     const template = locationLibrary.templates?.find(item => item.id === entry.templateId);
-    const tileArtwork = locationThumbnail(template || { settings: entry.settings, image: null });
-    tileArtwork.classList.add('session-location-tile-artwork');
-    tileArtwork.setAttribute('aria-hidden', 'true');
-    row.prepend(tileArtwork);
+    // Use the same vetted artwork as the location detail, covering the whole tile.
+    // A CSS background avoids the shared thumbnail component's fixed dimensions.
+    if (template?.image && safeLocationImage(template.image)) {
+      row.style.backgroundImage = `linear-gradient(180deg, rgba(18,16,14,.65), rgba(22,18,16,.42) 42%, rgba(18,16,14,.75)), url("${template.image}")`;
+      row.style.backgroundSize = 'cover';
+      row.style.backgroundPosition = safeLocationImagePosition(template.imagePosition) ? template.imagePosition : 'center';
+      row.classList.add('has-session-location-art');
+    }
   }
   const copy = locationNode('div', 'session-row-copy');
   copy.append(locationNode('h3', '', name));
