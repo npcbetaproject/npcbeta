@@ -706,3 +706,72 @@
  #session-board #session-location-list .session-row { flex:0 0 220px; min-width:220px; max-width:260px; }
  #session-board #character-grid { display:flex; flex-direction:column; }
 }
+
+/* Session desktop rebalance: slim side rails, generous active scene. */
+#session-board { max-width:1640px; }
+#session-board .session-board-columns {
+  display:grid;
+  grid-template-columns:minmax(170px, .63fr) minmax(0, 2.7fr) minmax(210px, .78fr);
+  gap:14px;
+  align-items:start;
+}
+#session-board #session-location-list .session-row {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 38px;
+  gap:2px 4px;
+  padding:7px 6px;
+}
+#session-board #session-location-list .session-row-open { grid-column:1; grid-row:1; }
+#session-board #session-location-list .session-location-card .location-thumbnail {
+  flex:0 0 42px; width:42px; height:42px;
+}
+#session-board #session-location-list .session-row-actions { grid-column:2; grid-row:1; }
+#session-board #session-location-list .session-location-quick-actions {
+  grid-column:1/-1; grid-row:2;
+  display:flex; flex-direction:column; align-items:stretch; gap:4px;
+  padding-top:3px;
+}
+#session-board #session-location-list .session-location-action-line {
+  display:flex; justify-content:space-between; gap:5px; width:100%; min-width:0;
+}
+#session-board #session-location-list .session-location-quick-active,
+#session-board #session-location-list .session-location-quick-details {
+  flex:1 1 0; min-width:0; min-height:36px; height:36px; padding:5px 4px;
+  border:1px solid #baa997; border-radius:5px; background:#fffdf8;
+  color:var(--wine); font-size:11px; text-align:center;
+}
+#session-board #session-location-list .session-location-quick-active[aria-pressed=true] {
+  background:#e9dcc9; border-color:#97785f; color:#483328;
+}
+#session-board #session-location-list .session-location-action-line [data-session-action=up],
+#session-board #session-location-list .session-location-action-line [data-session-action=down],
+#session-board #session-location-list .session-location-quick-delete {
+  display:inline-flex; justify-content:center; align-items:center;
+  flex:1 1 0; min-width:0; min-height:40px; height:40px;
+  border:1px solid #d0bdb1; border-radius:5px; background:#fffdf8;
+  color:#744336; padding:5px; font-size:20px;
+}
+#session-board #session-location-list .session-location-action-line button:disabled { opacity:.4; cursor:default; }
+#session-board #session-location-list .session-location-quick-delete svg { height:17px; width:17px; }
+#session-board #session-location-list .session-location-action-line button:focus-visible {
+  outline:2px solid var(--wine); outline-offset:2px;
+}
+#session-board #session-npc-column { padding:9px; }
+#session-board #character-grid { gap:5px; }
+#session-board #character-grid .cast-entry { padding:5px; gap:2px 4px; }
+/* The scene can fit three complete mini-cards at typical desktop widths. */
+#session-board #session-active-scene .location-cast-icons { grid-template-columns:minmax(0,1fr); }
+@container (min-width:340px) {
+  #session-board #session-active-scene .location-cast-icons { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@container (min-width:525px) {
+  #session-board #session-active-scene .location-cast-icons { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media(max-width:1130px) {
+  #session-board .session-board-columns { grid-template-columns:minmax(180px,.68fr) minmax(0,1.9fr); }
+  #session-board #session-npc-column { grid-column:1/-1; }
+}
+@media(max-width:660px) {
+  #session-board .session-board-columns { grid-template-columns:minmax(0,1fr); }
+  #session-board #session-locations,#session-board #session-active-scene,#session-board #session-npc-column { grid-column:1; }
+}
