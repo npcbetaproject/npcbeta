@@ -1,0 +1,30 @@
+name: Session scene regression
+on:
+  push:
+    branches:
+      - feature/session-scene-focus-backdrop-20261017
+  workflow_dispatch:
+jobs:
+  browser-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install test dependencies
+        run: npm install --no-save --package-lock=false jsdom playwright
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run generator integration tests
+        run: node tests/generator.dom.test.cjs
+      - name: Run scene browser regression and screenshots
+        run: node tests/session-scene.test.cjs
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: session-scene-screenshots
+          path: project/screenshots/session-scene-*.png
+          if-no-files-found: ignore
