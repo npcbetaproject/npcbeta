@@ -32,7 +32,7 @@ const assert = require('node:assert/strict');
  const tile=page.locator('#session-location-list [data-entry-id="location-0"]');
  const tileLayout=await tile.evaluate(n=>({image:getComputedStyle(n).backgroundImage,size:getComputedStyle(n).backgroundSize,position:getComputedStyle(n).backgroundPosition}));
  assert(tileLayout.image.includes('url('),'Location tile includes image as background');
- assert.equal(tileLayout.size,'cover','Artwork covers the full tile');
+ assert(tileLayout.size.split(',').every(size=>size.trim()==='cover'),'Artwork layers cover the full tile');
  assert(await tile.locator('.location-thumbnail').count()===0,'No separate fixed-size thumbnail is rendered');
  // The central scene artwork opens existing location details and closes with Escape.
  await page.locator('#session-active-scene .session-scene-hero-open').click();
