@@ -69,6 +69,20 @@ const assert = require('node:assert/strict');
  const boxes=await page.locator('#session-board .session-board-columns > .session-column').evaluateAll(nodes=>nodes.map(n=>{const r=n.getBoundingClientRect();return {top:r.top,bottom:r.bottom,left:r.left,right:r.right}}));
  assert(boxes[0].top<boxes[1].top && boxes[1].top<boxes[2].top,'Incorrect mobile stacked order');
  await page.screenshot({path:'project/screenshots/session-scene-mobile.png',fullPage:true});
+ // Edge cases: oversized names, an image that fails, and a session without locations.
+ await page.evaluate(()=>{
+   const active=locationLibrary.instances.find(item=>item.id===sessionLocationCast.activeLocationId);
+   active.displayName='An Extremely Long Name for the Market Square and the Traveling Circus That Must Wrap Without Pushing Any Controls Outside Their Panels';
+   const template=locationLibrary.templates.find(item=>item.id===active.templateId);
+   template.image='images/locations/intentional-test-missing.webp';
+   renderSessionBoard();
+ });
+ await page.waitForFunction(()=>!document.querySelector('#session-scene-backdrop').classList.contains('has-artwork'));
+ assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ assert.match(await page.locator('#session-adding-to').innerText(),/Extremely Long Name/);
+ await page.evaluate(()=>{locationLibrary.instances=[]; renderSessionBoard();});
+ assert.match(await page.locator('#session-scene-content').innerText(),/Choose or add a location/);
+ assert.equal(await page.locator('#session-scene-backdrop.has-artwork').count(),0);
  assert.deepEqual(errors,[]);
  await browser.close();
  console.log('PASS: active-scene selection/backdrop, notes, assignment, reload, unassign, profiles, search, responsive layouts, no overflow, screenshots');
