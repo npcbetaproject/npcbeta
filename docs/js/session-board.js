@@ -134,7 +134,10 @@ function boardRow(kind, entry) {
     } else open.append(generatedNpcVisual(entry));
   } else {
     const template = locationLibrary.templates?.find(item => item.id === entry.templateId);
-    open.append(locationThumbnail(template || { settings: entry.settings, image: null }));
+    const tileArtwork = locationThumbnail(template || { settings: entry.settings, image: null });
+    tileArtwork.classList.add('session-location-tile-artwork');
+    tileArtwork.setAttribute('aria-hidden', 'true');
+    row.prepend(tileArtwork);
   }
   const copy = locationNode('div', 'session-row-copy');
   copy.append(locationNode('h3', '', name));
@@ -256,7 +259,11 @@ function renderActiveSessionScene() {
     backdrop.append(img);
   }
   const label = locationNode('span', 'session-scene-active-label', 'Active location');
-  const hero = locationNode('div', 'session-scene-hero');
+  const hero = locationButton('', () => openSessionLocation(active),
+    `View details for ${active.displayName || 'Unnamed location'}`);
+  hero.className = 'session-scene-hero session-scene-hero-open';
+  hero.dataset.sessionAction = 'scene-details';
+  hero.title = `View ${active.displayName || 'Unnamed location'} details`;
   if (template?.image && safeLocationImage(template.image)) {
     const artwork = document.createElement('img');
     artwork.src = template.image;
