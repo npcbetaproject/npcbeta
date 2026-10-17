@@ -66,8 +66,9 @@
           <div class="session-tabs" role="tablist" aria-label="Session references"><button id="session-tab-npcs" type="button" role="tab" aria-controls="session-npc-column" aria-selected="true" tabindex="0" data-session-tab="npcs">NPCs <span id="session-tab-npc-count">0</span></button><button id="session-tab-locations" type="button" role="tab" aria-controls="session-locations" aria-selected="false" tabindex="-1" data-session-tab="locations">Locations <span id="session-tab-location-count">0</span></button></div>
           <p id="session-search-status" class="visually-hidden" role="status"></p>
         </div>
-        <div class="session-board-columns">
+        <div class="session-board-columns"><div id="session-scene-backdrop" aria-hidden="true"></div>
           <section id="session-locations" class="session-column" aria-labelledby="session-locations-title"><div class="session-column-heading"><h2 id="session-locations-title">Locations</h2><span id="session-location-count"></span></div><p id="session-location-reorder-note" class="session-reorder-note" hidden>Clear search to reorder locations.</p><div id="session-location-list"></div></section>
+          <section id="session-active-scene" class="session-column" aria-labelledby="session-scene-title"><div class="session-column-heading"><h2 id="session-scene-title">Active scene</h2></div><div id="session-scene-content" aria-live="off"></div></section>
           <section id="session-npc-column" class="session-column" aria-labelledby="session-npcs-title"><div class="session-column-heading"><h2 id="session-npcs-title">Tonight’s Cast</h2><span id="session-npc-count"></span></div><p id="session-adding-to" class="session-adding-to" aria-live="polite"></p></section>
         </div>
       </section>
