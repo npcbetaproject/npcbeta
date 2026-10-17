@@ -619,3 +619,90 @@
 #session-board #session-location-list .session-location-npc-mini-name { font-size:11px; font-weight:600; }
 #session-board #session-location-list .session-location-npc-mini-profession { color:#665c53; font-size:10px; }
 #session-board #session-location-list .session-location-npc-more { font-size:10px; color:#5b514a; padding-left:4px; }
+
+/* Compact three-column Session workspace: location rail / scene / cast. */
+#session-board { max-width:1580px; }
+#session-board .session-board-columns {
+ display:grid;
+ grid-template-columns:minmax(220px, .82fr) minmax(350px,1.52fr) minmax(265px,1.06fr);
+ align-items:start;
+ gap:16px;
+}
+#session-board #session-locations { grid-column:1; min-width:0; }
+#session-board #session-active-scene { grid-column:2; min-width:0; }
+#session-board #session-npc-column { grid-column:3; min-width:0; background:#fffaf3; border:1px solid #d8cbbb; border-radius:8px; padding:12px; }
+#session-board #session-location-list { max-height:min(75dvh,850px); }
+#session-board #session-location-list .session-row {
+ display:grid;
+ grid-template-columns:minmax(0,1fr) 38px;
+ row-gap:4px;
+ min-width:0;
+}
+#session-board #session-location-list .session-row-open { grid-column:1; grid-row:1; min-width:0; }
+#session-board #session-location-list .session-row-actions { grid-column:2; grid-row:1; }
+#session-board #session-location-list .session-location-npc-avatars { display:none; }
+#session-board #session-location-list .session-location-quick-actions {
+ grid-column:1/-1; grid-row:2; display:flex; justify-content:flex-end; align-items:center; gap:7px; min-width:0;
+}
+#session-board #session-location-list .session-location-quick-active {
+ min-height:40px; min-width:78px; padding:6px 9px;
+ background:#fffdf8; border:1px solid #baa997; border-radius:5px;
+ color:var(--wine); font-size:12px;
+}
+#session-board #session-location-list .session-location-quick-active[aria-pressed=true] {
+ background:#e9dcc9; border-color:#97785f; color:#483328; font-weight:600;
+}
+#session-board #session-location-list .session-location-quick-delete {
+ display:inline-flex; align-items:center; justify-content:center; flex:0 0 40px;
+ width:40px; height:40px; min-height:40px; padding:8px; border:1px solid #d0bdb1;
+ border-radius:5px; background:#fffdf8; color:#744336;
+}
+#session-board #session-location-list .session-location-quick-delete svg { width:17px; height:17px; }
+#session-board #session-location-list .session-location-quick-actions button:focus-visible { outline:2px solid var(--wine); outline-offset:2px; }
+/* Tonight's Cast borrows the tiny identity-card treatment, with controls intact. */
+#session-board #character-grid {
+ display:flex; flex-direction:column; gap:7px;
+ max-height:min(75dvh,850px); overflow-y:auto; padding:2px 2px 10px;
+ scrollbar-gutter:stable;
+}
+#session-board #character-grid .cast-entry {
+ display:grid;
+ grid-template-columns:minmax(0,1fr) auto;
+ grid-template-rows:auto auto;
+ align-items:center; gap:2px 5px;
+ min-width:0; min-height:70px; padding:7px;
+ border:1px solid #e1d3c4; border-radius:7px; background:#f8f0e5;
+}
+#session-board #character-grid .cast-entry .session-row-open {
+ grid-column:1; grid-row:1; min-width:0; display:flex; align-items:center; gap:7px;
+}
+#session-board #character-grid .cast-entry .session-npc-thumbnail,
+#session-board #character-grid .cast-entry > .session-row-open > .generated-npc-visual {
+ flex:0 0 34px; width:34px; height:34px; min-height:0; border-radius:50%; overflow:hidden;
+}
+#session-board #character-grid .cast-entry .session-row-copy h3 { font-size:12px; line-height:1.3; }
+#session-board #character-grid .cast-entry .session-row-description { font-size:11px; line-height:1.3; }
+#session-board #character-grid .cast-entry .session-row-actions {
+ grid-column:2; grid-row:1/3; display:flex; align-items:center; flex-direction:column; gap:2px;
+}
+#session-board #character-grid .cast-entry .session-assign-button {
+ grid-column:1; grid-row:2; justify-self:start; display:inline-flex;
+ min-width:74px; width:auto; height:38px; min-height:38px; padding:5px 9px;
+ font-size:12px;
+}
+#session-board #character-grid .cast-entry .session-row-actions .session-pin-button,
+#session-board #character-grid .cast-entry .session-row-actions .remove-icon-button {
+ flex:0 0 36px; width:36px; height:36px; min-width:36px; min-height:36px; padding:8px;
+}
+@media(max-width:1130px) {
+ #session-board .session-board-columns { grid-template-columns:minmax(205px,.86fr) minmax(0,1.55fr); }
+ #session-board #session-npc-column { grid-column:1/-1; }
+ #session-board #character-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); max-height:none; overflow:visible; }
+}
+@media(max-width:660px) {
+ #session-board .session-board-columns { grid-template-columns:minmax(0,1fr); }
+ #session-board #session-locations, #session-board #session-active-scene, #session-board #session-npc-column { grid-column:1; }
+ #session-board #session-location-list { display:flex; flex-direction:row; overflow-x:auto; max-height:none; }
+ #session-board #session-location-list .session-row { flex:0 0 220px; min-width:220px; max-width:260px; }
+ #session-board #character-grid { display:flex; flex-direction:column; }
+}
