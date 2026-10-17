@@ -47,6 +47,11 @@ const assert = require('node:assert/strict');
  await page.locator('[data-entry-id="mira-fen"] [data-session-action=assign]').click();
  assert.match(await page.locator('#session-scene-content .location-cast').innerText(),/Mira/);
  assert.equal(await page.locator('#session-location-list [data-entry-id="location-1"] .session-location-npc-count').innerText(),'1 NPC');
+ assert.equal(await page.locator('#session-location-list [data-entry-id="location-1"] .session-location-npc-avatar').count(),1,'assigned NPC has a circle beside location title');
+ assert.equal(await page.locator('#session-location-list [data-entry-id="location-1"] .session-location-npc-mini-card').count(),1);
+ assert.match(await page.locator('#session-location-list [data-entry-id="location-1"] .session-location-npc-mini-name').innerText(),/Mira Fen/);
+ assert.match(await page.locator('#session-location-list [data-entry-id="location-1"] .session-location-npc-mini-profession').innerText(),/Apothecary/i);
+ assert.equal(await page.locator('#session-location-list [data-entry-id="location-0"] .session-location-npc-avatar').count(),0,'unassigned location has no avatar circles');
  await page.reload(); await page.waitForSelector('#character-grid .session-row'); await page.waitForFunction(()=>locationLibrary.templates);
  assert.match(await page.locator('#session-adding-to').innerText(),/Silver Fox Inn/);
  assert.equal(await page.locator('#session-scene-content [data-location-field=notes]').inputValue(),'Scene-focused note survives reload');
@@ -65,6 +70,18 @@ const assert = require('node:assert/strict');
  await page.locator('#session-search').fill('blacksmith');
  assert(await page.locator('#character-grid .session-row').count());
  await page.locator('#session-clear-search').click();
+ // Assigned characters are compact mini-cards: circular portraits and
+ // name/profession on the same line, up to three across on desktop.
+ for(const npc of ['mira-fen','generated-test','cassian-holt']) {
+   await page.locator(`[data-entry-id="${npc}"] [data-session-action=assign]`).click();
+ }
+ const sceneCards=page.locator('#session-active-scene .location-cast-member');
+ assert.equal(await sceneCards.count(),3);
+ assert.equal(await page.locator('#session-active-scene .session-scene-member-copy').count(),3);
+ assert(await page.locator('#session-active-scene .session-scene-member-role').first().isVisible());
+ const rows=await sceneCards.evaluateAll(nodes=>nodes.map(n=>({top:Math.round(n.getBoundingClientRect().top),width:n.getBoundingClientRect().width})));
+ assert(rows.every(r=>r.top===rows[0].top),'Three assigned mini-cards should share one desktop row');
+ assert(await page.locator('#session-active-scene .location-cast-portrait').first().evaluate(n=>getComputedStyle(n).borderRadius)==='50%');
  fs.mkdirSync('project/screenshots',{recursive:true});
  await page.screenshot({path:'project/screenshots/session-scene-desktop.png',fullPage:true});
  for(const width of [320,390,760,768,1024,1440]){
