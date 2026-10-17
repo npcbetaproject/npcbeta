@@ -28,7 +28,7 @@ const validIds = value => Array.isArray(value) && value.every(id => typeof id ==
 const validResult = value => value && ['name', 'locationId', 'professionId'].every(key => typeof value[key] === 'string');
 const validRecord = value => validResult(value) && ['id', 'locationLabel', 'professionLabel', 'createdAt'].every(key => typeof value[key] === 'string') && value.id.startsWith('generated-');
 const generator = {
-  data: null, names: null, portraits: null, loading: null,
+  data: null, names: null, portraits: null, dialogue: null, loading: null,
   ...readStorage(GENERATOR_KEYS.result, { current: null, previous: null }, value => value && (value.current === null || validResult(value.current)) && (value.previous === null || validResult(value.previous))),
   records: readStorage(GENERATOR_KEYS.records, [], value => Array.isArray(value) && value.every(validRecord)),
 };
@@ -73,6 +73,11 @@ async function ensureGenerator() {
       const [data, names, portraits] = await Promise.all(responses.map(response => response.json()));
       validateGeneratorData(data, names); validateGeneratedPortraits(portraits, data);
       generator.data = data; generator.names = names; generator.portraits = portraits;
+      // Dialogue is optional so a failed preview request never blocks name generation.
+      try {
+        const response = await fetch('data/generator/dialogue.json');
+        if (response.ok) generator.dialogue = await response.json();
+      } catch { generator.dialogue = null; }
       // Give legacy saved records a stable portrait without changing their identity or labels.
       let migratedPortraits = false;
       for (const record of generator.records) {
@@ -144,6 +149,10 @@ function renderGenerator() {
   document.querySelector('#generator-visual-preview').replaceChildren(generatedNpcVisual(current));
   document.querySelector('#generator-controls').hidden = false;
   document.querySelector('#generated-name').textContent = current.name;
+  const dialogue = generator.dialogue?.[current.locationId]?.[current.professionId];
+  const preview = document.querySelector('#generator-dialogue');
+  preview.textContent = typeof dialogue === 'string' ? dialogue : '';
+  preview.hidden = !preview.textContent;
   for (const selector of ['#generated-name', '#generator-visual-preview']) document.querySelector(selector).setAttribute('aria-label', `View ${current.name} NPC card`);
   const fill = (selector, entries, value) => {
     const select = document.querySelector(selector); select.replaceChildren(...[...entries].sort((a, b) => a.label.localeCompare(b.label, 'en', { sensitivity: 'base' })).map(entry => new Option(entry.label, entry.id))); select.value = value;

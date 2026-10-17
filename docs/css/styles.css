@@ -333,3 +333,6 @@
 .detail-extra-visual .has-generated-portrait{width:200px;height:200px;max-width:100%}
 @media(max-width:760px){.generator-result-row{grid-template-columns:120px minmax(0,1fr);gap:14px;margin:18px 0}#generator-visual-preview{width:120px}.name-result h2{font-size:1.45rem}}
 @media(max-width:360px){.generator-result-row{grid-template-columns:104px minmax(0,1fr);gap:12px}#generator-visual-preview{width:104px}}
+
+/* Approved location/profession dialogue beneath the generated name. */
+.generator-dialogue { margin:0 0 18px; padding:10px 14px; border-left:3px solid var(--line); color:var(--muted); font-style:italic; line-height:1.5; overflow-wrap:anywhere; }
