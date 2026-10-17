@@ -873,3 +873,17 @@
 @media(prefers-reduced-motion:reduce) {
  #session-board #session-active-scene .session-scene-hero-open:hover img { transform:none; }
 }
+
+/* Four assigned scene NPCs fit across when the main column is wide enough. */
+@container (min-width:650px) {
+ #session-board #session-active-scene .location-cast-icons { grid-template-columns:repeat(4,minmax(0,1fr)); }
+}
+/* Override the generic location-thumbnail sizing so the image covers its entire tile. */
+#session-board #session-location-list .session-location-card > .session-location-tile-artwork {
+ position:absolute; inset:0; width:100%; height:100%; min-width:0; min-height:0;
+ max-width:none; max-height:none; padding:0; margin:0; aspect-ratio:auto;
+ box-sizing:border-box; border:0; border-radius:0; overflow:hidden;
+}
+#session-board #session-location-list .session-location-card .session-location-tile-artwork > img {
+ position:absolute; inset:0; width:100%; height:100%; max-width:none; max-height:none; object-fit:cover;
+}
