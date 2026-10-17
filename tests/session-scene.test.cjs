@@ -67,6 +67,18 @@ const assert = require('node:assert/strict');
  await page.locator('#session-search').fill('blacksmith');
  assert(await page.locator('#character-grid .session-row').count());
  await page.locator('#session-clear-search').click();
+ // Assigned characters are compact mini-cards: circular portraits and
+ // name/profession on the same line, up to three across on desktop.
+ for(const npc of ['mira-fen','generated-test','cassian-holt']) {
+   await page.locator(`[data-entry-id="${npc}"] [data-session-action=assign]`).click();
+ }
+ const sceneCards=page.locator('#session-active-scene .location-cast-member');
+ assert.equal(await sceneCards.count(),3);
+ assert.equal(await page.locator('#session-active-scene .session-scene-member-copy').count(),3);
+ assert(await page.locator('#session-active-scene .session-scene-member-role').first().isVisible());
+ const rows=await sceneCards.evaluateAll(nodes=>nodes.map(n=>({top:Math.round(n.getBoundingClientRect().top),width:n.getBoundingClientRect().width})));
+ assert(rows.every(r=>r.top===rows[0].top),'Three assigned mini-cards should share one desktop row');
+ assert(await page.locator('#session-active-scene .location-cast-portrait').first().evaluate(n=>getComputedStyle(n).borderRadius)==='50%');
  fs.mkdirSync('project/screenshots',{recursive:true});
  await page.screenshot({path:'project/screenshots/session-scene-desktop.png',fullPage:true});
  for(const width of [320,390,760,768,1024,1440]){
