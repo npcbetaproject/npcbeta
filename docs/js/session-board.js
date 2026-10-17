@@ -144,6 +144,34 @@ function boardRow(kind, entry) {
   if (kind === 'locations') {
     const count = sessionLocationCast.links.filter(link => link.locationId === entry.id).length;
     copy.append(locationNode('span', 'session-location-npc-count', `${count} ${count === 1 ? 'NPC' : 'NPCs'}`));
+    // Portrait chips are a read-only preview of location assignments. The full cast
+    // and assignment/remove controls remain in the active scene and Tonight's Cast.
+    const people = sessionEntries().filter(npc =>
+      sessionLocationCast.links.some(link => link.locationId === entry.id && link.npcId === npc.id));
+    if (people.length) {
+      const strip = locationNode('span', 'session-location-npc-avatars');
+      strip.setAttribute('aria-hidden', 'true');
+      for (const npc of people.slice(0, 4)) {
+        const circle = locationNode('span', 'session-location-npc-avatar');
+        circle.title = npc.name;
+        circle.textContent = npc.name.trim().split(/\\s+/).slice(0, 2).map(part => part[0]).join('').toUpperCase();
+        if (npc.library) {
+          const character = state.characters.find(character => character.id === npc.id);
+          const source = state.portraits[character?.portraitKey];
+          if (source) {
+            const image = locationNode('img', '');
+            image.src = source; image.alt = ''; image.loading = 'lazy';
+            image.addEventListener('error', () => image.remove(), { once: true });
+            circle.append(image);
+          }
+        } else {
+          circle.replaceChildren(generatedNpcVisual(npc));
+        }
+        strip.append(circle);
+      }
+      if (people.length > 4) strip.append(locationNode('span', 'session-location-npc-overflow', `+${people.length - 4}`));
+      copy.append(strip);
+    }
   }
   open.append(copy);
   const actions = locationNode(kind === 'locations' ? 'details' : 'div', 'session-row-actions');
