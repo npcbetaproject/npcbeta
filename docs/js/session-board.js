@@ -258,7 +258,7 @@ function renderActiveSessionScene() {
     img.addEventListener('error', () => { backdrop.classList.remove('has-artwork'); img.remove(); }, { once: true });
     backdrop.append(img);
   }
-  const label = locationNode('span', 'session-scene-active-label', 'Active location');
+
   const hero = locationButton('', () => openSessionLocation(active),
     `View details for ${active.displayName || 'Unnamed location'}`);
   hero.className = 'session-scene-hero session-scene-hero-open';
@@ -288,7 +288,7 @@ function renderActiveSessionScene() {
   const summary = locationNode('summary', '', 'Edit location name & condition');
   advanced.append(summary, ...others);
   const details = locationNode('div', 'session-scene-details');
-  details.append(label, hero, heading, description, locationCastSection(active));
+  details.append(hero, heading, description, locationCastSection(active));
   if (notes) {
     notes.classList.add('session-scene-notes');
     details.append(notes);
