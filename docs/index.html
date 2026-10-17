@@ -61,7 +61,7 @@
 
       <section id="session-board" aria-labelledby="session-board-title" hidden>
         <div class="session-board-toolbar">
-          <div class="session-board-heading"><h1 id="session-board-title">Session</h1><span>Live reference</span></div>
+          <div class="session-board-heading"><h1 id="session-board-title">Session</h1><span>Live reference</span><span id="session-overview-counts" class="session-overview-counts"></span></div>
           <div class="session-board-search"><label class="search-field" for="session-search"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg><span class="visually-hidden">Search session NPCs and locations</span><input id="session-search" type="search" placeholder="Search names, professions, places…" autocomplete="off"></label><button id="session-clear-search" type="button" aria-label="Clear session search" disabled>Clear</button></div>
           <div class="session-tabs" role="tablist" aria-label="Session references"><button id="session-tab-npcs" type="button" role="tab" aria-controls="session-npc-column" aria-selected="true" tabindex="0" data-session-tab="npcs">NPCs <span id="session-tab-npc-count">0</span></button><button id="session-tab-locations" type="button" role="tab" aria-controls="session-locations" aria-selected="false" tabindex="-1" data-session-tab="locations">Locations <span id="session-tab-location-count">0</span></button></div>
           <p id="session-search-status" class="visually-hidden" role="status"></p>
