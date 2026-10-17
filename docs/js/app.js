@@ -161,6 +161,8 @@ function npcPermanentURL(character) {
 let detailOpener = null, detailEntryId = null, detailEntryKind = null;
 function prepareDetail(kind, fromSession) {
   elements.detail.querySelector('.detail-location-remove')?.remove();
+  const dialogue = elements.detail.querySelector('.detail-dialogue');
+  dialogue.hidden = true; dialogue.textContent = '';
   elements.detail.querySelector('.npc-share-actions').hidden = true;
   const token = elements.detail.querySelector('.npc-token-download');
   token.hidden = true; token.removeAttribute('href'); token.querySelector('img').removeAttribute('src');

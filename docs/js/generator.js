@@ -143,15 +143,18 @@ async function copyName(name) {
   catch { announce('Could not copy automatically. Select the name and copy it manually.'); }
 }
 function resultSignature(value) { return JSON.stringify([value.name, value.locationId, value.professionId]); }
+function generatorDialogue(entry) {
+  const dialogue = generator.dialogue?.[entry.locationId]?.[entry.professionId];
+  return typeof dialogue === 'string' ? dialogue : '';
+}
 function renderGenerator() {
   if (!generator.data || !generator.current) return;
   const current = generator.current;
   document.querySelector('#generator-visual-preview').replaceChildren(generatedNpcVisual(current));
   document.querySelector('#generator-controls').hidden = false;
   document.querySelector('#generated-name').textContent = current.name;
-  const dialogue = generator.dialogue?.[current.locationId]?.[current.professionId];
   const preview = document.querySelector('#generator-dialogue');
-  preview.textContent = typeof dialogue === 'string' ? dialogue : '';
+  preview.textContent = generatorDialogue(current);
   preview.hidden = !preview.textContent;
   for (const selector of ['#generated-name', '#generator-visual-preview']) document.querySelector(selector).setAttribute('aria-label', `View ${current.name} NPC card`);
   const fill = (selector, entries, value) => {
