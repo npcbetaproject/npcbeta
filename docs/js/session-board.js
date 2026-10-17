@@ -233,6 +233,8 @@ function openSessionNpc(entry) {
   elements.detail.querySelector('h2').textContent = entry.name;
   elements.detail.querySelector('.detail-meta').textContent = [entry.professionLabel, entry.locationLabel].filter(Boolean).join(' · ');
   elements.detail.querySelector('.detail-summary').textContent = `${entry.name} is a ${entry.professionLabel.toLowerCase()} at ${entry.locationLabel}.`;
+  const dialogue = elements.detail.querySelector('.detail-dialogue');
+  dialogue.textContent = generatorDialogue(entry); dialogue.hidden = !dialogue.textContent;
   showLocationRemoval(entry); showDetail();
 }
 function showLocationRemoval(entry) {

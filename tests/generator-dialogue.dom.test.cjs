@@ -29,6 +29,19 @@ async function setup(storage=initialStorage, failure){
  t.rollGenerator('name');check();
  const persisted={};for(let i=0;i<w.localStorage.length;i++){const k=w.localStorage.key(i);persisted[k]=w.localStorage.getItem(k);}
  const restored=await setup(persisted);assert.equal(restored.window.document.querySelector('#generator-dialogue').textContent,preview().textContent);restored.window.close();
+ // Preview and saved-session popups use the entry pairing rather than the latest selection.
+ w.document.querySelector('#generated-name').click();
+ const popup=()=>w.document.querySelector('.detail-dialogue');
+ assert.equal(popup().textContent,preview().textContent);assert.equal(popup().hidden,false);
+ w.document.querySelector('.back-button').click();w.document.querySelector('#add-generated').click();
+ const saved=t.generator.records[0],expected=dialogue[saved.locationId][saved.professionId];
+ t.rollGenerator('location',saved.locationId==='village'?'city-street':'village');
+ t.setView('session');
+ w.document.querySelector(`[data-entry-id="${saved.id}"] .session-row-open`).click();
+ assert.equal(popup().textContent,expected);
+ w.document.querySelector('.back-button').click();
+ w.document.querySelector('[data-entry-id="cassian-holt"] .session-row-open').click();
+ assert(popup().hidden);assert.equal(popup().textContent,'');
  // A missing lookup must leave the generator usable and clear stale preview text.
  t.generator.dialogue=null;t.rollGenerator('name');assert(preview().hidden);assert.equal(preview().textContent,'');
  dom.window.close();
