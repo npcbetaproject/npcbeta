@@ -468,3 +468,26 @@
  #session-board #character-grid { grid-template-columns:minmax(0,1fr); }
  #session-board .session-scene-hero { height:150px; }
 }
+
+/* The compact ellipsis is a real keyboard-accessible management menu. */
+#session-board #session-location-list .session-row { position:relative; overflow:visible; }
+#session-board #session-location-list .session-row-actions { position:relative; display:block; justify-self:end; }
+#session-board #session-location-list .session-location-menu-trigger { display:grid; place-items:center; list-style:none; width:38px; height:44px; border:1px solid #dfcfc1; border-radius:6px; color:var(--wine); background:#fffaf3; font-size:24px; cursor:pointer; }
+#session-board #session-location-list .session-location-menu-trigger::-webkit-details-marker { display:none; }
+#session-board #session-location-list .session-location-menu-trigger:focus-visible { outline:2px solid var(--wine); outline-offset:2px; }
+#session-board #session-location-list .session-row-actions[open] { z-index:20; }
+#session-board #session-location-list .session-row-actions[open] > button { display:flex; align-items:center; justify-content:center; position:relative; width:100%; min-width:44px; height:44px; }
+#session-board #session-location-list .session-row-actions[open] { min-width:44px; }
+#session-board #session-location-list .session-row-actions[open] > button:not(.session-location-details-button) { background:#fffaf3; }
+#session-board #session-location-list .session-row-actions[open] > .session-location-details-button { font-size:13px; padding:4px; width:100%; }
+#session-board #session-location-list .session-row-actions[open] > .session-location-details-button::after { content:none; }
+#session-board #session-location-list .session-row-actions[open] > .session-location-details-button { font-size:0; }
+#session-board #session-location-list .session-row-actions[open] > .session-location-details-button::before { content:'Details'; font-size:12px; }
+#session-board #session-location-list .session-row-actions[open] { padding-bottom:6px; }
+@media(min-width:601px) {
+  #session-board #session-location-list .session-row-actions[open] { position:absolute; right:6px; top:6px; width:175px; padding:4px; background:#fffaf3; border:1px solid #d8cbbb; border-radius:6px; box-shadow:0 8px 24px #3f2d1c2b; }
+  #session-board #session-location-list .session-row-actions[open] .session-location-menu-trigger { margin-left:auto; }
+}
+@media(max-width:600px) {
+  #session-board #session-location-list .session-row-actions[open] { position:absolute; right:6px; top:6px; width:160px; background:#fffaf3; padding:5px; box-shadow:0 8px 24px #3f2d1c2b; border:1px solid #d8cbbb; }
+}
