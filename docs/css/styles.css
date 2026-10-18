@@ -229,6 +229,8 @@
 #session-board .session-assign-button:disabled { background:#e8e1d7; border-color:#c9c2b6; color:#605b52; }
 
 /* Location library matches the NPC Library's subtle card lift and image zoom. */
+#location-grid .location-card.is-location-of-day { position:relative; border-color:rgba(116,29,50,.55); }
+.location-of-day-ribbon { position:absolute; z-index:1; top:12px; left:0; max-width:calc(100% - 12px); padding:7px 12px; border-radius:0 4px 4px 0; background:var(--wine); color:#fff; font-size:.75rem; font-weight:600; line-height:1.4; pointer-events:none; }
 #location-grid .location-card { transition:transform .2s,box-shadow .2s; }
 #location-grid .location-thumbnail img { transition:transform .4s; }
 #location-grid .location-card:focus-within { transform:translateY(-3px); box-shadow:0 12px 30px rgba(48,34,25,.11); }

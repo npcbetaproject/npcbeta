@@ -1,3 +1,37 @@
+// Calendar days, not elapsed 24-hour periods: Toronto has 23/25-hour DST days.
+const NpcLocationOfDay = (() => {
+  'use strict';
+  const DAY_MS = 86400000;
+  const ANCHOR = Date.UTC(2026, 0, 1);
+  const calendar = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Toronto', year: 'numeric', month: '2-digit', day: '2-digit',
+  });
+  function dayNumber(now = new Date()) {
+    const parts = Object.fromEntries(calendar.formatToParts(now).map(part => [part.type, part.value]));
+    return (Date.UTC(Number(parts.year), Number(parts.month) - 1, Number(parts.day)) - ANCHOR) / DAY_MS;
+  }
+  function selectId(inventory, now = new Date()) {
+    // ASCII ID order is stable across source order, browser locale and name edits.
+    const ids = [...new Set(inventory.map(item => item.id))].sort();
+    if (!ids.length) return null;
+    const day = dayNumber(now);
+    return ids[((day % ids.length) + ids.length) % ids.length];
+  }
+  function nextMidnightDelay(now = new Date()) {
+    const start = now.getTime(), day = dayNumber(now);
+    // Locate the next calendar boundary without assuming a fixed UTC offset.
+    let low = start + 1, high = start + 27 * 3600000;
+    while (low < high) {
+      const middle = Math.floor((low + high) / 2);
+      if (dayNumber(new Date(middle)) === day) low = middle + 1;
+      else high = middle;
+    }
+    return low - start;
+  }
+  const api = { dayNumber, selectId, nextMidnightDelay };
+  return api;
+})();
+
 // Template IDs are independent of generator settings and specific location profiles.
 const SESSION_LOCATIONS_KEY = 'npc-beta:locations:v1:session';
 const SETTING_IDS = ['village', 'town', 'city', 'wilderness', 'underground'];
@@ -36,9 +70,9 @@ async function ensureLocations() {
   })();
   return locationLibrary.loading;
 }
-function visibleLocations() {
+function visibleLocations(todayId = NpcLocationOfDay.selectId(locationLibrary.templates || [])) {
   const query = locationLibrary.query.toLowerCase();
-  return (locationLibrary.templates || []).filter(item => `${item.name} ${item.description}`.toLowerCase().includes(query) && (!locationLibrary.settings.size || item.settings.some(id => locationLibrary.settings.has(id))) && (!locationLibrary.conditions.size || locationLibrary.conditions.has(item.condition))).sort((a, b) => locationLibrary.sort === 'recent' ? comparePublished(a, b) : a.name.localeCompare(b.name));
+  return (locationLibrary.templates || []).filter(item => `${item.name} ${item.description}`.toLowerCase().includes(query) && (!locationLibrary.settings.size || item.settings.some(id => locationLibrary.settings.has(id))) && (!locationLibrary.conditions.size || locationLibrary.conditions.has(item.condition))).sort((a, b) => Number(b.id === todayId) - Number(a.id === todayId) || (locationLibrary.sort === 'recent' ? comparePublished(a, b) : a.name.localeCompare(b.name)));
 }
 function locationNode(tag, className, text) {
   const node = document.createElement(tag); if (className) node.className = className; if (text !== undefined) node.textContent = text; return node;
@@ -76,10 +110,15 @@ function renderLocations() {
     if (locationLibrary.error) { const error = locationNode('div', 'empty-state', 'Check your connection and try loading the locations again.'); error.append(locationButton('Try again', ensureLocations)); grid.append(error); }
     return;
   }
-  const templates = visibleLocations(); note.textContent = `${templates.length} of ${locationLibrary.templates.length} locations`;
+  const todayId = NpcLocationOfDay.selectId(locationLibrary.templates);
+  const templates = visibleLocations(todayId); note.textContent = `${templates.length} of ${locationLibrary.templates.length} locations`;
   if (!templates.length) { const empty = locationNode('div', 'empty-state', 'No locations match your search and filters.'); empty.append(locationButton('Clear filters', clearLocationFilters)); grid.append(empty); return; }
   for (const template of templates) {
     const card = locationNode('article', 'location-card'); card.dataset.templateId = template.id;
+    if (template.id === todayId) {
+      card.classList.add('is-location-of-day');
+      card.append(locationNode('span', 'location-of-day-ribbon', 'Location of the Day'));
+    }
     const content = locationNode('div', 'location-card-content'); const chips = locationNode('div', 'location-chips');
     template.settings.forEach(id => chips.append(locationNode('span', 'setting-chip', locationLibrary.labels.settings[id])));
     if (template.condition) chips.append(locationNode('span', `condition-chip condition-${template.condition}`, locationLibrary.labels.conditions[template.condition]));
@@ -124,6 +163,31 @@ document.querySelector('#location-filter-toggle').addEventListener('click', even
 });
 
 document.querySelector('#location-sort').addEventListener('change', event => { locationLibrary.sort = event.target.value; renderLocations(); });
+
+// Refresh at Toronto midnight; visibility/pageshow also catch sleeping tabs and
+// restored pages. No storage, routing, popup or Session state is changed.
+let locationOfDayNumber = NpcLocationOfDay.dayNumber(), locationOfDayTimer;
+function refreshLocationOfDay() {
+  clearTimeout(locationOfDayTimer);
+  const now = new Date(), day = NpcLocationOfDay.dayNumber(now);
+  if (day !== locationOfDayNumber) {
+    locationOfDayNumber = day;
+    if (locationLibrary.templates) {
+      const focused = document.activeElement;
+      const cardId = focused?.closest('#location-grid .location-card')?.dataset.templateId;
+      const action = focused?.matches('[data-location-add]') ? '[data-location-add]' : '.location-card-open';
+      renderLocations();
+      if (cardId) {
+        const card = [...document.querySelectorAll('#location-grid .location-card')].find(item => item.dataset.templateId === cardId);
+        card?.querySelector(action)?.focus({ preventScroll: true });
+      }
+    }
+  }
+  locationOfDayTimer = setTimeout(refreshLocationOfDay, NpcLocationOfDay.nextMidnightDelay(now));
+}
+document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshLocationOfDay(); });
+window.addEventListener('pageshow', refreshLocationOfDay);
+refreshLocationOfDay();
 
 // Library templates and personal Session instances share the same reference panel.
 function openLocationDetail(templateId, instance = null) {
