@@ -14,6 +14,14 @@ const site=require('../docs/data/site.json'),records=require('../docs/data/chara
  await page.evaluate(id=>{localStorage.setItem('npc-beta-session',JSON.stringify([id]));localStorage.setItem('npc-beta:session-board:v1:pins','[]');},records[1].id);await page.reload();await page.waitForSelector('[data-character]');
  for(const width of [375,1440]){
   await page.setViewportSize({width,height:900});await page.evaluate(()=>setView('library'));await page.evaluate(()=>{document.documentElement.style.scrollBehavior='auto';window.scrollTo({top:250,behavior:'instant'});});
+  // Card portraits must decode at full size and keep their full framing, including on hover.
+  for (const id of [records[0].id, 'grusk-ironjaw']) {
+   const card=page.locator(`[data-character="${id}"]`),img=card.locator('.portrait-wrap img');
+   await card.scrollIntoViewIfNeeded();await img.evaluate(el=>el.decode());await card.hover();
+   assert(await img.evaluate(el=>el.naturalWidth===960&&el.naturalHeight===960),id+' full-resolution portrait');
+   assert.equal(await img.evaluate(el=>getComputedStyle(el).objectFit),'contain',id+' uncropped card');
+   assert.equal(await img.evaluate(el=>getComputedStyle(el).transform),'none',id+' no hover crop');
+  }
   await page.locator(`[data-character="${records[0].id}"]`).scrollIntoViewIfNeeded();
   const before=await page.evaluate(()=>({url:location.href,view:state.view,scroll:scrollY,session:localStorage.getItem('npc-beta-session')}));
   await page.locator(`[data-character="${records[0].id}"]`).click();await page.locator('.npc-copy-link').click();await page.getByText('Link copied.',{exact:true}).waitFor();
