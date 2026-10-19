@@ -836,7 +836,7 @@
       "wilderness"
     ],
     "condition": "maintained",
-    "image": "images/locations/caravanserai.svg",
+    "image": "images/locations/caravanserai.webp",
     "imageAlt": "Illustrated caravanserai courtyard enclosed by sandstone walls with a timber gateway, shaded arcade, loaded wagon, tethered pack animals and a central water trough.",
     "publishedAt": "2026-10-19T19:25:00-04:00"
   }
