@@ -1,5 +1,46 @@
 [
   {
+    "id": "grusk-ironjaw",
+    "name": "Grusk Ironjaw",
+    "ancestry": "Half-orc",
+    "role": "Extortionist and street enforcer",
+    "group": "villains",
+    "subtitle": "Every safe passage has a price",
+    "summary": "Broad-shouldered and scarred, Grusk collects illegal “street dues” from merchants at the market and travelers entering town. His ragtag crew blocks wagons, steals small valuables and threatens anyone who refuses to pay.",
+    "tableNote": "Step close, crack your knuckles and speak in a low, falsely friendly voice. Grusk wants steady income and a fearsome reputation, not unnecessary bloodshed; he loses nerve if his crew deserts him or a witness mentions the town watch.",
+    "adventureHook": "A caravan merchant asks the party to stop Grusk's protection racket after several wagons are robbed. Grusk insists a corrupt watch officer takes a cut of the dues—and his collection ledger may prove it.",
+    "locationIds": [
+      "market-square",
+      "gatehouse",
+      "tavern",
+      "roadside-campsite"
+    ],
+    "tags": [
+      "antagonist",
+      "quest-giver"
+    ],
+    "imageAlt": "Illustrated broad-shouldered olive-skinned half-orc thug with small tusks, a scarred brow, reddish scarf and battered leather armor standing in a modest town market.",
+    "locationFit": [
+      "Market square",
+      "Town gates",
+      "Tavern",
+      "Roadside travel"
+    ],
+    "roleCategoryIds": [
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel"
+    ],
+    "slug": "grusk-ironjaw",
+    "portraitKey": "grusk-ironjaw",
+    "portraitFit": "contain",
+    "image": "images/characters/grusk-ironjaw.webp",
+    "tokenImage": "images/tokens/grusk-ironjaw-token.webp",
+    "publishedAt": "2026-10-19T22:56:00Z"
+  },
+  {
     "id": "riggles-flintnose",
     "name": "Riggles Flintnose",
     "ancestry": "Deep gnome",
