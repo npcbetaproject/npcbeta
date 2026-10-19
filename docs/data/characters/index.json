@@ -1,5 +1,43 @@
 [
   {
+    "id": "varruk-copperhand-drenn",
+    "slug": "varruk-copperhand-drenn",
+    "name": "Varruk “Copperhand” Drenn",
+    "ancestry": "Half-orc",
+    "role": "Thug and protection racketeer",
+    "group": "townsfolk",
+    "subtitle": "A copper for your peace of mind",
+    "summary": "Varruk collects “stall insurance” from town merchants, pocketing their copper with a courteous smile and a quiet threat. His crew of three petty crooks blocks carts, harasses travelers near the gates and breaks merchandise when someone refuses to pay.",
+    "tableNote": "Speak softly, straighten a copper ring before naming a price, and call every threat a friendly warning. Varruk wants a steady income without attracting the watch; he bluffs about powerful backers and loses confidence when victims stand together. His crew includes a lookout, a cutpurse and a cudgel carrier, loyal only while the money lasts.",
+    "adventureHook": "A merchant hires the party to escort her cart through town without paying Varruk. When his crew blocks the lane, the youngest lookout slips the party a collection ledger: it names every victim, and Varruk intends to burn a refusing merchant’s stall after sunset.",
+    "locationIds": [
+      "market-square",
+      "tavern",
+      "roadside-campsite"
+    ],
+    "tags": [
+      "antagonist"
+    ],
+    "imageAlt": "Broad grey-olive half-orc with short black hair, small tusks and copper rings, wearing worn leather over a burgundy shirt and holding collected coins in a market alley.",
+    "locationFit": [
+      "Town markets",
+      "Town gates and approach roads",
+      "Taverns"
+    ],
+    "roleCategoryIds": [
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel"
+    ],
+    "portraitKey": "varruk-copperhand-drenn",
+    "portraitFit": "contain",
+    "image": "images/characters/varruk-copperhand-drenn.webp",
+    "tokenImage": "images/tokens/varruk-copperhand-drenn-token.webp",
+    "publishedAt": "2026-10-19T23:05:00Z"
+  },
+  {
     "id": "grusk-ironjaw",
     "name": "Grusk Ironjaw",
     "ancestry": "Half-orc",
