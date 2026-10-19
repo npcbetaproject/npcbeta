@@ -822,5 +822,22 @@
     "discovery": "Beyond the submerged arch, a narrow passage rises into an air pocket where a sealed travel case rests above the waterline.",
     "image": "images/locations/cavern-pool.webp",
     "publishedAt": "2026-10-09T22:03:35-04:00"
+  },
+  {
+    "id": "caravanserai",
+    "name": "Caravanserai",
+    "description": "A walled roadside lodging and trading compound where caravans rest, stable pack animals, store cargo and exchange news.",
+    "readAloud": "A broad courtyard opens beyond a heavy timber gate, with loaded wagons resting beneath shaded stone arcades and pack animals tethered beside a water trough.",
+    "flavour": "Harness buckles clink as stablehands lead tired animals toward fresh hay. The air carries the smell of dust, warm bread and cooking spices beneath the murmur of bargaining travelers.",
+    "discovery": "A loose stone beside the watering trough conceals a folded cargo receipt with several crate numbers crossed out and replaced in different handwriting.",
+    "settings": [
+      "town",
+      "city",
+      "wilderness"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/caravanserai.svg",
+    "imageAlt": "Illustrated caravanserai courtyard enclosed by sandstone walls with a timber gateway, shaded arcade, loaded wagon, tethered pack animals and a central water trough.",
+    "publishedAt": "2026-10-19T19:25:00-04:00"
   }
 ]
