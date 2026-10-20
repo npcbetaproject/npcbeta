@@ -1,6 +1,6 @@
 # NPC Pack Standard
 
-Version: 2.0 · Updated: 2026-10-15
+Version: 2.1 · Updated: 2026-10-20
 
 ## Scope and authoritative references
 
@@ -19,11 +19,11 @@ Use these references as the source of truth instead of copying settings into eac
 | Valid Location Fit IDs | `docs/data/characters/location-fit-categories.json` |
 | Public pages, metadata, slugs and share actions | `project/permanent-npc-pages.md` |
 
-## 1. Agree on the characters
+## 1. Choose the characters and proceed
 
-Present a concise table with name, ancestry, specific profession, concept/appearance, a playable mannerism, motivation or complication, actionable hook and proposed filter assignments. Default to four distinct NPCs who work independently; connections are optional. Avoid extensive backstories, statistics, lengthy dialogue, new fields or assumptions about the user's campaign.
+Select names, ancestry, specific profession, concept/appearance, a playable mannerism, motivation or complication, actionable hook and proposed filter assignments from the user's request. Default to four distinct NPCs who work independently; connections are optional. For a single NPC or another requested count, follow that scope. Avoid extensive backstories, statistics, lengthy dialogue, new fields or assumptions about the user's campaign.
 
-Obtain concept approval before artwork. Existing approval to create the named NPCs is sufficient. Concept approval covers portraits, tokens, data and a reviewable branch; publish only when the user has authorized publication.
+Make routine creative choices autonomously and continue through the complete NPC, including artwork, data, validation and a reviewable branch/PR. Do not stop for separate concept approval. Ask a clarifying question only when an essential missing detail prevents a useful, valid NPC. Creating an NPC does not authorize merging or live publication; publish only when the user explicitly authorizes it.
 
 ## 2. Prepare one branch and a content batch
 
@@ -35,7 +35,7 @@ Use only valid existing `locationIds`; preserve display-oriented `locationFit` w
 
 ## 3. Create portrait, then token
 
-For each approved NPC:
+For each requested NPC:
 
 1. Create and inspect the **960 × 960 opaque WebP portrait**, following the portrait standard. Prefer painted fantasy illustration over a photographic look. Preserve complete heads and headroom.
 2. Derive the **280 × 280 transparent WebP token** from that finalized portrait, using the approved circular border and subtle dragon-only emblem. Follow the token standard; do not target 2 KB.
@@ -52,7 +52,7 @@ docs/images/tokens/<npc-id>-token.webp
 
 ## 4. Integrate once
 
-Add all approved records, portraits, tokens and required portrait mappings in the same branch. Each new NPC includes:
+Add all requested records, portraits, tokens and required portrait mappings in the same branch. Each new NPC includes:
 
 ```json
 {
@@ -101,4 +101,4 @@ If publication is authorized, merge and verify successful deployment. Otherwise 
 
 ## Reusable request
 
-> Propose an NPC pack of four characters with the theme “[THEME]” following `project/npc-pack-standard.md`. Show concepts, appearance directions, hooks and filter assignments for approval. After approval, create each NPC's portrait and downloadable token using the linked standards, integrate the records and permanent pages in a new branch, validate and open a PR. Publish only when instructed.
+> Create an NPC pack of four characters with the theme “[THEME]” following `project/npc-pack-standard.md`. Choose the characters, concepts, appearance directions, hooks and filter assignments autonomously; do not stop for concept approval. Create each NPC's portrait and downloadable token using the linked standards, integrate the records and permanent pages in a new branch, validate and open a PR. Publish only when instructed.
