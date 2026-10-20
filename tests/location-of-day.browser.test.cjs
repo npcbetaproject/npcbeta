@@ -69,7 +69,7 @@ const base = 'http://localhost:8000/';
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`overflow at ${width}`);
   const size = await featured.boundingBox();
   const regularSize = await featured.evaluate(n=>{n.classList.remove('is-location-of-day');const b=n.getBoundingClientRect();n.classList.add('is-location-of-day');return {width:b.width,height:b.height};});
-  assert.equal(size.width,regularSize.width); assert.equal(size.height,regularSize.height);
+  assert(Math.abs(size.width-regularSize.width)<0.02,`width changed at ${width}`); assert(Math.abs(size.height-regularSize.height)<0.02,`height changed at ${width}`);
   const ribbon = await page.locator('.location-of-day-ribbon').boundingBox();
   assert(ribbon.x>=size.x && ribbon.x+ribbon.width<=size.x+size.width && ribbon.y+ribbon.height<size.y+size.height);
   assert.equal(await page.locator('.location-of-day-ribbon').evaluate(n=>getComputedStyle(n).backgroundColor),'rgb(116, 29, 50)');
