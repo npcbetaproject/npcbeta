@@ -1,5 +1,40 @@
 [
   {
+    "id": "ketta-honeyglass",
+    "slug": "ketta-honeyglass",
+    "name": "Ketta Honeyglass",
+    "ancestry": "Goblin",
+    "role": "Beekeeper",
+    "group": "townsfolk",
+    "subtitle": "The hive has its own counsel",
+    "summary": "Ketta tends a hillside apiary with patient hands and a careful ear for the moods of her bees. She is practical and softly amused, though she cannot explain why her workers return each dawn carrying pollen from a flower that grows nowhere nearby.",
+    "tableNote": "Pause to listen before answering. Touch the edge of a hive gently, name each queen's mood as if giving a weather report, and offer visitors a little honey before discussing payment.",
+    "adventureHook": "Ketta's hives have gone silent after moonrise, and each morning her bees leave a small wax key at the door. She asks the party to follow the workers to a shuttered apiary before the key softens in the sun.",
+    "locationIds": [],
+    "tags": [
+      "ally",
+      "quest-giver",
+      "mysterious"
+    ],
+    "imageAlt": "Goblin beekeeper with olive-green skin in a mustard coat and linen veil, holding a honey jar in a flowered apiary.",
+    "locationFit": [
+      "Town",
+      "Wilderness"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "wilderness"
+    ],
+    "portraitKey": "ketta-honeyglass",
+    "portraitFit": "contain",
+    "image": "images/characters/ketta-honeyglass.webp",
+    "tokenImage": "images/tokens/ketta-honeyglass-token.webp",
+    "publishedAt": "2026-10-20T19:40:00-04:00"
+  },
+  {
     "id": "tessa-brinewick",
     "slug": "tessa-brinewick",
     "name": "Tessa Brinewick",
