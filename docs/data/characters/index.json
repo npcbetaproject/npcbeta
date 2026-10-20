@@ -1,5 +1,40 @@
 [
   {
+    "id": "mara-vell",
+    "slug": "mara-vell",
+    "name": "Mara Vell",
+    "ancestry": "Human",
+    "role": "Cemetery gardener",
+    "group": "townsfolk",
+    "subtitle": "Bootprints among the flowers",
+    "summary": "Mara Vell tends the flower beds and paths in the village cemetery, taking quiet pride in making the place welcoming to grieving families. One morning she finds muddy bootprints crushed through the flowers she planted the night before.",
+    "tableNote": "Brush soil from your gloves before answering, and glance toward the damaged flower bed whenever someone mentions the cemetery. Gentle and practical, Mara wants to protect the families who visit; she fears the prints lead to a grave that should have stayed undisturbed.",
+    "adventureHook": "Mara asks the party to identify who crossed the flower bed after the cemetery gates were locked. The muddy prints end at an old, unmarked grave, where someone has recently loosened the soil and left a fresh sprig of flowers.",
+    "locationIds": [],
+    "tags": [
+      "mysterious",
+      "quest-giver"
+    ],
+    "imageAlt": "Painted fantasy portrait of Mara Vell, a worried cemetery gardener in a linen kerchief and moss-green dress, kneeling beside crushed flowers and muddy bootprints among simple grave markers.",
+    "locationFit": [
+      "Village cemetery",
+      "Cemetery gardens",
+      "Quiet village paths"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "dungeons-ruins"
+    ],
+    "portraitKey": "mara-vell",
+    "portraitFit": "contain",
+    "image": "images/characters/mara-vell.webp",
+    "tokenImage": "images/tokens/mara-vell-token.webp",
+    "publishedAt": "2026-10-20T00:52:00Z"
+  },
+  {
     "id": "varruk-copperhand-drenn",
     "slug": "varruk-copperhand-drenn",
     "name": "Varruk “Copperhand” Drenn",
