@@ -25,6 +25,19 @@ w.scrollTo=()=>{};w.confirm=()=>true;w.fetch=async p=>({ok:true,json:async()=>JS
 w.localStorage.setItem('npc-beta-session',JSON.stringify([records[0].id]));let copied='';w.navigator.clipboard={writeText:async value=>{copied=value;}};
 w.eval(scripts.map(n=>fs.readFileSync('docs/js/'+n+'.js','utf8')).join('\n')+'\nwindow.test={state,openDetail,closeDetail,setView,prepareDetail};');
 await new Promise(r=>setTimeout(r,100));const d=w.document,t=w.test;
+// Every library portrait must resolve in both the card and expanded popup.
+t.setView('library');
+for (const c of records) {
+ const source=t.state.portraits[c.portraitKey];
+ assert(source,c.id+' missing shared portrait mapping');
+ if(c.image) assert.equal(source,c.image,c.id+' shared portrait mapping');
+ assert(fs.existsSync('docs/'+source),c.id+' portrait asset');
+ assert.equal(d.querySelector(`[data-character="${c.id}"] .portrait-wrap img`).getAttribute('src'),source,c.id+' card portrait');
+ t.openDetail(c);
+ assert.equal(d.querySelector('.detail-portrait').getAttribute('src'),source,c.id+' popup portrait');
+ t.closeDetail();
+}
+t.setView('session');
 const before={url:w.location.href,tab:t.state.view,storage:JSON.stringify(w.localStorage),scroll:w.scrollY};
 d.querySelector(`[data-entry-id="${records[0].id}"] .session-row-open`).focus();d.querySelector(`[data-entry-id="${records[0].id}"] .session-row-open`).click();assert.equal(d.querySelector('#detail-panel').getAttribute('aria-hidden'),'false');
 d.querySelector('.npc-copy-link').click();await new Promise(r=>setTimeout(r,10));assert.equal(copied,url(records[0]));assert.equal(d.querySelector('.npc-share-status').textContent,'Link copied.');
