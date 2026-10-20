@@ -1,5 +1,42 @@
 [
   {
+    "id": "tessa-brinewick",
+    "slug": "tessa-brinewick",
+    "name": "Tessa Brinewick",
+    "ancestry": "Gnome",
+    "role": "Sailmaker",
+    "group": "townsfolk",
+    "subtitle": "A stitch before the storm",
+    "summary": "Tessa repairs sails in a cramped loft above the docks, working with quick hands and a running commentary on everyone else’s knots. Brisk and generous with her skills, she refuses to let a hurried captain take unsafe canvas to sea.",
+    "tableNote": "Keep stitching while you speak, tug each finished seam twice, and address people by their trade until they earn a name. Tessa wants her apprentices paid and every crew home safely; she becomes very still when someone dismisses a dangerous fault as good enough.",
+    "adventureHook": "Tessa finds neat knife cuts concealed beneath a fresh patch in a departing ship’s storm sail. She asks the party to warn the captain and examine the other sails before the evening tide; the damaged canvas bears the chalk mark of an apprentice who vanished after yesterday’s delivery.",
+    "locationIds": [
+      "docks-ferry-landing",
+      "ship"
+    ],
+    "tags": [
+      "merchant",
+      "quest-giver"
+    ],
+    "imageAlt": "Older brown-skinned gnome sailmaker with grey curls, an indigo kerchief and ochre apron holding cream sailcloth and a sail needle in a modest sail loft.",
+    "locationFit": [
+      "Dockside workshops",
+      "Ships"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "waterfront"
+    ],
+    "portraitKey": "tessa-brinewick",
+    "portraitFit": "contain",
+    "image": "images/characters/tessa-brinewick.webp",
+    "tokenImage": "images/tokens/tessa-brinewick-token.webp",
+    "publishedAt": "2026-10-20T10:35:00-04:00"
+  },
+  {
     "id": "della-wickfen",
     "slug": "della-wickfen",
     "name": "Della Wickfen",
