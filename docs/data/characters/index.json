@@ -1,5 +1,75 @@
 [
   {
+    "id": "della-wickfen",
+    "slug": "della-wickfen",
+    "name": "Della Wickfen",
+    "ancestry": "Dwarf",
+    "role": "Candle maker",
+    "group": "townsfolk",
+    "subtitle": "Every stub tells a story",
+    "summary": "Della makes dependable candles and checks every returned stub before granting credit. Blunt and meticulous, she distrusts grand stories but keeps her promises down to the last copper.",
+    "tableNote": "Hold a taper up to the light before answering, ask for exact quantities, and correct exaggerations without raising your voice. Della wants to protect her apprentice and keep the workshop solvent; she offers practical help once someone earns her trust.",
+    "adventureHook": "Della finds a missing messenger’s signet ring embedded in a returned block of tallow and recognizes it from his regular visits. She hires the party to trace her supplier’s marked cart to a disused roadside shed before the remaining batch is melted at dawn; the messenger may still be held there.",
+    "locationIds": [
+      "market-square",
+      "general-store"
+    ],
+    "tags": [
+      "merchant",
+      "quest-giver"
+    ],
+    "imageAlt": "Brown-skinned dwarf candle maker with short greying braids, ochre sleeves and a wax-spotted leather apron holding beeswax tapers in a modest workshop.",
+    "locationFit": [
+      "Town markets",
+      "General stores"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "portraitKey": "della-wickfen",
+    "portraitFit": "contain",
+    "image": "images/characters/della-wickfen.webp",
+    "tokenImage": "images/tokens/della-wickfen-token.webp",
+    "publishedAt": "2026-10-19T22:00:01-04:00"
+  },
+  {
+    "id": "oren-sedgewhistle",
+    "slug": "oren-sedgewhistle",
+    "name": "Oren Sedgewhistle",
+    "ancestry": "Elf",
+    "role": "Irrigation ditch keeper",
+    "group": "townsfolk",
+    "subtitle": "A fair turn of water",
+    "summary": "Oren clears farm irrigation ditches and remembers every household’s allotted turn of water. Cheerful and reluctant to take sides, he talks through disputes while quietly measuring whether anyone has taken more than their share.",
+    "tableNote": "Whistle off-key, mark water levels on a notched stick, and ask after the crops before discussing payment. Oren wants a fair water supply but avoids confrontation; firm allies help him speak up when his careful records are challenged.",
+    "adventureHook": "Oren finds a cut sluice rope and a weighted sack deliberately wedged in the channel supplying the lower farms. He asks the party to escort him upstream, clear the blockage and catch whoever returns to reset it before angry farmers smash the upstream mill’s wheel at sunset.",
+    "locationIds": [
+      "farm"
+    ],
+    "tags": [
+      "ally",
+      "quest-giver"
+    ],
+    "imageAlt": "Long-eared elf ditch keeper with greying tied-back hair, patched green sleeves and a brown work vest holding a notched measuring stick beside a farm irrigation channel.",
+    "locationFit": [
+      "Farms and irrigation channels"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "portraitKey": "oren-sedgewhistle",
+    "portraitFit": "contain",
+    "image": "images/characters/oren-sedgewhistle.webp",
+    "tokenImage": "images/tokens/oren-sedgewhistle-token.webp",
+    "publishedAt": "2026-10-19T22:00:00-04:00"
+  },
+  {
     "id": "mara-vell",
     "slug": "mara-vell",
     "name": "Mara Vell",
