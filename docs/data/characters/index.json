@@ -1,5 +1,43 @@
 [
   {
+    "id": "brin-alder",
+    "slug": "brin-alder",
+    "name": "Brin Alder",
+    "ancestry": "Human",
+    "role": "Ranger",
+    "group": "adventurers",
+    "subtitle": "When the herd runs uphill",
+    "summary": "Brin Alder follows old game trails and knows the forest by small signs others miss. He arrives in the village with empty snares and an unsettling report: every animal he tracked is fleeing the same ridge, even predators that should be hunting them.",
+    "tableNote": "Before entering a room, check its exits; when speaking, point out a detail rather than hold eye contact. Brin is patient with frightened creatures but uneasy among people, and will not set a trap until he knows what it might catch.",
+    "personality": "Quiet, observant and dryly humorous, Brin speaks up when a small detail does not fit.",
+    "motivations": "He wants to learn what has driven wildlife from the ridge before hunger pushes it toward farms and roads.",
+    "adventureHook": "Brin has found fresh tracks moving downhill from the ridge—deer, foxes and wolves traveling together, but none leaving prints beyond a ring of old standing stones. He can show the party the trail before the animals reach the village.",
+    "locationIds": [],
+    "tags": [
+      "ranger",
+      "tracking",
+      "wildlife"
+    ],
+    "imageAlt": "Painted fantasy portrait of human ranger Brin Alder in a weathered olive cloak and brown leather, with a shortbow on his back, standing at a quiet woodland edge.",
+    "locationFit": [
+      "Wilderness",
+      "Roads & Travel"
+    ],
+    "roleCategoryIds": [
+      "adventurers",
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "wilderness",
+      "roads-travel"
+    ],
+    "portraitKey": "brin-alder",
+    "portraitFit": "contain",
+    "image": "images/characters/brin-alder.webp",
+    "tokenImage": "images/tokens/brin-alder-token.webp",
+    "publishedAt": "2026-10-21T00:41:32.340Z"
+  },
+  {
     "id": "calder-venn",
     "slug": "calder-venn",
     "name": "Calder Venn",
