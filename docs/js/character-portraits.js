@@ -6,6 +6,8 @@ window.NPC_PORTRAITS = Object.freeze({
   "calder-venn": "images/characters/calder-venn.webp",
   "ketta-honeyglass": "images/characters/ketta-honeyglass.webp",
   ...window.NPC_PORTRAITS,
+  "borun-claystep": "images/characters/borun-claystep.webp",
+  "rella-quillbrook": "images/characters/rella-quillbrook.webp",
   "tessa-brinewick": "images/characters/tessa-brinewick.webp",
   "mara-vell": "images/characters/mara-vell.webp",
   "della-wickfen": "images/characters/della-wickfen.webp",
@@ -50,3 +52,4 @@ window.NPC_PORTRAITS = Object.freeze({
   "wenric-valechord": "images/characters/wenric-valechord.webp",
   "captain-mara-thornwick": "images/characters/captain-mara-thornwick.webp",
 });
+
