@@ -839,5 +839,20 @@
     "image": "images/locations/caravanserai.webp",
     "imageAlt": "Illustrated caravanserai courtyard enclosed by sandstone walls with a timber gateway, shaded arcade, loaded wagon, tethered pack animals and a central water trough.",
     "publishedAt": "2026-10-19T19:25:00-04:00"
+  },
+  {
+    "id": "charcoal-burners-kiln",
+    "name": "Charcoal Burner’s Kiln",
+    "description": "A woodland worksite where timber is slowly burned beneath an earth-covered kiln to produce charcoal for blacksmiths, merchants and other tradespeople.",
+    "readAloud": "A low, earth-covered charcoal kiln smoulders in a forest workyard beside stacked timber, soot-dark sacks and a rough lean-to shelter.",
+    "flavour": "Thin smoke threads through the branches, carrying the sharp scent of hot wood and damp soil. Somewhere beneath the kiln’s clay covering, embers crackle while a shovel scrapes against the packed earth.",
+    "discovery": "One sack marked for charcoal holds iron fittings wrapped in soot-stained cloth, with a delivery tally tucked beneath its binding cord.",
+    "settings": [
+      "wilderness"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/charcoal-burners-kiln-location.webp",
+    "imageAlt": "Earth-covered charcoal kiln smoking gently in a woodland clearing beside stacked timber, sacks, a shovel and a rough lean-to shelter.",
+    "publishedAt": "2026-10-21T19:25:41-04:00"
   }
 ]
