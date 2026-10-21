@@ -1,5 +1,47 @@
 [
   {
+    "id": "dorrin-sootpick",
+    "slug": "dorrin-sootpick",
+    "name": "Dorrin Sootpick",
+    "ancestry": "Dwarf",
+    "role": "Artificer & trap disarmer",
+    "group": "adventurers",
+    "subtitle": "Listen before you touch",
+    "summary": "Dorrin crawls deeper than most treasure hunters dare, disarming dungeon traps with patient hands and ingenious little tools. Mud cakes his knees, stone dust clings to his beard, and his scraped goggles rarely stay clean for a minute.",
+    "tableNote": "Stop mid-sentence to listen for a hidden mechanism, sort salvaged springs by touch, and insist everyone stand behind the chalk line. Dorrin treats a well-made trap with professional respect and gets cross when someone calls careful work luck.",
+    "personality": "Methodical, dryly funny and quietly protective, with more patience for mechanisms than boasting adventurers.",
+    "motivations": "He wants to bring every hired companion back alive and recover the ingenious mechanisms other delvers smash for scrap.",
+    "adventureHook": "Dorrin has wedged open a pressure plate three levels below a burial vault, but someone is resetting the traps behind him. His chalk marks now lead toward an unexplored stair; he needs companions to guard his back while he finds whoever is changing the route.",
+    "locationIds": [
+      "burial-vault"
+    ],
+    "tags": [
+      "ally",
+      "quest-giver",
+      "wanderer"
+    ],
+    "imageAlt": "Painted portrait of Dorrin Sootpick, a grimy dwarf artificer with brass goggles, a dust-caked beard and a harness of trap-disarming tools in a dark dungeon.",
+    "portraitKey": "dorrin-sootpick",
+    "portraitFit": "contain",
+    "image": "images/characters/dorrin-sootpick.webp",
+    "tokenImage": "images/tokens/dorrin-sootpick-token.webp",
+    "locationFit": [
+      "Dungeons",
+      "Burial vaults",
+      "Repair workshops"
+    ],
+    "publishedAt": "2026-10-21T08:40:00-04:00",
+    "roleCategoryIds": [
+      "adventurers",
+      "merchants-crafters",
+      "scholars-magic"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "dungeons-ruins"
+    ]
+  },
+  {
     "id": "sister-nera-duskfall",
     "slug": "sister-nera-duskfall",
     "name": "Sister Nera Duskfall",
