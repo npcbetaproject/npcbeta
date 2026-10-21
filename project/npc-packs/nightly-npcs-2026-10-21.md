@@ -10,9 +10,9 @@ A separate contributor reviewed both complete drafts before integration and appr
 
 ## Artwork
 Built-in image generation used Tessa Brinewick as painted-style reference, then each finished portrait plus Brakka's token and the site dragon as token references. Prompts specified visible brushwork, believable anatomy, earthy palette, soft light, complete heads and shoulders, clear headroom, profession clothing/props, no lettering or extra characters. Token prompts preserved identity and specified brass/burgundy/charcoal circular frames, subtle dragon-only medallions and genuine transparent exteriors.
-Portraits exported without cropping or stretching at 960×960 RGB WebP, quality 75/method 6. Tokens exported from high-resolution RGBA originals at 280×280, quality 80/method 6.
-Borun portrait: 98,872 bytes; token: 26,988 bytes.
-Rella portrait: 88,198 bytes; token: 26,296 bytes.
+Portraits exported without cropping or stretching at 960×960 RGB WebP, quality 75/method 6. Tokens exported from high-resolution RGBA originals at 280×280 with a 4px transparent safety margin, quality 80/method 6.
+Borun portrait: 98,872 bytes; token: 25,574 bytes.
+Rella portrait: 88,198 bytes; token: 24,772 bytes.
 Lossless PNG originals are retained with the image-generation outputs and in the working batch's artwork-sources directory.
 
 ## Integration and validation
