@@ -1,5 +1,42 @@
 [
   {
+    "id": "calder-venn",
+    "slug": "calder-venn",
+    "name": "Calder Venn",
+    "ancestry": "Human",
+    "role": "Infantry signaler",
+    "group": "townsfolk",
+    "subtitle": "A call from the old road",
+    "summary": "A mud-streaked infantry signaler wanders into the village at dawn, still in patched armor and carrying a cracked brass whistle. Calder asks whether anyone has seen his patrol and keeps glancing toward the rooftops, waiting for a signal no one else recognizes.",
+    "tableNote": "Tap the brass whistle with a thumb, count doors and windows before sitting, and give clipped orders before catching yourself and apologizing. Calder is disciplined and protective of civilians; he wants to find his missing squad but fears his retreat signal left them behind.",
+    "personality": "Courteous, alert and methodical, Calder hides his guilt behind military routine.",
+    "motivations": "He is searching for his missing patrol and privately believes he sounded the retreat too early.",
+    "adventureHook": "At dusk, Calder repeats his squad’s two-note call from the abandoned mill. A reply answers from the north road, and fresh bootprints lead from the road’s bend to a buried military marker. He asks the party to follow the trail before whoever answered reaches the village.",
+    "locationIds": [],
+    "tags": [
+      "ally",
+      "quest-giver",
+      "mysterious"
+    ],
+    "imageAlt": "Painted fantasy portrait of human infantry signaler Calder Venn in patched olive-brown gambeson and chainmail, clutching a brass whistle and battered shield on a village lane at dawn.",
+    "locationFit": [
+      "Village streets",
+      "Roadside watchposts"
+    ],
+    "roleCategoryIds": [
+      "military-authority"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel"
+    ],
+    "portraitKey": "calder-venn",
+    "portraitFit": "contain",
+    "image": "images/characters/calder-venn.webp",
+    "tokenImage": "images/tokens/calder-venn-token.webp",
+    "publishedAt": "2026-10-21T00:10:49.454Z"
+  },
+  {
     "id": "ketta-honeyglass",
     "slug": "ketta-honeyglass",
     "name": "Ketta Honeyglass",
