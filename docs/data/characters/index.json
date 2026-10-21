@@ -1,5 +1,83 @@
 [
   {
+    "id": "borun-claystep",
+    "slug": "borun-claystep",
+    "name": "Borun Claystep",
+    "ancestry": "Orc",
+    "role": "Bathhouse keeper",
+    "group": "townsfolk",
+    "subtitle": "Clean towels, troubled water",
+    "summary": "Borun runs a modest bathhouse where muddy travelers receive clean towels and cheerful instructions about washing their boots. Fussy about cleanliness and generous with his time, he remembers which guests need a quiet bench more than conversation.",
+    "tableNote": "Fold a towel while listening, straighten a crooked stool, and offer practical comfort before asking questions. Borun laughs easily until someone treats his workers as expendable; then his voice becomes very quiet.",
+    "personality": "Sociable, orderly and protective, with a brisk kindness that leaves little room for self-pity.",
+    "motivations": "He wants his workers safe and the bathhouse affordable for the laborers who depend on it.",
+    "adventureHook": "Borun's apprentice is trapped behind a jammed grille in the bathhouse cistern, and the water is rising. Borun asks the party to reach the inlet valve through an old service passage while he holds the grille clear of floating debris; a contractor's dumped rubble has blocked the normal access.",
+    "locationIds": [
+      "cistern-chamber"
+    ],
+    "tags": [
+      "ally",
+      "quest-giver"
+    ],
+    "imageAlt": "Painted orc bathhouse keeper with short greying hair and small tusks, wearing a teal waistcoat and russet apron while holding folded towels in a steamy bathhouse.",
+    "portraitKey": "borun-claystep",
+    "portraitFit": "contain",
+    "image": "images/characters/borun-claystep.webp",
+    "tokenImage": "images/tokens/borun-claystep-token.webp",
+    "locationFit": [
+      "Town bathhouses",
+      "Service passages and cisterns"
+    ],
+    "publishedAt": "2026-10-21T16:00:01-04:00",
+    "roleCategoryIds": [
+      "workers-services",
+      "hospitality-entertainment"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ]
+  },
+  {
+    "id": "rella-quillbrook",
+    "slug": "rella-quillbrook",
+    "name": "Rella Quillbrook",
+    "ancestry": "Halfling",
+    "role": "Traveling interpreter",
+    "group": "townsfolk",
+    "subtitle": "Read back every word",
+    "summary": "Rella travels between market towns, interpreting contracts and testimony for people far from home. Exacting and outspoken, she insists on reading every agreement back in both languages, even when an impatient official tells her to hurry.",
+    "tableNote": "Repeat the important word in each language, tap a pencil against the relevant line, and ask speakers to finish before translating. Rella corrects powerful people as readily as anyone else, but softens her tone for someone frightened of making a mistake.",
+    "personality": "Precise, forthright and quietly mischievous; she enjoys puncturing pomposity with an exact translation.",
+    "motivations": "She wants travelers judged by what they actually say and hopes to train enough interpreters that no one must sign words they cannot read.",
+    "adventureHook": "At a watchhouse, Rella discovers that a foreign carter's signed confession is actually a request for an interpreter. The clerk orders the prisoner transferred at sunset; she asks the party to find the original arrest witness at the caravanserai and bring them before the watch captain before the cart leaves.",
+    "locationIds": [
+      "watchhouse",
+      "caravanserai"
+    ],
+    "tags": [
+      "ally",
+      "quest-giver"
+    ],
+    "imageAlt": "Painted halfling interpreter with dark curls and a low braid, wearing a moss-green traveling coat and burgundy waistcoat while holding papers and a pencil outside an inn.",
+    "portraitKey": "rella-quillbrook",
+    "portraitFit": "contain",
+    "image": "images/characters/rella-quillbrook.webp",
+    "tokenImage": "images/tokens/rella-quillbrook-token.webp",
+    "locationFit": [
+      "Watchhouses",
+      "Caravan inns and market towns"
+    ],
+    "publishedAt": "2026-10-21T16:00:00-04:00",
+    "roleCategoryIds": [
+      "scholars-magic",
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel"
+    ]
+  },
+  {
     "id": "dorrin-sootpick",
     "slug": "dorrin-sootpick",
     "name": "Dorrin Sootpick",
