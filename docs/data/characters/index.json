@@ -1,5 +1,44 @@
 [
   {
+    "id": "sister-nera-duskfall",
+    "slug": "sister-nera-duskfall",
+    "name": "Sister Nera Duskfall",
+    "ancestry": "Human",
+    "role": "Cleric",
+    "group": "adventurers",
+    "subtitle": "Bruised, certain, and still hunting",
+    "summary": "Sister Nera Duskfall is found deep in the darkened ruins, following a vampire’s trail despite a bruised cheek and split lip. Her lantern is steady, her confidence unshaken, and she insists the creature can still be stopped before dawn.",
+    "tableNote": "Raise the lantern to inspect a threshold, wipe at the split lip without breaking her train of thought, and speak as if the next step is already settled. Nera welcomes capable help, but will not let caution become delay.",
+    "personality": "Calm, warm, and certain under pressure, she meets pain with a wry smile and refuses to dramatize the danger.",
+    "motivations": "She wants to find the vampire before dawn drives it toward the nearby settlement.",
+    "adventureHook": "Nera’s trail ends at a sealed crypt door; from behind it, a voice calls her by a private childhood name used only by her missing mentor. She asks the party to help decide whether the vampire is baiting her or needs help before dawn closes their chance.",
+    "locationIds": [],
+    "tags": [
+      "ally",
+      "quest-giver",
+      "mysterious"
+    ],
+    "imageAlt": "Painted fantasy portrait of Sister Nera Duskfall, a bruised human cleric in dark travel robes holding a lantern in a ruined chapel.",
+    "portraitKey": "sister-nera-duskfall",
+    "portraitFit": "contain",
+    "image": "images/characters/sister-nera-duskfall.webp",
+    "tokenImage": "images/tokens/sister-nera-duskfall-token.webp",
+    "locationFit": [
+      "Ruins",
+      "Crypts",
+      "Village streets"
+    ],
+    "publishedAt": "2026-10-20T21:01:40-04:00",
+    "roleCategoryIds": [
+      "adventurers",
+      "faith-healing"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "dungeons-ruins"
+    ]
+  },
+  {
     "id": "brin-alder",
     "slug": "brin-alder",
     "name": "Brin Alder",
