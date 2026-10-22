@@ -1,5 +1,42 @@
 [
   {
+    "id": "hodd-merrow",
+    "slug": "hodd-merrow",
+    "name": "Hodd Merrow",
+    "ancestry": "Human",
+    "role": "Collier",
+    "group": "townsfolk",
+    "subtitle": "Collars beneath the charcoal",
+    "summary": "Soot-stained and coughing, Hodd has tended woodland charcoal kilns for twenty years. Since gnolls seized his wife Tamsin, the quiet collier has hidden iron collars in his deliveries to a cult, knowing what they are for.",
+    "tableNote": "Speak softly between coughs, mutter to the kiln, and agree with anyone who blames him: “Aye. You’re right.” Use Commoner statistics, armed with a shovel; Survival +4. He can guide the party to the white stone and recognize the handler’s face.",
+    "personality": "Withdrawn and distracted at first, then painfully compliant; guilt makes him accept accusations without defending himself.",
+    "motivations": "Recover Tamsin alive. He fears she is already dead and that every collar he delivers condemns someone else.",
+    "adventureHook": "Hodd offers to lead the party to the white stone if they help recover Tamsin from the Rot-Laugh Pack, a Yeenoghu war band holding captives for Bloodwin. Skarl Half-Ear, the scarred Pack Lord, promises a feast to keep his hungry gnolls obedient; Vhrekka, a Fang of Yeenoghu, may break the ban on eating prisoners. Her half-starved hyenas obey only her. The Laughers flank vulnerable targets, retreat and return at night, tracking by scent; they scatter if their leaders fall. Killing the handler, spilling blood near the cages or turning Vhrekka against Skarl may fracture the pack.",
+    "locationIds": [
+      "charcoal-burners-kiln"
+    ],
+    "tags": [
+      "quest-giver",
+      "mysterious"
+    ],
+    "imageAlt": "Painted portrait of Hodd Merrow, a soot-stained middle-aged human collier with tired eyes and greying stubble, gripping a shovel beside a smoking woodland charcoal kiln.",
+    "portraitKey": "hodd-merrow",
+    "portraitFit": "contain",
+    "image": "images/characters/hodd-merrow.webp",
+    "tokenImage": "images/tokens/hodd-merrow-token.webp",
+    "locationFit": [
+      "Woodland charcoal kilns"
+    ],
+    "publishedAt": "2026-10-21T19:59:05-04:00",
+    "roleCategoryIds": [
+      "workers-services",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "wilderness"
+    ]
+  },
+  {
     "id": "borun-claystep",
     "slug": "borun-claystep",
     "name": "Borun Claystep",
