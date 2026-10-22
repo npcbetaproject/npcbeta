@@ -1,5 +1,6 @@
 // High-resolution assets shared by cards, profiles and Session.
 window.NPC_PORTRAITS = Object.freeze({
+  "garran-vey": "images/characters/garran-vey.webp",
   "hodd-merrow": "images/characters/hodd-merrow.webp",
   "dorrin-sootpick": "images/characters/dorrin-sootpick.webp",
   "sister-nera-duskfall": "images/characters/sister-nera-duskfall.webp",

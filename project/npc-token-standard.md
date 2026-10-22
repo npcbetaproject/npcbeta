@@ -9,7 +9,7 @@ Use Brakka Hearthhand's approved token, `docs/images/tokens/brakka-hearthhand-to
 - A circular portrait token with a restrained antique brass, burgundy and charcoal border.
 - A small dragon-head emblem integrated into the bottom border. Use only the dragon from `docs/images/branding/npc-beta-logo.png`; no NPC Beta lettering or character-name plaque.
 - Fully transparent outside the border; a subdued background is allowed inside the circle.
-- Center the face at a readable size, with complete hair, ears, horns and headwear inside the frame. Preserve the portrait's identity, clothing and painted fantasy style.
+- Center the face at a readable size, with complete hair, ears, horns and headwear inside the frame. Preserve the portrait's identity, clothing and approved Ink and colour fantasy RPG style (expressive ink contours, selective crosshatching, rich gouache colour and graphic shadows).
 - Keep the complete border within the square canvas, with a small transparent safety margin. No exterior shadow or extra scenery.
 
 ## Export
@@ -48,7 +48,7 @@ Keep the regular portrait as the main profile image. NPCs without a token hide t
 
 Reusable prompt:
 
-> Create a circular virtual tabletop token of [NPC] from the supplied final portrait, preserving recognizable identity and painted fantasy style. Match the approved Brakka token's restrained antique brass/burgundy/charcoal frame. Center the head and upper chest; keep all hair, ears, horns and headwear inside the circle and the entire border inside the square canvas. Include only a small dragon-head emblem from the site logo in a subtle bottom medallion; no lettering or nameplate. Subdued interior background; genuinely transparent exterior, no exterior shadow. Keep the face readable when reduced to 280 × 280. Export as `<npc-id>-token.webp` after generation.
+> Create a circular virtual tabletop token of [NPC] from the supplied final portrait, preserving recognizable identity and the finalized portrait’s Ink and colour fantasy RPG style. Match the approved Brakka token's restrained antique brass/burgundy/charcoal frame. Center the head and upper chest; keep all hair, ears, horns and headwear inside the circle and the entire border inside the square canvas. Include only a small dragon-head emblem from the site logo in a subtle bottom medallion; no lettering or nameplate. Subdued interior background; genuinely transparent exterior, no exterior shadow. Keep the face readable when reduced to 280 × 280. Export as `<npc-id>-token.webp` after generation.
 
 ## Verification
 

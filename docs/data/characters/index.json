@@ -1,5 +1,45 @@
 [
   {
+    "id": "garran-vey",
+    "slug": "garran-vey",
+    "name": "Garran Vey",
+    "ancestry": "Human",
+    "role": "Master Swordsmith",
+    "group": "townsfolk",
+    "subtitle": "A blade fitted to its bearer",
+    "summary": "Garran owns The True Edge, a tidy town weapons shop lined with finely balanced swords. This patient master craftsman sells finished blades and makes custom weapons, fitting the grip, reach and balance to each customer rather than adding needless ornament.",
+    "tableNote": "Speak in a measured, practical tone. Offer a wooden practice sword and watch the customer’s grip before discussing a commission; turn real blades flat toward visitors. “Show me how you hold it. A fine sword should fit your hand, not make you fight it.”",
+    "personality": "Courteous and exacting, with little patience for boastful claims about steel. He becomes warmly animated when someone asks a thoughtful question about his craft.",
+    "motivations": "Keep The True Edge known for reliable workmanship, and finish every commission to the promised standard. He would rather lose a sale than deliver a badly balanced weapon.",
+    "adventureHook": "Brittle swords bearing Garran’s copied maker’s mark are reaching the town watch. A customer’s receipt names a warehouse collecting another shipment tomorrow; he asks the party to trace the seller before someone is injured and his shop is closed.",
+    "locationIds": [
+      "blacksmiths-forge",
+      "market-square",
+      "armory"
+    ],
+    "tags": [
+      "merchant",
+      "quest-giver"
+    ],
+    "imageAlt": "Ink and colour fantasy illustration of Garran Vey, a human swordsmith with swept-back greying hair and a trimmed beard, examining a finished sword behind the counter of his town weapons shop.",
+    "portraitKey": "garran-vey",
+    "portraitFit": "contain",
+    "image": "images/characters/garran-vey.webp",
+    "tokenImage": "images/tokens/garran-vey-token.webp",
+    "locationFit": [
+      "Town weapons shop",
+      "Forge",
+      "Armory"
+    ],
+    "publishedAt": "2026-10-22T08:00:00-04:00",
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ]
+  },
+  {
     "id": "hodd-merrow",
     "slug": "hodd-merrow",
     "name": "Hodd Merrow",

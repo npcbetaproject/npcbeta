@@ -37,7 +37,7 @@ Use only valid existing `locationIds`; preserve display-oriented `locationFit` w
 
 For each requested NPC:
 
-1. Create and inspect the **960 × 960 opaque WebP portrait**, following the portrait standard. Prefer painted fantasy illustration over a photographic look. Preserve complete heads and headroom.
+1. Create and inspect the **960 × 960 opaque WebP portrait**, following the portrait standard. Use the approved **Ink and colour** fantasy RPG style and Garran Vey reference specified in the portrait standard. Preserve complete heads and headroom.
 2. Derive the **280 × 280 transparent WebP token** from that finalized portrait, using the approved circular border and subtle dragon-only emblem. Follow the token standard; do not target 2 KB.
 3. Export from high-resolution/lossless sources, verify dimensions/format/transparency/size, and retain sources when available. Avoid repeatedly recompressing lossy assets.
 
