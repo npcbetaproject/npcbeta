@@ -14,4 +14,4 @@ Reviewed by a second contributor before integration. The reviewer approved the t
 
 ## Artwork direction
 
-Painted fantasy illustration matching Maera's established medium, with a new human male identity: greying swept-back hair, trimmed beard, blue linen shirt and leather apron. Waist-up behind a shop counter with a fine practical sword below his face, complete head and generous headroom. Derive a circular token using the approved Brakka frame and dragon-only logo reference. Export to the current portrait and token standards.
+User-approved Ink and colour fantasy RPG illustration with expressive ink contours, selective crosshatching, rich gouache colour and graphic shadows. Default style reference for future NPCs. Garran’s identity: greying swept-back hair, trimmed beard, blue linen shirt and leather apron. Waist-up behind a shop counter with a fine practical sword below his face, complete head and generous headroom. Derive a circular token using the approved Brakka frame and dragon-only logo reference. Export to the current portrait and token standards.

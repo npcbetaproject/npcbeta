@@ -1,6 +1,6 @@
 # NPC Beta project guidance
 
-For any new or replacement library NPC portrait, follow project/npc-portrait-standard.md. Use one exactly 960 × 960 WebP asset for cards and expanded profiles, with full heads and generous headroom. Preserve character IDs and browser storage when updating references.
+For any new or replacement library NPC portrait, follow project/npc-portrait-standard.md. Default to the approved **Ink and colour** fantasy RPG style (expressive ink contours, selective crosshatching, rich gouache colour and graphic shadows), using Garran Vey as the style reference. Use one exactly 960 × 960 WebP asset for cards and expanded profiles, with full heads and generous headroom. Preserve character IDs and browser storage when updating references.
 
 Export NPC portraits as opaque WebP with quality 75 and method 6; review visible detail before publishing. These settings supersede older NPC pack export settings.
 
