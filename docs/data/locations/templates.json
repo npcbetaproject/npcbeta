@@ -870,5 +870,21 @@
     "image": "images/locations/glassblowers-workshop-location.webp",
     "imageAlt": "Painterly fantasy glassblower’s workshop with a glowing brick furnace, long blowpipes, a metal worktable and shelves of coloured glass vessels.",
     "publishedAt": "2026-10-22T08:43:14-04:00"
+  },
+  {
+    "id": "apiary",
+    "name": "Apiary",
+    "description": "A working yard where beekeepers tend straw skeps and timber hives, press honeycomb and prepare honey and wax for trade.",
+    "readAloud": "Rows of woven skeps and timber hives stand among wildflowers beside an open shelter crowded with honey jars and a wooden press.",
+    "flavour": "Bees drift between the blossoms in a steady golden haze, their hum rising and falling with the breeze. Warm wax and crushed herbs scent the air while honey glistens in shallow bowls beneath the shelter.",
+    "discovery": "A hive at the edge of the yard has been built around a small stone coffer; fresh wax seals its lid, but the bees leave the narrow seam untouched.",
+    "settings": [
+      "village",
+      "wilderness"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/apiary-location.webp",
+    "imageAlt": "Painterly fantasy apiary with woven straw skeps, timber hives, wildflowers, honey jars and a wooden press beneath a rustic shelter.",
+    "publishedAt": "2026-10-23T09:10:00-04:00"
   }
 ]
