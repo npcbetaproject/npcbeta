@@ -886,5 +886,21 @@
     "image": "images/locations/apiary-location.webp",
     "imageAlt": "Painterly fantasy apiary with woven straw skeps, timber hives, wildflowers, honey jars and a wooden press beneath a rustic shelter.",
     "publishedAt": "2026-10-23T09:10:00-04:00"
+  },
+  {
+    "id": "public-bathhouse",
+    "name": "Public Bathhouse",
+    "description": "A communal bathing house with heated pools, changing benches and washing rooms where residents gather, recover and exchange news.",
+    "readAloud": "Steam drifts above tiled bathing pools beneath arched stone ceilings, with folded linens and copper basins arranged along wooden benches.",
+    "flavour": "Warm mineral water laps against the pool steps while droplets patter from the vaulted ceiling. Soap, damp stone and herbal oils scent the heavy air beyond a screen of rising steam.",
+    "discovery": "A narrow maintenance grate beneath the hottest pool holds a sealed brass cylinder wedged against the drain bars, its surface still warm to the touch.",
+    "settings": [
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/public-bathhouse-location.webp",
+    "imageAlt": "Painterly fantasy public bathhouse with steaming tiled pools, arched stone ceilings, folded linens, copper basins and wooden benches.",
+    "publishedAt": "2026-10-24T09:22:00-04:00"
   }
 ]
