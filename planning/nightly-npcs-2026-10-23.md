@@ -102,3 +102,16 @@ Built-in image generation. Garran Vey is the Ink and colour style reference. Eac
 - Ivo: adult tawny-skinned halfling, chestnut curls and sideburns, welcoming smile, moss-green vest and cream shirt, falconry glove and brown hawk below face, estate mews.
 - Both portraits: centered waist-up, both shoulders, full head and ears, 18–20% clear headroom, expressive ink contours, selective crosshatching and rich gouache colour, no lettering.
 - Both tokens: finalized portrait identity, full head inside restrained antique brass/burgundy/charcoal circle, subtle dragon-only medallion, no text, fully transparent exterior and safety margin.
+
+## Asset and integration validation
+
+| NPC | Portrait | Token |
+| --- | --- | --- |
+| Dagna Slatewake | 960×960 RGB WebP, 203,836 bytes | 280×280 RGBA WebP, 28,800 bytes |
+| Ivo Fernstep | 960×960 RGB WebP, 180,198 bytes | 280×280 RGBA WebP, 28,596 bytes |
+
+Both final portraits were reframed through image generation to add generous clear headroom while preserving identity. Each token was generated from its finalized portrait and approved references, then exported from the lossless source into a 272px image on a transparent 280px canvas for a 4px safety margin. Portrait exports: quality 75/method 6. Tokens: quality 80/method 6. Files decode correctly; tokens have transparent corners and alpha range 0–255. Facial detail, full heads, complete borders and dragon emblems inspected at native size. Lossless PNG sources retained beside this batch's assets.
+
+Exactly two new records. All 58 previous records remain identical. Shared portrait mappings added without storage or UI implementation changes. Both new slugs, existing category/location references, ordering, permanent pages, directory and sitemap verified.
+
+Local checks passed: 60-page build and deterministic check; public-page DOM; token DOM; role categories; location-fit categories; Saved-filter DOM. Local Chromium installation failed due to a truncated browser download; existing PR CI native 375px/1440px browser checks must pass before merging, including full-resolution uncropped cards, profiles, token downloads and Session behavior.
