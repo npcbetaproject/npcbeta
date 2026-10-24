@@ -1,5 +1,8 @@
 // High-resolution assets shared by cards, profiles and Session.
 window.NPC_PORTRAITS = Object.freeze({
+  "dagna-slatewake": "images/characters/dagna-slatewake.webp",
+  "ivo-fernstep": "images/characters/ivo-fernstep.webp",
+
   "vessa-reedspool": "images/characters/vessa-reedspool.webp",
   "perrin-ashbell": "images/characters/perrin-ashbell.webp",
   "garran-vey": "images/characters/garran-vey.webp",
@@ -56,5 +59,6 @@ window.NPC_PORTRAITS = Object.freeze({
   "wenric-valechord": "images/characters/wenric-valechord.webp",
   "captain-mara-thornwick": "images/characters/captain-mara-thornwick.webp",
 });
+
 
 

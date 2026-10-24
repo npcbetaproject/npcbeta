@@ -1,5 +1,83 @@
 [
   {
+    "id": "dagna-slatewake",
+    "name": "Dagna Slatewake",
+    "ancestry": "Dwarf",
+    "role": "Miller",
+    "subtitle": "The wheel has stopped, but the rent has not",
+    "summary": "Dagna runs a riverside grain mill with flour on her sleeves and an iron-gray braid over one shoulder. She challenges unfamiliar visitors from the doorway, convinced that another polite inquiry means someone wants her work for less.",
+    "tableNote": "Plant your feet in the doorway and brush flour from a sleeve while listening. Start sharply: “If you've come to tell me water runs downhill, save your breath. Someone upstream has stopped it.” Let specific offers of work earn a grudging invitation inside.",
+    "personality": "Initially hostile, suspicious and curt; she respects people who keep a bargain and refuses to pass her losses on to hungry customers.",
+    "motivations": "Get the mill turning before her customers' damp grain spoils and keep her two workers paid.",
+    "adventureHook": "A new timber dam upstream has diverted the millrace into an estate's private fishpond. Dagna asks the party to accompany her to the river ford, document the diversion and open the old sluice; hired guards hold the bank, and pulling the wrong timbers could flood the nearby farm.",
+    "locationIds": [
+      "river-ford",
+      "farm"
+    ],
+    "locationFit": [
+      "Riverside mills",
+      "River crossings and farms"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "wilderness"
+    ],
+    "imageAlt": "Ink and colour illustration of dwarf miller Dagna Slatewake with an iron-gray braid, flour-dusted teal tunic and rust-brown apron, holding a grain scoop in a timber watermill.",
+    "publishedAt": "2026-10-23T22:00:01-04:00",
+    "slug": "dagna-slatewake",
+    "group": "townsfolk",
+    "tags": [
+      "quest-giver"
+    ],
+    "portraitKey": "dagna-slatewake",
+    "portraitFit": "contain",
+    "image": "images/characters/dagna-slatewake.webp",
+    "tokenImage": "images/tokens/dagna-slatewake-token.webp"
+  },
+  {
+    "id": "ivo-fernstep",
+    "name": "Ivo Fernstep",
+    "ancestry": "Halfling",
+    "role": "Falconer",
+    "subtitle": "A returning hawk and a missing courier",
+    "summary": "Ivo trains hawks in an estate's mews and welcomes visitors with a spare glove and an invitation to watch. His chestnut curls never stay tidy, and he explains each bird's habits as readily as another person might introduce old friends.",
+    "tableNote": "Offer a safe place to stand and lower your voice when a bird settles. Smile and say, “Come closer, friend—slowly. She likes a quiet introduction, same as anyone.” Ask a visitor's name, remember it and patiently demonstrate instead of scolding mistakes.",
+    "personality": "Initially friendly, helpful and eager to share his craft; he notices nervousness and makes room for people to learn.",
+    "motivations": "Find the missing courier and keep his hawks safe while helping the search.",
+    "adventureHook": "Ivo's escaped hawk returns with a freshly cut jess and blue courier cloth tangled in its anklet. He last saw the bird circling a rock shelter off the mountain trail, where couriers shelter from rain; he asks the party to search it with him before the approaching storm washes away any tracks.",
+    "locationIds": [
+      "courtyard",
+      "mountain-trail",
+      "rock-shelter"
+    ],
+    "locationFit": [
+      "Estate mews",
+      "Upland trails"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "castles-estates",
+      "wilderness",
+      "roads-travel"
+    ],
+    "imageAlt": "Ink and colour illustration of smiling halfling falconer Ivo Fernstep with chestnut curls and a moss-green vest, holding a small brown hawk on a leather glove beside estate mews.",
+    "publishedAt": "2026-10-23T22:00:00-04:00",
+    "slug": "ivo-fernstep",
+    "group": "townsfolk",
+    "tags": [
+      "quest-giver"
+    ],
+    "portraitKey": "ivo-fernstep",
+    "portraitFit": "contain",
+    "image": "images/characters/ivo-fernstep.webp",
+    "tokenImage": "images/tokens/ivo-fernstep-token.webp"
+  },
+  {
     "id": "vessa-reedspool",
     "name": "Vessa Reedspool",
     "ancestry": "Elf",
@@ -2091,4 +2169,3 @@
     "slug": "nyra-valecrest"
   }
 ]
-
