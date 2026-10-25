@@ -1,5 +1,84 @@
 [
   {
+    "id": "odran-vetchlock",
+    "name": "Odran Vetchlock",
+    "ancestry": "Human",
+    "role": "Locksmith",
+    "subtitle": "Proof before the auction bell",
+    "summary": "Odran repairs the town's locks in a cramped workshop, guarding each loose key as carefully as his purse. Balding and sharp-eyed, he greets unfamiliar customers with a demand for proof that they own whatever they want opened.",
+    "tableNote": "Cover a key with your palm and look from the visitor to the lock. Say, “Your door, is it? Then show me something besides confidence.” Keep replies clipped; a clear explanation and a witness earn a grudging hearing.",
+    "personality": "Initially hostile, suspicious and prickly about his reputation; he protects his customers' privacy even when they cannot pay promptly.",
+    "motivations": "Recover his missing master-key ring, replace compromised locks and keep innocent customers from being blamed for theft.",
+    "adventureHook": "Odran recognizes his stolen master-key ring in a lot of seized goods due to be auctioned in the market square at noon. The clerk refuses to release it without proof of ownership; Odran asks the party to fetch his numbered work ledger from the workshop storeroom and bring a watch officer to witness the claim while he keeps the bidding in sight.",
+    "locationIds": [
+      "market-square",
+      "storeroom",
+      "watchhouse"
+    ],
+    "locationFit": [
+      "Town workshops",
+      "Market squares"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "imageAlt": "Ink and colour illustration of balding human locksmith Odran Vetchlock in a plum tunic and leather apron, scowling over a disassembled iron lock in his workshop.",
+    "publishedAt": "2026-10-24T22:00:01-04:00",
+    "slug": "odran-vetchlock",
+    "group": "townsfolk",
+    "tags": [
+      "quest-giver"
+    ],
+    "portraitKey": "odran-vetchlock",
+    "portraitFit": "contain",
+    "image": "images/characters/odran-vetchlock.webp",
+    "tokenImage": "images/tokens/odran-vetchlock-token.webp"
+  },
+  {
+    "id": "selyra-cairnmark",
+    "name": "Selyra Cairnmark",
+    "ancestry": "Elf",
+    "role": "Boundary surveyor",
+    "subtitle": "Two deeds and one well",
+    "summary": "Selyra surveys field boundaries with a plumb bob, a measuring cord and little patience for spectators. Her ochre coat is dusty at the hem, and she treats anyone touching a marker as a likely source of another day's work.",
+    "tableNote": "Hold a cord taut and order visitors off the line before acknowledging them. Say, “Move your boot. Unless you intend to argue with the measurement as well.” Challenge vague claims, but listen closely when someone supplies a date, landmark or original deed.",
+    "personality": "Initially hostile, blunt and defensive of her work; she applies the same measurements to powerful landowners and small tenants.",
+    "motivations": "Establish a boundary people can verify and preserve lawful access to the village's only reliable well.",
+    "adventureHook": "Two apparently valid deeds place the communal well on opposite sides of an estate boundary. Selyra asks the party to escort her to an abandoned logging camp and uncover the oldest carved survey stone beneath a collapsed timber stack; the estate steward arrives tomorrow to fence the access path, and both claimants insist on sending witnesses.",
+    "locationIds": [
+      "farm",
+      "abandoned-logging-camp",
+      "courtyard"
+    ],
+    "locationFit": [
+      "Farm boundaries",
+      "Estate lands",
+      "Old woodland clearings"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "wilderness",
+      "castles-estates"
+    ],
+    "imageAlt": "Ink and colour illustration of stern elf surveyor Selyra Cairnmark in an ochre coat and green tunic, holding a brass plumb bob and measuring cord beside a stone cairn and rural well.",
+    "publishedAt": "2026-10-24T22:00:00-04:00",
+    "slug": "selyra-cairnmark",
+    "group": "townsfolk",
+    "tags": [
+      "quest-giver"
+    ],
+    "portraitKey": "selyra-cairnmark",
+    "portraitFit": "contain",
+    "image": "images/characters/selyra-cairnmark.webp",
+    "tokenImage": "images/tokens/selyra-cairnmark-token.webp"
+  },
+  {
     "id": "dagna-slatewake",
     "name": "Dagna Slatewake",
     "ancestry": "Dwarf",
