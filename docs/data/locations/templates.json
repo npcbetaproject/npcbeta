@@ -902,5 +902,21 @@
     "image": "images/locations/public-bathhouse-location.webp",
     "imageAlt": "Painterly fantasy public bathhouse with steaming tiled pools, arched stone ceilings, folded linens, copper basins and wooden benches.",
     "publishedAt": "2026-10-24T09:22:00-04:00"
+  },
+  {
+    "id": "dyers-yard",
+    "name": "Dyer’s Yard",
+    "description": "A workshop yard where cloth and yarn are boiled in dye vats, rinsed and hung to dry before sale or further finishing.",
+    "readAloud": "Rows of brightly dyed cloth hang above steaming copper vats, wooden rinsing troughs and worktables stained in overlapping colours.",
+    "flavour": "Hot steam carries the sharp scent of vinegar, wet wool and crushed roots across the yard. Coloured water trickles through shallow channels while suspended fabric snaps softly in the breeze.",
+    "discovery": "One drying length shows a pale repeating pattern beneath its blue dye, revealing writing woven into the cloth that becomes visible only while wet.",
+    "settings": [
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/dyers-yard-location.webp",
+    "imageAlt": "Painterly fantasy dyer’s yard with steaming copper vats, timber rinsing troughs, dye-stained worktables and bright cloth hanging from wooden racks.",
+    "publishedAt": "2026-10-25T08:40:00-04:00"
   }
 ]
