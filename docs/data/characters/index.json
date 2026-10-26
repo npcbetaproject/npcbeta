@@ -1,5 +1,81 @@
 [
   {
+    "id": "nella-ruskettle",
+    "slug": "nella-ruskettle",
+    "name": "Nella Ruskettle",
+    "ancestry": "Halfling",
+    "role": "Rat catcher",
+    "group": "townsfolk",
+    "subtitle": "Something stronger than rat bait",
+    "summary": "Nella clears vermin from the town's storehouses with wooden live traps and an exact account of every catch. She meets unfamiliar customers with narrowed eyes, convinced that most people conceal the worst part of a job until the price is settled.",
+    "tableNote": "Keep one hand on a closed trap and demand the whole story before naming a price. Say, “If it were only rats, you would have said where.” Let practical evidence earn her attention, though reassurance alone does not soften her.",
+    "personality": "Initially hostile, suspicious and blunt; she takes pride in careful work and refuses to endanger children or working animals with careless poison.",
+    "motivations": "Find who is dosing grain near her traps, protect her livelihood and keep contaminated sacks out of the town's food supply.",
+    "adventureHook": "Nella finds grain soaked in sleeping draught beside the granary's rear door, along with a dropped apothecary bottle. She asks the party to trace the bottle and watch the door while she separates the suspect sacks; the morning bread delivery leaves at dawn, and she suspects someone intends to drug the granary dogs before stealing from the stores.",
+    "locationIds": [
+      "alleyway",
+      "storeroom",
+      "apothecary"
+    ],
+    "locationFit": [
+      "Granary yards",
+      "Town storehouses"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Ink and colour illustration of suspicious halfling rat catcher Nella Ruskettle with auburn curls, a russet kerchief and moss-green coat, holding a closed wooden live trap beside granary sacks.",
+    "portraitKey": "nella-ruskettle",
+    "portraitFit": "contain",
+    "image": "images/characters/nella-ruskettle.webp",
+    "tokenImage": "images/tokens/nella-ruskettle-token.webp",
+    "publishedAt": "2026-10-25T22:00:01-04:00"
+  },
+  {
+    "id": "dobrik-sporetray",
+    "slug": "dobrik-sporetray",
+    "name": "Dobrik Sporetray",
+    "ancestry": "Goblin",
+    "role": "Mushroom grower",
+    "group": "townsfolk",
+    "subtitle": "A chest in the air shaft",
+    "summary": "Dobrik grows oyster mushrooms on carefully tended racks beneath a rented farmhouse. Usually occupied with moisture, temperature and delivery weights, he treats visitors as another task to fit between harvests.",
+    "tableNote": "Continue sorting mushrooms while visitors explain themselves, then ask how long their proposal will take. Say, “Set it on the dry shelf. I can listen while I weigh.” He becomes attentive when someone offers a specific tool or a workable timetable.",
+    "personality": "Initially indifferent, distracted and strictly practical; patient with honest mistakes, he has little interest in gossip or theatrical promises.",
+    "motivations": "Restore the cellar's airflow, save the next harvest and avoid losing the lease through someone else's concealed business.",
+    "adventureHook": "A locked ironbound chest has been wedged into Dobrik's cellar air shaft, trapping warm damp air around a crop due for delivery tomorrow. He offers a week's produce and his spare coin if the party can reach the shaft from the overgrown yard and extract the chest without crushing the racks; fresh drag marks lead toward the neighboring abandoned homestead.",
+    "locationIds": [
+      "farm",
+      "storeroom",
+      "overgrown-homestead"
+    ],
+    "locationFit": [
+      "Farm cellars",
+      "Produce storerooms"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Ink and colour illustration of sage-green goblin mushroom grower Dobrik Sporetray in an indigo shirt and cream apron, holding a tray of oyster mushrooms in a cool farm cellar.",
+    "portraitKey": "dobrik-sporetray",
+    "portraitFit": "contain",
+    "image": "images/characters/dobrik-sporetray.webp",
+    "tokenImage": "images/tokens/dobrik-sporetray-token.webp",
+    "publishedAt": "2026-10-25T22:00:00-04:00"
+  },
+  {
     "id": "odran-vetchlock",
     "name": "Odran Vetchlock",
     "ancestry": "Human",
