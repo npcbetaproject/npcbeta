@@ -918,5 +918,22 @@
     "image": "images/locations/dyers-yard-location.webp",
     "imageAlt": "Painterly fantasy dyer’s yard with steaming copper vats, timber rinsing troughs, dye-stained worktables and bright cloth hanging from wooden racks.",
     "publishedAt": "2026-10-25T08:40:00-04:00"
+  },
+  {
+    "id": "ropewalk",
+    "name": "Ropewalk",
+    "description": "A long, narrow workshop where flax, hemp and other fibres are spun, stretched and twisted into cordage for ships, farms and builders.",
+    "readAloud": "A roofed timber lane stretches between turning wheels and pegged racks, with pale fibres drawn into long strands above coils of finished rope.",
+    "flavour": "Dry hemp scratches beneath every step, filling the air with a grassy, dusty scent. Wooden hooks chatter in sequence as taut strands creak and tighten down the length of the shed.",
+    "discovery": "One coil carries a line of differently knotted fibres beneath its outer wrap, forming a compact route diagram when the rope is unrolled.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/ropewalk-location.webp",
+    "imageAlt": "Painterly fantasy ropewalk with a wooden twisting wheel, long taut fibre strands, pegged supports, hemp bundles, tar pots and coils of finished rope.",
+    "publishedAt": "2026-10-26T09:25:00-04:00"
   }
 ]
