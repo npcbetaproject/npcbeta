@@ -1,5 +1,84 @@
 [
   {
+    "id": "orsa-cinderglass",
+    "slug": "orsa-cinderglass",
+    "name": "Orsa Cinderglass",
+    "ancestry": "Dwarf",
+    "role": "Glazier",
+    "group": "townsfolk",
+    "subtitle": "Wax where iron should be",
+    "summary": "Orsa cuts and leads stained glass for chapels and prosperous households, checking every measurement twice. Busy with a delivery, she gives visitors the same level stare she gives a pane that does not quite fit.",
+    "tableNote": "Keep measuring while visitors speak, then ask for the detail that affects the job. Say, “Hold that thought—and this edge. Which window, exactly?” A precise answer gets her full attention; flattery does not.",
+    "personality": "Initially indifferent, absorbed and methodical; dryly humorous once the work is safe, she values careful hands over impressive claims.",
+    "motivations": "Keep her customers safe, protect her apprentices' reputations and find who tampered with her finished work.",
+    "adventureHook": "During a final inspection, Orsa finds that two iron support pins beneath a heavy chapel window have been replaced with dark wax. She asks the party to keep worshippers out of that aisle and fetch the caretaker's key to the locked scaffold gate while she braces the frame; the evening service starts within the hour, and fresh wax scraps on the scaffold may identify the saboteur.",
+    "locationIds": [
+      "glassblowers-workshop",
+      "chapel",
+      "private-residence"
+    ],
+    "locationFit": [
+      "Glazing workshops",
+      "Chapels",
+      "Town houses"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "castles-estates"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Ink and colour illustration of dwarf glazier Orsa Cinderglass with silver hair in a low bun, a slate-blue tunic and ochre apron, holding green glass in a medieval glazing workshop.",
+    "portraitKey": "orsa-cinderglass",
+    "portraitFit": "contain",
+    "image": "images/characters/orsa-cinderglass.webp",
+    "tokenImage": "images/tokens/orsa-cinderglass-token.webp",
+    "publishedAt": "2026-10-26T22:00:01-04:00"
+  },
+  {
+    "id": "fenwick-siltcap",
+    "slug": "fenwick-siltcap",
+    "name": "Fenwick Siltcap",
+    "ancestry": "Gnome",
+    "role": "Well cleaner",
+    "group": "townsfolk",
+    "subtitle": "Water going the wrong way",
+    "summary": "Fenwick clears silt and repairs the linings of village wells with a rope cradle and a battered sounding weight. He greets strangers as potential meddlers and insists that nobody touches his tackle without asking.",
+    "tableNote": "Plant yourself between visitors and the well rope, and inspect their boots before meeting their eyes. Say, “Hands off the winch. Tell me who sent you.” Let an offer to witness his findings earn a grudging explanation.",
+    "personality": "Initially hostile, defensive and suspicious; exacting about safety, he is stubbornly fair when evidence contradicts his suspicions.",
+    "motivations": "Restore the village water supply, prove the falling water level is not his fault and prevent an unsafe descent by an impatient neighbor.",
+    "adventureHook": "Fenwick's sounding weight catches on a new clay pipe beneath the village well's waterline. Its route through the lining points toward a wealthy household's cellar, making him suspect a concealed diversion. He asks the party to witness a careful inspection, obtain access to the cellar and help stop any diversion before the livestock troughs run dry tomorrow; he refuses to plug the pipe blindly while someone might be working at its far end.",
+    "locationIds": [
+      "farm",
+      "private-residence",
+      "cistern-chamber"
+    ],
+    "locationFit": [
+      "Village wells",
+      "Farmyards",
+      "Cisterns"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Ink and colour illustration of gnome well cleaner Fenwick Siltcap with a grey moustache, moss-green cap and rust work coat, holding a sounding weight beside a stone village well.",
+    "portraitKey": "fenwick-siltcap",
+    "portraitFit": "contain",
+    "image": "images/characters/fenwick-siltcap.webp",
+    "tokenImage": "images/tokens/fenwick-siltcap-token.webp",
+    "publishedAt": "2026-10-26T22:00:00-04:00"
+  },
+  {
     "id": "nella-ruskettle",
     "slug": "nella-ruskettle",
     "name": "Nella Ruskettle",
@@ -2324,3 +2403,4 @@
     "slug": "nyra-valecrest"
   }
 ]
+
