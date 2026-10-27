@@ -1,5 +1,7 @@
 // High-resolution assets shared by cards, profiles and Session.
 window.NPC_PORTRAITS = Object.freeze({
+  "orsa-cinderglass": "images/characters/orsa-cinderglass.webp",
+  "fenwick-siltcap": "images/characters/fenwick-siltcap.webp",
   "nella-ruskettle": "images/characters/nella-ruskettle.webp",
   "dobrik-sporetray": "images/characters/dobrik-sporetray.webp",
 
@@ -65,6 +67,7 @@ window.NPC_PORTRAITS = Object.freeze({
   "wenric-valechord": "images/characters/wenric-valechord.webp",
   "captain-mara-thornwick": "images/characters/captain-mara-thornwick.webp",
 });
+
 
 
 
