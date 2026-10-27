@@ -935,5 +935,22 @@
     "image": "images/locations/ropewalk-location.webp",
     "imageAlt": "Painterly fantasy ropewalk with a wooden twisting wheel, long taut fibre strands, pegged supports, hemp bundles, tar pots and coils of finished rope.",
     "publishedAt": "2026-10-26T09:25:00-04:00"
+  },
+  {
+    "id": "watermill",
+    "name": "Watermill",
+    "description": "A riverside workshop where a waterwheel powers millstones that grind grain into flour for nearby farms and settlements.",
+    "readAloud": "A broad wooden waterwheel turns beside a stone-and-timber mill, feeding a churning millrace beneath stacked grain sacks and a covered loading porch.",
+    "flavour": "The wheel groans steadily as wet paddles slap the current and gears thump behind the walls. Flour dust sweetens the damp air, settling in pale drifts across the threshold.",
+    "discovery": "A flour-dusted floorboard beside the main axle lifts to reveal a narrow compartment containing a bundle of tally sticks with several deliveries cut away.",
+    "settings": [
+      "village",
+      "wilderness"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/watermill-location.webp",
+    "imageAlt": "Painterly fantasy watermill with a broad wooden wheel, stone-and-timber walls, sluice gate, millrace, grain sacks and a covered loading porch.",
+    "publishedAt": "2026-10-27T08:43:00-04:00"
   }
 ]
+
