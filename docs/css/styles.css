@@ -566,11 +566,11 @@
 }
 #session-board #session-active-scene .location-cast-portrait .generated-profession-badge { display:none; }
 #session-board #session-active-scene .session-scene-member-copy { flex:1; min-width:0; overflow-wrap:anywhere; }
-#session-board #session-active-scene .location-cast-name { font-size:13px; font-weight:600; line-height:1.25; }
+#session-board #session-active-scene .location-cast-name { width:100%; min-width:0; white-space:normal; overflow-wrap:anywhere; overflow:visible; font-size:13px; font-weight:600; line-height:1.25; }
 #session-board #session-active-scene .session-scene-member-role { font-size:11px; line-height:1.35; }
 #session-board #session-active-scene .session-unassign-button {
-  flex:0 0 36px;
-  width:36px;
+  flex:0 0 44px;
+  width:44px;
   height:44px;
   min-height:44px;
   border-radius:5px;
