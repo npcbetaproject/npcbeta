@@ -951,6 +951,23 @@
     "image": "images/locations/watermill-location.webp",
     "imageAlt": "Painterly fantasy watermill with a broad wooden wheel, stone-and-timber walls, sluice gate, millrace, grain sacks and a covered loading porch.",
     "publishedAt": "2026-10-27T08:43:00-04:00"
+  },
+  {
+    "id": "saltworks",
+    "name": "Saltworks",
+    "description": "A coastal worksite where seawater is channelled into shallow pans and evaporated, leaving salt to be raked, dried and packed for trade.",
+    "readAloud": "Low stone-lined pans gleam beneath the sun beside timber sluice gates, salt-crusted rakes and a weathered drying shed stacked with pale sacks.",
+    "flavour": "Brine stings your nose while a dry mineral tang settles on your lips. Wind rattles the sluice boards and skims thin crystals across the pan edges with a faint glassy hiss.",
+    "discovery": "A salt-caked rake has a hollow handle sealed with wax, holding a tightly rolled list of coded weights and dates.",
+    "settings": [
+      "village",
+      "town",
+      "wilderness"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/saltworks-location.webp",
+    "imageAlt": "Painterly fantasy saltworks with shallow stone-lined brine pans, timber sluices, salt crystals, harvesting rakes, baskets, sacks and a low drying shed.",
+    "publishedAt": "2026-10-28T09:17:00-04:00"
   }
 ]
 
