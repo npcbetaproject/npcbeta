@@ -968,6 +968,21 @@
     "image": "images/locations/saltworks-location.webp",
     "imageAlt": "Painterly fantasy saltworks with shallow stone-lined brine pans, timber sluices, salt crystals, harvesting rakes, baskets, sacks and a low drying shed.",
     "publishedAt": "2026-10-28T09:17:00-04:00"
+  },
+  {
+    "id": "fish-weir",
+    "name": "Fish Weir",
+    "description": "A shallow-river fishery where woven barriers guide passing fish into basket traps that can be lifted from a narrow service walkway.",
+    "readAloud": "Willow hurdles and sharpened stakes form a broad V across the shallows, funnelling the current toward two wicker traps beside a narrow plank walkway.",
+    "flavour": "River water chatters through the woven barriers while damp reeds brush against the posts. The bank smells of wet willow and mud, and loose basket lids knock softly beneath the lean-to.",
+    "discovery": "One trap’s weighted anchor is a carved stone boundary marker, its buried face naming a settlement no longer shown on local maps.",
+    "settings": [
+      "village",
+      "wilderness"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/fish-weir-location.webp",
+    "imageAlt": "Painterly fantasy fish weir with woven willow barriers, timber stakes, wicker basket traps, a plank walkway, nets, creels and a simple riverside lean-to.",
+    "publishedAt": "2026-10-29T09:05:00-04:00"
   }
 ]
-
