@@ -984,5 +984,22 @@
     "image": "images/locations/fish-weir-location.webp",
     "imageAlt": "Painterly fantasy fish weir with woven willow barriers, timber stakes, wicker basket traps, a plank walkway, nets, creels and a simple riverside lean-to.",
     "publishedAt": "2026-10-29T09:05:00-04:00"
+  },
+  {
+    "id": "cooperage",
+    "name": "Cooperage",
+    "description": "A barrel-maker’s workshop where timber staves are shaped, steamed and bound with iron hoops into casks for storage and trade.",
+    "readAloud": "Curved oak staves, iron hoops and half-built casks crowd an open timber workshop around a steaming trough and scarred workbenches.",
+    "flavour": "Fresh shavings curl across the floor, filling the warm air with the scent of split oak. Wooden mallets thud against barrel hoops while steam hisses from the trough beside the yard.",
+    "discovery": "A completed cask sounds solid when struck except for one narrow stave, which conceals a rolled shipping tally inside a drilled channel.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/cooperage-location.webp",
+    "imageAlt": "Painterly fantasy cooperage with curved oak staves, iron hoops, half-built casks, scarred workbenches, barrel-making tools, wood shavings and a steaming trough.",
+    "publishedAt": "2026-10-30T09:13:00-04:00"
   }
 ]
