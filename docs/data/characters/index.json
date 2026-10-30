@@ -1,5 +1,86 @@
 [
   {
+    "id": "orrik-ashmuzzle",
+    "slug": "orrik-ashmuzzle",
+    "name": "Orrik Ashmuzzle",
+    "ancestry": "Werewolf",
+    "role": "Camp lookout",
+    "group": "townsfolk",
+    "subtitle": "A welcome behind the warning rope",
+    "summary": "Orrik keeps watch over woodcutters sheltering in an abandoned logging camp, speaking cheerfully through a grey-furred wolf's muzzle. He welcomes travelers to the fire and explains the double-knotted ropes that mark firm ground through the surrounding bog.",
+    "tableNote": "Greet each arrival warmly, offer a dry seat and explain the rope markers with patient enthusiasm. Say, “Welcome, friend. Follow the double knots and you will miss the bog.” His voice drops when anyone cuts a safety rope or tries to force a loaded cart onto the untested shortcut; he offers one clear warning before blocking the route.",
+    "personality": "Initially friendly, helpful and eager to put strangers at ease; protective of the workers in his care and stubborn when a profitable shortcut puts them at risk.",
+    "motivations": "Keep the woodcutters safe, restore a reliable route before the next shift and earn respect for his work rather than fear of his shape.",
+    "adventureHook": "A timber buyer's crew removes Orrik's safety ropes, insisting that a shorter bog route will carry more carts. Workers return before dawn, and Orrik's sounding pole sinks through the new path's crust. He offers the party free guidance if they persuade the foreman to restore the marked route and help check the crossing. If anyone deliberately cuts the remaining ropes or forces loaded carts onto the unsafe ground, he will physically block them.",
+    "locationIds": [
+      "abandoned-logging-camp",
+      "marsh-boardwalk",
+      "roadside-campsite"
+    ],
+    "locationFit": [
+      "Logging camps",
+      "Bog crossings",
+      "Woodland campsites"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "roads-travel",
+      "wilderness"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Grey-furred werewolf lookout Orrik Ashmuzzle with amber eyes and upright ears wearing a green wool vest, cream shirt and rust cloak beside a rope coil in a timber camp.",
+    "portraitKey": "orrik-ashmuzzle",
+    "portraitFit": "contain",
+    "image": "images/characters/orrik-ashmuzzle.webp",
+    "tokenImage": "images/tokens/orrik-ashmuzzle-token.webp",
+    "publishedAt": "2026-10-29T22:00:01-04:00"
+  },
+  {
+    "id": "veyra-thornhush",
+    "slug": "veyra-thornhush",
+    "name": "Veyra Thornhush",
+    "ancestry": "Dryad",
+    "role": "Orchard guardian",
+    "group": "townsfolk",
+    "subtitle": "No axe beyond the wall",
+    "summary": "Veyra tends an old orchard whose fruit feeds the neighboring farms, guarding its boundary with a pruning hook and a sharp tongue. She blocks strangers at the wall and assumes any wagon carries an axe until its owner proves otherwise.",
+    "tableNote": "Stand across the path, study hands before faces and answer grand introductions with a curt question. Say, “Another grand promise. Show me what is under that canvas.” She hears a practical bargain out, but refuses flattery; lighting a fire inside the orchard or cutting a living tree turns her warning into force.",
+    "personality": "Initially hostile, suspicious and mocking of careless promises; exact about boundaries and willing to honor a clearly stated agreement.",
+    "motivations": "Keep the living orchard intact, preserve the farms' shared harvest and secure a fuel arrangement that does not require destroying healthy trees.",
+    "adventureHook": "A charcoal crew arrives with paid cutting rights that place the orchard's oldest trees outside its protected boundary. Veyra seizes their tools and bars the cart track; the crew threatens to return with hired guards at dusk. She will release the tools if the party brokers access to fallen timber and gets the disputed boundary inspected. If anyone starts felling the living trees while talks continue, she will physically drive them out.",
+    "locationIds": [
+      "farm",
+      "forest-clearing",
+      "charcoal-burners-kiln"
+    ],
+    "locationFit": [
+      "Old orchards",
+      "Woodland boundaries",
+      "Charcoal camps"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "wilderness"
+    ],
+    "tags": [
+      "antagonist",
+      "quest-giver"
+    ],
+    "imageAlt": "Stern dryad orchard guardian Veyra Thornhush with tawny bark skin, green eyes and compact copper-leaf branch hair wearing a moss-green gown and russet shawl beside an old orchard wall.",
+    "portraitKey": "veyra-thornhush",
+    "portraitFit": "contain",
+    "image": "images/characters/veyra-thornhush.webp",
+    "tokenImage": "images/tokens/veyra-thornhush-token.webp",
+    "publishedAt": "2026-10-29T22:00:00-04:00"
+  },
+  {
     "id": "sarra-hearthsedge",
     "slug": "sarra-hearthsedge",
     "name": "Sarra Hearthsedge",
