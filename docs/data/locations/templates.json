@@ -1001,5 +1001,23 @@
     "image": "images/locations/cooperage-location.webp",
     "imageAlt": "Painterly fantasy cooperage with curved oak staves, iron hoops, half-built casks, scarred workbenches, barrel-making tools, wood shavings and a steaming trough.",
     "publishedAt": "2026-10-30T09:13:00-04:00"
+  },
+  {
+    "id": "tannery",
+    "name": "Tannery",
+    "description": "A leatherworker’s yard where raw hides are soaked, scraped, stretched and treated with bark liquor before being cut into durable leather.",
+    "readAloud": "Low timber sheds surround rows of soaking vats, scraping beams and hide-covered frames darkened by years of bark liquor.",
+    "flavour": "Sharp lye and wet hide sour the air beneath the warmer scent of oak bark. Water drips from stretched skins while wooden paddles knock against the rims of deep vats.",
+    "discovery": "One stretched hide bears a line of neat pinholes that forms a rough map when held to the light, with a single riverside bend marked twice.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/tannery-location.webp",
+    "imageAlt": "Painterly fantasy tannery with timber sheds, bark-liquor vats, scraping beams, stretched hides, drying racks and bundles of oak bark beside a rocky stream.",
+    "publishedAt": "2026-10-31T08:49:00-04:00"
   }
 ]
+
