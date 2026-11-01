@@ -1,5 +1,7 @@
 // High-resolution assets shared by cards, profiles and Session.
 window.NPC_PORTRAITS = Object.freeze({
+  "ylven-nettleshoe": "images/characters/ylven-nettleshoe.webp",
+  "korra-needlefern": "images/characters/korra-needlefern.webp",
   "fennick-bramblegate": "images/characters/fennick-bramblegate.webp",
   "pellin-waxford": "images/characters/pellin-waxford.webp",
   "orrik-ashmuzzle": "images/characters/orrik-ashmuzzle.webp",
