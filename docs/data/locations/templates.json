@@ -1035,6 +1035,22 @@
     "image": "images/locations/potters-yard-location.webp",
     "imageAlt": "Painterly fantasy potter’s yard with a soot-dark brick kiln, foot-driven wheels, timber shelves of bowls and jugs, clay blocks, glaze jars, tools and stacked firewood.",
     "publishedAt": "2026-11-01T08:40:00-05:00"
+  },
+  {
+    "id": "granary",
+    "name": "Granary",
+    "description": "A raised storehouse where grain is dried, measured and kept in sealed bins before milling or winter distribution.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/granary-location.webp",
+    "imageAlt": "Raised timber granary on stone piers with open loading doors, grain sacks, handcart, baskets, sieves and a balance scale in a sunlit yard.",
+    "publishedAt": "2026-11-02T10:30:00-05:00",
+    "flavour": "Chaff drifts through slanting light, carrying the dry scent of wheat and cedar boards. Somewhere beneath the floor, a wooden rattle turns steadily in the breeze to discourage vermin.",
+    "discovery": "One measuring scoop has a false bottom hiding a strip of waxed cloth marked with repeated delivery dates and an unfamiliar seal.",
+    "readAloud": "A broad timber granary stands on stone piers above a swept yard, its loading doors flanked by stacked sacks, handcarts and covered grain bins."
   }
 ]
-
