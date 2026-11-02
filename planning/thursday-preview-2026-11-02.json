@@ -1,0 +1,79 @@
+[
+  {
+    "id": "mosswick-reedjaw",
+    "slug": "mosswick-reedjaw",
+    "name": "Mosswick Reedjaw",
+    "ancestry": "Troll",
+    "role": "Sluice keeper",
+    "group": "townsfolk",
+    "subtitle": "A flood held behind one missing crank",
+    "summary": "Mosswick maintains a watermill sluice in exchange for flour and a dry shed. This broad, moss-skinned troll welcomes visitors with an eager grin and explains every repair as though he has finally found an interested apprentice.",
+    "tableNote": "Lean on an imaginary lever, beam at practical questions and praise a sound knot. Say, “Lovely timing! Hold this steady and I will show you which field we are saving.” His welcome hardens if someone forces the gate before the downstream path is cleared.",
+    "personality": "Initially friendly, enthusiastic and proud of useful work; protective of the people below the mill, but too ready to assume everyone understands the machinery.",
+    "motivations": "Keep the lower fields dry, preserve his arrangement with the miller and prove that his strength is good for more than frightening travellers.",
+    "adventureHook": "Someone steals the removable sluice crank and leaves enormous footprints pointing toward Mosswick’s shed. Water is backing up toward the lower fields, and a grain merchant offers a bounty for driving him away. Mosswick asks the party to follow the tracks to a reed-hidden handcart and recover the crank; the merchant has staged the theft to buy flooded farms cheaply. Clearing the downstream footpath and fitting the crank earns safe passage and Mosswick’s help, while trying to smash the gate makes him block the party by force.",
+    "locationIds": [
+      "watermill",
+      "marsh-boardwalk"
+    ],
+    "locationFit": [
+      "Watermills",
+      "Marsh crossings"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "waterfront",
+      "wilderness"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Broad moss-green troll with reed-tangled dark hair and a patched brown jerkin smiling over a wooden sluice lever beside a watermill.",
+    "portraitKey": "mosswick-reedjaw",
+    "portraitFit": "contain",
+    "image": "images/characters/mosswick-reedjaw.webp",
+    "tokenImage": "images/tokens/mosswick-reedjaw-token.webp",
+    "publishedAt": "2026-11-02T17:00:00-05:00"
+  },
+  {
+    "id": "veyra-hollowbell",
+    "slug": "veyra-hollowbell",
+    "name": "Sister Veyra Hollowbell",
+    "ancestry": "Vampire",
+    "role": "Mortuary keeper",
+    "group": "townsfolk",
+    "subtitle": "The bell is for the living",
+    "summary": "Veyra keeps a mortuary beside a neglected crypt, recording each delivery in a locked burial register. Pale, severe and openly suspicious of interruptions, she demands a name and a purpose before admitting anyone past the threshold.",
+    "tableNote": "Keep your chin still, watch a visitor’s throat and close the register when questioned. Say, “The mourners have gone. Explain why you have not.” Offer precise bargains when cornered, and let irritation slip when someone rings her small tarnished bell.",
+    "personality": "Initially hostile, controlling and contemptuous of curiosity. Her sinister work is deliberate: she conceals living captives among sealed funeral deliveries and feeds on them beneath the mortuary.",
+    "motivations": "Keep her feeding route concealed, silence witnesses and retain the official-looking register that makes her deliveries appear legitimate.",
+    "adventureHook": "A porter hears a living voice from a funeral cart and asks the party to inspect Veyra’s next delivery before midnight. Her register lists captives as buried strangers, and a loose page identifies the sealed crypt where they are held. The party can steal the crypt key from her bell cord, force her to exchange it for the incriminating register, or interrupt the cart at the crypt entrance. Veyra attacks if escape and bargaining fail; any deal leaves a predator who still needs to be stopped.",
+    "locationIds": [
+      "crypt",
+      "chapel"
+    ],
+    "locationFit": [
+      "Mortuaries",
+      "Burial crypts"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "dungeons-ruins"
+    ],
+    "tags": [
+      "antagonist",
+      "mysterious"
+    ],
+    "imageAlt": "Pale vampire mortuary keeper with black braided hair, small fangs and a charcoal dress holding a closed register in a stone passage.",
+    "portraitKey": "veyra-hollowbell",
+    "portraitFit": "contain",
+    "image": "images/characters/veyra-hollowbell.webp",
+    "tokenImage": "images/tokens/veyra-hollowbell-token.webp",
+    "publishedAt": "2026-11-02T17:00:01-05:00"
+  }
+]
