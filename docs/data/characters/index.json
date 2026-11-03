@@ -1,5 +1,82 @@
 [
   {
+    "id": "neris-claywhorl",
+    "slug": "neris-claywhorl",
+    "name": "Neris Claywhorl",
+    "ancestry": "Human",
+    "role": "Potter",
+    "group": "townsfolk",
+    "subtitle": "Mind the pots, and the tortoise",
+    "summary": "Neris makes sturdy jars in a pottery yard and insists visitors try the handle before praising the glaze. Warm and eager to include newcomers, she offers a place at the workbench even when her own hands are full.",
+    "tableNote": "Smile, wipe your palms on your apron and offer someone a small useful job. Say, “Perfect timing, friend. Take that end, and I will keep the pots out of our way.” She thanks careful helpers by name and admits readily when a problem needs skills beyond hers.",
+    "personality": "Initially friendly, practical and encouraging; delighted by other people's expertise, but inclined to promise help before checking how much work she already has.",
+    "motivations": "Make affordable vessels that last, keep her shared yard welcoming and solve the day's trouble without an animal or neighbor paying for her haste.",
+    "adventureHook": "A cart-sized tortoise follows the warmth into Neris's yard and becomes wedged between her unlit kiln and a storage wall. A traveler claiming it arrives with a winch and wants to drag it through the narrow lane before dusk. Neris asks the party to move the pottery racks, coax the animal backward into the square and persuade the claimant to use the broad farm gate instead; she offers payment in coin or sturdy travel jars.",
+    "locationIds": [
+      "potters-yard",
+      "market-square"
+    ],
+    "locationFit": [
+      "Pottery yards",
+      "Market squares"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "merchant",
+      "quest-giver"
+    ],
+    "imageAlt": "Brown-skinned human potter with dark curls under a rust-red headscarf, ochre shirt and clay-dusted indigo apron holding an unfinished jug in a pottery yard.",
+    "portraitKey": "neris-claywhorl",
+    "portraitFit": "contain",
+    "image": "images/characters/neris-claywhorl.webp",
+    "tokenImage": "images/tokens/neris-claywhorl-token.webp",
+    "publishedAt": "2026-11-02T22:00:01-05:00"
+  },
+  {
+    "id": "tirra-glassmote",
+    "slug": "tirra-glassmote",
+    "name": "Tirra Glassmote",
+    "ancestry": "Gnome",
+    "role": "Dream interpreter",
+    "group": "townsfolk",
+    "subtitle": "Kind words behind borrowed dreams",
+    "summary": "Tirra welcomes anxious sleepers to a curtained consultation room, remembers their worries and offers polished glass discs to keep beneath their pillows. Her warm attention conceals a scheme to turn reassuring dreams into commands her clients obey.",
+    "tableNote": "Lean forward, remember one small concern and speak as though there is plenty of time. Say, “You have carried this worry alone long enough. Tell me what you saw, and we will make sense of it together.” Keep her welcome gentle even while she steers questions away from the underside of the glass discs.",
+    "personality": "Initially friendly, attentive and patient. Deliberately sinister beneath that manner, she treats private fears as tools for controlling people and feels entitled to the wealth she takes from them.",
+    "motivations": "Bind prosperous clients to dream-borne commands, make them appear to surrender valuables willingly in public and preserve her reputation as a trusted adviser.",
+    "adventureHook": "A client asks the party for help after dreaming the exact command to bring her savings to Tirra at midnight; the same spiral appears in the dream and beneath Tirra's gift disc. The party can pose as new clients to inspect the consultation room, where a brass bowl beneath a loose floorboard links the discs. Removing a client's disc prevents further commands to that sleeper; breaking the bowl's spiral frees every linked client before the collection; Tirra offers a share of the stolen wealth for silence if exposed.",
+    "locationIds": [
+      "private-residence",
+      "market-square"
+    ],
+    "locationFit": [
+      "Consultation rooms",
+      "Market neighborhoods"
+    ],
+    "roleCategoryIds": [
+      "scholars-magic",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "antagonist",
+      "mysterious"
+    ],
+    "imageAlt": "Olive-skinned gnome dream interpreter with pointed ears, silver-blond braid and an inviting smile holding a brass dish with glass discs in a softly lit curtained room.",
+    "portraitKey": "tirra-glassmote",
+    "portraitFit": "contain",
+    "image": "images/characters/tirra-glassmote.webp",
+    "tokenImage": "images/tokens/tirra-glassmote-token.webp",
+    "publishedAt": "2026-11-02T22:00:00-05:00"
+  },
+  {
     "id": "mosswick-reedjaw",
     "slug": "mosswick-reedjaw",
     "name": "Mosswick Reedjaw",
