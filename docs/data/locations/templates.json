@@ -1052,5 +1052,22 @@
     "flavour": "Chaff drifts through slanting light, carrying the dry scent of wheat and cedar boards. Somewhere beneath the floor, a wooden rattle turns steadily in the breeze to discourage vermin.",
     "discovery": "One measuring scoop has a false bottom hiding a strip of waxed cloth marked with repeated delivery dates and an unfamiliar seal.",
     "readAloud": "A broad timber granary stands on stone piers above a swept yard, its loading doors flanked by stacked sacks, handcarts and covered grain bins."
+  },
+  {
+    "id": "public-well",
+    "name": "Public Well",
+    "description": "A communal water source with a stone curb, timber winch and nearby trough, often serving as a gathering place for residents and travellers.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/public-well-location.webp",
+    "imageAlt": "Painterly fantasy public well with a shingled timber canopy, stone curb, wooden winch, buckets and a long watering trough in a sunlit courtyard.",
+    "publishedAt": "2026-11-03T08:40:00-05:00",
+    "flavour": "The pulley groans as the rope turns, and cool air rises carrying the mineral smell of deep water. Damp moss darkens the lower stones while small coins glint between the cracks.",
+    "discovery": "One coping stone lifts free, revealing a shallow cache containing a wax-sealed note and several mismatched keys.",
+    "readAloud": "A waist-high stone well stands beneath a shingled canopy, with a wooden bucket hanging from its winch beside a long watering trough."
   }
 ]
