@@ -1069,5 +1069,22 @@
     "flavour": "The pulley groans as the rope turns, and cool air rises carrying the mineral smell of deep water. Damp moss darkens the lower stones while small coins glint between the cracks.",
     "discovery": "One coping stone lifts free, revealing a shallow cache containing a wax-sealed note and several mismatched keys.",
     "readAloud": "A waist-high stone well stands beneath a shingled canopy, with a wooden bucket hanging from its winch beside a long watering trough."
+  },
+  {
+    "id": "cemetery",
+    "name": "Cemetery",
+    "description": "A communal burial ground enclosed by a low wall, with marked graves, family plots and paths kept by local caretakers.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/cemetery-location.webp",
+    "imageAlt": "Painterly fantasy cemetery with a winding gravel path, weathered headstones, low stone walls, a ribbon-hung yew tree, gate bell and small caretaker shelter after rain.",
+    "publishedAt": "2026-11-04T09:04:00-05:00",
+    "flavour": "Damp earth and clipped rosemary scent the still air. A small iron bell beside the gate taps softly whenever the wind shifts.",
+    "discovery": "One marker has been turned to face the wall, exposing a second inscription cut across its hidden side.",
+    "readAloud": "A gravel path winds between rows of weathered headstones inside a low stone wall, beneath yew branches hung with pale ribbons."
   }
 ]
