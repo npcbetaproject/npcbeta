@@ -1,5 +1,84 @@
 [
   {
+    "id": "edda-appleturn",
+    "slug": "edda-appleturn",
+    "name": "Edda Appleturn",
+    "ancestry": "Gnome",
+    "role": "Cider presser",
+    "group": "townsfolk",
+    "subtitle": "One tree, another harvest",
+    "summary": "Edda presses cider in a small orchard shed, greeting visitors with a cup and a cheerful account of the day's apples. She eagerly finds newcomers a useful job and remembers anyone who handles her old press with care.",
+    "tableNote": "Offer a seat, explain one small task and praise a careful attempt before correcting it. Say, “Come in, friend. Taste this batch, then tell me which job your hands would like.” Her chatter slows when she speaks about the old trees, but she still welcomes practical advice.",
+    "personality": "Initially friendly, generous and talkative; proud of patient craft and quick to trust someone who treats living things gently.",
+    "motivations": "Keep the village supplied with good cider, pass her knowledge to willing learners and preserve an old apple variety that her neighbors cannot replace by buying new trees.",
+    "adventureHook": "A storm splits the last tree of Edda's treasured cider-apple variety, leaving its healthy shoots high in unstable branches. She asks the party to help the orchard gardener salvage cuttings and carry them to a sheltered estate courtyard before the night's hard frost. The estate's cold frames stand empty, but its steward wants a repair deposit before granting access; Edda offers the party coin and next harvest's first barrel if they can arrange shelter and transport without losing the shoots.",
+    "locationIds": [
+      "farm",
+      "courtyard"
+    ],
+    "locationFit": [
+      "Orchard farms",
+      "Estate courtyards"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "castles-estates"
+    ],
+    "tags": [
+      "merchant",
+      "quest-giver"
+    ],
+    "imageAlt": "Freckled older gnome cider presser with grey-streaked auburn braids, russet waistcoat and green apron holding an apple and wooden cup beside an orchard press.",
+    "portraitKey": "edda-appleturn",
+    "portraitFit": "contain",
+    "image": "images/characters/edda-appleturn.webp",
+    "tokenImage": "images/tokens/edda-appleturn-token.webp",
+    "publishedAt": "2026-11-03T22:00:01-05:00"
+  },
+  {
+    "id": "sarra-bonebutton",
+    "slug": "sarra-bonebutton",
+    "name": "Sarra Bonebutton",
+    "ancestry": "Goblin",
+    "role": "Relic seller",
+    "group": "townsfolk",
+    "subtitle": "A market for fear",
+    "summary": "Sarra sells worn charms from a covered market stall and greets questions with a suspicious stare. She keeps a sealed bronze reliquary close, concealing a captive shade she intends to release when frightened customers will pay most for her wards.",
+    "tableNote": "Count a visitor's coins, shield the reliquary with your elbow and answer questions with a challenge. Say, “Buying, or just wearing out my patience? Keep your hands where I can see them.” Her bargains remain grudging even when she needs help, and she treats concern for bystanders as a weakness to exploit.",
+    "personality": "Initially hostile, defensive and contemptuous of curiosity. Her sinister agenda is deliberate: she means to endanger a crowd for profit and considers unprotected neighbors an acceptable cost.",
+    "motivations": "Stage a supernatural attack, sell her genuine protective pendants at panic prices and leave town before anyone links the shade to her stall.",
+    "adventureHook": "A buyer recognizes Sarra's bronze reliquary as stolen from a family crypt and asks the party to investigate before the evening market bell. Sarra plans to pull its engraved locking pin at the bell, releasing a shade that avoids anyone wearing one of her wards. The party can seize the reliquary with its pin still in place and deliver it to the watchhouse, or clear the square and expose her scheme to the watch; the matching crypt carving proves the vessel's purpose. Sarra offers stolen relics for silence if cornered.",
+    "locationIds": [
+      "market-square",
+      "crypt"
+    ],
+    "locationFit": [
+      "Relic stalls",
+      "Burial crypts"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "dungeons-ruins"
+    ],
+    "tags": [
+      "merchant",
+      "antagonist"
+    ],
+    "imageAlt": "Slate-green goblin relic seller with pointed ears, swept-back dark hair and suspicious amber eyes holding a sealed bronze reliquary at a shadowed market stall.",
+    "portraitKey": "sarra-bonebutton",
+    "portraitFit": "contain",
+    "image": "images/characters/sarra-bonebutton.webp",
+    "tokenImage": "images/tokens/sarra-bonebutton-token.webp",
+    "publishedAt": "2026-11-03T22:00:00-05:00"
+  },
+  {
     "id": "neris-claywhorl",
     "slug": "neris-claywhorl",
     "name": "Neris Claywhorl",
