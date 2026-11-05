@@ -1,5 +1,85 @@
 [
   {
+    "id": "tivren-hazelwink",
+    "slug": "tivren-hazelwink",
+    "name": "Tivren Hazelwink",
+    "ancestry": "Gnome",
+    "role": "Town crier",
+    "group": "townsfolk",
+    "subtitle": "The last order of the watch",
+    "summary": "Tivren carries the town's notices from square to gate, greeting familiar faces between announcements. Warm and eager to help, he treats a newcomer as someone who simply has not heard the useful news yet.",
+    "tableNote": "Lift an imaginary bell, lean closer for ordinary conversation and remember the last name someone gives you. Say, “Welcome, friend! The public news can wait a breath. What do you need to know?” When frightened, he rehearses the opening line quietly rather than pretending to be fearless.",
+    "personality": "Initially friendly, talkative and civic-minded; proud of clear speech, generous with directions and unexpectedly gentle when announcing a loss.",
+    "motivations": "Make sure everyone hears news that affects them, earn trust through accurate announcements and give forgotten people the public acknowledgment they deserve.",
+    "adventureHook": "Spectral watchmen begin closing the town gate at dusk, insisting that their long-dead company has never been relieved. Tivren asks the party to recover its signed discharge roll from a record chest in the roof-damaged old barracks so he can read the order aloud with his civic seal. The party must reach the chest through fallen rafters and return before the midnight watch change, when the sentries will bar the gate for another day and strand the waiting supply carts.",
+    "locationIds": [
+      "market-square",
+      "gatehouse",
+      "barracks"
+    ],
+    "locationFit": [
+      "Town squares",
+      "Gatehouses",
+      "Old barracks"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Tan-skinned gnome town crier with sandy curls, small moustache and rust-red cap smiling with a brass handbell and rolled parchment beside a stone town gate.",
+    "portraitKey": "tivren-hazelwink",
+    "portraitFit": "contain",
+    "image": "images/characters/tivren-hazelwink.webp",
+    "tokenImage": "images/tokens/tivren-hazelwink-token.webp",
+    "publishedAt": "2026-11-04T22:00:01-05:00"
+  },
+  {
+    "id": "caldra-wispwick",
+    "slug": "caldra-wispwick",
+    "name": "Caldra Wispwick",
+    "ancestry": "Elf",
+    "role": "Perfumer",
+    "group": "townsfolk",
+    "subtitle": "The last scent of the grove",
+    "summary": "Caldra blends perfumes in a tidy workroom, welcoming customers with patient questions and carefully remembered preferences. Her attentive hospitality conceals plans to destroy the wild moonviolet grove and make her stored stock the only local supply.",
+    "tableNote": "Offer a clean testing cloth, listen without interrupting and recall one detail from a visitor's last purchase. Say, “You need not choose in a hurry. Tell me the scent you hoped to find, and I will help.” Keep her voice warm when challenged; she describes another person's hardship as an unfortunate cost of doing business.",
+    "personality": "Initially friendly, gracious and observant. Deliberately sinister beneath that manner, she is willing to destroy a shared resource and deny healers supplies to gain control of the trade.",
+    "motivations": "Eliminate the wild source of moonviolets, force perfumers and healers to buy her reserves at inflated prices and keep her polished reputation intact.",
+    "adventureHook": "Caldra's apprentice learns that hired burners will destroy the forest's only moonviolet grove at midnight and brings the party a route sketch and Caldra's signed payment order. The flowers also supply local healers, so the party can escort the apprentice to the watch and stop the crew at the forest clearing, or confront Caldra with the evidence and demand a witnessed cancellation. She offers a share of her stored flowers for silence; saving the grove preserves a source she cannot control.",
+    "locationIds": [
+      "private-residence",
+      "forest-clearing",
+      "watchhouse"
+    ],
+    "locationFit": [
+      "Perfume workrooms",
+      "Wildflower clearings"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "wilderness"
+    ],
+    "tags": [
+      "merchant",
+      "antagonist"
+    ],
+    "imageAlt": "Brown-skinned elf perfumer with long pointed ears and black hair in a low bun smiling with a stoppered amber flask and violet flowers in a softly lit workroom.",
+    "portraitKey": "caldra-wispwick",
+    "portraitFit": "contain",
+    "image": "images/characters/caldra-wispwick.webp",
+    "tokenImage": "images/tokens/caldra-wispwick-token.webp",
+    "publishedAt": "2026-11-04T22:00:00-05:00"
+  },
+  {
     "id": "edda-appleturn",
     "slug": "edda-appleturn",
     "name": "Edda Appleturn",
