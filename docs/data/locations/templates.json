@@ -1086,5 +1086,22 @@
     "flavour": "Damp earth and clipped rosemary scent the still air. A small iron bell beside the gate taps softly whenever the wind shifts.",
     "discovery": "One marker has been turned to face the wall, exposing a second inscription cut across its hidden side.",
     "readAloud": "A gravel path winds between rows of weathered headstones inside a low stone wall, beneath yew branches hung with pale ribbons."
+  },
+  {
+    "id": "sewer-junction",
+    "name": "Sewer Junction",
+    "description": "A junction of brick-lined drainage tunnels where runoff channels meet beneath a settlement, with narrow service ledges and sluice gates for maintenance.",
+    "settings": [
+      "town",
+      "city",
+      "underground"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/sewer-junction-location.webp",
+    "imageAlt": "Painterly fantasy sewer junction with converging brick drainage tunnels, shallow water channels, stone service ledges, an iron sluice gate and a wall ladder beneath a town.",
+    "publishedAt": "2026-11-05T09:03:00-05:00",
+    "flavour": "Water murmurs through the channels, carrying the sour smell of wet stone and rust. Drops strike the ledges in a slow, uneven rhythm beneath the distant rumble of cart wheels.",
+    "discovery": "Fresh mortar seals a low side channel, but a steady draft slips through a fist-sized gap near the floor.",
+    "readAloud": "Brick arches meet above three dark runoff channels, with narrow stone ledges circling an iron sluice gate and a ladder rising toward the street."
   }
 ]
