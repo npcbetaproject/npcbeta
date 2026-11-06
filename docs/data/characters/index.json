@@ -1,5 +1,84 @@
 [
   {
+    "id": "lethro-acornheel",
+    "slug": "lethro-acornheel",
+    "name": "Lethro Acornheel",
+    "ancestry": "Satyr",
+    "role": "Boundary guide",
+    "group": "townsfolk",
+    "subtitle": "A courteous pause at the thorn arch",
+    "summary": "Lethro guides travelers along the woodland boundary, welcoming them with an easy smile and a choice of routes. This horned satyr explains the crossing's restrictions before asking for payment, and accepts useful news as readily as bread.",
+    "tableNote": "Offer two clear choices, tilt your head as though listening to the trees and thank anyone who asks before touching a marker. Say, “Welcome, friends. A little patience here will save us all a long walk.” Keep his voice kind when he refuses passage; friendliness does not make him abandon his duty.",
+    "personality": "Initially friendly, patient and curious about travelers; generous with local knowledge, but firm about agreements that protect the path and neighboring farms.",
+    "motivations": "Keep the boundary's living thorn barrier contained, earn a modest living guiding crossings and persuade hurried travelers that a safe route is worth a short delay.",
+    "adventureHook": "A wagon clips the boundary stone, dropping its capstone into the ravine below. Until it is repaired, uncovered iron makes the thorn arch close across the path. Lethro offers a longer detour or a quiet crossing with iron gear wrapped in felt if the party helps retrieve and replace the capstone. Repair earns his escort; trying to smash the stone or burn through the barrier makes him block the party by force, because breaking the boundary would release the thorns toward nearby farms.",
+    "locationIds": [
+      "forest-clearing",
+      "ravine-crossing"
+    ],
+    "locationFit": [
+      "Woodland boundaries",
+      "Ravine crossings"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "roads-travel",
+      "wilderness"
+    ],
+    "tags": [
+      "quest-giver",
+      "wanderer"
+    ],
+    "imageAlt": "Brown-skinned satyr boundary guide with curled goat horns, russet curls and a short goatee smiling in a moss-green cloak beside a woodland marker.",
+    "portraitKey": "lethro-acornheel",
+    "portraitFit": "contain",
+    "image": "images/characters/lethro-acornheel.webp",
+    "tokenImage": "images/tokens/lethro-acornheel-token.webp",
+    "publishedAt": "2026-11-05T22:00:01-05:00"
+  },
+  {
+    "id": "vorrak-blackwrit",
+    "slug": "vorrak-blackwrit",
+    "name": "Vorrak Blackwrit",
+    "ancestry": "Ogre",
+    "role": "Debt enforcer",
+    "group": "townsfolk",
+    "subtitle": "A friendly throw, a longer debt",
+    "summary": "Vorrak welcomes debtors to his roadside counting room with a meal and a cheerful offer to settle matters over dice. The broad-shouldered ogre rigs these games to renew paid debts and send innocent people into forced quarry labor.",
+    "tableNote": "Greet visitors by name, pull out a chair and explain every demand as though you are doing them a favor. Say, “Sit, friend. No need for a sour face over a number. One little game can put this behind us.” Keep smiling while you move the bench across the doorway; his hospitality is a means of control.",
+    "personality": "Initially friendly, sociable and reassuring. Deliberately sinister beneath that manner, he treats coerced labor as a business asset and knows that his supposed settlements are fraudulent.",
+    "motivations": "Keep paid debts alive through rigged games, profit from quarry labor contracts and preserve the appearance that his victims freely accepted the terms.",
+    "adventureHook": "A carter's sibling asks the party to stop a dawn wagon carrying three adult debtors whom Vorrak has trapped through rigged settlement games. His marked dice and the carters' original paid bonds expose the fraud. The party can demand a public reckoning before neutral witnesses, bring the evidence to the watch or free the captives from the counting-room storeroom. Vorrak offers their release for a safe exit if cornered, but blocks the door and fights if the party tries to take the captives or dice without a deal.",
+    "locationIds": [
+      "caravanserai",
+      "storeroom",
+      "watchhouse"
+    ],
+    "locationFit": [
+      "Roadside counting rooms",
+      "Caravan stops"
+    ],
+    "roleCategoryIds": [
+      "workers-services",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel"
+    ],
+    "tags": [
+      "antagonist"
+    ],
+    "imageAlt": "Broad grey-brown ogre debt enforcer with close-cropped dark hair and small tusks smiling in a teal coat and ochre waistcoat with a wooden dice cup and folded paper.",
+    "portraitKey": "vorrak-blackwrit",
+    "portraitFit": "contain",
+    "image": "images/characters/vorrak-blackwrit.webp",
+    "tokenImage": "images/tokens/vorrak-blackwrit-token.webp",
+    "publishedAt": "2026-11-05T22:00:00-05:00"
+  },
+  {
     "id": "tivren-hazelwink",
     "slug": "tivren-hazelwink",
     "name": "Tivren Hazelwink",
