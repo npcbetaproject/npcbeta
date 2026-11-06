@@ -1103,5 +1103,22 @@
     "flavour": "Water murmurs through the channels, carrying the sour smell of wet stone and rust. Drops strike the ledges in a slow, uneven rhythm beneath the distant rumble of cart wheels.",
     "discovery": "Fresh mortar seals a low side channel, but a steady draft slips through a fist-sized gap near the floor.",
     "readAloud": "Brick arches meet above three dark runoff channels, with narrow stone ledges circling an iron sluice gate and a ladder rising toward the street."
+  },
+  {
+    "id": "communal-bakehouse",
+    "name": "Communal Bakehouse",
+    "description": "A shared baking house where households and bakers prepare dough and use a large communal oven, with worktables, proofing baskets and cooling racks.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/communal-bakehouse-location.webp",
+    "imageAlt": "Painterly fantasy communal bakehouse with a glowing domed brick oven, flour-dusted worktable, proofing baskets, bread racks, wooden peels, scales and stacked firewood.",
+    "publishedAt": "2026-11-06T08:45:00-05:00",
+    "flavour": "Warm bread and woodsmoke sweeten the air as the fire settles behind the oven mouth. Wooden peels scrape over brick, and linen cloths stir in the draft from the open shutters.",
+    "discovery": "A clay tally left beneath the balance scale bears the same simple notch pattern as three loaves set apart on the lowest rack.",
+    "readAloud": "A soot-dark brick oven glows beside broad flour-dusted tables, while proofing baskets and racks of cooling loaves fill the warm stone room."
   }
 ]
