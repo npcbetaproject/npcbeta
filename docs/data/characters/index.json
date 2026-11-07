@@ -1,5 +1,84 @@
 [
   {
+    "group": "townsfolk",
+    "portraitFit": "contain",
+    "id": "morla-fennstitch",
+    "slug": "morla-fennstitch",
+    "name": "Morla Fennstitch",
+    "ancestry": "Halfling",
+    "role": "Saddler",
+    "subtitle": "A sound saddle needs a rested mule",
+    "summary": "Morla fits pack saddles for departing caravans, answering questions without looking up from her stitching. This practical halfling charges fairly and refuses work that will put an exhausted animal back on the road.",
+    "tableNote": "Keep checking a strap while speaking, ask for measurements before explanations and give precise estimates. Say, “Delivery at dawn? Find a rested mule first. I can fit the harness while you settle the loan.” Her initial indifference comes from a crowded workbench, not contempt for the customer.",
+    "personality": "Initially indifferent, absorbed in her work and blunt about practical limits; meticulous, fair-minded and difficult to rush into a bad decision.",
+    "motivations": "Keep her small workshop solvent, send travelers out with reliable equipment and make sure the animals carrying it can manage the journey.",
+    "adventureHook": "An urgent mountain dispatch must leave at dawn, but its courier's mule is exhausted. Morla will adapt a spare harness at cost if the party arranges a replacement. A caravan master at the stables will lend a rested mule in exchange for collecting two escaped pack goats from a nearby paddock; the courier also needs persuading to leave his familiar mule behind. With both agreements secured, Morla can finish the fitting before departure.",
+    "locationIds": [
+      "stables",
+      "caravanserai"
+    ],
+    "locationFit": [
+      "Stable workshops",
+      "Caravan stops"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel"
+    ],
+    "tags": [
+      "merchant",
+      "quest-giver"
+    ],
+    "imageAlt": "Olive-skinned halfling saddler with cropped dark curls and a focused expression, wearing a teal shirt and leather apron while holding a strap in her workshop.",
+    "portraitKey": "morla-fennstitch",
+    "image": "images/characters/morla-fennstitch.webp",
+    "tokenImage": "images/tokens/morla-fennstitch-token.webp",
+    "publishedAt": "2026-11-06T22:00:01-05:00"
+  },
+  {
+    "group": "townsfolk",
+    "portraitFit": "contain",
+    "id": "veldra-coinhush",
+    "slug": "veldra-coinhush",
+    "name": "Veldra Coinhush",
+    "ancestry": "Gnome",
+    "role": "Auctioneer",
+    "subtitle": "The owner is inconveniently alive",
+    "summary": "Veldra conducts estate auctions with brisk precision, giving every question the same flat attention as a disputed bid. Behind her orderly sales, this gnome profits from a forged death notice and an owner she intends to silence.",
+    "tableNote": "Straighten an inventory sheet, quote the next bid and treat interruptions as scheduling problems. Say, “If you dispute the sale, bring the owner before the bell. Otherwise, shall we proceed?” Keep her initial attitude indifferent even when her hidden agenda is exposed; she bargains in costs and consequences.",
+    "personality": "Initially indifferent, procedural and impatient with digressions; calculating and remorseless when another person's rights obstruct her profit.",
+    "motivations": "Collect the proceeds from a living traveler's estate, keep the fraud from being exposed and purchase influence with the stolen wealth.",
+    "adventureHook": "A porter recognizes a distinctive traveling chest in Veldra's sale inventory: he carried it for the supposedly dead owner at the caravanserai yesterday. He asks the party to find the traveler before tomorrow's auction. The owner is alive, but Veldra has hired attackers to prevent his return. The party can escort him to halt the sale and secure her false commission and payment order from the auction office. If confronted privately, Veldra offers a share of the proceeds for their silence; warning the owner also puts them in the attackers' way.",
+    "locationIds": [
+      "great-hall",
+      "caravanserai"
+    ],
+    "locationFit": [
+      "Estate auction halls",
+      "Caravanserai courtyards"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "castles-estates"
+    ],
+    "tags": [
+      "merchant",
+      "antagonist"
+    ],
+    "imageAlt": "Older light-brown-skinned gnome auctioneer with swept-back silver hair and a neutral expression, wearing a burgundy coat and holding a small auction hammer and folded inventory.",
+    "portraitKey": "veldra-coinhush",
+    "image": "images/characters/veldra-coinhush.webp",
+    "tokenImage": "images/tokens/veldra-coinhush-token.webp",
+    "publishedAt": "2026-11-06T22:00:00-05:00"
+  },
+  {
     "id": "lethro-acornheel",
     "slug": "lethro-acornheel",
     "name": "Lethro Acornheel",
