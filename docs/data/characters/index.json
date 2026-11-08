@@ -1,5 +1,82 @@
 [
   {
+    "id": "mavren-reedlark",
+    "slug": "mavren-reedlark",
+    "name": "Mavren Reedlark",
+    "ancestry": "Human",
+    "role": "Ferryman",
+    "group": "townsfolk",
+    "subtitle": "No wages, no crossing",
+    "summary": "Mavren runs a small river ferry and greets unfamiliar passengers with a suspicious scowl. He distrusts easy promises, but keeps his own bargains and pays his crew before taking a share.",
+    "tableNote": "Block the gangplank with a boot, inspect an offered coin and demand a straight answer. Say, “Keep back from the rope. Have you come to help, or just tell me how to run my boat?” His initial hostility softens after useful work, though he never becomes chatty.",
+    "personality": "Initially hostile, defensive about his competence and quick to suspect a trick; stubbornly fair to workers and reliable once terms are settled.",
+    "motivations": "Recover the crew's wages, keep the ferry operating and prove that one mishap has not made him unfit to run the crossing.",
+    "adventureHook": "A loaded punt breaks loose during a squall, leaving Mavren's locked toll box wedged beneath it on a shingle bank upstream. The box holds his crew's overdue wages, and they will not launch the ferry until they are paid. He offers the party free passage and the loan of a small skiff to recover it before rising water covers the bank. They can row to the punt or reach it on foot through the old ford, but must shift it without letting the box wash away.",
+    "locationIds": [
+      "docks-ferry-landing",
+      "river-ford"
+    ],
+    "locationFit": [
+      "River ferry landings",
+      "Shallow fords"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "roads-travel",
+      "waterfront"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Tawny-skinned human ferryman with short greying black hair, a short beard and a suspicious frown, wearing a slate-blue tunic and russet work coat while holding a coil of rope at a river landing.",
+    "portraitKey": "mavren-reedlark",
+    "portraitFit": "contain",
+    "image": "images/characters/mavren-reedlark.webp",
+    "tokenImage": "images/tokens/mavren-reedlark-token.webp",
+    "publishedAt": "2026-11-07T22:00:01-05:00"
+  },
+  {
+    "id": "calven-rooklace",
+    "slug": "calven-rooklace",
+    "name": "Calven Rooklace",
+    "ancestry": "Human",
+    "role": "Charity steward",
+    "group": "townsfolk",
+    "subtitle": "A night of service, twenty years lost",
+    "summary": "Calven oversees a charity house with a cold stare and a sharp rebuke for anyone questioning his rules. His promised paid vigils conceal a ritual that steals years from adult volunteers to extend his own life.",
+    "tableNote": "Hold the alms box close, let a silence linger and dismiss objections as ingratitude. Say, “You want my help? Then stop wasting my evening and follow the rules.” His initial hostility is controlled arrogance; he considers concessions only when his position is threatened.",
+    "personality": "Initially hostile, domineering and contemptuous of scrutiny; patient about concealing his crimes, but unable to tolerate being treated as an equal.",
+    "motivations": "Prolong his life through stolen years, retain control of the charity house and prevent former volunteers from exposing what happens beneath it.",
+    "adventureHook": "An adult volunteer emerges from Calven's overnight vigil visibly twenty years older, while her promised wages remain unpaid. She asks the party to stop the next group from entering the cellar at dusk. Calven must read each volunteer's name from a roster during the ritual; taking the roster or persuading the volunteers to leave prevents that night's theft. Evidence in his locked office links earlier vigils to his changing appearance. Faced with witnesses, he offers compensation for silence, then tries to recover the roster before the bell.",
+    "locationIds": [
+      "private-residence",
+      "ritual-chamber"
+    ],
+    "locationFit": [
+      "Charity houses",
+      "Concealed ritual cellars"
+    ],
+    "roleCategoryIds": [
+      "scholars-magic",
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "dungeons-ruins"
+    ],
+    "tags": [
+      "antagonist"
+    ],
+    "imageAlt": "Deep-brown-skinned human charity steward with a shaved head, thin grey moustache and dismissive expression, wearing a plum robe and cream collar while holding a plain wooden alms box in a stone hall.",
+    "portraitKey": "calven-rooklace",
+    "portraitFit": "contain",
+    "image": "images/characters/calven-rooklace.webp",
+    "tokenImage": "images/tokens/calven-rooklace-token.webp",
+    "publishedAt": "2026-11-07T22:00:00-05:00"
+  },
+  {
     "group": "townsfolk",
     "portraitFit": "contain",
     "id": "morla-fennstitch",
