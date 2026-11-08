@@ -1137,5 +1137,23 @@
     "flavour": "Warm beeswax scents the room while the vat murmurs over a low fire. Cooling candles creak faintly on their frames, and clipped wicks collect like straw beneath the benches.",
     "discovery": "One finished candle is noticeably heavier than the others; beneath its final wax layers, a narrow metal tube holds a tightly rolled scrap of paper.",
     "readAloud": "Rows of pale candles hang from wooden dipping frames beside a copper melting vat, wick reels and wax-streaked worktables."
+  },
+  {
+    "id": "icehouse",
+    "name": "Icehouse",
+    "description": "An insulated store where winter ice is packed beneath straw and sawdust to preserve food, medicine and drink through warmer months.",
+    "settings": [
+      "village",
+      "town",
+      "city",
+      "wilderness"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/icehouse-location.webp",
+    "imageAlt": "Painterly fantasy icehouse with timber bins of packed ice, straw insulation, a loading hatch, pulley hook, meltwater drain, storage jars and barrels.",
+    "publishedAt": "2026-11-08T09:04:00-05:00",
+    "flavour": "Cold air settles close to the floor, carrying the clean scent of ice and damp stone. Meltwater trickles along the narrow drain while sawdust whispers from the packed timber bins.",
+    "discovery": "One cloudy ice block contains a waxed leather pouch frozen at its centre, visible only where the outer layer has begun to melt.",
+    "readAloud": "Timber bins filled with straw-packed ice occupy the frost-lined chamber beside a pulley hook, storage shelves and a narrow meltwater channel."
   }
 ]
