@@ -1155,5 +1155,22 @@
     "flavour": "Cold air settles close to the floor, carrying the clean scent of ice and damp stone. Meltwater trickles along the narrow drain while sawdust whispers from the packed timber bins.",
     "discovery": "One cloudy ice block contains a waxed leather pouch frozen at its centre, visible only where the outer layer has begun to melt.",
     "readAloud": "Timber bins filled with straw-packed ice occupy the frost-lined chamber beside a pulley hook, storage shelves and a narrow meltwater channel."
+  },
+  {
+    "id": "brewery",
+    "name": "Brewery",
+    "description": "A working brewhouse where malted grain is mashed, boiled and fermented into ale, with a copper kettle, cooling troughs and rows of casks.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/brewery-location.webp",
+    "imageAlt": "Painterly fantasy brewery with a copper kettle over a brick hearth, timber mash tun, cooling troughs, fermentation vats, grain sacks and stacked casks.",
+    "publishedAt": "2026-11-09T08:30:45-05:00",
+    "flavour": "Warm malt and woodsmoke sweeten the humid air. Somewhere behind the vats, a bung creaks as fresh ale works inside its cask.",
+    "discovery": "Scratched tally marks beneath one cask reveal that several finished barrels were moved without appearing in the brewer’s ledger.",
+    "readAloud": "A broad copper kettle stands over a brick hearth beside steaming mash tubs, cooling troughs and casks stacked along the walls."
   }
 ]
