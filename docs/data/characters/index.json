@@ -1,5 +1,83 @@
 [
   {
+    "id": "pella-rainskein",
+    "slug": "pella-rainskein",
+    "name": "Pella Rainskein",
+    "ancestry": "Halfling",
+    "role": "Laundress",
+    "group": "townsfolk",
+    "subtitle": "A badge in the wash",
+    "summary": "Pella washes clothes in a cottage yard, greeting customers with a warm smile and more questions than they expect. She remembers everyone's usual collection day and notices when a familiar bundle goes unclaimed.",
+    "tableNote": "Offer a stool, keep folding as you talk and ask after each companion by name. Say, “Come in, love. I've a dry place for your cloak, and a small worry you might help me with.” Her initial friendliness is practical hospitality; she listens carefully between cheerful digressions.",
+    "personality": "Initially friendly, talkative and eager to help; observant about small changes in routine and stubborn when others dismiss a missing neighbor.",
+    "motivations": "Earn a steady living, return every customer's belongings safely and make sure people who live alone are missed when something goes wrong.",
+    "adventureHook": "Pella finds a brass messenger's badge in an unclaimed shirt bundle after its owner misses both collection day and his relief shift. She remembers that he mentioned a last delivery to the icehouse and asks the party to check its loading passage before the workers return at dawn. A fallen stack of ice has jammed the inner door, trapping the messenger beyond it. Pella can identify the right entrance and fetch porters; the party must clear a route or open the service hatch to bring him out.",
+    "locationIds": [
+      "private-residence",
+      "icehouse"
+    ],
+    "locationFit": [
+      "Cottage wash yards",
+      "Icehouse loading passages"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "ally",
+      "quest-giver"
+    ],
+    "imageAlt": "Friendly freckled halfling laundress with short grey curls under a coral kerchief, wearing a green dress and blue apron while holding folded linen and a small brass badge in a wash yard.",
+    "portraitKey": "pella-rainskein",
+    "portraitFit": "contain",
+    "image": "images/characters/pella-rainskein.webp",
+    "tokenImage": "images/tokens/pella-rainskein-token.webp",
+    "publishedAt": "2026-11-08T22:00:01-05:00"
+  },
+  {
+    "id": "merrow-vexthread",
+    "slug": "merrow-vexthread",
+    "name": "Merrow Vexthread",
+    "ancestry": "Halfling",
+    "role": "Tailor",
+    "group": "townsfolk",
+    "subtitle": "Every private word has a price",
+    "summary": "Merrow fits formal coats with exacting skill and a sneer for anyone questioning his prices. Hidden listening charms let him overhear negotiating envoys, whose private concessions become the terms of his blackmail.",
+    "tableNote": "Brush an imaginary speck from a sleeve, criticize a customer's posture and refuse casual handling of the cloth. Say, “Keep your hands off that coat. If you want explanations, pay for a fitting.” His initial hostility is brittle pride; he becomes calculating rather than apologetic when cornered.",
+    "personality": "Initially hostile, arrogant and easily offended by scrutiny; meticulous about his craft and willing to ruin a client's reputation for personal gain.",
+    "motivations": "Turn privileged access to envoys into wealth, force lucrative clothing contracts through blackmail and keep his illicit listening work hidden behind professional prestige.",
+    "adventureHook": "An envoy receives a demand quoting a concession discussed only behind closed doors. She hires the party to inspect her new formal coat before tonight's negotiations. Charms beneath its lining relay speech to a locked workbox in Merrow's shop; matching stitches appear in the other envoys' coats. The party can disable the charms before the talks, recover the workbox and written demands as evidence, or feed Merrow a false concession to catch him selling it. He offers to destroy his notes if allowed to keep the payments already extorted.",
+    "locationIds": [
+      "general-store",
+      "great-hall"
+    ],
+    "locationFit": [
+      "Tailoring shops",
+      "Diplomatic receptions"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "castles-estates"
+    ],
+    "tags": [
+      "merchant",
+      "antagonist"
+    ],
+    "imageAlt": "Dark-brown-skinned halfling tailor with tied-back black hair, a thin moustache and an arrogant expression, wearing an ochre waistcoat and plum neckcloth while holding a folded charcoal coat.",
+    "portraitKey": "merrow-vexthread",
+    "portraitFit": "contain",
+    "image": "images/characters/merrow-vexthread.webp",
+    "tokenImage": "images/tokens/merrow-vexthread-token.webp",
+    "publishedAt": "2026-11-08T22:00:00-05:00"
+  },
+  {
     "id": "mavren-reedlark",
     "slug": "mavren-reedlark",
     "name": "Mavren Reedlark",
