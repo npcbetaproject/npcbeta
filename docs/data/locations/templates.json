@@ -1172,5 +1172,21 @@
     "flavour": "Warm malt and woodsmoke sweeten the humid air. Somewhere behind the vats, a bung creaks as fresh ale works inside its cask.",
     "discovery": "Scratched tally marks beneath one cask reveal that several finished barrels were moved without appearing in the brewer’s ledger.",
     "readAloud": "A broad copper kettle stands over a brick hearth beside steaming mash tubs, cooling troughs and casks stacked along the walls."
+  },
+  {
+    "id": "bookbinders-workshop",
+    "name": "Bookbinder’s Workshop",
+    "description": "A workshop where loose sheets are folded, sewn and bound into ledgers, devotional books and private volumes using presses, leather and glue.",
+    "settings": [
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/bookbinders-workshop-location.webp",
+    "imageAlt": "Painterly fantasy bookbinder’s workshop with a wooden screw press, sewing frames, folded paper, leather, thread, brass tools and finished volumes.",
+    "publishedAt": "2026-11-10T08:43:25-05:00",
+    "flavour": "Paste and warm hide glue sharpen the dry scent of paper and leather. Thread whispers through punched gatherings while the press screws creak under steady tension.",
+    "discovery": "A finished ledger has been rebound around an older set of pages, whose trimmed edges still show fragments of different handwriting.",
+    "readAloud": "Tall sewing frames and a heavy wooden press fill the workshop, surrounded by folded paper, trimmed leather, brass tools and books clamped between boards."
   }
 ]
