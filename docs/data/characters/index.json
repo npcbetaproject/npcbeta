@@ -1,5 +1,82 @@
 [
   {
+    "id": "olyra-flintpetal",
+    "slug": "olyra-flintpetal",
+    "name": "Olyra Flintpetal",
+    "ancestry": "Elf",
+    "role": "Basket weaver",
+    "group": "townsfolk",
+    "subtitle": "A quiet way through the reeds",
+    "summary": "Olyra weaves sturdy baskets at a market stall, giving customers precise prices while her hands keep working. She gathers her own reeds and treats delays as problems to solve rather than invitations to complain.",
+    "tableNote": "Test a reed between finger and thumb, leave a pause before answering and ask what the customer needs to carry. Say, “If you want the wide basket, come back tomorrow. If you know a quiet route through the marsh, we can discuss a trade.” Her initial indifference is concentration, not dislike.",
+    "personality": "Initially indifferent, practical and absorbed in her craft; patient with useful suggestions and careful about taking more from the marsh than it can spare.",
+    "motivations": "Fill her orders without wasting materials, preserve reliable reed beds and keep working access through agreements the marsh keeper can trust.",
+    "adventureHook": "Nesting cranes close the only firm reed-cutting bank just as Olyra needs material for a large fish-trap basket order. The marsh keeper will permit cutting on the far bank if the party scouts and marks a quiet punt route that avoids the nesting islets; the old channel stakes have sunk into the silt. Olyra offers finished baskets and a share of her fee for the survey. They can negotiate limited access to her already-cut bundles instead, but must agree how to carry them out without crossing the nests.",
+    "locationIds": [
+      "market-square",
+      "marsh-boardwalk"
+    ],
+    "locationFit": [
+      "Market craft stalls",
+      "Reed-cutting marsh banks"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "wilderness"
+    ],
+    "tags": [
+      "merchant",
+      "quest-giver"
+    ],
+    "imageAlt": "Olive-brown-skinned elf basket weaver with a silver braid and a neutral focused expression, wearing a rust tunic and sage apron while holding an unfinished basket beside a marsh boardwalk.",
+    "portraitKey": "olyra-flintpetal",
+    "portraitFit": "contain",
+    "image": "images/characters/olyra-flintpetal.webp",
+    "tokenImage": "images/tokens/olyra-flintpetal-token.webp",
+    "publishedAt": "2026-11-09T22:00:01-05:00"
+  },
+  {
+    "id": "nivra-copperchime",
+    "slug": "nivra-copperchime",
+    "name": "Nivra Copperchime",
+    "ancestry": "Gnome",
+    "role": "Clock repairer",
+    "group": "townsfolk",
+    "subtitle": "The alarm is part of the price",
+    "summary": "Nivra repairs the town's warning clock with a flat voice and an exact account of every part. He has accepted payment to leave its alarm silent while raiders empty the granary.",
+    "tableNote": "Count small parts, answer only the question asked and glance toward the mechanism when someone mentions the time. Say, “It will be ready when I said. Do you need a repair, or are you here to watch me work?” His initial indifference remains matter-of-fact when he starts bargaining over his secret.",
+    "personality": "Initially indifferent, methodical and strictly transactional; meticulous about mechanisms, but willing to endanger others when the payment suits him.",
+    "motivations": "Collect the raiders' promised share, make the clock failure appear accidental and retain the repair contract that gives him trusted access to the alarm.",
+    "adventureHook": "A granary porter finds a raider's payment note naming the hour when the warning clock will be silent. Nivra has fitted a sham alarm linkage beneath the gatehouse mechanism, and the raid is due tonight. The party can inspect and restore the linkage, arrange an independent alarm or warn the granary watch while preserving the note as evidence. Nivra offers the raiders' meeting place in exchange for safe custody if exposed; left unwatched, he tries to remove the faulty parts before they can be examined.",
+    "locationIds": [
+      "gatehouse",
+      "granary"
+    ],
+    "locationFit": [
+      "Gatehouse clock alcoves",
+      "Granary watch posts"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "antagonist"
+    ],
+    "imageAlt": "Older freckled gnome clock repairer with receding silver hair, round brass spectacles and a businesslike expression, wearing a midnight-blue coat while holding a brass gear and wooden mechanism.",
+    "portraitKey": "nivra-copperchime",
+    "portraitFit": "contain",
+    "image": "images/characters/nivra-copperchime.webp",
+    "tokenImage": "images/tokens/nivra-copperchime-token.webp",
+    "publishedAt": "2026-11-09T22:00:00-05:00"
+  },
+  {
     "id": "pella-rainskein",
     "slug": "pella-rainskein",
     "name": "Pella Rainskein",
