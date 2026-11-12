@@ -1,5 +1,85 @@
 [
   {
+    "id": "nemmik-glowfen",
+    "slug": "nemmik-glowfen",
+    "name": "Nemmik Glowfen",
+    "ancestry": "Gnome",
+    "role": "Lamplighter",
+    "group": "townsfolk",
+    "subtitle": "A light borrowed until moonrise",
+    "summary": "Nemmik tends the market lamps and greets late shoppers with cheerful advice. With the oil delivery overdue, a willing will-o’-the-wisp lights his hand lantern under a promise that he will escort it home by moonrise.",
+    "tableNote": "Beam at newcomers, offer directions before they ask and address the light as a colleague. Say, “Glad you’re here! My bright friend has kept its promise; now I need to keep mine. Can you lend us a pair of hands?”",
+    "personality": "Initially friendly, eager to help and prone to explaining every practical detail; treats promises to unusual neighbors as seriously as contracts with townsfolk.",
+    "motivations": "Keep the market safe after dusk, repay the wisp’s freely offered help and earn enough trust to borrow emergency supplies next time.",
+    "adventureHook": "The market’s last reserve oil is locked in a store whose keeper is stranded beside a broken cart on the marsh boardwalk. Nemmik offers his evening’s pay for help bringing the keeper back before moonrise, when he must escort the willing wisp home. The party can recover the keeper and unlock the reserve, or negotiate a short extension with the wisp while arranging another light source. Keeping the wisp against its wishes would break Nemmik’s promise and cost the market a useful neighbor.",
+    "locationIds": [
+      "market-square",
+      "storeroom",
+      "marsh-boardwalk"
+    ],
+    "locationFit": [
+      "Market lanes",
+      "Marsh approaches"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "wilderness"
+    ],
+    "tags": [
+      "ally",
+      "quest-giver"
+    ],
+    "imageAlt": "Cheerful dark-brown-skinned gnome lamplighter with close grey curls and a curled moustache, wearing an ochre shirt and charcoal-blue work coat while holding a brass lantern with a blue-white glow in a dusk market lane.",
+    "portraitKey": "nemmik-glowfen",
+    "portraitFit": "contain",
+    "image": "images/characters/nemmik-glowfen.webp",
+    "tokenImage": "images/tokens/nemmik-glowfen-token.webp",
+    "publishedAt": "2026-11-11T22:00:01-05:00"
+  },
+  {
+    "id": "melva-hushwillow",
+    "slug": "melva-hushwillow",
+    "name": "Melva Hushwillow",
+    "ancestry": "Halfling",
+    "role": "Marriage broker",
+    "group": "townsfolk",
+    "subtitle": "A union built around a stolen name",
+    "summary": "Melva arranges marriages between adult heirs with brisk schedules and a strictly transactional manner. She secretly places an impostor in an estate union to gain control of household appointments, and intends to have the real heir killed once the vows are witnessed.",
+    "tableNote": "Check a folded contract while others speak, answer only the question asked and quote a fee before discussing arrangements. Say, “Names, date and witnesses. Leave the family history out unless it changes the terms.” Keep her indifferent businesslike manner even when a client becomes emotional.",
+    "personality": "Initially indifferent, distracted by appointments and impatient with irrelevant detail; calculating about other people’s loyalties and unmoved by the harm behind her arrangements.",
+    "motivations": "Install a dependent impostor in an influential household, collect a continuing share of its patronage and remove the captive heir who could expose her bargain.",
+    "adventureHook": "An adult betrothed asks the party why their intended no longer remembers a shared journey. Melva’s appointment book contains two simultaneous fittings for the same heir: one in the great hall and one behind a locked servants’ passage. The second leads to the real adult heir, held until an escort paid by Melva arrives after the ceremony to kill them. The party can extract the captive before the escort comes, confront the impostor for testimony or warn the betrothed and halt the ceremony. Melva offers payment for silence, but an exposed appointment book gives the household grounds to investigate her network.",
+    "locationIds": [
+      "private-residence",
+      "great-hall",
+      "servants-passage"
+    ],
+    "locationFit": [
+      "Estate receiving rooms",
+      "Household service passages"
+    ],
+    "roleCategoryIds": [
+      "workers-services",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "castles-estates"
+    ],
+    "tags": [
+      "antagonist"
+    ],
+    "imageAlt": "Composed tawny-brown-skinned halfling marriage broker with short black hair and a grey streak, wearing a moss-green gown and russet shawl while holding a folded contract in an estate receiving room.",
+    "portraitKey": "melva-hushwillow",
+    "portraitFit": "contain",
+    "image": "images/characters/melva-hushwillow.webp",
+    "tokenImage": "images/tokens/melva-hushwillow-token.webp",
+    "publishedAt": "2026-11-11T22:00:00-05:00"
+  },
+  {
     "id": "torven-loamhall",
     "slug": "torven-loamhall",
     "name": "Torven Loamhall",
