@@ -1188,5 +1188,22 @@
     "flavour": "Paste and warm hide glue sharpen the dry scent of paper and leather. Thread whispers through punched gatherings while the press screws creak under steady tension.",
     "discovery": "A finished ledger has been rebound around an older set of pages, whose trimmed edges still show fragments of different handwriting.",
     "readAloud": "Tall sewing frames and a heavy wooden press fill the workshop, surrounded by folded paper, trimmed leather, brass tools and books clamped between boards."
+  },
+  {
+    "id": "wheelwrights-workshop",
+    "name": "Wheelwright’s Workshop",
+    "description": "A workshop where hubs, spokes and curved felloe segments are shaped and assembled into cart and wagon wheels before iron tyres are fitted.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/wheelwrights-workshop-location.webp",
+    "imageAlt": "Painterly fantasy wheelwright’s workshop with an unfinished wagon wheel on a timber stand, curved felloe segments, hand tools, wood shavings and stacked iron tyres.",
+    "publishedAt": "2026-11-11T09:12:35-05:00",
+    "flavour": "Fresh oak and hot iron scent the open workshop as pale shavings gather beneath the benches. Mallets strike spoke tenons in an even rhythm while a newly fitted tyre ticks as it cools.",
+    "discovery": "A freshly repaired wheel uses alternating old and new spokes, and scrape marks on the older wood form a sequence of symbols when the wheel is turned.",
+    "readAloud": "An unfinished wagon wheel stands clamped between heavy timber posts, surrounded by shaped spokes, curved rim segments, iron tyres and benches covered in hand tools."
   }
 ]
