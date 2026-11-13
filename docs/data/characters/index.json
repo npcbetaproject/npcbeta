@@ -1,5 +1,86 @@
 [
   {
+    "id": "brammok-tilehorn",
+    "slug": "brammok-tilehorn",
+    "name": "Brammok Tilehorn",
+    "ancestry": "Minotaur",
+    "role": "Stone mason",
+    "group": "townsfolk",
+    "subtitle": "A friendly face across a closed tunnel",
+    "summary": "Brammok repairs mountain stonework and welcomes travelers with cheerful advice. He plants his broad frame across a damaged tunnel entrance until the missing support crew is found and the passage can be made safe.",
+    "tableNote": "Offer a seat on a stone block, praise useful questions and sketch the problem in dust with one thick finger. Say, “Good to see willing hands! Tea first, then we find my crew. Nobody goes under that lintel until it can hold its own weight.”",
+    "personality": "Initially friendly, patient and eager to explain his craft; stubborn about safety and deeply loyal to the people working beside him.",
+    "motivations": "Bring the crew home, keep the mountain route useful and prove that closing a dangerous passage is an act of care rather than a demand for tribute.",
+    "adventureHook": "Two adult workers sent to inspect a side opening have not returned, and fresh tool taps sound beyond a fall of loose stone. Brammok offers his repair fee to companions who reach the opening by the mountain trail and locate the crew. The party can help plan a rescue and a temporary detour, or convince him that an alternative support plan is sound. Travelers who try to force the entrance or dismantle the warning barrier meet a dangerous opponent: he grapples intruders and drives them back, but stops when they withdraw or agree to a safe inspection.",
+    "locationIds": [
+      "mountain-trail",
+      "mine-quarry",
+      "rock-shelter"
+    ],
+    "locationFit": [
+      "Mountain tunnels",
+      "Stonework camps"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "roads-travel",
+      "wilderness"
+    ],
+    "tags": [
+      "ally",
+      "quest-giver"
+    ],
+    "imageAlt": "Chestnut-furred minotaur stone mason with kind amber eyes and complete ivory horns, wearing a slate-blue tunic and tan leather apron while holding a wooden mason’s square beside a braced mountain tunnel.",
+    "portraitKey": "brammok-tilehorn",
+    "portraitFit": "contain",
+    "image": "images/characters/brammok-tilehorn.webp",
+    "tokenImage": "images/tokens/brammok-tilehorn-token.webp",
+    "publishedAt": "2026-11-12T22:00:01-05:00"
+  },
+  {
+    "id": "selvik-mirrorfen",
+    "slug": "selvik-mirrorfen",
+    "name": "Selvik Mirrorfen",
+    "ancestry": "Doppelganger",
+    "role": "Witness broker",
+    "group": "townsfolk",
+    "subtitle": "Every witness has the same helpful smile",
+    "summary": "Selvik finds witnesses for legal disputes, greeting anxious clients with warmth and offers of practical help. He secretly impersonates several witnesses to convict an innocent adult craftworker, then buys the seized workshop through a paid intermediary.",
+    "tableNote": "Pull out a chair, remember the visitor’s name and offer to take troublesome errands off their hands. Say, “You have enough to worry about. Tell me who needs a witness, and I’ll make the introductions.” His friendly manner remains smooth when questions become inconvenient.",
+    "personality": "Initially friendly, attentive and reassuring; exploitative beneath the courtesy, treating trust as a resource he can spend for personal gain.",
+    "motivations": "Acquire a profitable workshop cheaply, retain control of the intermediary who will hold it and keep his false identities from being compared.",
+    "adventureHook": "The accused craftworker’s adult apprentice notices that three witnesses use the same unusual phrase and asks the party to investigate before the verdict at dusk. The clerk keeps their written statements: all three contain the same distinctive spelling error, and a runner sees each supposed witness return to Selvik’s office. The party can arrange simultaneous questioning, find the intermediary’s purchase agreement or persuade that frightened accomplice to testify. Selvik offers a share of the workshop for silence. If cornered with evidence, he tries to seize the clerk’s statements and escape through the service passage, fighting anyone who prevents his flight; a guaranteed hearing without a mob may persuade him to surrender.",
+    "locationIds": [
+      "watchhouse",
+      "private-residence",
+      "servants-passage"
+    ],
+    "locationFit": [
+      "Hearing rooms",
+      "Household service passages"
+    ],
+    "roleCategoryIds": [
+      "workers-services",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "castles-estates"
+    ],
+    "tags": [
+      "antagonist",
+      "mysterious"
+    ],
+    "imageAlt": "Pale slate-grey doppelganger witness broker with a narrow face, short silver hair and a welcoming smile, wearing a plum doublet and cream scarf while holding a closed leather ledger in a stone courthouse antechamber.",
+    "portraitKey": "selvik-mirrorfen",
+    "portraitFit": "contain",
+    "image": "images/characters/selvik-mirrorfen.webp",
+    "tokenImage": "images/tokens/selvik-mirrorfen-token.webp",
+    "publishedAt": "2026-11-12T22:00:00-05:00"
+  },
+  {
     "id": "nemmik-glowfen",
     "slug": "nemmik-glowfen",
     "name": "Nemmik Glowfen",
