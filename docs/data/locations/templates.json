@@ -1205,5 +1205,22 @@
     "flavour": "Fresh oak and hot iron scent the open workshop as pale shavings gather beneath the benches. Mallets strike spoke tenons in an even rhythm while a newly fitted tyre ticks as it cools.",
     "discovery": "A freshly repaired wheel uses alternating old and new spokes, and scrape marks on the older wood form a sequence of symbols when the wheel is turned.",
     "readAloud": "An unfinished wagon wheel stands clamped between heavy timber posts, surrounded by shaped spokes, curved rim segments, iron tyres and benches covered in hand tools."
+  },
+  {
+    "id": "saddlers-workshop",
+    "name": "Saddler’s Workshop",
+    "description": "A workshop where saddles, bridles and other riding tack are cut, stitched and fitted for horses, pack animals and their riders.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/saddlers-workshop-location.webp",
+    "imageAlt": "Painterly fantasy saddler’s workshop with a half-finished leather saddle on a timber stand, hanging bridles and reins, hand tools, rolled hides and brass buckles.",
+    "publishedAt": "2026-11-13T08:54:28-05:00",
+    "flavour": "Warm leather, beeswax and charcoal scent the sunlit workshop. Buckles chime softly against the wall as waxed thread draws tight through a half-finished saddle.",
+    "discovery": "A saddle awaiting collection has an extra layer beneath its seat; inside, a narrow leather sleeve conceals a hand-drawn route marked with three isolated waypoints.",
+    "readAloud": "A half-finished leather saddle rests on a timber stand beside a scarred workbench, while bridles, reins and girths hang in orderly rows along the plastered wall."
   }
 ]
