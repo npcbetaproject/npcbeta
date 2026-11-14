@@ -1222,5 +1222,21 @@
     "flavour": "Warm leather, beeswax and charcoal scent the sunlit workshop. Buckles chime softly against the wall as waxed thread draws tight through a half-finished saddle.",
     "discovery": "A saddle awaiting collection has an extra layer beneath its seat; inside, a narrow leather sleeve conceals a hand-drawn route marked with three isolated waypoints.",
     "readAloud": "A half-finished leather saddle rests on a timber stand beside a scarred workbench, while bridles, reins and girths hang in orderly rows along the plastered wall."
+  },
+  {
+    "id": "bellfoundry",
+    "name": "Bellfoundry",
+    "description": "A workshop where bronze bells are moulded, cast, finished and tuned for temples, civic buildings, ships and livestock.",
+    "settings": [
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/bellfoundry-location.webp",
+    "imageAlt": "Painterly fantasy bellfoundry with a clay bell mould in a casting pit, a bronze bell on a timber testing frame, brick furnace, hand tools, wax patterns and ingots.",
+    "publishedAt": "2026-11-14T09:21:40-05:00",
+    "flavour": "Soot, hot brick and sharp metal scent the broad workshop. A wooden testing mallet taps the suspended bell, sending a low note trembling through the roof beams.",
+    "discovery": "Inside one finished bell’s crown, a second maker’s mark has been filed nearly smooth, though its unfamiliar outline remains visible in angled light.",
+    "readAloud": "A clay bell mould rises from a casting pit beside a glowing brick furnace, while a finished bronze bell hangs from a heavy timber testing frame."
   }
 ]
