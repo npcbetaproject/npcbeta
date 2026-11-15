@@ -1238,5 +1238,21 @@
     "flavour": "Soot, hot brick and sharp metal scent the broad workshop. A wooden testing mallet taps the suspended bell, sending a low note trembling through the roof beams.",
     "discovery": "Inside one finished bell’s crown, a second maker’s mark has been filed nearly smooth, though its unfamiliar outline remains visible in angled light.",
     "readAloud": "A clay bell mould rises from a casting pit beside a glowing brick furnace, while a finished bronze bell hangs from a heavy timber testing frame."
+  },
+  {
+    "id": "locksmiths-workshop",
+    "name": "Locksmith’s Workshop",
+    "description": "A workshop where locks, keys, latches and secure fittings are designed, repaired and fitted to doors, chests and strongboxes.",
+    "settings": [
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/locksmiths-workshop-location.webp",
+    "imageAlt": "Painterly fantasy locksmith’s workshop with an opened lock clamped on a wooden bench among iron keys, files, springs and precision tools.",
+    "publishedAt": "2026-11-15T08:54:35-05:00",
+    "flavour": "Fine filings glitter across the wood, and warm oil sharpens the smell of iron and charcoal. Springs click softly as a half-finished mechanism settles beneath a testing pick.",
+    "discovery": "One drawer holds wax impressions of several keys, each marked only by a different notch cut into its edge.",
+    "readAloud": "Rows of iron keys hang above a scarred workbench where an opened lock case sits clamped beneath a bright window."
   }
 ]
