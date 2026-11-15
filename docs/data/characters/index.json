@@ -1,5 +1,86 @@
 [
   {
+    "id": "marda-copperleaf",
+    "slug": "marda-copperleaf",
+    "name": "Marda Copperleaf",
+    "ancestry": "Human",
+    "role": "Coppersmith",
+    "group": "townsfolk",
+    "subtitle": "One basin for two tables",
+    "summary": "Marda makes and repairs copper household wares, greeting visitors with an eager smile and a stream of practical suggestions. A ceremonial basin she lent for a shared feast is now caught between two households that each insist the other should collect it.",
+    "tableNote": "Offer to mend a loose clasp while talking, call people by name and sketch possible compromises on the bench with a finger. Say, “Come in, there’s room for another pair of hands! We can polish a basin; getting two proud neighbors to carry it together takes more care.”",
+    "personality": "Initially friendly, talkative and eager to be useful; patient with awkward negotiations but unwilling to let her work become a token of someone else’s superiority.",
+    "motivations": "Recover the borrowed basin without humiliating either household, preserve the shared feast and keep her workshop’s loans grounded in trust.",
+    "adventureHook": "The basin waits in a private courtyard, but neither household will send a cart first: each thinks doing so would acknowledge the other as host. Marda asks the party to collect it before sunset and offers repairs in return. They can arrange a neutral cart, persuade both households to contribute carriers or move the feast to the public market with agreement from both sides. Marda will lend the basin again once its return and care are settled; she refuses to invent a debt or ownership claim merely to force cooperation.",
+    "locationIds": [
+      "blacksmiths-forge",
+      "private-residence",
+      "courtyard",
+      "market-square"
+    ],
+    "locationFit": [
+      "Metalworkers’ benches",
+      "Shared household courtyards"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "castles-estates"
+    ],
+    "tags": [
+      "ally",
+      "quest-giver"
+    ],
+    "imageAlt": "Warmly smiling elderly human coppersmith with fair freckled skin and a short white bob, wearing a rust-red shirt and slate-grey apron while holding a polished copper bowl in a daylight workshop.",
+    "portraitKey": "marda-copperleaf",
+    "portraitFit": "contain",
+    "image": "images/characters/marda-copperleaf.webp",
+    "tokenImage": "images/tokens/marda-copperleaf-token.webp",
+    "publishedAt": "2026-11-14T22:00:01-05:00"
+  },
+  {
+    "id": "perria-sootmark",
+    "slug": "perria-sootmark",
+    "name": "Perria Sootmark",
+    "ancestry": "Halfling",
+    "role": "Ink maker",
+    "group": "townsfolk",
+    "subtitle": "The terms nobody remembers",
+    "summary": "Perria mixes writing inks and meets questions with a suspicious glare and clipped demands. She secretly sells a moneylender cursed contract ink that erases readers’ memories of the negotiations, letting the lender deny promises made before signing.",
+    "tableNote": "Keep one hand over the bottle stopper, challenge anyone who reaches across the counter and answer curiosity as though it were an accusation. Say, “Buying ink or prying? State the color and pay. My customers’ business is none of yours.” Her hostility is defensive and mocking, not an automatic attack.",
+    "personality": "Initially hostile, suspicious and quick to belittle unwelcome questions; deliberately exploits other people’s confusion while guarding the reputation of her ordinary inks.",
+    "motivations": "Collect a continuing cut of the lender’s proceeds, hide the curse among legitimate commissions and keep the uncursed drafts that make her indispensable to the scheme.",
+    "adventureHook": "An adult borrower remembers visiting a lender but cannot recall a promised grace period; two other clients describe the same gap after reading their contracts. Perria keeps the original uncursed drafts in her workshop, alongside orders linking the black bottles to the lender. Before a new group signs at dawn, the party can obtain those drafts, warn the prospective borrowers or persuade an affected clerk to compare the orders with the lender’s copies. Breaking the wax seal on Perria’s master bottle ends the curse on that batch and restores the lost negotiations. Perria offers to release the batch if the party lets her keep the evidence against the lender, creating a choice between immediate relief and a fuller public accounting.",
+    "locationIds": [
+      "bookbinders-workshop",
+      "general-store",
+      "private-residence"
+    ],
+    "locationFit": [
+      "Ink workshops",
+      "Lenders’ consulting rooms"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "antagonist",
+      "merchant"
+    ],
+    "imageAlt": "Suspicious olive-skinned halfling ink maker with cropped black hair, a blunt fringe and round copper spectacles, wearing an indigo coat while holding a stoppered black ink bottle with stained fingers in a cramped workshop.",
+    "portraitKey": "perria-sootmark",
+    "portraitFit": "contain",
+    "image": "images/characters/perria-sootmark.webp",
+    "tokenImage": "images/tokens/perria-sootmark-token.webp",
+    "publishedAt": "2026-11-14T22:00:00-05:00"
+  },
+  {
     "id": "alwen-brasshoof",
     "slug": "alwen-brasshoof",
     "name": "Alwen Brasshoof",
