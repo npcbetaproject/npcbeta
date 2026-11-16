@@ -1,5 +1,87 @@
 [
   {
+    "id": "nivven-leafpress",
+    "slug": "nivven-leafpress",
+    "name": "Nivven Leafpress",
+    "ancestry": "Gnome",
+    "role": "Herbarium keeper",
+    "group": "townsfolk",
+    "subtitle": "Seven years for one evening’s bloom",
+    "summary": "Nivven tends living specimens and pressed plant collections, greeting interruptions with a suspicious glare. An overdue loan is about to flower for the first time in seven years, and he refuses to let careless handling spoil the herbarium’s only chance to record it.",
+    "tableNote": "Look at a visitor’s muddy cuffs before their face, move fragile pots out of reach and demand a concrete plan. Say, “If you’ve come to tell me plants grow back, leave. If you can return one intact, explain how.” His hostility is protective impatience, not cruelty.",
+    "personality": "Initially hostile, sharp-tongued and distrustful of casual promises; meticulous about records and quietly willing to credit anyone who treats living things carefully.",
+    "motivations": "Keep the rare specimen alive, document its brief flowering and make future borrowers respect the collection’s loan agreements.",
+    "adventureHook": "A household borrowed Nivven’s potted dusk lily for a courtyard display, but its roots have grown through the pot into a pool’s removable grate. The blossom will open at sunset and fade before morning. Nivven offers access to his plant records for help returning it intact. The party can negotiate with the pool keeper to lower the water and lift pot and grate together, arrange careful transport, or convince Nivven to bring his recording materials and observe the bloom on site. He accepts a sound alternative once it protects both the plant and the record.",
+    "locationIds": [
+      "academy-library",
+      "courtyard",
+      "private-residence"
+    ],
+    "locationFit": [
+      "Herbarium workrooms",
+      "Household plant displays"
+    ],
+    "roleCategoryIds": [
+      "scholars-magic"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "castles-estates"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Stern dark-brown-skinned gnome herbarium keeper with a bald crown, silver hair fringe and chin beard, wearing wire spectacles and a moss-green robe while holding a terracotta plant pot in a collection workroom.",
+    "portraitKey": "nivven-leafpress",
+    "portraitFit": "contain",
+    "image": "images/characters/nivven-leafpress.webp",
+    "tokenImage": "images/tokens/nivven-leafpress-token.webp",
+    "publishedAt": "2026-11-15T22:00:01-05:00"
+  },
+  {
+    "id": "tavrith-emberquill",
+    "slug": "tavrith-emberquill",
+    "name": "Tavrith Emberquill",
+    "ancestry": "Gnome",
+    "role": "Fireworks maker",
+    "group": "townsfolk",
+    "subtitle": "A bright display to hide a dark account",
+    "summary": "Tavrith supplies festival displays with a bored, strictly transactional manner. She secretly helps a grain thief and plans to burn a warehouse during the celebration, destroying the storage records that expose their theft.",
+    "tableNote": "Check the sample case clasp, answer questions without looking up and quote a fee before discussing changes. Say, “Date, budget and where the audience stands. I don’t need the story behind the celebration.” Her indifference conceals calculation rather than open aggression.",
+    "personality": "Initially indifferent, busy and sparing with words; ruthlessly practical about concealing her complicity and willing to endanger neighbors to protect her share.",
+    "motivations": "Erase the grain trail before the warehouse audit, keep her illicit payment and retain a respectable trade after the theft is forgotten.",
+    "adventureHook": "An adult warehouse porter asks the party why Tavrith has paid for the building to be empty during the festival even though no display is booked there. A canceled delivery note and the warehouse tally book connect her patron to grain that never reached the public stores. Before the celebration, the party can secure those records, warn the watch and move spectators away, or persuade the porter to testify and force a public inventory. Tavrith offers to identify the buyer if the party helps recover her stolen share, but the immediate priority is stopping the planned fire and keeping the grain and witnesses safe.",
+    "locationIds": [
+      "granary",
+      "storeroom",
+      "market-square",
+      "watchhouse"
+    ],
+    "locationFit": [
+      "Display workshops",
+      "Festival squares",
+      "Grain warehouses"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "hospitality-entertainment",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "antagonist",
+      "merchant"
+    ],
+    "imageAlt": "Tawny-skinned gnome fireworks maker with an auburn braid and a neutral sidelong expression, wearing a plum jacket, charcoal apron and brass goggles at her neck while holding a closed sample case in a workshop.",
+    "portraitKey": "tavrith-emberquill",
+    "portraitFit": "contain",
+    "image": "images/characters/tavrith-emberquill.webp",
+    "tokenImage": "images/tokens/tavrith-emberquill-token.webp",
+    "publishedAt": "2026-11-15T22:00:00-05:00"
+  },
+  {
     "id": "marda-copperleaf",
     "slug": "marda-copperleaf",
     "name": "Marda Copperleaf",
