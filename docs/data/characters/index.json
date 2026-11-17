@@ -1,5 +1,89 @@
 [
   {
+    "id": "elaris-oakrhyme",
+    "slug": "elaris-oakrhyme",
+    "name": "Elaris Oakrhyme",
+    "ancestry": "Elf",
+    "role": "Itinerant poet",
+    "group": "townsfolk",
+    "subtitle": "A final verse between two tables",
+    "summary": "Elaris trades songs for supper in mountain-road taverns, eagerly inviting strangers to join the chorus. Two retired drovers remember different endings to a song that may describe a lost travelers’ cache, and she wants both accounts heard before anyone sets out.",
+    "tableNote": "Pull out a chair, offer to share the bread and ask visitors which songs they grew up with. Say, “Sit here! I have three verses, two splendidly stubborn witnesses and room for another opinion.” Let her listen enthusiastically rather than perform over someone else’s answer.",
+    "personality": "Initially friendly, welcoming and delightfully talkative; curious about ordinary people’s memories and careful to give each singer credit.",
+    "motivations": "Preserve the song with its singers’ names, discover what the missing verse actually describes and keep the search from becoming a contest over who deserves to be remembered.",
+    "adventureHook": "Elaris gathers the party at a taproom’s long table with two adult drovers: one recalls a stone arch, the other a fallen bell. Each refuses to sing beside the other after an old quarrel over an unpaid room. Elaris offers introductions along the mountain road if the party can hear both versions, settle the room debt or arrange separate performances, then compare the landmarks before searching. The cache contains travelers’ emergency provisions; Elaris argues for recording and replenishing it rather than carrying everything away.",
+    "locationIds": [
+      "tavern",
+      "inn",
+      "mountain-trail"
+    ],
+    "locationFit": [
+      "Mountain-road taprooms",
+      "Wayside inns",
+      "Mountain song landmarks"
+    ],
+    "roleCategoryIds": [
+      "hospitality-entertainment"
+    ],
+    "locationFitCategoryIds": [
+      "settlements",
+      "roads-travel",
+      "wilderness"
+    ],
+    "tags": [
+      "quest-giver",
+      "wanderer"
+    ],
+    "imageAlt": "Welcoming brown-skinned elf poet with long silver-black hair tied back, prominent pointed ears and an ochre traveling coat, holding a small song notebook at a rustic taproom table.",
+    "portraitKey": "elaris-oakrhyme",
+    "portraitFit": "contain",
+    "image": "images/characters/elaris-oakrhyme.webp",
+    "tokenImage": "images/tokens/elaris-oakrhyme-token.webp",
+    "publishedAt": "2026-11-16T22:00:01-05:00"
+  },
+  {
+    "id": "tobren-sablecork",
+    "slug": "tobren-sablecork",
+    "name": "Tobren Sablecork",
+    "ancestry": "Halfling",
+    "role": "Cellar landlord",
+    "group": "townsfolk",
+    "subtitle": "The rent rises with the water",
+    "summary": "Tobren manages rented taproom cellars with a bored, professional manner. Secretly holding a water spirit beneath his oldest tavern, he threatens rival tenants with selective flooding to force the district’s drink storage into his hands.",
+    "tableNote": "Finish adding a column before acknowledging visitors; ask for the property address and discuss every interruption as a maintenance charge. Say, “Cellar number, lease term, payment date. If this is a complaint about damp, put it in writing.” His initial indifference hides deliberate extortion.",
+    "personality": "Initially indifferent, strictly transactional and absorbed in paperwork; patient with profitable arrangements, contemptuous of losses he can pass to others and fiercely proud of keeping his literal promises.",
+    "motivations": "Build a cellar monopoly so no creditor can dispossess him as his family once was. His leases, hired collectors and knowledge of connected drains give him leverage, but his insistence that his contracts are fair makes a public accounting dangerously persuasive.",
+    "adventureHook": "A taproom tenant hires the party after clear water rises around only the barrels of tenants who rejected Tobren’s exclusive lease. A collector’s rent book lists the next target, while a voice beneath Tobren’s oldest tavern offers testimony. GM secret: Tobren promised to release the captive spirit when his original cellar debt was paid; his own stamped receipts prove it was settled last winter. Before the next collection night, the party can warn tenants and move their stock, obtain the receipts and demand release before witnesses, or persuade a collector to bring the rent book to the watch. Tobren may bargain to preserve his remaining leases, but freeing the spirit removes his threat and exposes the scheme.",
+    "locationIds": [
+      "tavern",
+      "inn",
+      "storeroom",
+      "cistern-chamber"
+    ],
+    "locationFit": [
+      "Rented taproom cellars",
+      "Tavern offices",
+      "Connected cellar drains"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "antagonist",
+      "merchant"
+    ],
+    "imageAlt": "Uninterested stout halfling cellar landlord with light olive skin, neatly combed chestnut hair and short side whiskers, wearing a dark teal waistcoat and carrying a rent ledger and brass keys in a tavern cellar office.",
+    "portraitKey": "tobren-sablecork",
+    "portraitFit": "contain",
+    "image": "images/characters/tobren-sablecork.webp",
+    "tokenImage": "images/tokens/tobren-sablecork-token.webp",
+    "publishedAt": "2026-11-16T22:00:00-05:00"
+  },
+  {
     "id": "nivven-leafpress",
     "slug": "nivven-leafpress",
     "name": "Nivven Leafpress",
