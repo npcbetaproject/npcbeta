@@ -1254,5 +1254,21 @@
     "flavour": "Fine filings glitter across the wood, and warm oil sharpens the smell of iron and charcoal. Springs click softly as a half-finished mechanism settles beneath a testing pick.",
     "discovery": "One drawer holds wax impressions of several keys, each marked only by a different notch cut into its edge.",
     "readAloud": "Rows of iron keys hang above a scarred workbench where an opened lock case sits clamped beneath a bright window."
+  },
+  {
+    "id": "mapmakers-workshop",
+    "name": "Mapmaker’s Workshop",
+    "description": "A workshop where survey notes are turned into maps for roads, estates, coasts and unfamiliar country.",
+    "settings": [
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/mapmakers-workshop-location.webp",
+    "imageAlt": "Painterly fantasy mapmaker’s workshop with a large regional map on an angled drafting table among brass dividers, rulers, quills, chart rolls and survey tools.",
+    "publishedAt": "2026-11-17T08:48:37-05:00",
+    "flavour": "Dry parchment and lamp oil scent the room while brass dividers scratch softly across the drafting table. Rolled charts rustle in their pigeonholes whenever a breeze enters through the open window.",
+    "discovery": "A patched section of the largest map covers an older road that continues beneath the repair and ends at a landmark omitted from the finished copy.",
+    "readAloud": "An angled drafting table fills the workshop beneath a broad regional map held flat by brass weights, surrounded by dividers, rulers, quills and rolled charts."
   }
 ]
