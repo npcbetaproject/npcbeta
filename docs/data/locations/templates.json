@@ -1270,5 +1270,21 @@
     "flavour": "Dry parchment and lamp oil scent the room while brass dividers scratch softly across the drafting table. Rolled charts rustle in their pigeonholes whenever a breeze enters through the open window.",
     "discovery": "A patched section of the largest map covers an older road that continues beneath the repair and ends at a landmark omitted from the finished copy.",
     "readAloud": "An angled drafting table fills the workshop beneath a broad regional map held flat by brass weights, surrounded by dividers, rulers, quills and rolled charts."
+  },
+  {
+    "id": "scriveners-office",
+    "name": "Scrivener’s Office",
+    "description": "A public writing office where contracts, petitions, letters and certified copies are prepared for a fee.",
+    "settings": [
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/scriveners-office-location.webp",
+    "imageAlt": "Painterly fantasy scrivener’s office with sloped writing desks, quills, blank parchment, sealing wax, a brass sand timer and shelves of bundled records.",
+    "publishedAt": "2026-11-18T08:40:00-05:00",
+    "flavour": "Quills rasp steadily over parchment beneath the soft tick of a brass sand timer. The room smells of lampblack ink, warm wax and the dry dust of bundled records.",
+    "discovery": "One ledger has been rebound upside down, hiding a narrow pocket in its spine that holds an unsigned copy of a recently altered contract.",
+    "readAloud": "Tall desks line a narrow office, each set with ink pots, sealing wax and stacks of documents weighted beneath smooth stones."
   }
 ]
