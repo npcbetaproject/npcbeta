@@ -1,5 +1,84 @@
 [
   {
+    "id": "vessa-linenrook",
+    "slug": "vessa-linenrook",
+    "name": "Vessa Linenrook",
+    "ancestry": "Halfling",
+    "role": "Awning maker",
+    "group": "townsfolk",
+    "subtitle": "A safe way out from under canvas",
+    "summary": "Vessa repairs and rents canvas awnings in an open-air market, treating interruptions as jobs to be priced and scheduled. A shifted canopy pole has trapped a delivery cart beneath sagging canvas, and she needs the market cleared before she can make a safe repair.",
+    "tableNote": "Keep measuring while visitors speak, ask who will pay and give a practical answer without pleasantries. Say, “Two signatures, clear tables and someone to hold the ladder. Then I can start.” She is busy and indifferent, not contemptuous.",
+    "personality": "Initially indifferent, task-focused and economical with words; patient with useful assistance and firm about stopping work when bystanders are in danger.",
+    "motivations": "Finish a sound repair before the storm, protect the stallholders’ livelihoods and persuade the market stewards to keep delivery lanes clear.",
+    "adventureHook": "Before afternoon rain, Vessa needs helpers to move customers away from a sagging market canopy and clear access to a delivery cart trapped beneath it. The adult driver refuses to abandon several fragile crates, while neighboring sellers worry about rain spoiling their stock. Vessa directs the repair once the area is clear. The party can organize an orderly unloading, find temporary covers or persuade the stewards to open a sheltered storage room. She offers a repair to the party’s travel gear in return and insists that nobody crawl beneath the damaged canopy.",
+    "locationIds": [
+      "market-square",
+      "storeroom"
+    ],
+    "locationFit": [
+      "Open-air market stalls",
+      "Canvas repair booths"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "merchant",
+      "quest-giver"
+    ],
+    "imageAlt": "Busy dark-brown-skinned halfling awning maker with a short iron-gray braid, wearing a rust-colored work coat and blue apron while holding folded canvas and a wooden measuring rule beneath a market canopy.",
+    "portraitKey": "vessa-linenrook",
+    "portraitFit": "contain",
+    "image": "images/characters/vessa-linenrook.webp",
+    "tokenImage": "images/tokens/vessa-linenrook-token.webp",
+    "publishedAt": "2026-11-17T22:00:01-05:00"
+  },
+  {
+    "id": "ulren-threadwake",
+    "slug": "ulren-threadwake",
+    "name": "Ulren Threadwake",
+    "ancestry": "Elf",
+    "role": "Banner painter",
+    "group": "townsfolk",
+    "subtitle": "A quiet audience for a stolen name",
+    "summary": "Ulren paints festival banners in a riverside open-air market and discusses commissions with detached professionalism. He secretly plans to put the market’s audience to sleep so his hired attendants can abduct the adult witness who knows he stole his late patron’s inheritance.",
+    "tableNote": "Inspect a pigment sample, ask for dimensions and pause only to record a delivery address. Say, “Size, colors and the day you need it. Approval is due before I hang anything.” His indifference makes an illicit commission sound like ordinary work.",
+    "personality": "Initially indifferent, composed and strictly transactional; hungry for recognition as an independent artist, yet willing to strip others of their freedom to protect a reputation built on theft.",
+    "motivations": "Keep the inherited workshop and secure a prestigious festival commission before the witness’s public testimony. Years of unpaid work for his patron explain his grievance without excusing the theft or abduction. Paid attendants, access to the hanging crew and a borrowed enchanted pigment enable his scheme; his dependence on the pigment’s owner leaves evidence he cannot control.",
+    "adventureHook": "An adult market attendant asks the party why Ulren has ordered a covered cart for one passenger after the banner unveiling. GM secret: the sleeping curse needs the enchanted central banner on display; removing or covering it prevents the spell, and ordinary paint has no such effect. A loan receipt identifies the pigment’s owner, who insists it was lent only for a private demonstration and will demand its return if told the plan. Before the unveiling, the party can warn and protect the witness, stop the banner being displayed, recover the receipt or persuade an attendant to testify. Ulren offers the stolen inheritance records to keep his workshop, but the witness must remain free to speak.",
+    "locationIds": [
+      "market-square",
+      "dyers-yard",
+      "storeroom"
+    ],
+    "locationFit": [
+      "Open-air festival markets",
+      "Banner painting booths",
+      "Festival supply rooms"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "antagonist",
+      "merchant"
+    ],
+    "imageAlt": "Detached pale copper-skinned elf banner painter with straight black hair tied low and long pointed ears, wearing a plum painting smock and holding a brush and rolled ochre banner at an outdoor market workbench.",
+    "portraitKey": "ulren-threadwake",
+    "portraitFit": "contain",
+    "image": "images/characters/ulren-threadwake.webp",
+    "tokenImage": "images/tokens/ulren-threadwake-token.webp",
+    "publishedAt": "2026-11-17T22:00:00-05:00"
+  },
+  {
     "id": "elaris-oakrhyme",
     "slug": "elaris-oakrhyme",
     "name": "Elaris Oakrhyme",
