@@ -1,5 +1,87 @@
 [
   {
+    "id": "beldo-quietreed",
+    "slug": "beldo-quietreed",
+    "name": "Beldo Quietreed",
+    "ancestry": "Halfling",
+    "role": "Shrine organist",
+    "group": "townsfolk",
+    "subtitle": "Four notes before the doors open",
+    "summary": "Beldo prepares music for a hillside shrine and answers interruptions without looking up from his score. While restoring its disused organ to service, he recognizes four unwanted notes as an old warning from the shrine’s enchanted waterworks.",
+    "tableNote": "Keep a finger on the score, count a beat before answering and ask visitors to wait until the phrase ends. Say, “If you need a procession tune, leave the order there. If you can hear those four notes, stop the door steward.” His indifference becomes focused urgency when someone can help.",
+    "personality": "Initially indifferent, distracted by rehearsal and sparing with conversation; methodical, dependable and willing to postpone a performance rather than put listeners at risk.",
+    "motivations": "Reopen the organ for public use, preserve the previous organist’s practical annotations and keep the shrine’s guests safe without turning a solvable problem into panic.",
+    "adventureHook": "An old score labels the repeated four-note phrase “cistern overflow”; the organ’s enchantment was designed to carry warnings through the shrine. A crowded service begins within the hour, but nobody has inspected the cistern chamber since the organ fell silent. Beldo asks the party to alert the stewards and help keep visitors outside while the caretaker checks the waterworks. They can locate the caretaker’s missing inspection ledger, arrange a service in the courtyard or find safe access for an inspection. Beldo offers music and introductions for a future gathering in return, and accepts moving the service rather than rushing a repair.",
+    "locationIds": [
+      "chapel",
+      "cistern-chamber",
+      "courtyard"
+    ],
+    "locationFit": [
+      "Hillside shrines",
+      "Chapel organ lofts",
+      "Shrine waterworks"
+    ],
+    "roleCategoryIds": [
+      "hospitality-entertainment",
+      "faith-healing"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Distracted middle-aged halfling shrine organist with warm beige skin, swept-back sandy-gray curls and round ears, wearing a moss-green coat and cream scarf while holding a rolled score beside wooden organ pipes in a stone chapel.",
+    "portraitKey": "beldo-quietreed",
+    "portraitFit": "contain",
+    "image": "images/characters/beldo-quietreed.webp",
+    "tokenImage": "images/tokens/beldo-quietreed-token.webp",
+    "publishedAt": "2026-11-18T22:00:01-05:00"
+  },
+  {
+    "id": "gravven-hollowmoss",
+    "slug": "gravven-hollowmoss",
+    "name": "Gravven Hollowmoss",
+    "ancestry": "Dwarf",
+    "role": "Shrine quarry agent",
+    "group": "townsfolk",
+    "subtitle": "An omen priced by the cartload",
+    "summary": "Gravven arranges stone deliveries and repairs for a remote shrine with brisk, transactional efficiency. He secretly sells its consecrated foundation stones to collectors and circulates a fabricated omen so the caretakers will abandon the site before an inventory exposes him.",
+    "tableNote": "Check the delivery tally, ask which invoice a visitor means and quote transport costs before discussing the shrine. Say, “Stone, distance and number of carts. Prophecies are the caretakers’ business.” He treats the invented omen as someone else’s problem.",
+    "personality": "Initially indifferent, professional and impatient with unpriced requests; calculating about other people’s beliefs and willing to endanger a cherished building to conceal his theft.",
+    "motivations": "Keep the proceeds from his illicit sales and secure the last collector’s payment before the shrine’s inventory. His authority over deliveries and a hired carter conceal the removals, but the collector’s receipts identify the stones and contradict his account.",
+    "adventureHook": "A shrine caretaker asks the party why empty repair crates leave heavier than they arrive. GM secret: Gravven has sold stones marked in the shrine’s old dedication register and spread a false prediction that the site must be deserted before the next moonrise. A buyer is due at the roadside campsite tomorrow. The party can compare the register with the buyer’s receipt, persuade the carter to hold the shipment or bring the caretakers evidence before they leave. Gravven offers the buyer’s identity in exchange for concealing his part. Recovering the stones and arranging an independent safety inspection protects the shrine; exposing the lie lets the caretakers decide its future without coercion.",
+    "locationIds": [
+      "chapel",
+      "storeroom",
+      "roadside-campsite"
+    ],
+    "locationFit": [
+      "Remote shrine compounds",
+      "Shrine delivery yards",
+      "Stone shipment camps"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "roads-travel",
+      "wilderness"
+    ],
+    "tags": [
+      "antagonist",
+      "merchant"
+    ],
+    "imageAlt": "Businesslike ruddy-skinned dwarf shrine quarry agent with a broad nose, short braided black beard and receding black hair, wearing a slate-blue wool coat and brown leather shoulder cape while holding a delivery tally beside stone crates in a shrine courtyard.",
+    "portraitKey": "gravven-hollowmoss",
+    "portraitFit": "contain",
+    "image": "images/characters/gravven-hollowmoss.webp",
+    "tokenImage": "images/tokens/gravven-hollowmoss-token.webp",
+    "publishedAt": "2026-11-18T22:00:00-05:00"
+  },
+  {
     "id": "vessa-linenrook",
     "slug": "vessa-linenrook",
     "name": "Vessa Linenrook",
