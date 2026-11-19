@@ -1286,5 +1286,21 @@
     "flavour": "Quills rasp steadily over parchment beneath the soft tick of a brass sand timer. The room smells of lampblack ink, warm wax and the dry dust of bundled records.",
     "discovery": "One ledger has been rebound upside down, hiding a narrow pocket in its spine that holds an unsigned copy of a recently altered contract.",
     "readAloud": "Tall desks line a narrow office, each set with ink pots, sealing wax and stacks of documents weighted beneath smooth stones."
+  },
+  {
+    "id": "masons-yard",
+    "name": "Mason’s Yard",
+    "description": "An open work yard where stone is measured, cut and dressed into blocks, steps, lintels and carved fittings for local buildings.",
+    "settings": [
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/masons-yard-location.webp",
+    "imageAlt": "Painterly fantasy mason’s yard with a partly dressed limestone lintel on a scarred workbench, mallets, chisels, measuring tools, stacked blocks and a timber lifting tripod.",
+    "publishedAt": "2026-11-19T08:40:00-05:00",
+    "flavour": "Metal taps ring across the yard in a patient rhythm while grit crunches underfoot. The air smells of wet stone, chalk and the hemp ropes coiled beside the hoist.",
+    "discovery": "Several finished blocks carry a second set of mason’s marks beneath fresh chisel cuts, showing they were reclaimed from another building and passed off as new.",
+    "readAloud": "Squared stone blocks stand around a timber lifting frame beside scarred workbenches covered with chisels, mallets and pale dust."
   }
 ]
