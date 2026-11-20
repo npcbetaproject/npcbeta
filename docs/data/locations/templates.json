@@ -1302,5 +1302,22 @@
     "flavour": "Metal taps ring across the yard in a patient rhythm while grit crunches underfoot. The air smells of wet stone, chalk and the hemp ropes coiled beside the hoist.",
     "discovery": "Several finished blocks carry a second set of mason’s marks beneath fresh chisel cuts, showing they were reclaimed from another building and passed off as new.",
     "readAloud": "Squared stone blocks stand around a timber lifting frame beside scarred workbenches covered with chisels, mallets and pale dust."
+  },
+  {
+    "id": "cobblers-workshop",
+    "name": "Cobbler’s Workshop",
+    "description": "A workshop where shoes and boots are cut, stitched, soled and repaired using wooden lasts, hand tools and worked leather.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/cobblers-workshop-location.webp",
+    "imageAlt": "Painterly fantasy cobbler’s workshop with a half-finished leather boot on a wooden last, shoe forms, awls, hammers, waxed thread, cut soles and finished footwear.",
+    "publishedAt": "2026-11-20T09:22:56-05:00",
+    "flavour": "Beeswax and worked leather scent the warm workshop while waxed thread rasps through a row of fresh holes. Small hammers tap against wooden lasts as loose buckles and eyelets chime in a shallow tray.",
+    "discovery": "A boot awaiting repair has a heel deliberately built around a slim brass key, visible where the worn leather has split.",
+    "readAloud": "A half-finished boot rests on a wooden last at the centre of a scarred bench covered with awls, hammers, thread and cut leather soles."
   }
 ]
