@@ -1,5 +1,86 @@
 [
   {
+    "id": "thervos-ashhorn",
+    "slug": "thervos-ashhorn",
+    "name": "Thervos Ashhorn",
+    "ancestry": "Minotaur",
+    "role": "Estate fencing master",
+    "group": "townsfolk",
+    "subtitle": "A welcome at a closed door",
+    "summary": "Thervos teaches fencing to a noble household and greets visitors with cheerful encouragement, even while barring its practice hall. Two missing training blades and an adult guest’s reckless challenge have convinced him that the doors must stay closed until everyone agrees to safe terms.",
+    "tableNote": "Offer a towel, praise good footwork and make room to talk beside the doorway without letting anyone pass. Say, “Welcome! I’ll gladly hear your challenge after we find my practice blades and agree nobody fights angry.” His warmth is sincere; the closed door is a boundary, not a taunt.",
+    "personality": "Initially friendly, helpful and enthusiastic about teaching; calm under insult, stubborn about consent and protective of inexperienced students.",
+    "motivations": "Recover the household’s training blades, prevent an angry guest from turning a lesson into a dangerous duel and show that discipline matters more than noble rank.",
+    "adventureHook": "A guest asks the party to get past Thervos and open the practice hall before a public challenge. Thervos offers a lesson and introductions if they instead recover the missing blades and persuade the challenger to withdraw the insult or accept a supervised demonstration. A servant saw the blades carried toward the armory for polishing but cannot leave a post to check. The party can trace the loan, negotiate an apology or arrange another day. If anyone forces entry or threatens a student, Thervos blocks and disarms them, using restraint rather than pursuing a defeated opponent. Returning the blades and agreeing to safe terms ends the standoff.",
+    "locationIds": [
+      "great-hall",
+      "courtyard",
+      "armory"
+    ],
+    "locationFit": [
+      "Noble practice halls",
+      "Estate training courts"
+    ],
+    "roleCategoryIds": [
+      "military-authority"
+    ],
+    "locationFitCategoryIds": [
+      "castles-estates"
+    ],
+    "tags": [
+      "quest-giver",
+      "ally"
+    ],
+    "imageAlt": "Welcoming broad-shouldered minotaur fencing master with chestnut fur, a dark bovine muzzle and short outward-curving cream horns, wearing a navy padded fencing coat and holding a wooden practice sword low in an estate training hall.",
+    "portraitKey": "thervos-ashhorn",
+    "portraitFit": "contain",
+    "image": "images/characters/thervos-ashhorn.webp",
+    "tokenImage": "images/tokens/thervos-ashhorn-token.webp",
+    "publishedAt": "2026-11-19T22:00:01-05:00"
+  },
+  {
+    "id": "caldraven-duskmere",
+    "slug": "caldraven-duskmere",
+    "name": "Caldraven Duskmere",
+    "ancestry": "Vampire",
+    "role": "Chamberlain",
+    "group": "townsfolk",
+    "subtitle": "An emergency with no missing heir",
+    "summary": "Caldraven manages a noble estate with detached precision and presents himself as its indispensable guardian. He has hidden letters proving the adult heir is alive and plans an emergency court oath that will bind the attending adults to his vampiric service, giving him control of the regency.",
+    "tableNote": "Check names against a seating plan, answer only the question asked and refer every interruption to the evening’s schedule. Say, “The heir’s absence is already accounted for. Sign in, take your assigned place and await the announcement.” His initial indifference is practiced administrative control.",
+    "personality": "Initially indifferent, formal and strictly professional; patient with procedure and chillingly certain that other people’s freedom is an acceptable price for a stable household.",
+    "motivations": "Become the estate’s permanent regent after decades of preserving it through sieges, afraid the returning heir will dismiss him. Keys, intercepted correspondence, household influence and loyal night servants support his scheme. He needs the senior steward’s freely given approval to open the emergency court and cannot compel that approval without invalidating the oath.",
+    "adventureHook": "The senior steward quietly asks the party to locate a courier who arrived with a letter from the supposedly lost heir. GM secret: Caldraven concealed that letter in his locked office and intends to turn an emergency oath into supernatural servitude. Before the evening court, the party can find the courier’s delivery receipt, recover the letter, secure the steward’s refusal to convene or persuade courtiers to leave. Caldraven offers records of the estate’s old enemies if allowed to retain his post, but insists on controlling the household. He may order his night servants to detain anyone removing the letter or breaking up the court; public proof that the heir lives and the steward’s withheld approval dismantle his pretext and stop the oath.",
+    "locationIds": [
+      "great-hall",
+      "private-residence",
+      "servants-passage",
+      "guardroom"
+    ],
+    "locationFit": [
+      "Noble evening courts",
+      "Chamberlain offices",
+      "Estate service corridors"
+    ],
+    "roleCategoryIds": [
+      "military-authority",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "castles-estates"
+    ],
+    "tags": [
+      "antagonist",
+      "mysterious"
+    ],
+    "imageAlt": "Detached pale-skinned vampire chamberlain with sleek silver-black hair, a narrow clean-shaven face and subtle pointed upper canines, wearing a burgundy high-collared court coat and holding a seating ledger in a candlelit noble hall.",
+    "portraitKey": "caldraven-duskmere",
+    "portraitFit": "contain",
+    "image": "images/characters/caldraven-duskmere.webp",
+    "tokenImage": "images/tokens/caldraven-duskmere-token.webp",
+    "publishedAt": "2026-11-19T22:00:00-05:00"
+  },
+  {
     "id": "beldo-quietreed",
     "slug": "beldo-quietreed",
     "name": "Beldo Quietreed",
