@@ -1,5 +1,86 @@
 [
   {
+    "id": "poldren-tansypot",
+    "slug": "poldren-tansypot",
+    "name": "Poldren Tansypot",
+    "ancestry": "Halfling",
+    "role": "Roadside cook",
+    "group": "townsfolk",
+    "subtitle": "Supper without breaking a promise",
+    "summary": "Poldren serves hot meals from a cooking wagon at a busy trade-road stopping place, answering questions while counting portions. A closed ford has stranded more drovers than he can feed, but he refuses to open a food consignment already promised to the next waystation.",
+    "tableNote": "Count bowls before faces, keep stirring during introductions and ask how many people need feeding. Say, “How many portions, and what can you trade? Those sacks belong to the next stop.” His indifference comes from concentrating on the work, not a lack of concern.",
+    "personality": "Initially indifferent, busy and strictly practical; dependable about other people’s supplies and quietly pleased when a useful plan feeds everyone without breaking a promise.",
+    "motivations": "Give the stranded adults a proper supper, deliver the promised consignment intact and keep his cooking wagon welcome along the trade road.",
+    "adventureHook": "A closed ford leaves adult drovers camped beside Poldren’s wagon with cold travel rations and little dry fuel. He asks the party to negotiate for spare firewood and cooking supplies at the nearby caravanserai, organize a shared meal from the travelers’ own provisions or arrange a sheltered cooking place until the crossing reopens. He will cook and share his remaining ingredients, but will not take from the sealed onward consignment. Successful helpers receive meals at his next roadside stop and introductions to drovers who know the route.",
+    "locationIds": [
+      "roadside-campsite",
+      "river-ford",
+      "caravanserai"
+    ],
+    "locationFit": [
+      "Trade-road stopping places",
+      "Caravan cooking wagons",
+      "Stranded drover camps"
+    ],
+    "roleCategoryIds": [
+      "hospitality-entertainment"
+    ],
+    "locationFitCategoryIds": [
+      "roads-travel"
+    ],
+    "tags": [
+      "merchant",
+      "quest-giver"
+    ],
+    "imageAlt": "Busy tan-skinned halfling roadside cook with a shaved crown, short curly dark hair at the sides and a neat mustache, wearing a faded ochre shirt and charcoal apron while holding a wooden ladle beside a cooking wagon on a trade road.",
+    "portraitKey": "poldren-tansypot",
+    "portraitFit": "contain",
+    "image": "images/characters/poldren-tansypot.webp",
+    "tokenImage": "images/tokens/poldren-tansypot-token.webp",
+    "publishedAt": "2026-11-20T22:00:01-05:00"
+  },
+  {
+    "id": "wendel-sootsaffron",
+    "slug": "wendel-sootsaffron",
+    "name": "Wendel Sootsaffron",
+    "ancestry": "Halfling",
+    "role": "Salt trader",
+    "group": "townsfolk",
+    "subtitle": "A stolen burden in someone else’s sacks",
+    "summary": "Wendel trades sacks of salt along a caravan road with a bored, transactional manner. He has hidden a stolen curse-bearing reliquary in another trader’s cargo so its pursuing guardians will target that innocent convoy while he escapes with his payment.",
+    "tableNote": "Brush salt dust from a cuff, check a weight and quote a price without asking about the buyer’s journey. Say, “Weight, grade and where you want it delivered. I don’t discuss another trader’s cargo.” His indifference conceals a deliberate transfer of danger.",
+    "personality": "Initially indifferent, professional and sparing with words; calculating about risk and willing to sacrifice fellow travelers’ safety to keep the proceeds of his theft.",
+    "motivations": "Keep the collector’s advance, pass beyond the guardians’ patrol route and leave an innocent trader to answer for the stolen object. His signed delivery slip is the evidence he overlooked.",
+    "adventureHook": "At a trade-road campsite, a carter asks why one salt sack has grown rimed with dark frost despite a warm evening. GM secret: Wendel planted a sealed reliquary whose curse marks its current carrier as the thief; its living sworn guardians follow that mark and may attack unless stopped to hear evidence. Wendel’s signed delivery slip and the carter’s account identify who supplied the sack. Before the guardians reach the next stopping place, the party can warn the convoy, intercept them with the evidence and arrange the object’s return, or find Wendel before he departs the caravanserai. The guardians can lift the false mark once the reliquary is returned; opening it is unnecessary. Wendel offers the collector’s name in exchange for passage, but the innocent convoy still needs protection.",
+    "locationIds": [
+      "roadside-campsite",
+      "caravanserai",
+      "storeroom"
+    ],
+    "locationFit": [
+      "Trade-road salt convoys",
+      "Caravanserai loading yards",
+      "Roadside cargo camps"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "roads-travel"
+    ],
+    "tags": [
+      "antagonist",
+      "merchant"
+    ],
+    "imageAlt": "Uninterested olive-skinned halfling salt trader with a straight auburn bob, narrow face and clean-shaven chin, wearing a dark green traveling coat and maroon scarf while holding a folded delivery slip beside covered salt sacks at a caravanserai.",
+    "portraitKey": "wendel-sootsaffron",
+    "portraitFit": "contain",
+    "image": "images/characters/wendel-sootsaffron.webp",
+    "tokenImage": "images/tokens/wendel-sootsaffron-token.webp",
+    "publishedAt": "2026-11-20T22:00:00-05:00"
+  },
+  {
     "id": "thervos-ashhorn",
     "slug": "thervos-ashhorn",
     "name": "Thervos Ashhorn",
