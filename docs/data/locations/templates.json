@@ -1319,5 +1319,22 @@
     "flavour": "Beeswax and worked leather scent the warm workshop while waxed thread rasps through a row of fresh holes. Small hammers tap against wooden lasts as loose buckles and eyelets chime in a shallow tray.",
     "discovery": "A boot awaiting repair has a heel deliberately built around a slim brass key, visible where the worn leather has split.",
     "readAloud": "A half-finished boot rests on a wooden last at the centre of a scarred bench covered with awls, hammers, thread and cut leather soles."
+  },
+  {
+    "id": "basketmakers-workshop",
+    "name": "Basketmaker’s Workshop",
+    "description": "A workshop where soaked willow, reeds and split cane are woven into baskets, creels, hampers and sturdy containers for local work and trade.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/basketmakers-workshop-location.webp",
+    "imageAlt": "Painterly fantasy basketmaker’s workshop with a half-woven willow basket in a wooden jig, soaking trough, bundled rods, hand tools and finished wicker containers.",
+    "publishedAt": "2026-11-21T08:43:04-05:00",
+    "flavour": "Wet willow and fresh-cut reeds lend the workshop a green, earthy smell. Thin rods creak beneath steady pressure while loose lengths whisper against the rim of the soaking trough.",
+    "discovery": "One finished hamper has a second wall woven inside it, creating a slim hidden compartment around the base.",
+    "readAloud": "A half-woven willow basket sits clamped in a wooden jig beside bundled rods, a stone soaking trough and shelves crowded with finished wickerwork."
   }
 ]
