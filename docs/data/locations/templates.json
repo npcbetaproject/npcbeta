@@ -1336,5 +1336,22 @@
     "flavour": "Wet willow and fresh-cut reeds lend the workshop a green, earthy smell. Thin rods creak beneath steady pressure while loose lengths whisper against the rim of the soaking trough.",
     "discovery": "One finished hamper has a second wall woven inside it, creating a slim hidden compartment around the base.",
     "readAloud": "A half-woven willow basket sits clamped in a wooden jig beside bundled rods, a stone soaking trough and shelves crowded with finished wickerwork."
+  },
+  {
+    "id": "fletchers-workshop",
+    "name": "Fletcher’s Workshop",
+    "description": "A workshop where wooden shafts are straightened, nocked and feathered into arrows for hunters, guards and travellers.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/fletchers-workshop-location.webp",
+    "imageAlt": "Painterly fantasy fletcher’s workshop with rows of wooden shafts, feather baskets, a fletching jig, hand tools, thread and wicker containers.",
+    "publishedAt": "2026-11-22T08:52:06-05:00",
+    "flavour": "Fresh-cut cedar and warm hide glue sharpen the smell of waxed thread. Feathers rustle in their baskets while a shaft turns with a soft scrape inside the fletching jig.",
+    "discovery": "A dozen finished arrows use the same dark feather on one side; when laid in order, the clipped edges form a simple route through the nearby streets.",
+    "readAloud": "A long workbench stands beneath an open window, covered with smooth wooden shafts, pale feather bundles, measuring guides and a small iron fletching jig."
   }
 ]
