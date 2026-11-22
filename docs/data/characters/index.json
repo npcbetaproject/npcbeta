@@ -1,5 +1,85 @@
 [
   {
+    "id": "udrik-amberbark",
+    "slug": "udrik-amberbark",
+    "name": "Udrik Amberbark",
+    "ancestry": "Dwarf",
+    "role": "Resin tapper",
+    "group": "townsfolk",
+    "subtitle": "A marked batch beneath occupied rafters",
+    "summary": "Udrik gathers and grades pine resin from a small woodland outpost, talking about yields while his hands remain busy. A batch he paid to store at an abandoned neighboring station is ready for collection, but nesting swallows now occupy the rafters above its loading hatch.",
+    "tableNote": "Check a bucket seal while visitors speak, ask what carrying gear they brought and answer in short practical phrases. Say, “Three marked tubs, no broken seals. Tell me how you’ll move them without wrecking the nests.” He is initially indifferent and focused on the job, not hostile to help.",
+    "personality": "Initially indifferent, absorbed in quantities and schedules; patient with careful work and unwilling to destroy a nesting colony merely to save himself a journey.",
+    "motivations": "Recover the paid-for resin intact, keep his own outpost supplied for repairs and leave the swallows undisturbed until their young have fledged.",
+    "adventureHook": "Udrik offers a share of his next resin delivery for help collecting three tubs bearing his pinecone mark. The usual loading hatch would disturb nests directly above it. The party can inspect the station with him, negotiate access through a neighboring forester’s side door or organize smaller loads through a clear passage. Udrik accepts delaying collection if no safe route is available, but wants the batch recorded and protected from weather in the meantime. A careful solution earns a reliable supply contact at his woodland outpost.",
+    "locationIds": [
+      "hunters-cabin",
+      "abandoned-logging-camp",
+      "forest-clearing"
+    ],
+    "locationFit": [
+      "Woodland resin stations",
+      "Remote supply storehouses",
+      "Forest work outposts"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "wilderness"
+    ],
+    "tags": [
+      "merchant",
+      "quest-giver"
+    ],
+    "imageAlt": "Busy dark-brown-skinned dwarf resin tapper with a square gray-streaked beard and cropped black hair, wearing a moss-brown work jacket and leather apron while holding a sealed wooden resin bucket outside a forest outpost.",
+    "portraitKey": "udrik-amberbark",
+    "portraitFit": "contain",
+    "image": "images/characters/udrik-amberbark.webp",
+    "tokenImage": "images/tokens/udrik-amberbark-token.webp",
+    "publishedAt": "2026-11-21T22:00:01-05:00"
+  },
+  {
+    "id": "vessra-blacktally",
+    "slug": "vessra-blacktally",
+    "name": "Vessra Blacktally",
+    "ancestry": "Goblin",
+    "role": "Outpost paymaster",
+    "group": "townsfolk",
+    "subtitle": "The relief wagon that was never ordered",
+    "summary": "Vessra keeps the accounts of a remote prospecting outpost and greets questions with sharp suspicion. She has stolen its winter wage chest and issued a false evacuation order claiming that relief wagons will take the adult crew to shelter, although she has arranged no such transport.",
+    "tableNote": "Shut the ledger when someone approaches, demand a written reason for every question and treat casual concern as an accusation. Say, “Show me whose authority you’re questioning these accounts under. Otherwise get out of my office.” Her hostility guards a deliberate theft, not a harmless misunderstanding.",
+    "personality": "Initially hostile, defensive and contemptuous of scrutiny; quick to invoke procedure while ignoring the obligations that protect the workers whose wages she controls.",
+    "motivations": "Leave with the stolen wages before the next accounts inspection and blame the missing chest on confusion during evacuation. She has hired a private northbound freight wagon, while her false order sends the crew toward an unstaffed lower camp.",
+    "adventureHook": "An adult camp worker asks the party why the paymaster’s closure notice promises relief wagons that do not appear in the dispatch book. GM secret: Vessra plans to send the unpaid crew out of its winter quarters and move the wage chest north on her own hired wagon. The outpost charter guarantees shelter until relief arrives, and the freight receipt names the wagon she hired. Before the announced departure, the party can secure those records, help the crew remain in safe quarters, verify the empty lower camp or intercept the private wagon. Vessra offers a portion of the money for silence. Recovering the chest and exposing the false order lets the crew arrange a genuine relief plan rather than walk into the wilderness without shelter.",
+    "locationIds": [
+      "hunters-cabin",
+      "storeroom",
+      "roadside-campsite"
+    ],
+    "locationFit": [
+      "Remote prospecting outposts",
+      "Outpost pay offices",
+      "Winter supply camps"
+    ],
+    "roleCategoryIds": [
+      "workers-services",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "wilderness"
+    ],
+    "tags": [
+      "antagonist"
+    ],
+    "imageAlt": "Suspicious olive-green-skinned goblin outpost paymaster with long pointed ears, a sharp face and black hair in a tight topknot, wearing a plum wool coat and fingerless gloves while clutching a closed ledger in a remote timber office.",
+    "portraitKey": "vessra-blacktally",
+    "portraitFit": "contain",
+    "image": "images/characters/vessra-blacktally.webp",
+    "tokenImage": "images/tokens/vessra-blacktally-token.webp",
+    "publishedAt": "2026-11-21T22:00:00-05:00"
+  },
+  {
     "id": "poldren-tansypot",
     "slug": "poldren-tansypot",
     "name": "Poldren Tansypot",
