@@ -1353,5 +1353,22 @@
     "flavour": "Fresh-cut cedar and warm hide glue sharpen the smell of waxed thread. Feathers rustle in their baskets while a shaft turns with a soft scrape inside the fletching jig.",
     "discovery": "A dozen finished arrows use the same dark feather on one side; when laid in order, the clipped edges form a simple route through the nearby streets.",
     "readAloud": "A long workbench stands beneath an open window, covered with smooth wooden shafts, pale feather bundles, measuring guides and a small iron fletching jig."
+  },
+  {
+    "id": "soapmakers-workshop",
+    "name": "Soapmaker’s Workshop",
+    "description": "A workshop where ash lye and rendered oils are boiled, scented, poured into moulds and cut into bars for washing, laundry and trade.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/soapmakers-workshop-location.webp",
+    "imageAlt": "Painterly fantasy soapmaker’s workshop with a steaming copper kettle, wooden moulds, cutting frame, herb bundles and racks of pale soap bars.",
+    "publishedAt": "2026-11-23T09:46:16-05:00",
+    "flavour": "Woodsmoke and warm oils mingle with lavender and rosemary in the humid air. Wooden moulds knock against the worktable while cooling bars creak softly on their racks.",
+    "discovery": "One crate is stamped as plain household soap, but the cut bars inside carry a different maker’s seal and a faint medicinal scent.",
+    "readAloud": "A broad copper kettle steams above a brick hearth beside long wooden moulds, a wire cutting frame and shelves stacked with pale soap bars."
   }
 ]
