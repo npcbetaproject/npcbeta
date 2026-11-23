@@ -1,5 +1,84 @@
 [
   {
+    "id": "merris-reedknuckle",
+    "slug": "merris-reedknuckle",
+    "name": "Merris Reedknuckle",
+    "ancestry": "Halfling",
+    "role": "Excavation hauler",
+    "group": "townsfolk",
+    "subtitle": "A borrowed sled in the rising channel",
+    "summary": "Merris moves excavated stone and supplies through ancient underground galleries, measuring every load before she takes a contract. Her borrowed hauling sled has slipped into a rising stream and caught against the partly open door of a forgotten storeroom.",
+    "tableNote": "Keep winding a rope while visitors talk, ask how much weight their gear can bear and discuss the task without ceremony. Say, “The sled belongs to someone else. Tell me what you can anchor, and we can get to work.” She is initially indifferent and occupied with the recovery.",
+    "personality": "Initially indifferent, practical and absorbed in her work; she takes borrowed equipment seriously and refuses to risk another worker merely to save a tool.",
+    "motivations": "Return the sled intact, finish hauling the excavation spoil and keep a reputation for bringing borrowed gear back in working order.",
+    "adventureHook": "Merris offers hauling work or a share of her fee for recovering the sled before the stream pushes it through the storeroom door. Its iron runners are caught on the stone sill, and a dry service ledge provides a place to inspect the obstruction without entering the current. The party can find a sound anchor, clear the accessible end of the sill or arrange help from the excavation crew. Merris accepts abandoning the sled if recovery would put people in danger, but asks for its owner’s brass plate back if that can be retrieved safely. Success earns a capable hauler who knows the ruin’s supply routes.",
+    "locationIds": [
+      "forgotten-storeroom",
+      "cistern-chamber",
+      "cavern-pool"
+    ],
+    "locationFit": [
+      "Ancient dungeon service galleries",
+      "Flooded excavation passages",
+      "Underground supply stations"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "dungeons-ruins"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Busy brown-skinned halfling excavation hauler with a round freckled face and dark auburn braid, wearing an ochre shirt, faded blue work vest and leather hauling straps while holding rope and a wooden sled handle in an ancient stone gallery.",
+    "portraitKey": "merris-reedknuckle",
+    "portraitFit": "contain",
+    "image": "images/characters/merris-reedknuckle.webp",
+    "tokenImage": "images/tokens/merris-reedknuckle-token.webp",
+    "publishedAt": "2026-11-22T22:00:01-05:00"
+  },
+  {
+    "id": "zerrek-thornseal",
+    "slug": "zerrek-thornseal",
+    "name": "Zerrek Thornseal",
+    "ancestry": "Goblin",
+    "role": "Ruin concession broker",
+    "group": "townsfolk",
+    "subtitle": "Two crews, one promised vault",
+    "summary": "Zerrek welcomes explorers to an ancient dungeon with maps and offers to arrange exclusive excavation rights. He knowingly sells the same vault to rival crews, then feeds each false reports of theft so they will fight while his hired carriers take the finds.",
+    "tableNote": "Greet everyone by name, offer a dry seat and praise their expedition before explaining his generous terms. Say, “Friends, you’ve found the right desk. Let’s make certain all that hard work pays.” His initial friendliness is sincere in manner, while his promises conceal a malicious scheme.",
+    "personality": "Initially friendly, attentive and eager to make introductions; he treats other people’s ambitions as openings to exploit and dismisses the harm caused by his bargains.",
+    "motivations": "Gain control of the ruin’s most valuable finds without paying for an excavation. He wants the rival crews blamed for the violence while his carriers move the goods through a disused service passage.",
+    "adventureHook": "Two adult expedition leaders bring the party different contracts that each grant exclusive rights to the same burial vault. GM secret: Zerrek has arranged a confrontation at the vault and hired carriers to remove its finds through a side passage during the dispute. The contracts bear the same boundary sketch, and one carrier’s receipt names the service entrance. The party can bring the crews together before the confrontation, compare the documents, watch the side passage or persuade a carrier to explain the delivery. Zerrek offers a profitable new claim for silence, but his scheme depends on the crews never speaking directly. Exposing the duplicate grants and recovering the finds deprives him of both the haul and his reputation.",
+    "locationIds": [
+      "burial-vault",
+      "guardroom",
+      "forgotten-storeroom"
+    ],
+    "locationFit": [
+      "Ancient dungeon excavation camps",
+      "Ruined vault entrances",
+      "Underground concession offices"
+    ],
+    "roleCategoryIds": [
+      "workers-services",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "dungeons-ruins"
+    ],
+    "tags": [
+      "antagonist"
+    ],
+    "imageAlt": "Friendly moss-green goblin ruin concession broker with long pointed ears, amber eyes and swept-back silver-gray hair, wearing a rust-red tunic and dark teal cloak while offering an open hand beside a leather document case in an ancient dungeon hall.",
+    "portraitKey": "zerrek-thornseal",
+    "portraitFit": "contain",
+    "image": "images/characters/zerrek-thornseal.webp",
+    "tokenImage": "images/tokens/zerrek-thornseal-token.webp",
+    "publishedAt": "2026-11-22T22:00:00-05:00"
+  },
+  {
     "id": "udrik-amberbark",
     "slug": "udrik-amberbark",
     "name": "Udrik Amberbark",
