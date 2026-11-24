@@ -1370,5 +1370,22 @@
     "flavour": "Woodsmoke and warm oils mingle with lavender and rosemary in the humid air. Wooden moulds knock against the worktable while cooling bars creak softly on their racks.",
     "discovery": "One crate is stamped as plain household soap, but the cut bars inside carry a different maker’s seal and a faint medicinal scent.",
     "readAloud": "A broad copper kettle steams above a brick hearth beside long wooden moulds, a wire cutting frame and shelves stacked with pale soap bars."
+  },
+  {
+    "id": "woodcarvers-workshop",
+    "name": "Woodcarver’s Workshop",
+    "description": "A workshop where timber is shaped with chisels and gouges into household wares, signs, toys and decorative panels.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/woodcarvers-workshop-location.webp",
+    "imageAlt": "Painterly fantasy woodcarver’s workshop with a shaving-covered workbench, carving chisels, wooden figures and decorative panels.",
+    "publishedAt": "2026-11-24T09:10:20-05:00",
+    "flavour": "Fresh-cut cedar and beeswax scent the warm, dusty air. Fine shavings whisper across the floorboards whenever a breeze enters through the open door.",
+    "discovery": "The unfinished signboard clamped to the bench conceals a thin hinged panel, sized to hide a folded letter or small key.",
+    "readAloud": "Pale curls of wood cover a scarred workbench beneath racks of chisels, unfinished figures and carved panels."
   }
 ]
