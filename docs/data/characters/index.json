@@ -1,5 +1,81 @@
 [
   {
+    "id": "dellen-quincebrook",
+    "slug": "dellen-quincebrook",
+    "name": "Dellen Quincebrook",
+    "ancestry": "Halfling",
+    "role": "Taproom skittles keeper",
+    "group": "townsfolk",
+    "subtitle": "A kingpin missing before the match",
+    "summary": "Dellen maintains a taproom’s skittles lane and welcomes newcomers with patient demonstrations. The weighted kingpin has vanished before a visiting team’s match, and the regulars are starting to blame their guests.",
+    "tableNote": "Offer to show visitors the lane, remember their names and make room for beginners. Say, “Come in, friends. Help me find the old kingpin, and I’ll teach you the house throw.” He is initially friendly and wants both teams to enjoy the evening.",
+    "personality": "Initially friendly, talkative and generous with encouragement; he values fair play more than his regulars’ pride and dislikes accusations made without evidence.",
+    "motivations": "Recover the kingpin, keep the match fair and make visiting players feel welcome rather than suspected.",
+    "adventureHook": "Dellen asks the party to check the lane and adjoining storeroom before the teams gather. The kingpin’s brass-weighted base has left a circular mark on a recently moved drinks tray, and a server remembers clearing spare game pieces with the empty cups. The party can follow the tray’s route, speak with the staff or help Dellen organize a friendly practice round while he searches. The pin turns out to be packed with returned festival decorations, not stolen by a rival. Finding it and clearing the visitors’ names earns free use of the lane and a sociable taproom contact.",
+    "locationIds": [
+      "tavern",
+      "storeroom"
+    ],
+    "locationFit": [
+      "Tavern skittles lanes",
+      "Taproom games corners"
+    ],
+    "roleCategoryIds": [
+      "hospitality-entertainment"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Friendly freckled halfling skittles keeper with curly ginger hair and sideburns, wearing a blue waistcoat, cream shirt and leather apron while polishing a wooden pin beside a tavern lane.",
+    "portraitKey": "dellen-quincebrook",
+    "portraitFit": "contain",
+    "image": "images/characters/dellen-quincebrook.webp",
+    "tokenImage": "images/tokens/dellen-quincebrook-token.webp",
+    "publishedAt": "2026-11-23T22:00:01-05:00"
+  },
+  {
+    "id": "osselin-gloamtoast",
+    "slug": "osselin-gloamtoast",
+    "name": "Osselin Gloamtoast",
+    "ancestry": "Elf",
+    "role": "Toastmaster",
+    "group": "townsfolk",
+    "subtitle": "A toast that sells tomorrow’s triumph",
+    "summary": "Osselin hosts celebrations in tavern private rooms, drawing shy guests into warm speeches about what they hope to achieve. His ceremonial cup steals one future triumph named in a toast, which he stores in engraved silver leaves and sells to wealthy patrons.",
+    "tableNote": "Welcome each guest warmly, recall something they are proud of and invite them to speak at their own pace. Say, “Your work deserves an audience, my friend. Tell us the success you hope to celebrate next.” His initial friendliness conceals a deliberate invitation into the cup’s bargain.",
+    "personality": "Initially friendly, attentive and encouraging; privately envious of people whose work earns applause. He insists that recognition should go to those who can make proper use of it, while craving praise he has never earned.",
+    "motivations": "Build a circle of influential clients by supplying stolen victories, then secure a permanent ceremonial office through their patronage. After years of being overlooked as a performer, he treats other people’s promise as something to trade rather than respect.",
+    "adventureHook": "A craftworker who toasted an upcoming exhibition watches a wealthy stranger win with her own distinctive design and asks the party to attend Osselin’s next taproom celebration. GM secret: the cup transfers a named future triumph into a silver leaf hidden in its stem; Osselin sells the leaf and keeps a commission ledger in a rented storeroom. Two well-paid ushers screen his private gatherings, and indebted patrons discourage questions. The party can compare the ledger with guests’ failed ambitions, approach a dissatisfied buyer or secure the cup before another toast. Its binding has an exploitable contradiction: if the buyer publicly credits the person whose triumph was taken, that leaf releases its claim. Osselin needs the stolen success to look deserved, so persuading one patron to acknowledge the source can unravel his reputation. Recovering the cup and unused leaves prevents further theft; returning the leaves restores their owners’ chance to achieve the promised successes through their own efforts, without guaranteeing an outcome.",
+    "locationIds": [
+      "tavern",
+      "inn",
+      "storeroom"
+    ],
+    "locationFit": [
+      "Tavern private celebration rooms",
+      "Taproom patrons’ suppers"
+    ],
+    "roleCategoryIds": [
+      "hospitality-entertainment",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "antagonist"
+    ],
+    "imageAlt": "Welcoming dark-brown-skinned elf toastmaster with pointed ears and black braided hair streaked with silver, wearing a bottle-green embroidered coat and wine-red sash while holding a silver cup in a candlelit tavern room.",
+    "portraitKey": "osselin-gloamtoast",
+    "portraitFit": "contain",
+    "image": "images/characters/osselin-gloamtoast.webp",
+    "tokenImage": "images/tokens/osselin-gloamtoast-token.webp",
+    "publishedAt": "2026-11-23T22:00:00-05:00"
+  },
+  {
     "id": "merris-reedknuckle",
     "slug": "merris-reedknuckle",
     "name": "Merris Reedknuckle",

@@ -31,6 +31,8 @@ window.NPC_PORTRAITS = Object.freeze({
   "calder-venn": "images/characters/calder-venn.webp",
   "ketta-honeyglass": "images/characters/ketta-honeyglass.webp",
   ...window.NPC_PORTRAITS,
+  "dellen-quincebrook": "images/characters/dellen-quincebrook.webp",
+  "osselin-gloamtoast": "images/characters/osselin-gloamtoast.webp",
   "merris-reedknuckle": "images/characters/merris-reedknuckle.webp",
   "zerrek-thornseal": "images/characters/zerrek-thornseal.webp",
   "udrik-amberbark": "images/characters/udrik-amberbark.webp",
