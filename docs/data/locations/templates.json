@@ -1387,5 +1387,22 @@
     "flavour": "Fresh-cut cedar and beeswax scent the warm, dusty air. Fine shavings whisper across the floorboards whenever a breeze enters through the open door.",
     "discovery": "The unfinished signboard clamped to the bench conceals a thin hinged panel, sized to hide a folded letter or small key.",
     "readAloud": "Pale curls of wood cover a scarred workbench beneath racks of chisels, unfinished figures and carved panels."
+  },
+  {
+    "id": "instrument-makers-workshop",
+    "name": "Instrument Maker’s Workshop",
+    "description": "A workshop where lutes, fiddles, harps and other wooden instruments are shaped, strung, repaired and tuned.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/instrument-makers-workshop-location.webp",
+    "imageAlt": "Painterly fantasy instrument maker’s workshop with an unfinished lute, carving tools, clamps, fiddles, harps and drums.",
+    "publishedAt": "2026-11-25T09:16:42-05:00",
+    "flavour": "The room smells of spruce resin, hide glue and beeswax polish. A newly strung fiddle gives a faint answering hum whenever a wagon rattles past outside.",
+    "discovery": "A strip of parchment is glued beneath the unfinished lute’s soundboard; fragments of a route and several dates can be read through the carved sound hole.",
+    "readAloud": "Lutes, fiddles, small harps and drums hang above a scarred bench where an unfinished instrument rests among clamps, chisels and curled shavings."
   }
 ]
