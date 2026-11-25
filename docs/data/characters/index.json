@@ -1,5 +1,86 @@
 [
   {
+    "id": "orrava-petalcord",
+    "slug": "orrava-petalcord",
+    "name": "Orrava Petalcord",
+    "ancestry": "Orc",
+    "role": "Flower bundler",
+    "group": "townsfolk",
+    "subtitle": "Wedding flowers in a market squall",
+    "summary": "Orrava ties bouquets at an open-air market stall, guarding her finished work with sharp looks and sharper instructions. A sudden squall threatens a delicate wedding order before its collectors arrive.",
+    "tableNote": "Keep tying stems, block any hand reaching toward a finished bundle and demand a clear offer of help. Say, “If you’re here to gawp, move. If you can carry a basket without crushing it, take that end.” She is initially hostile and impatient with interruptions.",
+    "personality": "Initially hostile, brusque and suspicious of careless help; meticulous about her promises and quick to protect another trader’s fragile stock as well as her own.",
+    "motivations": "Deliver the wedding flowers intact, pay the stall’s seasonal rent and prove that practical market flowers deserve the same care as a noble household’s arrangements.",
+    "adventureHook": "As rain drives beneath the awning, Orrava asks the party to help move six flower baskets to shelter. A neighboring trader has room beneath a covered loading arch but will not leave an unpaid cart unattended. The party can negotiate shared shelter, help move that cart first or find another dry route through the market. Orrava will accept a delayed collection rather than force anyone into an unsafe crossing. Keeping the flowers and the neighbor’s stock dry earns a dependable market contact, though her thanks remain blunt.",
+    "locationIds": [
+      "market-square",
+      "general-store",
+      "courtyard"
+    ],
+    "locationFit": [
+      "Open-air flower markets",
+      "Market loading arches",
+      "Covered trading courtyards"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "merchant",
+      "quest-giver"
+    ],
+    "imageAlt": "Impatient olive-green orc flower bundler with small tusks and white hair in two short braids, wearing a plum work dress and lilac apron while tying cream and yellow flowers beneath a windy market awning.",
+    "portraitKey": "orrava-petalcord",
+    "portraitFit": "contain",
+    "image": "images/characters/orrava-petalcord.webp",
+    "tokenImage": "images/tokens/orrava-petalcord-token.webp",
+    "publishedAt": "2026-11-24T22:00:01-05:00"
+  },
+  {
+    "id": "sivren-thornstave",
+    "slug": "sivren-thornstave",
+    "name": "Sivren Thornstave",
+    "ancestry": "Elf",
+    "role": "Seed merchant",
+    "group": "townsfolk",
+    "subtitle": "Roots beneath the rival stalls",
+    "summary": "Sivren sells hardy seeds from an open-air market stall and treats questions about her growing methods as insults. Beneath neighboring pitches, an enchanted root network breaks paving and grips stock carts until their owners agree to surrender their trading spaces.",
+    "tableNote": "Close the seed box when approached, correct visitors before answering and make them stand outside the stall. Say, “You can buy a packet or stop wasting my daylight. My methods are not a public lesson.” Her initial hostility protects a deliberate scheme, not merely a difficult temperament.",
+    "personality": "Initially hostile, proud and contemptuous of scrutiny; she calls her own cruelty necessary while refusing to accept that other traders have families and obligations as urgent as hers.",
+    "motivations": "Acquire a continuous row of pitches and turn it into a profitable private seed exchange. She needs money for an expedition seeking a remedy for her adult sister’s petrification, and has decided that other traders’ livelihoods are an acceptable price for bringing her sister home.",
+    "adventureHook": "A stallholder hires the party after roots seize a loaded cart on the morning Sivren offers to buy his pitch. GM secret: her enchanted mother vine sends tendrils beneath the market from a display pot sunk through a gap in the paving. A paid night porter distributes her seedlings, and two wealthy growers back her planned exchange. The roots tighten when a threatened trader refuses her offer; the party can follow matching leaves beneath several stalls, question the porter or compare the growers’ purchase letters. Sivren must keep the mother vine on public display to demonstrate her seeds, exposing her weakness: lifting its whole pot clear of the soil makes every linked tendril release and retreat. She stations a hired guard by the display and offers the party a share of the exchange if they leave it alone. Securing the pot and protecting the porter’s testimony can stop the seizures and expose the coercion before another trader signs away a pitch. Her backers can keep the takeover alive unless their funding and claims are challenged; a credible lead toward restoring her sister may also persuade Sivren to surrender evidence, without excusing the harm she has caused.",
+    "locationIds": [
+      "market-square",
+      "storeroom",
+      "courtyard"
+    ],
+    "locationFit": [
+      "Open-air seed markets",
+      "Market demonstration plots",
+      "Trading courtyards"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "merchant",
+      "antagonist"
+    ],
+    "imageAlt": "Arrogant tan-skinned elf seed merchant with pointed ears and close-cropped copper-red curls streaked with gray, wearing an ochre coat over green clothing while holding a wooden seed box and potted vine at an open-air market stall.",
+    "portraitKey": "sivren-thornstave",
+    "portraitFit": "contain",
+    "image": "images/characters/sivren-thornstave.webp",
+    "tokenImage": "images/tokens/sivren-thornstave-token.webp",
+    "publishedAt": "2026-11-24T22:00:00-05:00"
+  },
+  {
     "id": "dellen-quincebrook",
     "slug": "dellen-quincebrook",
     "name": "Dellen Quincebrook",
