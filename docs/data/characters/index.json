@@ -1,5 +1,83 @@
 [
   {
+    "id": "tovin-mossribbon",
+    "slug": "tovin-mossribbon",
+    "name": "Tovin Mossribbon",
+    "ancestry": "Halfling",
+    "role": "Temple floor polisher",
+    "group": "townsfolk",
+    "subtitle": "A stone pilgrim across the procession route",
+    "summary": "Tovin polishes a temple’s worn floors and cheerfully guides visitors around the wet patches. An ancient stone pilgrim has fallen asleep across the usual procession route, leaving the stewards divided over whether to wake it or change their plans.",
+    "tableNote": "Offer visitors a dry cloth to wipe their boots, introduce everyone by name and explain the problem as though inviting help with a shared chore. Say, “Mind the shine, friend. Our guest has chosen a grand place for a nap—shall we find everyone a little room?” She is initially friendly and eager to hear a workable suggestion.",
+    "personality": "Initially friendly, talkative and patient with confused visitors; she respects the stone pilgrim as a guest and dislikes treating ceremony as more important than people.",
+    "motivations": "Keep the floor and visitors safe, let the procession proceed with dignity and help the old pilgrim reach the resting place it was seeking.",
+    "adventureHook": "Tovin asks the party to speak with the stewards before the procession assembles. The pilgrim’s wrist inscription names the west cloister as its destination, but that door is locked and the caretaker has not heard about its arrival. The party can find the caretaker, arrange a quieter route through the courtyard or wait for the pilgrim to wake and offer directions. Tovin supplies cloths to mark a dry path and accepts postponing the ceremony if no suitable route is available. Helping both visitors and pilgrim earns a welcoming temple contact.",
+    "locationIds": [
+      "chapel",
+      "courtyard"
+    ],
+    "locationFit": [
+      "Temple entrance halls",
+      "Shrine cloisters",
+      "Temple processional courtyards"
+    ],
+    "roleCategoryIds": [
+      "workers-services"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "quest-giver"
+    ],
+    "imageAlt": "Welcoming brown-skinned halfling temple floor polisher with black curls touched gray and an ochre kerchief, wearing a cream work dress and sage apron while holding a cloth and wooden wax pot beside a polishing brush.",
+    "portraitKey": "tovin-mossribbon",
+    "portraitFit": "contain",
+    "image": "images/characters/tovin-mossribbon.webp",
+    "tokenImage": "images/tokens/tovin-mossribbon-token.webp",
+    "publishedAt": "2026-11-25T22:00:01-05:00"
+  },
+  {
+    "id": "velren-hushscript",
+    "slug": "velren-hushscript",
+    "name": "Velren Hushscript",
+    "ancestry": "Elf",
+    "role": "Penitential scribe",
+    "group": "townsfolk",
+    "subtitle": "Confessions that whisper demands",
+    "summary": "Velren copies penitential accounts for adults staying in temple sanctuary and regards questions about his work with open suspicion. He steals sealed originals and animates scraps of their words into whispering threats, demanding payment to keep the accounts private.",
+    "tableNote": "Cover the folio with one hand, ask who authorized the visit and answer interruptions with clipped contempt. Say, “These are private papers. State your business, and keep your hands where I can see them.” His initial hostility conceals his own violation of the privacy he invokes.",
+    "personality": "Initially hostile, defensive and disdainful of scrutiny; he treats the trust of vulnerable guests as a resource to exploit and insists his copying fees entitle him to more than he was promised.",
+    "motivations": "Collect secret payments from sanctuary guests and retain their originals as leverage. He wants a profitable private archive beyond the temple’s oversight.",
+    "adventureHook": "A sanctuary guest asks the party to stop a folded paper slip that whispers her name and a demand for money outside her door. GM secret: Velren keeps the stolen originals in a red-thread-bound folio; while it remains tied, he can send the animated scraps after their authors. The party can seek willing testimony, trace the slips to his writing alcove or ask a steward to secure the folio. Untying its thread silences the scraps without exposing the sealed originals. Returning each account privately to its author and preserving the payment demands as evidence can end the extortion without turning the victims’ disclosures into public spectacle.",
+    "locationIds": [
+      "chapel",
+      "academy-library",
+      "storeroom"
+    ],
+    "locationFit": [
+      "Temple sanctuary offices",
+      "Shrine writing alcoves",
+      "Sanctuary record rooms"
+    ],
+    "roleCategoryIds": [
+      "scholars-magic",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "settlements"
+    ],
+    "tags": [
+      "antagonist"
+    ],
+    "imageAlt": "Suspicious pale elf penitential scribe with long pointed ears and straight black hair tipped silver, wearing an indigo robe and ivory shoulder cloth while guarding a worn leather folio in a temple writing alcove.",
+    "portraitKey": "velren-hushscript",
+    "portraitFit": "contain",
+    "image": "images/characters/velren-hushscript.webp",
+    "tokenImage": "images/tokens/velren-hushscript-token.webp",
+    "publishedAt": "2026-11-25T22:00:00-05:00"
+  },
+  {
     "id": "orrava-petalcord",
     "slug": "orrava-petalcord",
     "name": "Orrava Petalcord",
