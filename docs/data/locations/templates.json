@@ -1421,5 +1421,22 @@
     "flavour": "River water murmurs beneath the bridge, carrying the smell of wet stone and trampled reeds. Loose coins chink inside the toll box whenever the barrier arm settles against its wooden stop.",
     "discovery": "A page has been carefully removed from the toll ledger, but the next sheet retains impressions of several wagon entries recorded after midnight.",
     "readAloud": "A striped barrier blocks the muddy road beside a small tollhouse, where an open ledger rests above an iron cash box and a low stone bridge spans the river."
+  },
+  {
+    "id": "laundry-yard",
+    "name": "Laundry Yard",
+    "description": "A shared work yard where clothes and linens are boiled, scrubbed, rinsed and hung to dry for households, inns and institutions.",
+    "settings": [
+      "village",
+      "town",
+      "city"
+    ],
+    "condition": "maintained",
+    "image": "images/locations/laundry-yard-location.webp",
+    "imageAlt": "Painterly fantasy laundry yard with steaming copper kettles, wooden wash troughs, washboards, linen baskets and clotheslines.",
+    "publishedAt": "2026-11-27T09:23:11-05:00",
+    "flavour": "Soap and hot linen scent the damp air as water runs steadily along a stone drain. Wooden paddles knock against the troughs, and clothespins click whenever the breeze pulls at the drying lines.",
+    "discovery": "One unclaimed sheet bears a repeated pattern of rust-coloured marks; when folded along its creases, they form a rough street map with a single doorway circled.",
+    "readAloud": "Steam rises from copper wash kettles beside wooden troughs, while lines of sheets and work clothes sway above baskets piled with wet linen."
   }
 ]
