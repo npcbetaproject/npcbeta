@@ -1,5 +1,86 @@
 [
   {
+    "id": "nollis-barrelbrook",
+    "slug": "nollis-barrelbrook",
+    "name": "Nollis Barrelbrook",
+    "ancestry": "Gnome",
+    "role": "Traveling cooper",
+    "group": "townsfolk",
+    "subtitle": "A sound hoop before the water runs out",
+    "summary": "Nollis repairs barrels for caravans along a dry trade road and greets each arriving wagon like an old friend. A split hoop has left a convoy’s drinking-water cask leaking at his roadside workbench.",
+    "tableNote": "Welcome visitors, offer a place in the shade and enthusiastically explain one useful detail about a barrel. Say, “Come into the shade! Hold this end, and I will show you how we keep everyone’s water inside the wood.” He is initially friendly, helpful and talkative.",
+    "personality": "Initially friendly and eager to include strangers in useful work; proud of careful repairs, generous with advice and prone to explaining a craft problem long after others understand it.",
+    "motivations": "Keep the convoy supplied until its next watering place, earn repeat work through reliable repairs and teach someone a skill they can use after he moves on.",
+    "adventureHook": "Nollis asks the party to borrow a sound iron hoop from a carter resting at the nearby caravanserai. The carter needs that hoop for an empty cask promised to another customer; the party can arrange a replacement, negotiate a short loan or help transfer the water into clean spare vessels while Nollis repairs the damaged hoop. He supplies his labor and will accept a delayed departure rather than risk the convoy’s drinking water. Saving the supply earns a dependable traveling craftsman and introductions along the route.",
+    "locationIds": [
+      "roadside-campsite",
+      "caravanserai",
+      "cooperage"
+    ],
+    "locationFit": [
+      "Trade-road caravan stops",
+      "Roadside barrel-repair benches",
+      "Caravanserai loading yards"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters"
+    ],
+    "locationFitCategoryIds": [
+      "roads-travel"
+    ],
+    "tags": [
+      "quest-giver",
+      "wanderer"
+    ],
+    "imageAlt": "Smiling older gnome traveling cooper with warm tan skin, a short silver beard, rounded ears and a low rust-red cap, wearing a blue work shirt and leather apron with a small hoop driver beside a barrel on a dusty trade road.",
+    "portraitKey": "nollis-barrelbrook",
+    "portraitFit": "contain",
+    "image": "images/characters/nollis-barrelbrook.webp",
+    "tokenImage": "images/tokens/nollis-barrelbrook-token.webp",
+    "publishedAt": "2026-11-27T22:00:01-05:00"
+  },
+  {
+    "id": "nestra-coilwhistle",
+    "slug": "nestra-coilwhistle",
+    "name": "Nestra Coilwhistle",
+    "ancestry": "Gnome",
+    "role": "Whistle seller",
+    "group": "townsfolk",
+    "subtitle": "Safety signals sold to highway robbers",
+    "summary": "Nestra sells polished caravan whistles from a small stand beside the trade road, discussing prices with detached efficiency. Her enchanted stock sends each sounded signal to a matching whistle carried by highway robbers she employs.",
+    "tableNote": "Keep sorting the stock while visitors speak, state the price and answer questions as routine transactions. Say, “One whistle per wagon. The price includes its case. Decide before the convoy moves.” She is initially indifferent and gives no unsolicited welcome.",
+    "personality": "Initially indifferent, businesslike and impatient with bargaining; she treats travelers as sales figures and calmly shifts blame when her own decisions put them in danger.",
+    "motivations": "Make caravan crews dependent on her supposed safety equipment and take a share of the cargo stolen by her accomplices. She wants enough money to establish a permanent roadside shop and knowingly funds attacks to obtain it.",
+    "adventureHook": "A caravan guard hires the party after robbers arrive whenever a purchased whistle is sounded, even after the convoy changes its route. GM secret: Nestra keeps the paired whistles in a locked sales case until her accomplices collect them; a sounded note lets its paired holder hear the signal and see a fleeting image of the sender’s surroundings. The party can compare purchase receipts, watch a collection or secure the case before the next departure. The magic only works while a whistle is blown, so warning the crews and retiring the compromised whistles prevents further signals without silencing ordinary calls for help. Nestra offers the robbers’ meeting place for safe passage, but her payment book and a collector’s testimony can establish her role. Recovering the paired stock and warning the convoy stops her immediate scheme; the hired gang still needs to be confronted, diverted or reported.",
+    "locationIds": [
+      "roadside-campsite",
+      "caravanserai",
+      "bridge-tollhouse"
+    ],
+    "locationFit": [
+      "Trade-road sales stands",
+      "Caravanserai departure yards",
+      "Roadside toll queues"
+    ],
+    "roleCategoryIds": [
+      "merchants-crafters",
+      "underworld"
+    ],
+    "locationFitCategoryIds": [
+      "roads-travel"
+    ],
+    "tags": [
+      "merchant",
+      "antagonist"
+    ],
+    "imageAlt": "Reserved adult gnome whistle seller with deep brown skin, dark hazel eyes, rounded ears and black hair in a compact braided coil, wearing a muted plum coat over a cream blouse and holding an open wooden case of small brass whistles beside a trade road.",
+    "portraitKey": "nestra-coilwhistle",
+    "portraitFit": "contain",
+    "image": "images/characters/nestra-coilwhistle.webp",
+    "tokenImage": "images/tokens/nestra-coilwhistle-token.webp",
+    "publishedAt": "2026-11-27T22:00:00-05:00"
+  },
+  {
     "id": "eshra-brasscry",
     "slug": "eshra-brasscry",
     "name": "Eshra Brasscry",
